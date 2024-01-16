@@ -2,9 +2,33 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import MainTitle from '../components/MainTitle.astro';
+import Menu from '../layouts/Menu.astro';
+import MenuCard from '../components/MenuCard.astro';
 ---
 
 <Layout title='| Diarios'>
 	<Header />
 	<MainTitle title='Diarios de Viaje' />
+	<Menu title='Capítulo 1' subtitle='La Tierra Olvidada'>
+		<MenuCard
+			src='/img/baren_book.png'
+			name='Baren Valhice'
+			href='diaries/baren_diary'
+		/>
+		<MenuCard
+			src='/img/baren_book.png'
+			name='Enya Fendor'
+			href='diaries/enya_diary'
+		/>
+		<MenuCard
+			src='/img/baren_book.png'
+			name='Isidoro Matamoros'
+			href='diaries/isidoro_diary'
+		/>
+		<MenuCard
+			src='/img/baren_book.png'
+			name='Kenkart Silkson'
+			href='diaries/kenkart_diary'
+		/>
+	</Menu>
 </Layout>
