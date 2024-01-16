@@ -12,7 +12,7 @@ const { title, subtitle } = Astro.props;
 		<h1 class='text-[--title] font-[pacifico] text-2xl'>{title}</h1>
 		<h2 class='text-[--subtitle] font-[lobster] text-lg'>{subtitle}</h2>
 	</section>
-	<section class='grid p-4 m-auto lg:mx-32' id='auto-fit'>
+	<section class='grid p-4 mx-auto lg:mx-32 lg:grid-cols-4'>
 		<slot />
 	</section>
 </article>
@@ -21,7 +21,7 @@ const { title, subtitle } = Astro.props;
 	section > * {
 		padding: 0.5rem;
 	}
-	#auto-fit {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	#grid-start:nth-child(5) {
+		grid-column-start: 2;
 	}
 </style>
