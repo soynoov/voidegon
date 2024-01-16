@@ -1,25 +1,22 @@
 ---
 interface Props {
-	src: string;
-	href: string;
-	name: string;
+  src: string;
+  href: string;
+  name: string;
 }
 
 const { src, href, name } = Astro.props;
 ---
 
-<div class='flex justify-center items-center flex-col' id='grid-start'>
-	<a href={href}>
-		<img src={src} class='rounded-lg' />
-	</a>
-	<h3 class='my-4 font-[caveat] font-semibold'>{name}</h3>
+<div class="flex justify-center items-center flex-col">
+  <a href={href}>
+    <img src={src} class="rounded-lg" />
+  </a>
+  <h3 class="my-4 font-[caveat] font-semibold">{name}</h3>
 </div>
 
 <style>
-	img {
-		height: 7cm;
-	}
-	#grid-start:nth-child(5) {
-		grid-column-start: 2;
-	}
+  img {
+    height: 7cm;
+  }
 </style>
