@@ -1,34 +1,54 @@
 ---
-
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
-<header class="flex justify-between hover:shadow-xl">
-  <div>
-    <a href="/">
-      <img src="/logo.png" alt="Logotype" class="w-auto h-10" />
-      <h1 class="text-2xl font-bold ml-4">Voidegon</h1>
-    </a>
-  </div>
-  <nav class="text-xl text-[--light] font-semibold">
-    <ul>
-      <li><a href="/diaries">Diarios</a></li>
-      <li><a href="/characters">Personajes</a></li>
-      <li><a href="/map">Mapa</a></li>
-    </ul>
-  </nav>
+<header class='flex justify-between hover:shadow-xl'>
+	<div>
+		<a class={currentPath === '' ? 'active' : ''} href='/'>
+			<img src='/logo.png' alt='Logotype' class='w-auto h-10' />
+			<h1 class='text-2xl font-bold ml-4'>Voidegon</h1>
+		</a>
+	</div>
+	<nav class='text-xl text-[--light] font-medium'>
+		<ul>
+			<li>
+				<a
+					class={currentPath.includes('diaries') ? 'active' : ''}
+					href='/diaries'>Diarios</a
+				>
+			</li>
+			<li>
+				<a
+					class={currentPath.includes('characters') ? 'active' : ''}
+					href='/characters'>Personajes</a
+				>
+			</li>
+			<li>
+				<a
+					class={currentPath.includes('map') ? 'active' : ''}
+					href='/map'>Mapa</a
+				>
+			</li>
+		</ul>
+	</nav>
 </header>
 
 <style>
-  header,
-  ul > li {
-    padding: 0.5rem 1rem;
-  }
-  header > div > a,
-  header > nav > ul {
-    display: flex;
-    align-items: center;
-  }
-  ul > li > a:hover {
-    color: var(--white);
-  }
+	header,
+	ul > li {
+		padding: 0.5rem 1rem;
+	}
+	header > div > a,
+	header > nav > ul {
+		display: flex;
+		align-items: center;
+	}
+	ul > li > a:hover {
+		color: var(--white);
+	}
+	.active {
+		font-weight: bold;
+		color: var(--light);
+	}
 </style>

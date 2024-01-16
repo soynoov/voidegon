@@ -1,17 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout title="| Voidegon">
-  <Header />
-  <main class="h-screen">
-    <h1 class="flex justify-center items-center">Welcome to Voidegon!</h1>
-  </main>
+<Layout title='| Voidegon'>
+	<Header />
+	<main class='flex justify-center'>
+		<h1 class='self-center font-[unbounded] text-4xl'>
+			Welcome to Voidegon!
+		</h1>
+	</main>
 </Layout>
 
 <style>
-  body {
-    overflow-y: hidden;
-  }
+	body {
+		overflow-y: hidden;
+	}
+	main {
+		background: url('../img/background.png') bottom/cover;
+		height: 95dvh;
+	}
+	h1 {
+		color: var(--light);
+		font-weight: 900;
+	}
 </style>
