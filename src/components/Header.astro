@@ -7,7 +7,7 @@ const currentPath = pathname.slice(1);
 	<div>
 		<a class={currentPath === '' ? 'active' : ''} href='/'>
 			<img src='/logo.png' alt='Logotype' class='w-auto h-10' />
-			<h1 class='text-2xl font-bold ml-4'>Voidegon</h1>
+			<h1 class='text-2xl font-bold ml-4 text-[--light]'>Voidegon</h1>
 		</a>
 	</div>
 	<nav class='text-xl text-[--light] font-medium'>
@@ -44,11 +44,23 @@ const currentPath = pathname.slice(1);
 		display: flex;
 		align-items: center;
 	}
-	ul > li > a:hover {
+	a:hover {
 		color: var(--white);
 	}
 	.active {
 		font-weight: bold;
 		color: var(--light);
+	}
+	.active:hover {
+		color: var(--light);
+	}
+
+	@media (max-width: 600px) {
+		header > div {
+			margin: 0 auto;
+		}
+		header > nav {
+			display: none;
+		}
 	}
 </style>
