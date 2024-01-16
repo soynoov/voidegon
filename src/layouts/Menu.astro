@@ -12,7 +12,7 @@ const { title, subtitle } = Astro.props;
 		<h1 class='text-[--title] font-[pacifico] text-2xl'>{title}</h1>
 		<h2 class='text-[--subtitle] font-[lobster] text-lg'>{subtitle}</h2>
 	</section>
-	<section class='grid grid-flow-col p-4 mx-32'>
+	<section class='grid p-4 m-auto lg:mx-32' id='auto-fit'>
 		<slot />
 	</section>
 </article>
@@ -20,5 +20,8 @@ const { title, subtitle } = Astro.props;
 <style>
 	section > * {
 		padding: 0.5rem;
+	}
+	#auto-fit {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 </style>
