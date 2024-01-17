@@ -9,7 +9,17 @@ import Stats from '../../components/Stats.astro';
 <Layout title=''>
 	<Header />
 	<Menu title='Tablas' subtitle='' />
-	<Stats fue={10} des={10} con={10} int={10} sab={10} car={10} />
+	<Stats
+		fue={16}
+		des={10}
+		con={14}
+		int={8}
+		sab={12}
+		car={16}
+		mod={['fue', '2', 'car', '1']}
+		com={['sab', 'car']}
+	/>
+	<Stats fue={14} des={0} con={-3} int={23} sab={4} car={10} />
 
 	<table class='mx-[10vw] my-4 skills'>
 		<tr>

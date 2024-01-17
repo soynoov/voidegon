@@ -6,17 +6,44 @@ interface Props {
 	int: number;
 	sab: number;
 	car: number;
+	mod?: Array<string>; // Parametro Opcional
+	com?: Array<string>; // Parametro Opcional
 }
 
-const { fue, des, con, int, sab, car } = Astro.props;
+const { fue, des, con, int, sab, car, mod, com } = Astro.props;
+
+// Modificar los potenciadores de las Stats Base
+function modificadorStats(stat = 0) {
+	let modificador = 0;
+
+	if (stat < 0) {
+		stat = 0;
+	}
+
+	if (stat > 10) {
+		modificador = Math.floor((stat - 10) / 2); // Ajustado el cálculo aquí
+	} else if (stat > 0 && stat <= 10) {
+		modificador = -Math.ceil((10 - stat) / 2);
+	} else if (stat <= 0) {
+		modificador = -5;
+	}
+
+	if (modificador >= 0) {
+		return `+${modificador}`;
+	}
+
+	return modificador;
+}
+
+function aplicarModificador() {}
 ---
 
 <div>
-	<table class='mx-[10vw] my-4'>
+	<table class='m-4 p-4'>
 		<tr>
 			<td>FUE</td>
 			<td>{fue}</td>
-			<td>[+0]</td>
+			<td>[{modificadorStats(fue)}]</td>
 			<td>|</td>
 			<td>1</td>
 			<td>+1</td>
@@ -27,7 +54,7 @@ const { fue, des, con, int, sab, car } = Astro.props;
 		<tr>
 			<td>DES</td>
 			<td>{des}</td>
-			<td>[+2]</td>
+			<td>[{modificadorStats(des)}]</td>
 			<td>|</td>
 			<td>-</td>
 			<td>+2</td>
@@ -37,7 +64,7 @@ const { fue, des, con, int, sab, car } = Astro.props;
 		</tr><tr>
 			<td>CON</td>
 			<td>{con}</td>
-			<td>[+0]</td>
+			<td>[{modificadorStats(con)}]</td>
 			<td>|</td>
 			<td>-</td>
 			<td>+0</td>
@@ -47,7 +74,7 @@ const { fue, des, con, int, sab, car } = Astro.props;
 		</tr><tr>
 			<td>INT</td>
 			<td>{int}</td>
-			<td>[+3]</td>
+			<td>[{modificadorStats(int)}]</td>
 			<td>|</td>
 			<td>-</td>
 			<td>+3</td>
@@ -57,7 +84,7 @@ const { fue, des, con, int, sab, car } = Astro.props;
 		</tr><tr>
 			<td>SAB</td>
 			<td>{sab}</td>
-			<td>[+2]</td>
+			<td>[{modificadorStats(sab)}]</td>
 			<td>|</td>
 			<td>-</td>
 			<td>+2</td>
@@ -67,7 +94,7 @@ const { fue, des, con, int, sab, car } = Astro.props;
 		</tr><tr>
 			<td>CAR</td>
 			<td>{car}</td>
-			<td>[-1]</td>
+			<td>[{modificadorStats(car)}]</td>
 			<td>|</td>
 			<td>2</td>
 			<td>+1</td>
@@ -81,5 +108,28 @@ const { fue, des, con, int, sab, car } = Astro.props;
 <style>
 	td {
 		padding: 0.5rem;
+	}
+	td:nth-of-type(1) {
+		color: var(--subtitle);
+		font-weight: bold;
+	}
+	td:nth-of-type(2) {
+		color: var(--grey);
+	}
+	td:nth-of-type(6) {
+		color: var(--date);
+	}
+	td:nth-of-type(9) {
+		color: var(--warning);
+	}
+	td:nth-of-type(2),
+	td:nth-of-type(3),
+	td:nth-of-type(5),
+	td:nth-of-type(6),
+	td:nth-of-type(9) {
+		font-family: 'pacifico';
+	}
+	td:nth-of-type(8) {
+		font-family: 'caveat';
 	}
 </style>
