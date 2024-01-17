@@ -1,0 +1,130 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import MainTitle from "../../components/MainTitle.astro";
+import Menu from "../../layouts/Menu.astro";
+---
+
+<Layout title="">
+  <Header />
+  <Menu title="Tablas" subtitle="" />
+  <div>
+    <table class="mx-[10vw] my-4">
+      <tr>
+        <td>FUE</td>
+        <td>10</td>
+        <td>[+0]</td>
+        <td>|</td>
+        <td>1</td>
+        <td>+1</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+1</td>
+      </tr>
+      <tr>
+        <td>DES</td>
+        <td>14</td>
+        <td>[+2]</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+2</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+2</td>
+      </tr><tr>
+        <td>CON</td>
+        <td>10</td>
+        <td>[+0]</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+0</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+0</td>
+      </tr><tr>
+        <td>INT</td>
+        <td>16</td>
+        <td>[+3]</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+3</td>
+        <td>|</td>
+        <td>x</td>
+        <td>+5</td>
+      </tr><tr>
+        <td>SAB</td>
+        <td>14</td>
+        <td>[+2]</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+2</td>
+        <td>|</td>
+        <td>x</td>
+        <td>+4</td>
+      </tr><tr>
+        <td>CAR</td>
+        <td>8</td>
+        <td>[-1]</td>
+        <td>|</td>
+        <td>2</td>
+        <td>+1</td>
+        <td>|</td>
+        <td>-</td>
+        <td>+1</td>
+      </tr>
+    </table>
+    <table class="mx-[10vw] my-4 skills">
+      <tr>
+        <td>Acrobacias</td>
+        <td>[-]</td>
+        <td>+2</td>
+        <td>+2</td>
+      </tr>
+      <tr>
+        <td>Atletismo</td>
+        <td>[-]</td>
+        <td>+1</td>
+        <td>+1</td>
+      </tr>
+      <tr>
+        <td>C. Arcano</td>
+        <td>[x]</td>
+        <td>+1</td>
+        <td>+3</td>
+      </tr>
+    </table>
+  </div>
+</Layout>
+
+<style>
+  td:first-child {
+    color: var(--subtitle);
+    font-weight: bold;
+  }
+  td:nth-child(2) {
+    color: #666;
+    font-family: "pacifico";
+  }
+  td:nth-child(6),
+  .skills td:nth-child(3) {
+    color: #dcbd4c;
+  }
+  td:nth-child(9),
+  .skills td:nth-child(4) {
+    color: var(--warning);
+  }
+  .skills td {
+    padding: 0.5rem 1rem;
+  }
+  td {
+    padding: 1rem;
+  }
+  table {
+    border: solid #ccc 5px;
+  }
+  .skills td:nth-child(2) {
+    padding: 0 2rem;
+    color: #666;
+    font-family: "caveat";
+  }
+</style>
