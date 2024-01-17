@@ -76,21 +76,129 @@ import Menu from "../../layouts/Menu.astro";
     <table class="mx-[10vw] my-4 skills">
       <tr>
         <td>Acrobacias</td>
+        <td>(DES)</td>
         <td>[-]</td>
         <td>+2</td>
         <td>+2</td>
       </tr>
       <tr>
         <td>Atletismo</td>
+        <td>(FUE)</td>
         <td>[-]</td>
         <td>+1</td>
         <td>+1</td>
       </tr>
       <tr>
         <td>C. Arcano</td>
+        <td>(SAB)</td>
         <td>[x]</td>
         <td>+1</td>
         <td>+3</td>
+      </tr>
+      <tr>
+        <td>Engaño</td>
+        <td>(CAR)</td>
+        <td>[x]</td>
+        <td>+0</td>
+        <td>+2</td>
+      </tr>
+      <tr>
+        <td>Historia</td>
+        <td>(SAB)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Interpretación</td>
+        <td>(CAR)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Intimidación</td>
+        <td>(CAR)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Investigación</td>
+        <td>(INT)</td>
+        <td>[-]</td>
+        <td>+2</td>
+        <td>+2</td>
+      </tr>
+      <tr>
+        <td>Juego de Manos</td>
+        <td>(DES)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Medicina</td>
+        <td>(SAB)</td>
+        <td>[x]</td>
+        <td>+1</td>
+        <td>+3</td>
+      </tr>
+      <tr>
+        <td>Naturaleza</td>
+        <td>(SAB)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Percepción</td>
+        <td>(INT)</td>
+        <td>[-]</td>
+        <td>+1</td>
+        <td>+1</td>
+      </tr>
+      <tr>
+        <td>Perspicacia</td>
+        <td>(INT)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Persuasión</td>
+        <td>(CAR)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Religión</td>
+        <td>(SAB)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Sigilo</td>
+        <td>(DES)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
+      </tr>
+      <tr>
+        <td>Supervivencia</td>
+        <td>(SAB)</td>
+        <td>[x]</td>
+        <td>+0</td>
+        <td>+2</td>
+      </tr>
+      <tr>
+        <td>T. con Animales</td>
+        <td>(SAB)</td>
+        <td>[-]</td>
+        <td>+0</td>
+        <td>+0</td>
       </tr>
     </table>
   </div>
@@ -106,15 +214,15 @@ import Menu from "../../layouts/Menu.astro";
     font-family: "pacifico";
   }
   td:nth-child(6),
-  .skills td:nth-child(3) {
+  .skills td:nth-child(4) {
     color: #dcbd4c;
   }
   td:nth-child(9),
-  .skills td:nth-child(4) {
+  .skills td:nth-child(5) {
     color: var(--warning);
   }
   .skills td {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
   }
   td {
     padding: 1rem;
@@ -122,9 +230,15 @@ import Menu from "../../layouts/Menu.astro";
   table {
     border: solid #ccc 5px;
   }
+  .skills td:nth-child(3),
   .skills td:nth-child(2) {
     padding: 0 2rem;
     color: #666;
+  }
+  .skills td:nth-child(3) {
     font-family: "caveat";
+  }
+  .skills td:nth-child(2) {
+    font-family: "lexend";
   }
 </style>
