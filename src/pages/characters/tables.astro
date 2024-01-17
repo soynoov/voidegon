@@ -1,244 +1,181 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
-import MainTitle from "../../components/MainTitle.astro";
-import Menu from "../../layouts/Menu.astro";
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import MainTitle from '../../components/MainTitle.astro';
+import Menu from '../../layouts/Menu.astro';
+import Stats from '../../components/Stats.astro';
 ---
 
-<Layout title="">
-  <Header />
-  <Menu title="Tablas" subtitle="" />
-  <div>
-    <table class="mx-[10vw] my-4">
-      <tr>
-        <td>FUE</td>
-        <td>10</td>
-        <td>[+0]</td>
-        <td>|</td>
-        <td>1</td>
-        <td>+1</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+1</td>
-      </tr>
-      <tr>
-        <td>DES</td>
-        <td>14</td>
-        <td>[+2]</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+2</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+2</td>
-      </tr><tr>
-        <td>CON</td>
-        <td>10</td>
-        <td>[+0]</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+0</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+0</td>
-      </tr><tr>
-        <td>INT</td>
-        <td>16</td>
-        <td>[+3]</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+3</td>
-        <td>|</td>
-        <td>x</td>
-        <td>+5</td>
-      </tr><tr>
-        <td>SAB</td>
-        <td>14</td>
-        <td>[+2]</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+2</td>
-        <td>|</td>
-        <td>x</td>
-        <td>+4</td>
-      </tr><tr>
-        <td>CAR</td>
-        <td>8</td>
-        <td>[-1]</td>
-        <td>|</td>
-        <td>2</td>
-        <td>+1</td>
-        <td>|</td>
-        <td>-</td>
-        <td>+1</td>
-      </tr>
-    </table>
-    <table class="mx-[10vw] my-4 skills">
-      <tr>
-        <td>Acrobacias</td>
-        <td>(DES)</td>
-        <td>[-]</td>
-        <td>+2</td>
-        <td>+2</td>
-      </tr>
-      <tr>
-        <td>Atletismo</td>
-        <td>(FUE)</td>
-        <td>[-]</td>
-        <td>+1</td>
-        <td>+1</td>
-      </tr>
-      <tr>
-        <td>C. Arcano</td>
-        <td>(SAB)</td>
-        <td>[x]</td>
-        <td>+1</td>
-        <td>+3</td>
-      </tr>
-      <tr>
-        <td>Engaño</td>
-        <td>(CAR)</td>
-        <td>[x]</td>
-        <td>+0</td>
-        <td>+2</td>
-      </tr>
-      <tr>
-        <td>Historia</td>
-        <td>(SAB)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Interpretación</td>
-        <td>(CAR)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Intimidación</td>
-        <td>(CAR)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Investigación</td>
-        <td>(INT)</td>
-        <td>[-]</td>
-        <td>+2</td>
-        <td>+2</td>
-      </tr>
-      <tr>
-        <td>Juego de Manos</td>
-        <td>(DES)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Medicina</td>
-        <td>(SAB)</td>
-        <td>[x]</td>
-        <td>+1</td>
-        <td>+3</td>
-      </tr>
-      <tr>
-        <td>Naturaleza</td>
-        <td>(SAB)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Percepción</td>
-        <td>(INT)</td>
-        <td>[-]</td>
-        <td>+1</td>
-        <td>+1</td>
-      </tr>
-      <tr>
-        <td>Perspicacia</td>
-        <td>(INT)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Persuasión</td>
-        <td>(CAR)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Religión</td>
-        <td>(SAB)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Sigilo</td>
-        <td>(DES)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-      <tr>
-        <td>Supervivencia</td>
-        <td>(SAB)</td>
-        <td>[x]</td>
-        <td>+0</td>
-        <td>+2</td>
-      </tr>
-      <tr>
-        <td>T. con Animales</td>
-        <td>(SAB)</td>
-        <td>[-]</td>
-        <td>+0</td>
-        <td>+0</td>
-      </tr>
-    </table>
-  </div>
+<Layout title=''>
+	<Header />
+	<Menu title='Tablas' subtitle='' />
+	<Stats fue={10} des={10} con={10} int={10} sab={10} car={10} />
+
+	<table class='mx-[10vw] my-4 skills'>
+		<tr>
+			<td>Acrobacias</td>
+			<td>(DES)</td>
+			<td>[-]</td>
+			<td>+2</td>
+			<td>+2</td>
+		</tr>
+		<tr>
+			<td>Atletismo</td>
+			<td>(FUE)</td>
+			<td>[-]</td>
+			<td>+1</td>
+			<td>+1</td>
+		</tr>
+		<tr>
+			<td>C. Arcano</td>
+			<td>(SAB)</td>
+			<td>[x]</td>
+			<td>+1</td>
+			<td>+3</td>
+		</tr>
+		<tr>
+			<td>Engaño</td>
+			<td>(CAR)</td>
+			<td>[x]</td>
+			<td>+0</td>
+			<td>+2</td>
+		</tr>
+		<tr>
+			<td>Historia</td>
+			<td>(SAB)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Interpretación</td>
+			<td>(CAR)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Intimidación</td>
+			<td>(CAR)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Investigación</td>
+			<td>(INT)</td>
+			<td>[-]</td>
+			<td>+2</td>
+			<td>+2</td>
+		</tr>
+		<tr>
+			<td>Juego de Manos</td>
+			<td>(DES)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Medicina</td>
+			<td>(SAB)</td>
+			<td>[x]</td>
+			<td>+1</td>
+			<td>+3</td>
+		</tr>
+		<tr>
+			<td>Naturaleza</td>
+			<td>(SAB)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Percepción</td>
+			<td>(INT)</td>
+			<td>[-]</td>
+			<td>+1</td>
+			<td>+1</td>
+		</tr>
+		<tr>
+			<td>Perspicacia</td>
+			<td>(INT)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Persuasión</td>
+			<td>(CAR)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Religión</td>
+			<td>(SAB)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Sigilo</td>
+			<td>(DES)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+		<tr>
+			<td>Supervivencia</td>
+			<td>(SAB)</td>
+			<td>[x]</td>
+			<td>+0</td>
+			<td>+2</td>
+		</tr>
+		<tr>
+			<td>T. con Animales</td>
+			<td>(SAB)</td>
+			<td>[-]</td>
+			<td>+0</td>
+			<td>+0</td>
+		</tr>
+	</table>
 </Layout>
 
 <style>
-  td:first-child {
-    color: var(--subtitle);
-    font-weight: bold;
-  }
-  td:nth-child(2) {
-    color: #666;
-    font-family: "pacifico";
-  }
-  td:nth-child(6),
-  .skills td:nth-child(4) {
-    color: #dcbd4c;
-  }
-  td:nth-child(9),
-  .skills td:nth-child(5) {
-    color: var(--warning);
-  }
-  .skills td {
-    padding: 0.4rem 1rem;
-  }
-  td {
-    padding: 1rem;
-  }
-  table {
-    border: solid #ccc 5px;
-  }
-  .skills td:nth-child(3),
-  .skills td:nth-child(2) {
-    padding: 0 2rem;
-    color: #666;
-  }
-  .skills td:nth-child(3) {
-    font-family: "caveat";
-  }
-  .skills td:nth-child(2) {
-    font-family: "lexend";
-  }
+	td:first-child {
+		color: var(--subtitle);
+		font-weight: bold;
+	}
+	td:nth-child(2) {
+		color: #666;
+		font-family: 'pacifico';
+	}
+	td:nth-child(6),
+	.skills td:nth-child(4) {
+		color: #dcbd4c;
+	}
+	td:nth-child(9),
+	.skills td:nth-child(5) {
+		color: var(--warning);
+	}
+	.skills td {
+		padding: 0.4rem 1rem;
+	}
+	td {
+		padding: 1rem;
+	}
+	table {
+		border: solid #ccc 5px;
+	}
+	.skills td:nth-child(3),
+	.skills td:nth-child(2) {
+		padding: 0 2rem;
+		color: #666;
+	}
+	.skills td:nth-child(3) {
+		font-family: 'caveat';
+	}
+	.skills td:nth-child(2) {
+		font-family: 'lexend';
+	}
 </style>

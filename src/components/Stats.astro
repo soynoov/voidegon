@@ -1,0 +1,85 @@
+---
+interface Props {
+	fue: number;
+	des: number;
+	con: number;
+	int: number;
+	sab: number;
+	car: number;
+}
+
+const { fue, des, con, int, sab, car } = Astro.props;
+---
+
+<div>
+	<table class='mx-[10vw] my-4'>
+		<tr>
+			<td>FUE</td>
+			<td>{fue}</td>
+			<td>[+0]</td>
+			<td>|</td>
+			<td>1</td>
+			<td>+1</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+1</td>
+		</tr>
+		<tr>
+			<td>DES</td>
+			<td>{des}</td>
+			<td>[+2]</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+2</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+2</td>
+		</tr><tr>
+			<td>CON</td>
+			<td>{con}</td>
+			<td>[+0]</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+0</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+0</td>
+		</tr><tr>
+			<td>INT</td>
+			<td>{int}</td>
+			<td>[+3]</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+3</td>
+			<td>|</td>
+			<td>x</td>
+			<td>+5</td>
+		</tr><tr>
+			<td>SAB</td>
+			<td>{sab}</td>
+			<td>[+2]</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+2</td>
+			<td>|</td>
+			<td>x</td>
+			<td>+4</td>
+		</tr><tr>
+			<td>CAR</td>
+			<td>{car}</td>
+			<td>[-1]</td>
+			<td>|</td>
+			<td>2</td>
+			<td>+1</td>
+			<td>|</td>
+			<td>-</td>
+			<td>+1</td>
+		</tr>
+	</table>
+</div>
+
+<style>
+	td {
+		padding: 0.5rem;
+	}
+</style>
