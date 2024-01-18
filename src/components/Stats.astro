@@ -6,8 +6,8 @@ interface Props {
   int: number;
   sab: number;
   car: number;
-  mod: Array<string>; // Parametro Opcional
-  com: Array<string>; // Parametro Opcional
+  mod: Array<number>;
+  com: Array<number>;
 }
 
 const { fue, des, con, int, sab, car, mod, com } = Astro.props;
@@ -40,9 +40,23 @@ function modificadorStats(stat = 0) {
   return modificador;
 }
 
-// Aplicar o no el Modificador
-function aplicarModificador(stat = "") {
-  for (let i = 0; i < mod.length; i++) {}
+// Aplicamos los modificadores de la Clase
+function aplicarStats(x = 0) {
+  if (mod[x - 1] == 0) {
+    return "-";
+  } else {
+    return mod[x - 1];
+  }
+}
+
+// Aplicamos las Competencias
+function competenciasStats(x = 0) {
+  switch (com[x - 1]) {
+    case 0:
+      return "-";
+    case 1:
+      return "x";
+  }
 }
 ---
 
@@ -53,69 +67,74 @@ function aplicarModificador(stat = "") {
       <td>{numeroAbsoluto(fue)}</td>
       <td>[{modificadorStats(fue)}]</td>
       <td>|</td>
-      <td>{aplicarModificador("fue")}</td>
-      <td>+1</td>
+      <td>{aplicarStats(1)}</td>
+      <td></td>
       <td>|</td>
-      <td>-</td>
-      <td>+1</td>
+      <td>{competenciasStats(1)}</td>
+      <td></td>
     </tr>
     <tr>
       <td>DES</td>
       <td>{numeroAbsoluto(des)}</td>
       <td>[{modificadorStats(des)}]</td>
       <td>|</td>
-      <td>-</td>
-      <td>+2</td>
+      <td>{aplicarStats(2)}</td>
+      <td>{modificadorStats(des + mod[1] * 2)}</td>
       <td>|</td>
-      <td>-</td>
-      <td>+2</td>
+      <td>{competenciasStats(2)}</td>
+      <td>{com[1] === 1 ? modificadorStats(des * 2) : modificadorStats(des)}</td
+      >
     </tr><tr>
       <td>CON</td>
       <td>{numeroAbsoluto(con)}</td>
       <td>[{modificadorStats(con)}]</td>
       <td>|</td>
-      <td>-</td>
-      <td>+0</td>
+      <td>{aplicarStats(3)}</td>
+      <td>{modificadorStats(con + mod[2] * 2)}</td>
       <td>|</td>
-      <td>-</td>
-      <td>+0</td>
+      <td>{competenciasStats(3)}</td>
+      <td>{com[2] === 1 ? modificadorStats(con * 2) : modificadorStats(con)}</td
+      >
     </tr><tr>
       <td>INT</td>
       <td>{numeroAbsoluto(int)}</td>
       <td>[{modificadorStats(int)}]</td>
       <td>|</td>
-      <td>-</td>
-      <td>+3</td>
+      <td>{aplicarStats(4)}</td>
+      <td>{modificadorStats(int + mod[3] * 2)}</td>
       <td>|</td>
-      <td>x</td>
-      <td>+5</td>
+      <td>{competenciasStats(4)}</td>
+      <td>{com[3] === 1 ? modificadorStats(int * 2) : modificadorStats(int)}</td
+      >
     </tr><tr>
       <td>SAB</td>
       <td>{numeroAbsoluto(sab)}</td>
       <td>[{modificadorStats(sab)}]</td>
       <td>|</td>
-      <td>-</td>
-      <td>+2</td>
+      <td>{aplicarStats(5)}</td>
+      <td>{modificadorStats(sab + mod[4] * 2)}</td>
       <td>|</td>
-      <td>x</td>
-      <td>+4</td>
+      <td>{competenciasStats(5)}</td>
+      <td>{com[4] === 1 ? modificadorStats(sab * 2) : modificadorStats(sab)}</td
+      >
     </tr><tr>
       <td>CAR</td>
       <td>{numeroAbsoluto(car)}</td>
       <td>[{modificadorStats(car)}]</td>
       <td>|</td>
-      <td>2</td>
-      <td>+1</td>
+      <td>{aplicarStats(6)}</td>
+      <td>{modificadorStats(car + mod[5] * 2)}</td>
       <td>|</td>
-      <td>-</td>
-      <td>+1</td>
+      <td>{competenciasStats(6)}</td>
+      <td>{com[5] === 1 ? modificadorStats(car * 2) : modificadorStats(car)}</td
+      >
     </tr>
   </table>
 </div>
 
 <style>
   td {
-    padding: 0.5rem;
+    padding: 0.35rem 0.535rem;
   }
   td:nth-of-type(1) {
     color: var(--subtitle);

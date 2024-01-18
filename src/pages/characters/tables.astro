@@ -4,197 +4,31 @@ import Header from "../../components/Header.astro";
 import MainTitle from "../../components/MainTitle.astro";
 import Menu from "../../layouts/Menu.astro";
 import Stats from "../../components/Stats.astro";
+import Skills from "../../components/Skills.astro";
 ---
 
 <Layout title="">
   <Header />
   <Menu title="Tablas" subtitle="" />
-  <Stats
-    fue={16}
-    des={10}
-    con={14}
-    int={8}
-    sab={12}
-    car={16}
-    mod={["fue", "2", "car", "1"]}
-    com={["sab", "car"]}
-  />
-  <Stats
-    fue={14}
-    des={0}
-    con={-3}
-    int={23}
-    sab={4}
-    car={10}
-    mod={["car", "3"]}
-    com={["sab"]}
-  />
-
-  <table class="mx-[10vw] my-4 skills">
-    <tr>
-      <td>Acrobacias</td>
-      <td>(DES)</td>
-      <td>[-]</td>
-      <td>+2</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>Atletismo</td>
-      <td>(FUE)</td>
-      <td>[-]</td>
-      <td>+1</td>
-      <td>+1</td>
-    </tr>
-    <tr>
-      <td>C. Arcano</td>
-      <td>(SAB)</td>
-      <td>[x]</td>
-      <td>+1</td>
-      <td>+3</td>
-    </tr>
-    <tr>
-      <td>Engaño</td>
-      <td>(CAR)</td>
-      <td>[x]</td>
-      <td>+0</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>Historia</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Interpretación</td>
-      <td>(CAR)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Intimidación</td>
-      <td>(CAR)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Investigación</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+2</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>Juego de Manos</td>
-      <td>(DES)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Medicina</td>
-      <td>(SAB)</td>
-      <td>[x]</td>
-      <td>+1</td>
-      <td>+3</td>
-    </tr>
-    <tr>
-      <td>Naturaleza</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Percepción</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+1</td>
-      <td>+1</td>
-    </tr>
-    <tr>
-      <td>Perspicacia</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Persuasión</td>
-      <td>(CAR)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Religión</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Sigilo</td>
-      <td>(DES)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Supervivencia</td>
-      <td>(SAB)</td>
-      <td>[x]</td>
-      <td>+0</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>T. con Animales</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-  </table>
+  <div class="flex justify-center mx-[40%]">
+    <Stats
+      fue={18}
+      des={18}
+      con={12}
+      int={10}
+      sab={8}
+      car={8}
+      mod={[1, 0, 0, 3, 0, 2]}
+      com={[0, 1, 0, 0, 1, 1]}
+    />
+  </div>
+  <div class="flex justify-center mx-[40%]">
+    <Skills />
+  </div>
 </Layout>
 
 <style>
-  td:first-child {
-    color: var(--subtitle);
-    font-weight: bold;
-  }
-  td:nth-child(2) {
-    color: #666;
-    font-family: "pacifico";
-  }
-  td:nth-child(6),
-  .skills td:nth-child(4) {
-    color: #dcbd4c;
-  }
-  td:nth-child(9),
-  .skills td:nth-child(5) {
-    color: var(--warning);
-  }
-  .skills td {
-    padding: 0.4rem 1rem;
-  }
-  td {
-    padding: 1rem;
-  }
-  table {
-    border: solid #ccc 5px;
-  }
-  .skills td:nth-child(3),
-  .skills td:nth-child(2) {
-    padding: 0 2rem;
-    color: #666;
-  }
-  .skills td:nth-child(3) {
-    font-family: "caveat";
-  }
-  .skills td:nth-child(2) {
-    font-family: "lexend";
+  div {
+    border: solid 5px var(--white);
   }
 </style>
