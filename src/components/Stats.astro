@@ -48,6 +48,12 @@ function aplicarStats(x = 0) {
     return mod[x - 1];
   }
 }
+// Le sumamos las Stats
+function sumarStats(stat = 0, x = 0) {
+  let modificador = modificadorStats(stat);
+  let suma = mod[x - 1];
+  return `+${modificador}`;
+}
 
 // Aplicamos las Competencias
 function competenciasStats(x = 0) {
@@ -68,7 +74,7 @@ function competenciasStats(x = 0) {
       <td>[{modificadorStats(fue)}]</td>
       <td>|</td>
       <td>{aplicarStats(1)}</td>
-      <td></td>
+      <td>{sumarStats(fue, 1)}</td>
       <td>|</td>
       <td>{competenciasStats(1)}</td>
       <td></td>
