@@ -1,44 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
-<Layout title='| Voidegon'>
-	<Header />
-	<main class='flex justify-center flex-col'>
-		<h1 class='self-center font-[unbounded] text-4xl'>
-			Welcome to Voidegon!
-		</h1>
-		<p class='text-center mt-4'>
-			Los acertijos en la Biblioteca (#roleplay) has de resolver.
-		</p>
-	</main>
+<Layout title="| Voidegon">
+  <Header />
+  <main class="flex justify-center flex-col">
+    <h1 class="self-center font-[unbounded] text-4xl">Welcome to Voidegon!</h1>
+    <p class="text-center mt-4">
+      Los acertijos en la Biblioteca (#roleplay) has de resolver.
+    </p>
+  </main>
 </Layout>
 
 <style>
-	body {
-		overflow-y: hidden;
-	}
-	main {
-		background: url('../img/background.png') bottom/cover;
-		height: 95dvh;
-	}
-	h1 {
-		color: var(--light);
-		font-weight: 900;
-	}
+  body {
+    overflow-y: hidden;
+  }
+  main {
+    background: url("/img/background.png") bottom/cover;
+    height: 95dvh;
+  }
+  h1 {
+    color: var(--light);
+    font-weight: 900;
+  }
 
-	@media (max-width: 600px) {
-		h1 {
-			text-align: center;
-			margin: 1rem;
-		}
-		main {
-			background:;
-		}
-		p {
-			margin: 1rem;
-			text-wrap: balance;
-		}
-	}
+  @media (max-width: 600px) {
+    h1 {
+      text-align: center;
+      margin: 1rem;
+    }
+    main {
+      background:;
+    }
+    p {
+      margin: 1rem;
+      text-wrap: balance;
+    }
+  }
 </style>

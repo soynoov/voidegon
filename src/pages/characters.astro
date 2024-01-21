@@ -1,14 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import MainTitle from "../components/MainTitle.astro";
+import Article from "../components/Article.astro";
+import Section from "../components/Section.astro";
 import Menu from "../layouts/Menu.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="| Personajes">
   <Header />
-  <MainTitle title="Personajes" />
-  <a href="characters/tables">
-    <Menu title="Personajes Jugables" subtitle="" />
-  </a>
+  <main>
+    <Article title="Personajes" opacity={0} />
+    <Section title="Personajes Jugables" />
+    <Menu>
+      <Card
+        name="Baren Valhice"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+      <Card
+        name="Enya Fendor"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+      <Card
+        name="Isidoro Matamoros"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+      <Card
+        name="Kenkart Silkson"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+      <Card
+        name="Kriv Coppernico"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+      <Card
+        name="Nyliss Avacynn"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+    </Menu>
+    <Section title="Personajes No Jugables" subtitle="Protagonistas" />
+    <Menu>
+      <Card
+        name="Almawrid"
+        img="/img/isidoro.png"
+        enlace="/characters/isidoro"
+      />
+    </Menu>
+  </main>
 </Layout>

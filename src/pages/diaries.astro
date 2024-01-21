@@ -1,48 +1,55 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import MainTitle from "../components/MainTitle.astro";
+import Article from "../components/Article.astro";
+import Section from "../components/Section.astro";
 import Menu from "../layouts/Menu.astro";
-import MenuCard from "../components/MenuCard.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="| Diarios">
   <Header />
-  <div>
-    <MainTitle title="Diarios de Viaje" />
-  </div>
-  <Menu title="Capítulo 1" subtitle="La Tierra Olvidada">
-    <MenuCard
-      src="/img/baren_book.png"
-      name="Baren Valhice"
-      href="diaries/baren_diary"
+  <main>
+    <Article
+      title="Diarios de Viaje"
+      img="/img/bg_diaries.png"
+      center="center"
+      opacity={0.75}
     />
-    <MenuCard
-      src="/img/enya_book.png"
-      name="Enya Fendor"
-      href="diaries/enya_diary"
-    />
-    <MenuCard
-      src="/img/isidoro_book.png"
-      name="Isidoro Matamoros"
-      href="diaries/isidoro_diary"
-    />
-    <MenuCard
-      src="/img/kenkart_book.png"
-      name="Kenkart Silkson"
-      href="diaries/kenkart_diary"
-    />
-    <MenuCard
-      src="/img/kriv_book.png"
-      name="Kriv Coppernico"
-      href="diaries/kriv_diary"
-    />
-    <MenuCard
-      src="/img/nyliss_book.png"
-      name="Nyliss Avacynn"
-      href="diaries/nyliss_diary"
-    />
-  </Menu>
+    <Section title="Capítulo 1" subtitle="La Tierra Olvidada" />
+    <Menu>
+      <Card
+        img="/img/baren_book.png"
+        name="Baren Valhice"
+        enlace="diaries/baren_diary"
+      />
+      <Card
+        img="/img/enya_book.png"
+        name="Enya Fendor"
+        enlace="diaries/enya_diary"
+      />
+      <Card
+        img="/img/isidoro_book.png"
+        name="Isidoro Matamoros"
+        enlace="diaries/isidoro_diary"
+      />
+      <Card
+        img="/img/kenkart_book.png"
+        name="Kenkart Silkson"
+        enlace="diaries/kenkart_diary"
+      />
+      <Card
+        img="/img/kriv_book.png"
+        name="Kriv Coppernico"
+        enlace="diaries/kriv_diary"
+      />
+      <Card
+        img="/img/nyliss_book.png"
+        name="Nyliss Avacynn"
+        enlace="diaries/nyliss_diary"
+      />
+    </Menu>
+  </main>
 </Layout>
 
 <style></style>

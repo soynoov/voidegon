@@ -3,7 +3,9 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<header class="flex justify-between hover:shadow-xl sticky top-0 bg-[--dark]">
+<header
+  class="flex justify-between hover:shadow-xl sticky top-0 bg-[--dark] z-50"
+>
   <div>
     <a class={currentPath === "" ? "active" : ""} href="/">
       <img src="/logo.png" alt="Logotype" class="w-auto h-10" />
@@ -60,7 +62,7 @@ const currentPath = pathname.slice(1);
   }
 
   @media (max-width: 600px) {
-    header > div {
+    header > * {
       margin: 0 auto;
     }
     header {

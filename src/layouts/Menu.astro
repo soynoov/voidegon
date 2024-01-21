@@ -1,24 +1,7 @@
 ---
-interface Props {
-  title: string;
-  subtitle: string;
-}
 
-const { title, subtitle } = Astro.props;
 ---
 
-<article>
-  <section class="text-center p-4">
-    <h1 class="text-[--title] font-[pacifico] text-2xl my-2">{title}</h1>
-    <h2 class="text-[--subtitle] font-[lobster] text-lg">{subtitle}</h2>
-  </section>
-  <section class="flex flex-wrap mx-[15vw] gap-8 m-4 px-4 justify-center">
-    <slot />
-  </section>
-</article>
-
-<style>
-  section > * {
-    padding: 0.5rem;
-  }
-</style>
+<section class="my-4 mx-[10vw] flex justify-center flex-wrap gap-8">
+  <slot />
+</section>
