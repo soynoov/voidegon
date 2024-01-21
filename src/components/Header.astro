@@ -44,6 +44,7 @@ const currentPath = pathname.slice(1);
   header,
   ul > li {
     padding: 0.5rem 1rem;
+    transition: transform 150ms ease-out;
   }
   header > div > a,
   header > nav > ul {
@@ -56,9 +57,15 @@ const currentPath = pathname.slice(1);
   .active {
     font-weight: bold;
     color: var(--light);
+    transform: none;
   }
   .active:hover {
     color: var(--light);
+    transform: none;
+  }
+
+  li:hover {
+    transform: scale(1.05);
   }
 
   @media (max-width: 600px) {
