@@ -1,0 +1,60 @@
+---
+interface Props {
+  exp: number;
+}
+
+const { exp } = Astro.props;
+const expUp = 600;
+const level = 2;
+---
+
+<article class="grid grid-cols-6 justify-around items-center">
+  <section class="col-span-2 justify-self-center">
+    <h6 class="text-[--title] font-[unbounded]">Monk</h6>
+  </section>
+  <section class="flex justify-between items-center col-span-2">
+    <p class="whitespace-nowrap">Nivel {level}</p>
+    <div class="bg-[--dark] w-[20vw] rounded-xl h-2 flex">
+      <div
+        class={`
+          w-[${exp}%]
+          rounded-xl
+      `}
+        id="exp"
+      >
+      </div>
+    </div>
+    <p>{exp}/{expUp}</p>
+  </section>
+  <section class="col-span-2 justify-self-center">
+    <h6 class="text-[--subtitle] font-[unbounded]">Tiefling</h6>
+  </section>
+</article>
+
+<style>
+  section > * {
+    margin: 0.5rem;
+  }
+  p {
+    font-family: "caveat";
+    font-weight: bold;
+  }
+  #exp {
+    background: linear-gradient(270deg, var(--date), var(--title), var(--date));
+    background-size: 600% 600%;
+
+    animation: linearGradient 10s ease infinite;
+  }
+
+  @keyframes linearGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

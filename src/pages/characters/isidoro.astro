@@ -1,34 +1,69 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Title from "../../components/Title.astro";
-import Info from "../../components/Info.astro";
+import Experience from "../../components/Experience.astro";
 import Stats from "../../components/Stats.astro";
 import Skills from "../../components/Skills.astro";
 ---
 
 <Layout title="">
   <Title title="Isidoro Matamoros" img="/img/isidoro/bg_isidoro.png" />
-  <Info clase="Monje" level={2} exp={355} />
-  <div class="flex justify-center mx-[40%]">
-    <Stats
-      fue={16}
-      des={16}
-      con={12}
-      int={10}
-      sab={10}
-      car={8}
-      mod={[1, 0, 0, 0, 0, 2]}
-      com={[0, 0, 0, 0, 1, 1]}
-      modcom={2}
-    />
-  </div>
-  <div class="flex justify-center mx-[40%]">
-    <Skills />
-  </div>
+  <main
+    class={`
+    grid grid-cols-6 auto-rows-auto gap-4
+    mx-auto w-[80vw]
+    justify-center
+  `}
+  >
+    <div class="col-span-6 mt-4 w-full">
+      <Experience exp={90} />
+    </div>
+    <div class="col-span-2">
+      <Stats
+        fue={16}
+        des={16}
+        con={12}
+        int={10}
+        sab={10}
+        car={8}
+        mod={[1, 0, 0, 0, 0, 2]}
+        com={[0, 0, 0, 0, 1, 1]}
+        modcom={2}
+      />
+    </div>
+    <div class="col-span-2 row-span-2 col-start-3 row-start-2 w-full">
+      <a href="" class="w-full">
+        <img
+          src="/img/isidoro/isidoro.png"
+          alt="Isidoro Matamoros"
+          class="rounded-xl w-full h-auto"
+        />
+      </a>
+    </div>
+    <div class="col-span-2">
+      <h6>Aguante</h6>
+    </div>
+    <div class="col-span-1 col-start-5 row-start-3">
+      <h6>Pies</h6>
+    </div>
+    <div class="col-span-1 col-start-6 row-start-3">
+      <h6>Competencias</h6>
+    </div>
+    <div class="col-span-6">
+      <Skills />
+    </div>
+  </main>
 </Layout>
 
 <style>
-  div {
-    border: solid 5px var(--white);
+  main > div {
+    cursor: default;
+    background-color: var(--gray);
+    border-radius: 0.75rem;
+    transition: transform 300ms ease;
+  }
+
+  main > div:hover {
+    transform: scale(1.01);
   }
 </style>
