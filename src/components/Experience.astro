@@ -32,14 +32,7 @@ medirXP(exp);
   <section class="flex justify-between items-center col-span-2">
     <p class="whitespace-nowrap">Nivel {level}</p>
     <div class="bg-[--dark] w-[20vw] rounded-xl h-2 flex">
-      <div
-        class={`
-          w-[${medirPor(exp).expPor}%]
-          rounded-xl
-      `}
-        id="exp"
-      >
-      </div>
+      <div class={`w-[${medirPor(exp).expPor}%] rounded-xl bg-[--date]`}></div>
     </div>
     <p>{exp}/{expUp}</p>
   </section>
@@ -55,23 +48,5 @@ medirXP(exp);
   p {
     font-family: "caveat";
     font-weight: bold;
-  }
-  #exp {
-    background: linear-gradient(270deg, var(--date), var(--title), var(--date));
-    background-size: 600% 600%;
-
-    animation: linearGradient 10s ease infinite;
-  }
-
-  @keyframes linearGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
   }
 </style>
