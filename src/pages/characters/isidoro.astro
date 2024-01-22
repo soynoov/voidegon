@@ -1,11 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Article from "../../components/Article.astro";
+import Title from "../../components/Title.astro";
+import Info from "../../components/Info.astro";
 import Stats from "../../components/Stats.astro";
 import Skills from "../../components/Skills.astro";
 ---
 
 <Layout title="">
+  <Title title="Isidoro Matamoros" img="/img/isidoro/bg_isidoro.png" />
+  <Info clase="Monje" level={2} exp={355} />
   <div class="flex justify-center mx-[40%]">
     <Stats
       fue={16}
