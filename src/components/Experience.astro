@@ -5,8 +5,8 @@ interface Props {
 
 const { exp } = Astro.props;
 
-let level = 1;
-let expUp = 300; // Establecemos el umbral inicial
+let level = 0;
+let expUp = 0;
 
 function medirXP(exp: number) {
   while (exp >= expUp) {
@@ -18,11 +18,12 @@ function medirXP(exp: number) {
 }
 
 function medirPor(exp: number) {
-  const expPor = Math.floor((exp / expUp) * 100);
+  let expPor = Math.floor((exp / expUp) * 100);
   return { expPor };
 }
 
 medirXP(exp);
+console.log(medirPor(exp).expPor);
 ---
 
 <article class="grid grid-cols-6 justify-around items-center">
@@ -32,7 +33,7 @@ medirXP(exp);
   <section class="flex justify-between items-center col-span-2">
     <p class="whitespace-nowrap">Nivel {level}</p>
     <div class="bg-[--dark] w-[20vw] rounded-xl h-2 flex">
-      <div class={`w-[${medirPor(exp).expPor}%] rounded-xl bg-[--date]`}></div>
+      <div class={`rounded-xl bg-[--date] w-[${medirPor(exp).expPor}%]`}></div>
     </div>
     <p>{exp}/{expUp}</p>
   </section>
@@ -47,6 +48,9 @@ medirXP(exp);
   }
   p {
     font-family: "caveat";
+    font-weight: bold;
+  }
+  h6 {
     font-weight: bold;
   }
 </style>
