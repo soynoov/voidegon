@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { exp } = Astro.props;
-
+let porcentaje = 0;
 let level = 0;
 let expUp = 0;
 
@@ -18,12 +18,12 @@ function medirXP(exp: number) {
 }
 
 function medirPor(exp: number) {
-  let expPor = Math.floor((exp / expUp) * 100);
-  return { expPor };
+  porcentaje = Math.floor((exp / expUp) * 100);
+  return porcentaje;
 }
 
 medirXP(exp);
-console.log(medirPor(exp).expPor);
+console.log(medirPor(exp));
 ---
 
 <article class="grid grid-cols-6 justify-around items-center">
@@ -33,7 +33,7 @@ console.log(medirPor(exp).expPor);
   <section class="flex justify-between items-center col-span-2">
     <p class="whitespace-nowrap">Nivel {level}</p>
     <div class="bg-[--dark] w-[20vw] rounded-xl h-2 flex">
-      <div class={`rounded-xl bg-[--date] w-[${medirPor(exp).expPor}%]`}></div>
+      <div class={`rounded-xl bg-[--date] w-[${porcentaje}%]`}></div>
     </div>
     <p>{exp}/{expUp}</p>
   </section>
