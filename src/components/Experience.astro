@@ -4,8 +4,25 @@ interface Props {
 }
 
 const { exp } = Astro.props;
-const expUp = 600;
-const level = 2;
+
+let level = 1;
+let expUp = 300; // Establecemos el umbral inicial
+
+function medirXP(exp: number) {
+  while (exp >= expUp) {
+    level++;
+    expUp += 300; // Incrementamos el umbral por cada nivel
+  }
+
+  return { level, expUp };
+}
+
+function medirPor(exp: number) {
+  const expPor = Math.floor((exp / expUp) * 100);
+  return { expPor };
+}
+
+medirXP(exp);
 ---
 
 <article class="grid grid-cols-6 justify-around items-center">
@@ -17,7 +34,7 @@ const level = 2;
     <div class="bg-[--dark] w-[20vw] rounded-xl h-2 flex">
       <div
         class={`
-          w-[${exp}%]
+          w-[${medirPor(exp).expPor}%]
           rounded-xl
       `}
         id="exp"
