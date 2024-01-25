@@ -31,7 +31,7 @@ import Section from '../../components/Section.astro';
 				/>
 				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
 			</summary>
-			<p class='text-justify p-4 px-10 -mt-8'>
+			<p class='-mt-8'>
 				<strong>[Día 0]:</strong>
 				Nuestros <span id='group'>protagonistas</span>, en busca de su
 				destino, han terminado en
@@ -72,7 +72,7 @@ import Section from '../../components/Section.astro';
 					sentenciada en un lugar donde nunca la encontrarían.
 				</li>
 			</ul>
-			<p class='text-justify p-4 px-10'>
+			<p class='-mt-4'>
 				Estos "héroes" convergen en la taberna de Murcia, conocida como
 				"The Bold Owl". Ahora, enfrentados a un destino compartido,
 				deben tomar decisiones cruciales en este nuevo día.
@@ -159,10 +159,16 @@ import Section from '../../components/Section.astro';
 	}
 
 	ul {
-		margin: 0 4rem;
+		margin: 0 3.5rem;
 		list-style: disc;
 	}
 	ul li {
 		margin-bottom: 1rem;
+		text-align: justify;
+	}
+
+	p {
+		padding: 1rem 2.5rem;
+		text-align: justify;
 	}
 </style>
