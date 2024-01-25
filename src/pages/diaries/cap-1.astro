@@ -1,35 +1,103 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Article from "../../components/Article.astro";
-import Section from "../../components/Section.astro";
+import Layout from '../../layouts/Layout.astro';
+import Article from '../../components/Article.astro';
+import Section from '../../components/Section.astro';
 ---
 
-<Layout title="| Capítulo 1">
-  <main>
-    <Article title="Capítulo 1" img="/img/map/murcia.png" center="top" />
-    <p class="m-8 px-14 mx-[20vw] text-justify text-balance">
-      Nos encontramos en las solitarias y tenebrosas tierras de
-      <span id="location">Murcia</span>, específicamente ███ █████ ████ después
-      de ███ ███████████ ██████████, también conocida como la creación de
-      ███████. En este momento, se avecina el renacimiento de uno de los
-      elementos en el planeta
-      <span id="location">Terra</span>. Sin embargo, este evento parece
-      diferente a los █████████ ███████████ ████ ████████ ██ █████████
-      ███████████. En esta ocasión, nuestros
-      <span id="group">Protagonistas</span> tendrán un papel crucial en la dirección
-      de la historia, tomando decisiones que modificarán el curso de los acontecimientos.
-      Acompáñame en esta aventura para explorar sus elecciones y analizar las consecuencias:
-    </p>
-    <details
-      class="bg-[--gray] m-4 mx-[20vw] rounded-xl cursor-pointer shadow-xl"
-    >
-      <summary class="list-none mb-4">
-        <Section title="Prólogo ~ Nacimiento del Dragón Blanco" />
-        <hr class="w-[55vw] mx-auto p-2 -mt-8" />
-      </summary>
-      <p class="text-center p-4 px-8 -mt-8"></p>
-    </details>
-  </main>
+<Layout title='| Capítulo 1'>
+	<main>
+		<Article title='Capítulo 1' img='/img/map/murcia.png' center='top' />
+		<p class='m-8 px-14 mx-[20vw] text-justify text-balance'>
+			Nos encontramos en las solitarias y tenebrosas tierras de
+			<span id='location'>Murcia</span>, específicamente ███ █████ ████
+			después de ███ ███████████ ██████████, también conocida como la
+			creación de ███████. En este momento, se avecina el ██████████ de
+			uno de los elementos en el planeta
+			<span id='location'>Terra</span>. Sin embargo, este evento parece
+			diferente a los █████████ ███████████ ████ ████████ ██ █████████
+			███████████. En esta ocasión, nuestros
+			<span id='group'>Protagonistas</span> tendrán un papel crucial en la
+			dirección de la historia, tomando decisiones que modificarán el curso
+			de los acontecimientos. Acompáñame en esta aventura para explorar sus
+			elecciones y analizar las consecuencias:
+		</p>
+		<details
+			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+		>
+			<summary class='list-none mb-4'>
+				<Section title='Prólogo ~ Nacimiento del Dragón Blanco' />
+				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			</summary>
+			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Laborum, quas libero! Excepturi, repellat explicabo perferendis
+				laborum blanditiis minus voluptate in id unde ipsam deserunt,
+				amet dolores nihil accusantium voluptatum eveniet.
+			</p>
+		</details>
+		<details
+			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+		>
+			<summary class='list-none mb-4'>
+				<Section title='Primer Act ~ Formando Vínculos' />
+				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			</summary>
+			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Laborum, quas libero! Excepturi, repellat explicabo perferendis
+				laborum blanditiis minus voluptate in id unde ipsam deserunt,
+				amet dolores nihil accusantium voluptatum eveniet.
+			</p>
+		</details>
+		<details
+			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+		>
+			<summary class='list-none mb-4'>
+				<Section title='Segundo Act ~ Asentando Bases' />
+				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			</summary>
+			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Laborum, quas libero! Excepturi, repellat explicabo perferendis
+				laborum blanditiis minus voluptate in id unde ipsam deserunt,
+				amet dolores nihil accusantium voluptatum eveniet.
+			</p>
+		</details>
+		<details
+			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+		>
+			<summary class='list-none mb-4'>
+				<Section title='Tercer Act ~ Desafios de Tir' />
+				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			</summary>
+			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Laborum, quas libero! Excepturi, repellat explicabo perferendis
+				laborum blanditiis minus voluptate in id unde ipsam deserunt,
+				amet dolores nihil accusantium voluptatum eveniet.
+			</p>
+		</details>
+		<details
+			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+		>
+			<summary class='list-none mb-4'>
+				<Section title='Cuarto Act ~ Soledad' />
+				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			</summary>
+			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Laborum, quas libero! Excepturi, repellat explicabo perferendis
+				laborum blanditiis minus voluptate in id unde ipsam deserunt,
+				amet dolores nihil accusantium voluptatum eveniet.
+			</p>
+		</details>
+	</main>
 </Layout>
 
-<style></style>
+<style>
+	details {
+		background-color: var(--gray);
+		border-radius: 0.75rem;
+		cursor: pointer;
+	}
+</style>
