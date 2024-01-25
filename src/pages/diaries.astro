@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import Article from "../components/Article.astro";
 import Section from "../components/Section.astro";
 import Menu from "../layouts/Menu.astro";
@@ -15,7 +14,9 @@ import Card from "../components/Card.astro";
       center="center"
       opacity={0.75}
     />
-    <Section title="Capítulo 1" subtitle="La Tierra Olvidada" />
+    <a href="/diaries/cap-1">
+      <Section title="Capítulo 1" subtitle="La Tierra Olvidada" />
+    </a>
     <Menu>
       <Card
         img="/img/baren/baren_book.png"

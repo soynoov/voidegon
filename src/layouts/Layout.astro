@@ -36,7 +36,14 @@ const { title } = Astro.props;
     --subtitle: #f89d1f;
     --section: #00a1b9;
     --warning: #ff5349;
+    /** Span */
+    --name: #fff;
+    --location: #a1a556;
+    --group: #008080;
     --date: #dcbd4c;
+    --event: #ad70a4;
+    --deity: #ac0940;
+    --object: #ff4fa7;
   }
   html {
     font-family: "Lexend";
@@ -45,5 +52,31 @@ const { title } = Astro.props;
   }
   body::-webkit-scrollbar {
     display: none; /* Ocultar scroll */
+  }
+
+  /** Span */
+  span#name {
+    color: var(--name);
+  }
+  span#location {
+    color: var(--location);
+  }
+  span#group {
+    color: var(--group);
+  }
+  span#date {
+    color: var(--date);
+  }
+  span#event {
+    color: var(--event);
+  }
+  span#deity {
+    color: var(--deity);
+  }
+  span#object {
+    color: var(--object);
+  }
+  span#hidden {
+    display: none;
   }
 </style>
