@@ -22,7 +22,7 @@ import Section from '../../components/Section.astro';
 			elecciones y analizar las consecuencias:
 		</p>
 		<details
-			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform open:mb-8'
 		>
 			<summary class='list-none mb-4 text-[--warning]'>
 				<Section
@@ -35,29 +35,44 @@ import Section from '../../components/Section.astro';
 				<strong>[Día 0]:</strong>
 				Nuestros <span id='group'>protagonistas</span>, en busca de su
 				destino, han terminado en
-				<span id='location'>las tierras olvidadas</span>. Para conocer
-				detalles específicos de cada uno, consulta sus respectivas
-				fichas de personajes, pero vamos a introducirlos con un breve
-				resumen: <br /><br />
+				<span id='location'>las tierras olvidadas</span>.
+				<span id='hint'>
+					Para conocer detalles específicos de cada uno, consulta sus
+					respectivas fichas de personajes
+				</span>, pero vamos a introducirlos con un breve resumen:
+			</p>
 
-				Baren Valhice, la semielfa druida, y Enya Fendor, la enana
-				exploradora, ambas pérdidas en los rincones de Terra, buscan
-				refugio en Murcia. <br /><br />
+			<ul>
+				<li>
+					<strong>Baren Valhice</strong>: la semielfa druida, y
+					<strong>Enya Fendor</strong>: la enana exploradora, ambas
+					pérdidas en los rincones de <span id='location'>Terra</span
+					>, buscan refugio en <span id='location'>Murcia</span>.
+				</li>
 
-				Kenkart Silkson, un enano pícaro ladrón cuya única meta es
-				acumular riquezas, desterrado de todas partes y sin un lugar que
-				lo acoja, acaba en Murcia con la esperanza de saquear tierras ya
-				despojadas.<br /><br />
+				<li>
+					<strong>Kenkart Silkson</strong>, un enano pícaro ladrón
+					cuya única meta es acumular riquezas, desterrado de todas
+					partes y sin un lugar que lo acoja, acaba en
+					<span id='location'>Murcia</span> con la esperanza de saquear
+					tierras ya despojadas.
+				</li>
 
-				Isidoro Matamoros, un tiefling monje cuyo destino ha sido
-				impuesto por sus padres, desterrado por su comportamiento,
-				deberá aprender a valorar las cosas, y encontrará en Murcia el
-				lugar perfecto para esa lección.<br /><br />
+				<li>
+					<strong>Isidoro Matamoros</strong>, un tiefling monje cuyo
+					destino ha sido impuesto por sus padres, desterrado por su
+					comportamiento, deberá aprender a valorar las cosas, y
+					encontrará en <span id='location'>Murcia</span> el lugar perfecto
+					para esa lección.
+				</li>
 
-				Nyliss Avacyn, un mago aasimar cuyo destino fue forzado, se ve
-				obligada a huir de su mundo y termina sentenciada en un lugar
-				donde nunca la encontrarían.<br /><br />
-
+				<li>
+					<strong>Nyliss Avacyn</strong>, un mago aasimar cuyo destino
+					fue forzado, se ve obligada a huir de su mundo y termina
+					sentenciada en un lugar donde nunca la encontrarían.
+				</li>
+			</ul>
+			<p class='text-justify p-4 px-10'>
 				Estos "héroes" convergen en la taberna de Murcia, conocida como
 				"The Bold Owl". Ahora, enfrentados a un destino compartido,
 				deben tomar decisiones cruciales en este nuevo día.
@@ -141,5 +156,13 @@ import Section from '../../components/Section.astro';
 		background-color: var(--gray);
 		border-radius: 0.75rem;
 		cursor: pointer;
+	}
+
+	ul {
+		margin: 0 4rem;
+		list-style: disc;
+	}
+	ul li {
+		margin-bottom: 1rem;
 	}
 </style>
