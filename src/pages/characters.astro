@@ -66,36 +66,40 @@ import Card from '../components/Card.astro';
 			/>
 		</Menu>
 		<Section subtitle='Los Enanos' />
-		<Menu>
-			<Card
-				name='Var'
-				img='/img/npc/tir/var/var.png'
-				enlace='/characters/npc/var'
-			/>
-			<Card
-				name='Rel'
-				img='/img/npc/tir/rel/rel.png'
-				enlace='/characters/npc/rel'
-			/>
-			<Card
-				name='Tir'
-				img='/img/npc/tir/tir.png'
-				enlace='/characters/npc/tir'
-			/>
-			<div class='saturate-0 blur-sm hover:saturate-100 hover:blur-none'>
+		<div class='pb-6'>
+			<Menu>
 				<Card
-					name='Kor'
-					img='/img/npc/tir/kor/kor.png'
-					enlace='/characters/npc/kor'
+					name='Var'
+					img='/img/npc/tir/var/var.png'
+					enlace='/characters/npc/var'
 				/>
-			</div>
-			<Card
-				name='████'
-				img='/img/npc/tir/mun/mun.png'
-				enlace='/characters/npc/mun'
-			/>
-			<Card name='█████████' img='/img/background.png' enlace='' />
-		</Menu>
+				<Card
+					name='Rel'
+					img='/img/npc/tir/rel/rel.png'
+					enlace='/characters/npc/rel'
+				/>
+				<Card
+					name='Tir'
+					img='/img/npc/tir/tir.png'
+					enlace='/characters/npc/tir'
+				/>
+				<div
+					class='saturate-0 blur-sm hover:saturate-100 hover:blur-none'
+				>
+					<Card
+						name='Kor'
+						img='/img/npc/tir/kor/kor.png'
+						enlace='/characters/npc/kor'
+					/>
+				</div>
+				<Card
+					name='████'
+					img='/img/npc/tir/mun/mun.png'
+					enlace='/characters/npc/mun'
+				/>
+				<Card name='█████████' img='/img/background.png' enlace='' />
+			</Menu>
+		</div>
 		<div class='bg-[--gray] pb-6'>
 			<Section subtitle='Personajes Secundarios' />
 			<Menu>
