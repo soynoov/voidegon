@@ -7,7 +7,7 @@ import Section from '../../components/Section.astro';
 <Layout title='| Capítulo 1'>
 	<main>
 		<Article title='Capítulo 1' img='/img/map/murcia.png' center='top' />
-		<p class='m-8 px-14 mx-[20vw] text-justify text-balance'>
+		<p class='m-8 px-14 mx-[10vw] text-justify text-balance'>
 			Nos encontramos en las solitarias y tenebrosas tierras de
 			<span id='location'>Murcia</span>, específicamente ███ █████ ████
 			después de ███ ███████████ ██████████, también conocida como la
@@ -22,25 +22,53 @@ import Section from '../../components/Section.astro';
 			elecciones y analizar las consecuencias:
 		</p>
 		<details
-			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
 		>
-			<summary class='list-none mb-4'>
-				<Section title='Prólogo ~ Nacimiento del Dragón Blanco' />
-				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			<summary class='list-none mb-4 text-[--warning]'>
+				<Section
+					title='Prólogo ~ Nacimiento del Dragón'
+					color='warning'
+				/>
+				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
 			</summary>
-			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Laborum, quas libero! Excepturi, repellat explicabo perferendis
-				laborum blanditiis minus voluptate in id unde ipsam deserunt,
-				amet dolores nihil accusantium voluptatum eveniet.
+			<p class='text-justify p-4 px-10 -mt-8'>
+				<strong>[Día 0]:</strong>
+				Nuestros <span id='group'>protagonistas</span>, en busca de su
+				destino, han terminado en
+				<span id='location'>las tierras olvidadas</span>. Para conocer
+				detalles específicos de cada uno, consulta sus respectivas
+				fichas de personajes, pero vamos a introducirlos con un breve
+				resumen: <br /><br />
+
+				Baren Valhice, la semielfa druida, y Enya Fendor, la enana
+				exploradora, ambas pérdidas en los rincones de Terra, buscan
+				refugio en Murcia. <br /><br />
+
+				Kenkart Silkson, un enano pícaro ladrón cuya única meta es
+				acumular riquezas, desterrado de todas partes y sin un lugar que
+				lo acoja, acaba en Murcia con la esperanza de saquear tierras ya
+				despojadas.<br /><br />
+
+				Isidoro Matamoros, un tiefling monje cuyo destino ha sido
+				impuesto por sus padres, desterrado por su comportamiento,
+				deberá aprender a valorar las cosas, y encontrará en Murcia el
+				lugar perfecto para esa lección.<br /><br />
+
+				Nyliss Avacyn, un mago aasimar cuyo destino fue forzado, se ve
+				obligada a huir de su mundo y termina sentenciada en un lugar
+				donde nunca la encontrarían.<br /><br />
+
+				Estos "héroes" convergen en la taberna de Murcia, conocida como
+				"The Bold Owl". Ahora, enfrentados a un destino compartido,
+				deben tomar decisiones cruciales en este nuevo día.
 			</p>
 		</details>
 		<details
-			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
 		>
 			<summary class='list-none mb-4'>
 				<Section title='Primer Act ~ Formando Vínculos' />
-				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
 			</summary>
 			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -50,11 +78,11 @@ import Section from '../../components/Section.astro';
 			</p>
 		</details>
 		<details
-			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
 		>
 			<summary class='list-none mb-4'>
 				<Section title='Segundo Act ~ Asentando Bases' />
-				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
 			</summary>
 			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -64,11 +92,11 @@ import Section from '../../components/Section.astro';
 			</p>
 		</details>
 		<details
-			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
 		>
 			<summary class='list-none mb-4'>
 				<Section title='Tercer Act ~ Desafios de Tir' />
-				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
 			</summary>
 			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -78,11 +106,25 @@ import Section from '../../components/Section.astro';
 			</p>
 		</details>
 		<details
-			class='m-4 mx-[20vw] shadow-xl open:scale-105 transition-transform'
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
 		>
-			<summary class='list-none mb-4'>
-				<Section title='Cuarto Act ~ Soledad' />
-				<hr class='w-[55vw] mx-auto p-2 -mt-8' />
+			<summary class='list-none mb-4 text-[--subtitle]'>
+				<Section title='Cuarto Act ~ Soledad' color='subtitle' />
+				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
+			</summary>
+			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Laborum, quas libero! Excepturi, repellat explicabo perferendis
+				laborum blanditiis minus voluptate in id unde ipsam deserunt,
+				amet dolores nihil accusantium voluptatum eveniet.
+			</p>
+		</details>
+		<details
+			class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
+		>
+			<summary class='list-none mb-4 text-[--grey]'>
+				<Section title='Quinto Act ~ ?' color='grey' />
+				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
 			</summary>
 			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
