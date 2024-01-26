@@ -1,0 +1,22 @@
+---
+interface Props {
+  name: string;
+  img: string;
+  enlace?: string;
+}
+
+const { name, img, enlace } = Astro.props;
+---
+
+<section
+  class="flex justify-center items-center flex-col hover:scale-105 transition-transform hover:shadow-xl rounded-xl"
+>
+  <a href={enlace}>
+    <div
+      class="size-[5.5cm] rounded-xl"
+      style={{ background: `url(${img}) top/cover` }}
+    >
+    </div>
+  </a>
+  <h3 class="my-2 font-[caveat] font-semibold text-lg">{name}</h3>
+</section>
