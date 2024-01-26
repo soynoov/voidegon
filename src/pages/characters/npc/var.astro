@@ -16,8 +16,12 @@ import Name from "../../../components/Name.astro";
     <div class="col-span-6 row-span-1">
       <Name name="The Mad Alchemist" />
     </div>
-    <div class="col-span-2 row-span-6">
-      <img src="/img/npc/tir/var/var.png" alt="Var" class="rounded-xl h-full" />
+    <div class="lg:col-span-2 lg:row-span-5 md:col-span-3 col-span-6">
+      <img
+        src="/img/npc/tir/var/var.png"
+        alt="Var"
+        class="rounded-xl w-full h-full"
+      />
     </div>
     <div class="col-span-2 row-span-1">
       <h3 class="p-4 text-[--subtitle] font-[lobster]">Dwarf</h3>
@@ -54,24 +58,19 @@ import Name from "../../../components/Name.astro";
     <div class="col-span-2 row-span-1">
       <h3 class="p-4 text-[--subtitle] font-[lobster]">1.18 Metros</h3>
     </div>
-    <div class="col-span-4 row-span-1">
-      <p class="p-4 px-8">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
-        explicabo alias. Doloribus rerum asperiores eius. Provident dolore
-        accusamus sequi, rerum ut tempore hic quis reiciendis, sint neque
-        accusantium! Harum, facilis.
-      </p>
-    </div>
   </main>
 </Layout>
 
 <style>
   main > div {
+    display: flex;
     cursor: default;
     background-color: var(--gray);
     transition: transform 300ms ease;
     border-radius: 0.75rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   main > div:hover {
