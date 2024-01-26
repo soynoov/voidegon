@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainTitle from "../components/Article.astro";
+import Article from "../components/Article.astro";
+import Section from "../components/Section.astro";
+import Menu from "../layouts/Menu.astro";
+import Card from "../components/Card.astro";
+import SmallCard from "../components/SmallCard.astro";
 ---
 
 <Layout title="| Mapa">
-  <MainTitle title="Mapas" />
+  <Article title="Mapa de Voidegon" />
+  <Section title="Terra" />
+  <Menu>
+    <Card name="Murcia" enlace="maps/murcia" />
+  </Menu>
 </Layout>

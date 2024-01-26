@@ -3,17 +3,30 @@ import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
 import Section from "../components/Section.astro";
 import Menu from "../layouts/Menu.astro";
-import Card from "../components/Card.astro";
 import SmallCard from "../components/SmallCard.astro";
 ---
 
 <Layout title="| Extras">
   <Article title="Detalles Extras" />
   <Section title="Clases" subtitle="Basic" />
+  <Menu>
+    <SmallCard name="Barbarian" enlace="/extras/barbarian" />
+    <SmallCard name="Bard" enlace="/extras/bard" />
+    <SmallCard name="Cleric" enlace="/extras/cleric" />
+    <SmallCard name="Druid" enlace="/extras/druid" />
+    <SmallCard name="Fighter" enlace="/extras/fighter" />
+    <SmallCard name="Monk" enlace="/extras/monk" />
+    <SmallCard name="Paladin" enlace="/extras/paladin" />
+    <SmallCard name="Ranger" enlace="/extras/ranger" />
+    <SmallCard name="Rogue" enlace="/extras/rogue" />
+    <SmallCard name="Sorcerer" enlace="/extras/sorcerer" />
+    <SmallCard name="Warlock" enlace="/extras/warlock" />
+    <SmallCard name="Wizard" enlace="/extras/wizard" />
+  </Menu>
   <Section title="Razas" subtitle="Basic" />
   <Menu>
     <SmallCard name="Dragonborn" enlace="/extras/dragonborn" />
-    <SmallCard name="Dwarf" enlace="/extras/dragonborn" />
+    <SmallCard name="Dwarf" enlace="/extras/dwarf" />
     <SmallCard name="Elf" enlace="/extras/elf" />
     <SmallCard name="Gnome" enlace="/extras/gnome" />
     <SmallCard name="Half-Elf" enlace="/extras/half-elf" />
