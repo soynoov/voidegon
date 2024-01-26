@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="| Error 404">
+  <main class="flex justify-center flex-col h-full items-center">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Spain_traffic_signal_tp18.svg/1200px-Spain_traffic_signal_tp18.svg.png"
+      alt=""
+    />
+    <h1 class="self-center font-[unbounded] text-4xl">
+      Estamos creando Voidegon!
+    </h1>
+    <p class="text-center mt-4">
+      Esta página aún no esta disponible, ten paciencia y vuelve más tarde.
+    </p>
+  </main>
+</Layout>
+
+<style>
+  body {
+    overflow-y: hidden;
+  }
+  main {
+    background: url("/img/background.png") bottom/cover;
+    height: 95dvh;
+  }
+  h1 {
+    color: var(--light);
+    font-weight: 900;
+  }
+
+  img {
+    width: 10vw;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      text-align: center;
+      margin: 1rem;
+    }
+    main {
+      background:;
+    }
+    p {
+      margin: 1rem;
+      text-wrap: balance;
+    }
+  }
+</style>

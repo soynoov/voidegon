@@ -1,8 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainTitle from "../components/Article.astro";
+import Article from "../components/Article.astro";
+import Section from "../components/Section.astro";
+import Menu from "../layouts/Menu.astro";
+import Card from "../components/Card.astro";
+import SmallCard from "../components/SmallCard.astro";
 ---
 
-<Layout title="| Mapa">
-  <MainTitle title="Detalles Extras" />
+<Layout title="| Extras">
+  <Article title="Detalles Extras" />
+  <Section title="Razas" />
+  <Menu>
+    <Card
+      name="Aasimar"
+      img="https://www.worldanvil.com/media/cache/cover/uploads/images/894fa8aab5d0e5e9a6cf5c11a71d41da.jpg"
+      enlace="/extras/aasimar"
+    />
+  </Menu>
+  <Section title="Clases" subtitle="Oficiales" />
 </Layout>
