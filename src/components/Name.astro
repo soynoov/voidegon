@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<section>
+  <h1 class="text-5xl font-[pacifico] text-[--title] text-center m-4">
+    {name}
+  </h1>
+</section>

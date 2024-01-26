@@ -1,94 +1,94 @@
 ---
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 
 interface Props {
-	title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
+const { title = "| Voidegon" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='es'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content='Astro description' />
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.ico' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class='mb-14'>
-		<Header />
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="mb-14">
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lexend&family=Lobster&family=Pacifico&family=Unbounded:wght@400;900&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Lexend&family=Lobster&family=Pacifico&family=Unbounded:wght@400;900&display=swap");
 
-	:root {
-		--dark: #212121;
-		--light: #fff;
-		--white: #ccc;
-		--grey: #666;
-		--gray: #333;
-		--title: #25d366;
-		--subtitle: #f89d1f;
-		--section: #00a1b9;
-		--warning: #ff5349;
-		/** Span */
-		--name: #fff;
-		--location: #a1a556;
-		--group: #008080;
-		--date: #dcbd4c;
-		--event: #ad70a4;
-		--deity: #ac0940;
-		--object: #ff4fa7;
-	}
+  :root {
+    --dark: #212121;
+    --light: #fff;
+    --white: #ccc;
+    --grey: #666;
+    --gray: #333;
+    --title: #25d366;
+    --subtitle: #f89d1f;
+    --section: #00a1b9;
+    --warning: #ff5349;
+    /** Span */
+    --name: #fff;
+    --location: #a1a556;
+    --group: #008080;
+    --date: #dcbd4c;
+    --event: #ad70a4;
+    --deity: #ac0940;
+    --object: #ff4fa7;
+  }
 
-	html {
-		font-family: 'Lexend';
-		background: var(--dark);
-		color: var(--white);
-	}
-	body::-webkit-scrollbar {
-		display: none; /* Ocultar scroll */
-	}
+  html {
+    font-family: "Lexend";
+    background: var(--dark);
+    color: var(--white);
+  }
+  body::-webkit-scrollbar {
+    display: none; /* Ocultar scroll */
+  }
 
-	/** Span */
-	span#name {
-		color: var(--name);
-	}
-	span#location {
-		color: var(--location);
-	}
-	span#group {
-		color: var(--group);
-	}
-	span#date {
-		color: var(--date);
-	}
-	span#event {
-		color: var(--event);
-	}
-	span#deity {
-		color: var(--deity);
-	}
-	span#object {
-		color: var(--object);
-	}
-	span#hint {
-		color: var(--grey);
-		font-style: italic;
-	}
-	span#good {
-		color: var(--title);
-	}
-	span#neutral {
-		color: var(--subtitle);
-	}
-	span#bad {
-		color: var(--warning);
-	}
+  /** Span */
+  span#name {
+    color: var(--name);
+  }
+  span#location {
+    color: var(--location);
+  }
+  span#group {
+    color: var(--group);
+  }
+  span#date {
+    color: var(--date);
+  }
+  span#event {
+    color: var(--event);
+  }
+  span#deity {
+    color: var(--deity);
+  }
+  span#object {
+    color: var(--object);
+  }
+  span#hint {
+    color: var(--grey);
+    font-style: italic;
+  }
+  span#good {
+    color: var(--title);
+  }
+  span#neutral {
+    color: var(--subtitle);
+  }
+  span#bad {
+    color: var(--warning);
+  }
 </style>
