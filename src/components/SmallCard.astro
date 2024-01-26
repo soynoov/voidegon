@@ -1,11 +1,11 @@
 ---
 interface Props {
   name: string;
-  img: string;
+  img?: string;
   enlace?: string;
 }
 
-const { name, img, enlace } = Astro.props;
+const { name, img = "/img/background.png", enlace } = Astro.props;
 ---
 
 <section

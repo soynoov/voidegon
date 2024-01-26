@@ -9,13 +9,26 @@ import SmallCard from "../components/SmallCard.astro";
 
 <Layout title="| Extras">
   <Article title="Detalles Extras" />
-  <Section title="Razas" />
+  <Section title="Clases" subtitle="Basic" />
+  <Section title="Razas" subtitle="Basic" />
   <Menu>
-    <Card
+    <SmallCard name="Dragonborn" enlace="/extras/dragonborn" />
+    <SmallCard name="Dwarf" enlace="/extras/dragonborn" />
+    <SmallCard name="Elf" enlace="/extras/elf" />
+    <SmallCard name="Gnome" enlace="/extras/gnome" />
+    <SmallCard name="Half-Elf" enlace="/extras/half-elf" />
+    <SmallCard name="Halfling" enlace="/extras/halfling" />
+    <SmallCard name="Half-Orc" enlace="/extras/half-orc" />
+    <SmallCard name="Human" enlace="/extras/human" />
+    <SmallCard name="Tiefling" enlace="/extras/tiefling" />
+  </Menu>
+  <Section subtitle="Monsters of the Multiverse" />
+  <Menu>
+    <SmallCard
       name="Aasimar"
-      img="https://www.worldanvil.com/media/cache/cover/uploads/images/894fa8aab5d0e5e9a6cf5c11a71d41da.jpg"
+      img="https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg"
       enlace="/extras/aasimar"
     />
   </Menu>
-  <Section title="Clases" subtitle="Oficiales" />
+  <Section title="Objetos" />
 </Layout>
