@@ -38,6 +38,14 @@ function modificadorStats(stat: number, x: number) {
 
   return `${modificador}`;
 }
+
+function sumarStats(x: number) {
+  x -= 1;
+
+  if (mod[x] != 0) {
+    return `+${mod[x]}`;
+  }
+}
 ---
 
 <section
@@ -49,60 +57,60 @@ function modificadorStats(stat: number, x: number) {
 `}
 >
   <div>
-    <h3>FUE</h3>
+    <h3 id={com[1 - 1] == 1 ? "x" : ""}>FUE</h3>
     <div>
       <h6>{fue}</h6>
-      <p>+{mod[0]}</p>
+      <p>{sumarStats(1)}</p>
     </div>
     <div>
       <h5>[{modificadorStats(fue, 1)}]</h5>
     </div>
   </div>
   <div>
-    <h3>DES</h3>
+    <h3 id={com[2 - 1] == 1 ? "x" : ""}>DES</h3>
     <div>
       <h6>{des}</h6>
-      <p></p>
+      <p>{sumarStats(2)}</p>
     </div>
     <div>
       <h5>[{modificadorStats(des, 2)}]</h5>
     </div>
   </div>
   <div>
-    <h3 id={com[2] == 1 ? "x" : ""}>CON</h3>
+    <h3 id={com[3 - 1] == 1 ? "x" : ""}>CON</h3>
     <div>
       <h6>{con}</h6>
-      <p></p>
+      <p>{sumarStats(3)}</p>
     </div>
     <div>
       <h5>[{modificadorStats(con, 3)}]</h5>
     </div>
   </div>
   <div>
-    <h3 id={com[3] == 1 ? "x" : ""}>INT</h3>
+    <h3 id={com[4 - 1] == 1 ? "x" : ""}>INT</h3>
     <div>
       <h6>{int}</h6>
-      <p></p>
+      <p>{sumarStats(4)}</p>
     </div>
     <div>
       <h5>[{modificadorStats(int, 4)}]</h5>
     </div>
   </div>
   <div>
-    <h3 id={com[5] == 1 ? "x" : ""}>SAB</h3>
+    <h3 id={com[5 - 1] == 1 ? "x" : ""}>SAB</h3>
     <div>
       <h6>{sab}</h6>
-      <p></p>
+      <p>{sumarStats(5)}</p>
     </div>
     <div>
       <h5>[{modificadorStats(sab, 5)}]</h5>
     </div>
   </div>
   <div>
-    <h3 id={com[6] == 1 ? "x" : ""}>CAR</h3>
+    <h3 id={com[6 - 1] == 1 ? "x" : ""}>CAR</h3>
     <div>
       <h6>{car}</h6>
-      <p>{mod[6]}</p>
+      <p>{sumarStats(6)}</p>
     </div>
     <div>
       <h5>[{modificadorStats(car, 6)}]</h5>
