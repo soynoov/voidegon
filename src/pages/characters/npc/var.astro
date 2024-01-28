@@ -24,39 +24,34 @@ import Name from "../../../components/Name.astro";
       />
     </div>
     <div class="col-span-2 row-span-1">
-      <h3 class="p-4 text-[--subtitle] font-[lobster]">Dwarf</h3>
+      <h3>Dwarf</h3>
     </div>
     <div class="col-span-2 row-span-1">
-      <h3 class="p-4 text-[--subtitle] font-[lobster]">372 años</h3>
+      <h3>372 años</h3>
     </div>
     <div class="col-span-4 row-span-1">
-      <p class="p-4 px-8">
-        [Es uno de los <span id="group">Seis Enanos</span>, las pociones que
-        crea tienen "la tendencia de generar pares de burbujas que ascienden
-        hasta lo más alto de la superficie." ████████ ██████████ █████████
-        ███████████]
-      </p>
+      <p class="p-4 px-8">[████████ ██████████ █████████ ███████████]</p>
     </div>
     <div class="col-span-2 row-span-1">
-      <h3 class="p-4 text-[--subtitle] font-[lobster]">Alchemist</h3>
+      <h3>Alchemist</h3>
     </div>
     <div class="col-span-2 row-span-1">
-      <h3 class="p-4 text-[--subtitle] font-[lobster]">Caótico Neutro</h3>
+      <h3>Caótico Neutro</h3>
     </div>
     <div class="col-span-4 row-span-1">
       <p class="p-4 px-8 text-justify">
         Este enano anciano presenta un rostro marcado por numerosas arrugas y
-        dos cejas pelirrojas densas, casi ocultando sus ojos entre ellas. La
+        cejas pelirrojas densas, casi ocultando sus ojos entre ellas. La
         calvicie es evidente, y su barba sigue la misma tonalidad. Viste con
         harapos largos que se asemejan a un manto descosido, y su apariencia
         refleja un aire de excentricidad.
       </p>
     </div>
     <div class="col-span-2 row-span-1">
-      <h3 class="p-4 text-[--subtitle] font-[lobster]">62 Kilos</h3>
+      <h3>62 Kilos</h3>
     </div>
     <div class="col-span-2 row-span-1">
-      <h3 class="p-4 text-[--subtitle] font-[lobster]">1.18 Metros</h3>
+      <h3>1.18 Metros</h3>
     </div>
   </main>
 </Layout>
@@ -71,13 +66,17 @@ import Name from "../../../components/Name.astro";
     text-align: center;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
   }
 
   main > div:hover {
     transform: scale(1.01);
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
 
-  p {
+  h3 {
+    padding: 1rem;
+    font-family: "Lobster";
+    color: var(--subtitle);
   }
 </style>

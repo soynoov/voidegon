@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
+import Stats from "../../components/Stats.astro";
+---
+
+<Layout>
+  <Title
+    title="Nyliss Avacyn"
+    img="https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg"
+    center="center"
+  />
+  <main
+    class={`
+    w-[80vw] mx-auto m-4
+    grid grid-cols-6 grid-flow-row-dense
+    gap-4
+  `}
+  >
+    <div class="col-span-4">
+      <Stats
+        fue={10}
+        des={14}
+        con={10}
+        int={16}
+        sab={14}
+        car={8}
+        mod={[1, 0, 0, 0, 0, 2]}
+        com={[0, 0, 0, 1, 1, 0]}
+        modcom={2}
+      />
+    </div>
+    <div class="col-span-4 row-span-2 size-fit">
+      <img
+        src="/img/nyliss/nyliss.png"
+        alt="Nyliss Avacyn"
+        class="rounded-2xl size-fit"
+      />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main > div {
+    background-color: var(--gray);
+    border-radius: 1rem;
+  }
+</style>

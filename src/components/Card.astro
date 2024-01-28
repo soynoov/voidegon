@@ -13,10 +13,10 @@ const { name, img = "/img/background.png", enlace } = Astro.props;
 >
   <a href={enlace}>
     <div
-      class="size-[7.5cm] rounded-xl"
+      class="size-[7.5cm] rounded-lg"
       style={{ background: `url(${img}) top/cover` }}
     >
     </div>
   </a>
-  <h3 class="my-2 font-[caveat] font-semibold text-lg">{name}</h3>
+  <h3 class="my-2 font-[caveat] font-semibold text-xl">{name}</h3>
 </section>

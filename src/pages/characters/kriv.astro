@@ -1,20 +1,30 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Title from "../../components/Title.astro";
-import Stats from "../../components/StatTest.astro";
+import Stats from "../../components/Stats.astro";
 ---
 
 <Layout>
   <Title title="Kriv Coppernico" />
-  <Stats
-    fue={16}
-    des={6}
-    con={14}
-    int={8}
-    sab={12}
-    car={16}
-    mod={[2, 0, 0, 0, 0, 1]}
-    com={[0, 0, 0, 0, 1, 1]}
-    modcom={2}
-  />
+  <main
+    class={`
+    w-[80vw] mx-auto m-4
+    grid grid-cols-6
+    
+  `}
+  >
+    <div class="bg-[--gray] rounded-xl">
+      <Stats
+        fue={16}
+        des={6}
+        con={14}
+        int={8}
+        sab={12}
+        car={16}
+        mod={[2, 0, 0, 0, 0, 1]}
+        com={[0, 0, 0, 0, 1, 1]}
+        modcom={2}
+      />
+    </div>
+  </main>
 </Layout>
