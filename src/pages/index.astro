@@ -1,13 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="| Voidegon">
-  <main class="flex justify-center flex-col h-full">
-    <h1 class="self-center font-[unbounded] text-4xl">Welcome to Voidegon!</h1>
-    <p class="text-center mt-4">
+<Layout title='| Voidegon'>
+  <main class='flex justify-center flex-col h-full'>
+    <h1 class='self-center font-[unbounded] text-4xl'>Welcome to Voidegon!</h1>
+    <p class='text-center mt-4'>
       Los acertijos en la Biblioteca (#roleplay) has de resolver.
     </p>
+    <p class='text-center mt-4'>Activos: <span id='bad'>0</span></p>
   </main>
 </Layout>
 
@@ -16,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
     overflow-y: hidden;
   }
   main {
-    background: url("/img/background.png") bottom/cover;
+    background: url('/img/background.png') bottom/cover;
     height: 95dvh;
   }
   h1 {
