@@ -1,113 +1,118 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Article from "../components/Article.astro";
-import Section from "../components/Section.astro";
-import Menu from "../layouts/Menu.astro";
-import Card from "../components/Card.astro";
-import SmallCard from "../components/SmallCard.astro";
+import Layout from '../layouts/Layout.astro';
+import Article from '../components/Article.astro';
+import Section from '../components/Section.astro';
+import Menu from '../layouts/Menu.astro';
+import Card from '../components/Card.astro';
+import SmallCard from '../components/SmallCard.astro';
 ---
 
-<Layout title="| Personajes">
+<Layout title='| Personajes'>
   <main>
-    <Article title="Personajes" opacity={0} />
-    <Section title="Personajes Jugables" subtitle="Fichas de Personaje" />
+    <Article title='Personajes' opacity={0} />
+    <Section title='Personajes Jugables' subtitle='Fichas de Personaje' />
     <Menu>
       <Card
-        name="Baren Valhice"
-        img="/img/baren/baren.png"
-        enlace="/characters/baren"
+        name='Baren Valhice'
+        img='/img/baren/baren.png'
+        enlace='/characters/baren'
       />
       <Card
-        name="Enya Fendor"
-        img="/img/enya/enya.png"
-        enlace="/characters/enya"
+        name='Enya Fendor'
+        img='/img/enya/enya.png'
+        enlace='/characters/enya'
       />
       <Card
-        name="Isidoro Matamoros"
-        img="/img/isidoro/isidoro.png"
-        enlace="/characters/isidoro"
+        name='Isidoro Matamoros'
+        img='/img/isidoro/isidoro.png'
+        enlace='/characters/isidoro'
       />
       <Card
-        name="Kenkart Silkson"
-        img="/img/kenkart/kenkart.png"
-        enlace="/characters/kenkart"
+        name='Kenkart Silkson'
+        img='/img/kenkart/kenkart.png'
+        enlace='/characters/kenkart'
       />
       <Card
-        name="Kriv Coppernico"
-        img="/img/kriv/kriv.png"
-        enlace="/characters/kriv"
+        name='Kriv Coppernico'
+        img='/img/kriv/kriv.png'
+        enlace='/characters/kriv'
       />
       <Card
-        name="Nyliss Avacyn"
-        img="/img/nyliss/nyliss.png"
-        enlace="/characters/nyliss"
+        name='Nyliss Avacyn'
+        img='/img/nyliss/nyliss.png'
+        enlace='/characters/nyliss'
       />
     </Menu>
-    <Section title="Personajes No Jugables" subtitle="Lore Principal" />
+    <Section title='Personajes No Jugables' subtitle='Lore Principal' />
     <Menu>
       <Card
-        name="Almawrid"
-        img="/img/npc/almawrid/almawrid.png"
-        enlace="/characters/npc/almawrid"
+        name='Almawrid'
+        img='/img/npc/almawrid/almawrid.png'
+        enlace='/characters/npc/almawrid'
       />
       <Card
-        name="Arnold"
-        img="/img/npc/arnold/arnold.png"
-        enlace="/characters/npc/arnold"
+        name='Arnold'
+        img='/img/npc/arnold/arnold.png'
+        enlace='/characters/npc/arnold'
       />
       <Card
         name="Kal'El"
-        img="/img/npc/kalel/kalel.png"
-        enlace="/characters/npc/kalel"
+        img='/img/npc/kalel/kalel.png'
+        enlace='/characters/npc/kalel'
       />
       <Card
-        name="Azrael"
-        img="/img/npc/kelthuzad/azrael.png"
-        enlace="/characters/npc/azrael"
+        name='Azrael'
+        img='/img/npc/kelthuzad/azrael.png'
+        enlace='/characters/npc/azrael'
       />
     </Menu>
-    <Section subtitle="Los Enanos" />
-    <div class="pb-6">
+    <Section subtitle='Los Enanos' />
+    <div class='pb-6'>
       <Menu>
         <Card
-          name="Var"
-          img="/img/npc/tir/var/var.png"
-          enlace="/characters/npc/var"
+          name='Var'
+          img='/img/npc/tir/var/var.png'
+          enlace='/characters/npc/var'
         />
         <Card
-          name="Rel"
-          img="/img/npc/tir/rel/rel.png"
-          enlace="/characters/npc/rel"
+          name='Rel'
+          img='/img/npc/tir/rel/rel.png'
+          enlace='/characters/npc/rel'
         />
         <Card
-          name="Tir"
-          img="/img/npc/tir/tir.png"
-          enlace="/characters/npc/tir"
+          name='Tir'
+          img='/img/npc/tir/tir.png'
+          enlace='/characters/npc/tir'
         />
-        <div class="saturate-0 hover:saturate-100">
+        <div class='saturate-0 hover:saturate-100'>
           <Card
-            name="Kor"
-            img="/img/npc/tir/kor/kor.png"
-            enlace="/characters/npc/kor"
+            name='Kor'
+            img='/img/npc/tir/kor/kor.png'
+            enlace='/characters/npc/kor'
           />
         </div>
-        <div class="blur-sm hover:blur-none">
+        <div class='blur-sm hover:blur-none'>
           <Card
-            name="████"
-            img="/img/npc/tir/mun/mun.png"
-            enlace="/characters/npc/mun"
+            name='████'
+            img='/img/npc/tir/mun/mun.png'
+            enlace='/characters/npc/mun'
           />
         </div>
-        <div class="blur-sm hover:blur-none">
-          <Card name="█████████" img="/img/background.png" enlace="" />
+        <div class='blur-sm hover:blur-none'>
+          <Card name='█████████' img='/img/background.png' enlace='' />
         </div>
       </Menu>
     </div>
-    <div class="bg-[--gray] pb-6">
-      <Section subtitle="Personajes Secundarios" />
+    <div class='bg-[--gray] pb-6'>
+      <Section subtitle='Personajes Secundarios' />
       <Menu>
-        <div class="blur-sm hover:blur-none">
-          <SmallCard name="█████████" img="/img/background.png" enlace="" />
+        <div class='blur-sm hover:blur-none'>
+          <SmallCard
+            name='█████████'
+            img='/img/background.png'
+            enlace=''
+            light
+          />
         </div>
       </Menu>
     </div>
