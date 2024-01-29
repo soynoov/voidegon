@@ -44,7 +44,7 @@ function modificadorStats(stat: number) {
 // Aplicamos los modificadores de la Clase
 function aplicarStats(x = 0) {
   if (mod[x - 1] == 0) {
-    return "-";
+    return '-';
   } else {
     return mod[x - 1];
   }
@@ -68,9 +68,9 @@ function sumarStats(stat = 0, x = 0) {
 function competenciasStats(x = 0) {
   switch (com[x - 1]) {
     case 0:
-      return "-";
+      return '-';
     case 1:
-      return "x";
+      return 'x';
   }
 }
 
@@ -100,12 +100,12 @@ function sumarComp(stat = 0, x = 0) {
       <td>{numeroAbsoluto(fue)}</td>
       <td>[{modificadorStats(fue)}]</td>
       <td>|</td>
-      <td class={aplicarStats(1) === "-" ? "text-[--gray]" : ""}
+      <td class={aplicarStats(1) === '-' ? 'text-[--gray]' : ''}
         >{aplicarStats(1)}</td
       >
       <td>{sumarStats(fue, 1)}</td>
       <td>|</td>
-      <td class={competenciasStats(1) === "-" ? "text-[--gray]" : ""}
+      <td class={competenciasStats(1) === '-' ? 'text-[--gray]' : ''}
         >{competenciasStats(1)}</td
       >
       <td>{sumarComp(fue, 1)}</td>
@@ -115,12 +115,12 @@ function sumarComp(stat = 0, x = 0) {
       <td>{numeroAbsoluto(des)}</td>
       <td>[{modificadorStats(des)}]</td>
       <td>|</td>
-      <td class={aplicarStats(2) === "-" ? "text-[--gray]" : ""}
+      <td class={aplicarStats(2) === '-' ? 'text-[--gray]' : ''}
         >{aplicarStats(2)}</td
       >
       <td>{sumarStats(des, 2)}</td>
       <td>|</td>
-      <td class={competenciasStats(2) === "-" ? "text-[--gray]" : ""}
+      <td class={competenciasStats(2) === '-' ? 'text-[--gray]' : ''}
         >{competenciasStats(2)}</td
       >
       <td>{sumarComp(des, 2)}</td>
@@ -129,12 +129,12 @@ function sumarComp(stat = 0, x = 0) {
       <td>{numeroAbsoluto(con)}</td>
       <td>[{modificadorStats(con)}]</td>
       <td>|</td>
-      <td class={aplicarStats(3) === "-" ? "text-[--gray]" : ""}
+      <td class={aplicarStats(3) === '-' ? 'text-[--gray]' : ''}
         >{aplicarStats(3)}</td
       >
       <td>{sumarStats(con, 3)}</td>
       <td>|</td>
-      <td class={competenciasStats(3) === "-" ? "text-[--gray]" : ""}
+      <td class={competenciasStats(3) === '-' ? 'text-[--gray]' : ''}
         >{competenciasStats(3)}</td
       >
       <td>{sumarComp(con, 3)}</td>
@@ -143,12 +143,12 @@ function sumarComp(stat = 0, x = 0) {
       <td>{numeroAbsoluto(int)}</td>
       <td>[{modificadorStats(int)}]</td>
       <td>|</td>
-      <td class={aplicarStats(4) === "-" ? "text-[--gray]" : ""}
+      <td class={aplicarStats(4) === '-' ? 'text-[--gray]' : ''}
         >{aplicarStats(4)}</td
       >
       <td>{sumarStats(int, 4)}</td>
       <td>|</td>
-      <td class={competenciasStats(4) === "-" ? "text-[--gray]" : ""}
+      <td class={competenciasStats(4) === '-' ? 'text-[--gray]' : ''}
         >{competenciasStats(4)}</td
       >
       <td>{sumarComp(int, 4)}</td>
@@ -157,12 +157,12 @@ function sumarComp(stat = 0, x = 0) {
       <td>{numeroAbsoluto(sab)}</td>
       <td>[{modificadorStats(sab)}]</td>
       <td>|</td>
-      <td class={aplicarStats(5) === "-" ? "text-[--gray]" : ""}
+      <td class={aplicarStats(5) === '-' ? 'text-[--gray]' : ''}
         >{aplicarStats(5)}</td
       >
       <td>{sumarStats(sab, 5)}</td>
       <td>|</td>
-      <td class={competenciasStats(5) === "-" ? "text-[--gray]" : ""}
+      <td class={competenciasStats(5) === '-' ? 'text-[--gray]' : ''}
         >{competenciasStats(5)}</td
       >
       <td>{sumarComp(sab, 5)}</td>
@@ -171,12 +171,12 @@ function sumarComp(stat = 0, x = 0) {
       <td>{numeroAbsoluto(car)}</td>
       <td>[{modificadorStats(car)}]</td>
       <td>|</td>
-      <td class={aplicarStats(6) === "-" ? "text-[--gray]" : ""}
+      <td class={aplicarStats(6) === '-' ? 'text-[--gray]' : ''}
         >{aplicarStats(6)}</td
       >
       <td>{sumarStats(car, 6)}</td>
       <td>|</td>
-      <td class={competenciasStats(6) === "-" ? "text-[--gray]" : ""}
+      <td class={competenciasStats(6) === '-' ? 'text-[--gray]' : ''}
         >{competenciasStats(6)}</td
       >
       <td>{sumarComp(car, 6)}</td>
@@ -206,10 +206,10 @@ function sumarComp(stat = 0, x = 0) {
   td:nth-of-type(5),
   td:nth-of-type(6),
   td:nth-of-type(9) {
-    font-family: "pacifico";
+    font-family: 'pacifico';
   }
   td:nth-of-type(8) {
-    font-family: "caveat";
+    font-family: 'caveat';
     font-weight: bold;
   }
 </style>
