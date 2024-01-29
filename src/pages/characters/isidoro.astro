@@ -5,20 +5,22 @@ import Experience from "../../components/Experience.astro";
 import Stats from "../../components/Stats.astro";
 import Skills from "../../components/Skills.astro";
 import Section from "../../components/Section.astro";
+
+// Los parametros hay que pasarselos por TypeScript para hacer calculos externos individuales de cada personaje.
 ---
 
 <Layout title="| Isidoro Matamoros">
   <Title title="Isidoro Matamoros" img="/img/isidoro/bg_isidoro.png" />
   <main
     class={`
-    grid grid-cols-6 auto-rows-auto gap-4
+    grid grid-cols-subgrid grid-flow-row-dense gap-4
     mx-auto w-[80vw]
   `}
   >
     <div class="col-span-6 mt-4 w-full">
       <Experience exp={355} />
     </div>
-    <div class="col-span-2 row-span-1 size-fit pb-4 p-2">
+    <div class="col-span-1 row-span-1 size-fit pb-4 p-2">
       <Stats
         fue={14}
         des={18}
