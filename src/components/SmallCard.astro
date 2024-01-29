@@ -3,6 +3,8 @@ interface Props {
 	name: string;
 	img?: string;
 	enlace?: string;
+	center?: string;
+	lock?: boolean;
 	bg_color?: string;
 }
 
@@ -10,8 +12,16 @@ const {
 	name,
 	img = '/img/background.png',
 	enlace,
+	center = 'top',
+	lock = false,
 	bg_color = 'gray',
 } = Astro.props;
+
+// Controlar si esta bloqueado o no
+let id;
+if (lock == true) {
+	id = 'lock';
+}
 ---
 
 <section
@@ -20,13 +30,26 @@ const {
   hover:scale-105 transition-transform hover:shadow-lg hover:bg-[--${bg_color}]
   rounded-lg text-center
   `}
+	id=`${id}`
 >
 	<a href={enlace}>
 		<div
 			class='size-[5.5cm] rounded-t-lg'
-			style={{ background: `url(${img}) top/cover` }}
+			style={{ background: `url(${img}) ${center}/cover` }}
 		>
 		</div>
 		<h3 class='my-2 font-[caveat] font-semibold text-lg'>{name}</h3>
 	</a>
 </section>
+
+<style>
+	#lock {
+		opacity: 0.5;
+		color: var(--gray);
+	}
+	#lock:hover {
+		transform: none;
+		background-color: transparent;
+		box-shadow: none;
+	}
+</style>
