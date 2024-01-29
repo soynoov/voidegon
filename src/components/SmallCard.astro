@@ -27,7 +27,7 @@ if (lock == true) {
 <section
   class={`
   	flex justify-center items-center flex-col 
-  	hover:scale-105 transition-transform hover:shadow-lg hover:bg-[--${bg_color}]
+  	hover:scale-105 transition-transform hover:shadow-lg
   	rounded-lg text-center
   `}
   id={`${id}`}
@@ -43,6 +43,9 @@ if (lock == true) {
 </section>
 
 <style>
+  section:hover {
+    background-color: var(--gray);
+  }
   #lock {
     opacity: 0.5;
     color: var(--gray);
