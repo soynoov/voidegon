@@ -1,154 +1,167 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Title from "../../../components/Title.astro";
+import Layout from '../../../layouts/Layout.astro';
+import Title from '../../../components/Title.astro';
 ---
 
 <Layout>
-  <Title title="Taberna" />
-  <main
-    class={`
+	<Title title='Taberna' img='/img/maps/murcia/tavern.png' center='center' />
+	<main
+		class={`
     w-[80vw] mx-auto my-4
     grid grid-cols-5 gap-4
     
   `}
-  >
-    <div class="col-span-5">
-      <h1>The Bold Owl</h1>
-    </div>
-    <div>
-      <svg
-        class="text-[--subtitle]"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"
-        ></path>
-        <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-        <path d="M8 11v-5a4 4 0 0 1 8 0"></path>
-      </svg>
-      <h3>Nivel 1</h3>
-    </div>
-    <div>
-      <svg
-        class="text-[--subtitle]"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"
-        ></path>
-        <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-        <path d="M8 11v-5a4 4 0 0 1 8 0"></path>
-      </svg>
-      <h3>Nivel 2</h3>
-    </div>
-    <div id="lock">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
-        >
-        </path>
-        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
-        <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
-      </svg>
-      <h3>Nivel 3</h3>
-    </div>
-    <div id="lock">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
-        >
-        </path>
-        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
-        <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
-      </svg>
-      <h3>Nivel 4</h3>
-    </div>
-    <div id="lock">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
-        >
-        </path>
-        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
-        <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
-      </svg>
-      <h3>Nivel 5</h3>
-    </div>
-  </main>
+	>
+		<div class='col-span-5'>
+			<h1>The Bold Owl</h1>
+		</div>
+		<div id='unlock'>
+			<svg
+				class='text-[--subtitle]'
+				width='20'
+				height='20'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z'
+				></path>
+				<path d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0'></path>
+				<path d='M8 11v-5a4 4 0 0 1 8 0'></path>
+			</svg>
+			<h3>Nivel 1</h3>
+		</div>
+		<div id='unlock'>
+			<svg
+				class='text-[--subtitle]'
+				width='20'
+				height='20'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z'
+				></path>
+				<path d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0'></path>
+				<path d='M8 11v-5a4 4 0 0 1 8 0'></path>
+			</svg>
+			<h3>Nivel 2</h3>
+		</div>
+		<div id='lock'>
+			<svg
+				width='20'
+				height='20'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
+				>
+				</path>
+				<path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path>
+				<path d='M8 11v-4a4 4 0 1 1 8 0v4'></path>
+			</svg>
+			<h3>Nivel 3</h3>
+		</div>
+		<div id='lock'>
+			<svg
+				width='20'
+				height='20'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
+				>
+				</path>
+				<path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path>
+				<path d='M8 11v-4a4 4 0 1 1 8 0v4'></path>
+			</svg>
+			<h3>Nivel 4</h3>
+		</div>
+		<div id='lock'>
+			<svg
+				width='20'
+				height='20'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
+				>
+				</path>
+				<path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path>
+				<path d='M8 11v-4a4 4 0 1 1 8 0v4'></path>
+			</svg>
+			<h3>Nivel 5</h3>
+		</div>
+	</main>
 </Layout>
 
 <style>
-  main > div {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
+	main > div {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-  h1 {
-    color: var(--title);
-    font-family: "Pacifico";
-    margin: 1rem;
+		transition: transform 300ms ease;
+		cursor: default;
+	}
+	main > div:hover {
+		transform: scale(1.01);
+	}
 
-    font-size: 2rem;
-  }
-  h3 {
-    color: var(--subtitle);
-    font-family: "Lobster";
-    margin: 1rem;
+	h1 {
+		color: var(--title);
+		font-family: 'Pacifico';
+		margin: 1rem;
 
-    font-size: 1.5rem;
-  }
+		font-size: 2rem;
+	}
+	h3 {
+		color: var(--subtitle);
+		font-family: 'Lobster';
+		margin: 1rem;
 
-  #lock > * {
-    color: var(--grey);
-  }
+		font-size: 1.5rem;
+	}
+
+	#lock > * {
+		color: var(--grey);
+	}
+	#lock:hover {
+		transform: none;
+	}
+
+	#unlock {
+		cursor: pointer;
+	}
 </style>

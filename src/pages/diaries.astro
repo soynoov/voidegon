@@ -1,55 +1,67 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Article from "../components/Article.astro";
-import Section from "../components/Section.astro";
-import Menu from "../layouts/Menu.astro";
-import Card from "../components/Card.astro";
+import Layout from '../layouts/Layout.astro';
+import Article from '../components/Article.astro';
+import Menu from '../layouts/Menu.astro';
+import Card from '../components/Card.astro';
 ---
 
-<Layout title="| Diarios">
-  <main>
-    <Article
-      title="Diarios de Viaje"
-      img="/img/bg_diaries.png"
-      center="center"
-      opacity={0.75}
-    />
-    <a href="/diaries/cap-1">
-      <Section title="Capítulo 1" subtitle="La Tierra Olvidada" />
-    </a>
-    <Menu>
-      <Card
-        img="/img/baren/baren_book.png"
-        name="Baren Valhice"
-        enlace="diaries/baren_diary"
-      />
-      <Card
-        img="/img/enya/enya_book.png"
-        name="Enya Fendor"
-        enlace="diaries/enya_diary"
-      />
-      <Card
-        img="/img/isidoro/isidoro_book.png"
-        name="Isidoro Matamoros"
-        enlace="diaries/isidoro_diary"
-      />
-      <Card
-        img="/img/kenkart/kenkart_book.png"
-        name="Kenkart Silkson"
-        enlace="diaries/kenkart_diary"
-      />
-      <Card
-        img="/img/kriv/kriv_book.png"
-        name="Kriv Coppernico"
-        enlace="diaries/kriv_diary"
-      />
-      <Card
-        img="/img/nyliss/nyliss_book.png"
-        name="Nyliss Avacynn"
-        enlace="diaries/nyliss_diary"
-      />
-    </Menu>
-  </main>
+<Layout title='| Diarios'>
+	<main>
+		<Article
+			title='Diarios de Viaje'
+			img='/img/bg_diaries.png'
+			center='center'
+			opacity={0.75}
+		/>
+		<div
+			class={`
+      bg-[--gray] text-center w-[80vw] mx-auto m-4 p-4
+      rounded-lg hover:scale-105 transition-transform
+      cursor-pointer shadow-lg
+    `}
+		>
+			<a href='/diaries/cap-1'>
+				<h1 class='text-[--title] font-[pacifico] text-2xl'>
+					Capítulo 1
+				</h1>
+			</a>
+		</div>
+		<h3 class='text-[--subtitle] font-[lobster] text-lg m-4 text-center'>
+			La Tierra Olvidada
+		</h3>
+		<Menu>
+			<Card
+				img='/img/baren/baren_book.png'
+				name='Baren Valhice'
+				enlace='diaries/baren_diary'
+			/>
+			<Card
+				img='/img/enya/enya_book.png'
+				name='Enya Fendor'
+				enlace='diaries/enya_diary'
+			/>
+			<Card
+				img='/img/isidoro/isidoro_book.png'
+				name='Isidoro Matamoros'
+				enlace='diaries/isidoro_diary'
+			/>
+			<Card
+				img='/img/kenkart/kenkart_book.png'
+				name='Kenkart Silkson'
+				enlace='diaries/kenkart_diary'
+			/>
+			<Card
+				img='/img/kriv/kriv_book.png'
+				name='Kriv Coppernico'
+				enlace='diaries/kriv_diary'
+			/>
+			<Card
+				img='/img/nyliss/nyliss_book.png'
+				name='Nyliss Avacynn'
+				enlace='diaries/nyliss_diary'
+			/>
+		</Menu>
+	</main>
 </Layout>
 
 <style></style>

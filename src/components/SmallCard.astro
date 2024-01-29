@@ -1,22 +1,32 @@
 ---
 interface Props {
-  name: string;
-  img?: string;
-  enlace?: string;
+	name: string;
+	img?: string;
+	enlace?: string;
+	bg_color?: string;
 }
 
-const { name, img = "/img/background.png", enlace } = Astro.props;
+const {
+	name,
+	img = '/img/background.png',
+	enlace,
+	bg_color = 'gray',
+} = Astro.props;
 ---
 
 <section
-  class="flex justify-center items-center flex-col hover:scale-105 transition-transform hover:shadow-xl rounded-xl"
+	class={`
+  flex justify-center items-center flex-col 
+  hover:scale-105 transition-transform hover:shadow-lg hover:bg-[--${bg_color}]
+  rounded-lg text-center
+  `}
 >
-  <a href={enlace}>
-    <div
-      class="size-[5.5cm] rounded-xl"
-      style={{ background: `url(${img}) top/cover` }}
-    >
-    </div>
-  </a>
-  <h3 class="my-2 font-[caveat] font-semibold text-lg">{name}</h3>
+	<a href={enlace}>
+		<div
+			class='size-[5.5cm] rounded-t-lg'
+			style={{ background: `url(${img}) top/cover` }}
+		>
+		</div>
+		<h3 class='my-2 font-[caveat] font-semibold text-lg'>{name}</h3>
+	</a>
 </section>

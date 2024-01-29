@@ -1,28 +1,34 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Article from "../../components/Article.astro";
-import Section from "../../components/Section.astro";
-import Menu from "../../layouts/Menu.astro";
-import Card from "../../components/Card.astro";
-import SmallCard from "../../components/SmallCard.astro";
+import Layout from '../../layouts/Layout.astro';
+import Article from '../../components/Article.astro';
+import Section from '../../components/Section.astro';
+import Menu from '../../layouts/Menu.astro';
+import SmallCard from '../../components/SmallCard.astro';
 ---
 
-<Layout title="| Murcia">
-  <Article title="Murcia" img="/img/maps/murcia.png" />
-  <Section title="Locales" />
-  <Menu>
-    <SmallCard name="Taberna" enlace="murcia/tavern" />
-    <SmallCard name="Biblioteca" />
-    <SmallCard name="Iglesia" />
-    <SmallCard name="Forja" />
-    <SmallCard name="Álmacen" />
-    <SmallCard name="Tienda de Pociones" />
-  </Menu>
-  <Section title="Ubicaciones" />
-  <Menu>
-    <SmallCard name="Cueva" enlace="maps/murcia/cave" />
-  </Menu>
-  <div class="bg-[--gray]">
-    <!-- Fragmento de Historia -->
-  </div>
+<Layout title='| Murcia'>
+	<Article title='Murcia' img='/img/maps/murcia.png' />
+	<Section title='Locales' />
+	<Menu>
+		<SmallCard
+			name='Taberna'
+			enlace='murcia/tavern'
+			img='/img/maps/murcia/tavern.png'
+		/>
+		<SmallCard name='Biblioteca' />
+		<SmallCard name='Iglesia' />
+		<SmallCard name='Forja' />
+		<SmallCard name='Almacen' />
+		<SmallCard name='Tienda de Pociones' />
+	</Menu>
+	<Section title='Ubicaciones' />
+	<Menu>
+		<SmallCard name='Cueva' enlace='maps/murcia/cave' />
+		<SmallCard name='Bosque' enlace='maps/murcia/cave' />
+		<SmallCard name='Mazmorra' enlace='maps/murcia/cave' />
+		<SmallCard name='Jardin' enlace='maps/murcia/cave' />
+	</Menu>
+	<div class='bg-[--gray]'>
+		<!-- Fragmento de Historia -->
+	</div>
 </Layout>
