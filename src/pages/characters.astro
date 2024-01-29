@@ -92,14 +92,10 @@ import SmallCard from '../components/SmallCard.astro';
           />
         </div>
         <div class='blur-sm hover:blur-none'>
-          <Card
-            name='████'
-            img='/img/npc/tir/mun/mun.png'
-            enlace='/characters/npc/mun'
-          />
+          <Card img='/img/npc/tir/mun/mun.png' lock />
         </div>
         <div class='blur-sm hover:blur-none'>
-          <Card name='█████████' img='/img/background.png' enlace='' />
+          <Card lock />
         </div>
       </Menu>
     </div>
@@ -107,12 +103,7 @@ import SmallCard from '../components/SmallCard.astro';
       <Section subtitle='Personajes Secundarios' />
       <Menu>
         <div class='blur-sm hover:blur-none'>
-          <SmallCard
-            name='█████████'
-            img='/img/background.png'
-            enlace=''
-            light
-          />
+          <SmallCard lock />
         </div>
       </Menu>
     </div>
