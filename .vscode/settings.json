@@ -1,0 +1,36 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "voidegon\\src\\components\\",
+            "badge": "🦴"
+        },
+        {
+            "folderPath": "voidegon\\src\\layouts\\",
+            "badge": "🫀"
+        },
+        {
+            "folderPath": "voidegon\\src\\pages\\",
+            "badge": "🌱"
+        },
+        {
+            "folderPath": "voidegon\\src\\pages\\maps\\",
+            "badge": "🗺️"
+        },
+        {
+            "folderPath": "voidegon\\src\\pages\\extras\\",
+            "badge": "🧵"
+        },
+        {
+            "folderPath": "voidegon\\src\\pages\\diaries\\",
+            "badge": "📓"
+        },
+        {
+            "folderPath": "voidegon\\src\\pages\\characters\\",
+            "badge": "🤡"
+        },
+        {
+            "folderPath": "voidegon\\src\\pages\\characters\\npc\\",
+            "badge": "🤖"
+        }
+    ]
+}
