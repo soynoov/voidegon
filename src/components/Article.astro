@@ -8,23 +8,23 @@ interface Props {
 
 const {
   title,
-  img = "/img/background.png",
-  center = "bottom",
+  img = '/img/background.png',
+  center = 'bottom',
   opacity = 0.5,
 } = Astro.props;
 ---
 
 <section
-  class="relative h-[30vh] flex justify-center items-center cursor-default"
+  class='relative h-[30vh] flex justify-center items-center cursor-default'
   style={{ background: `url(${img}) ${center}/cover` }}
 >
   <div
-    class="absolute inset-0"
-    style={{ opacity: `${opacity}`, background: "#000" }}
+    class='absolute inset-0'
+    style={{ opacity: `${opacity}`, background: '#000' }}
   >
   </div>
   <h1
-    class="font-bold text-5xl font-[unbounded] text-[--light] text-center relative mx-8 text-balance"
+    class='font-bold text-5xl font-[unbounded] text-[--light] text-center relative mx-8 text-balance'
   >
     {title}
   </h1>
