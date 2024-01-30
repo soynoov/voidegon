@@ -18,12 +18,12 @@ import Section from '../../components/Section.astro';
       <span id='location'>Terra</span>. Sin embargo, este evento parece
       diferente a los █████████ ███████████ ████ ████████ ██ █████████
       ███████████. En esta ocasión, nuestros
-      <span id='group'>protagonistas</span> tendrán un papel crucial en la dirección
+      <strong id='heros'>heroes</strong> tendrán un papel crucial en la dirección
       de la historia, tomando decisiones que modificarán el curso de los acontecimientos.
       Acompáñame en esta aventura para explorar sus elecciones y analizar las consecuencias:
     </p>
     <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform open:mb-8 open:pb-4'
+      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform open:lg:mb-10 open:pb-4 open:mb-20'
     >
       <summary class='list-none mb-4 text-[--warning]'>
         <Section title='Prólogo ~ Nacimiento del Dragón' color='warning' />
@@ -31,7 +31,7 @@ import Section from '../../components/Section.astro';
       </summary>
       <p class='-mt-8'>
         <strong class='text-[--date]'>[Día 0]:</strong>
-        Nuestros <span id='group'>protagonistas</span>, en busca de su destino,
+        Nuestros "<strong id='heros'>heroes</strong>", en busca de su destino,
         han terminado en
         <span id='location'>las tierras olvidadas</span>.
         <span id='hint'>
@@ -42,44 +42,42 @@ import Section from '../../components/Section.astro';
 
       <ul>
         <li>
-          <strong>Baren Valhice</strong>: la semielfa druida, y
-          <strong>Enya Fendor</strong>: la enana exploradora, ambas pérdidas en
-          los rincones de <span id='location'>Terra</span>, buscan refugio en <span
-            id='location'>Murcia</span
-          >.
+          <strong id='hero'>Baren Valhice</strong>: la semielfa druida, y
+          <strong id='hero'>Enya Fendor</strong>: la enana exploradora, ambas
+          pérdidas en los rincones de <span id='location'>Terra</span>, buscan
+          refugio en <span id='location'>Murcia</span>.
         </li>
 
         <li>
-          <strong>Kenkart Silkson</strong>, un enano pícaro ladrón cuya única
-          meta es acumular riquezas, desterrado de todas partes y sin un lugar
-          que lo acoja, acaba en
+          <strong id='hero'>Kenkart Silkson</strong>, un enano pícaro ladrón
+          cuya única meta es acumular riquezas, desterrado de todas partes y sin
+          un lugar que lo acoja, acaba en
           <span id='location'>Murcia</span> con la esperanza de saquear tierras ya
           despojadas.
         </li>
 
         <li>
-          <strong>Isidoro Matamoros</strong>, un tiefling monje cuyo destino ha
-          sido impuesto por sus padres, desterrado por su comportamiento, deberá
-          aprender a valorar las cosas, y encontrará en <span id='location'
-            >Murcia</span
-          > el lugar perfecto para esa lección.
+          <strong id='hero'>Isidoro Matamoros</strong>, un tiefling monje cuyo
+          destino ha sido impuesto por sus padres, desterrado por su
+          comportamiento, deberá aprender a valorar las cosas, y encontrará en
+          <span id='location'>Murcia</span> el lugar perfecto para esa lección.
         </li>
 
         <li>
-          <strong>Nyliss Avacyn</strong>, un mago aasimar cuyo destino fue
-          forzado, se ve obligada a huir de su mundo y termina sentenciada en un
-          lugar donde nunca la encontrarían.
+          <strong id='hero'>Nyliss Avacyn</strong>, un mago aasimar cuyo destino
+          fue forzado, se ve obligada a huir de su mundo y termina sentenciada
+          en un lugar donde nunca la encontrarían.
         </li>
       </ul>
       <p class='-mt-4'>
-        Estos "héroes" convergen en la taberna de
+        Estos "<strong id='heros'>heroes</strong>" convergen en la taberna de
         <span id='location'>Murcia</span>, conocida como "The Bold Owl". Ahora,
         enfrentados a un destino compartido, deben tomar decisiones cruciales en
         este nuevo día.
         <br />
         Al despertar en lo que parece su nuevo hogar, todos bajan a la sala principal
         con la esperanza de encontrar algo para comer o beber.
-        <strong>Enya</strong>, desesperada por la comida,
+        <strong id='hero'>Enya</strong>, desesperada por la comida,
         <span id='bad'>decide tomar algo sin preguntar</span>. Sin embargo, el
         tabernero se da cuenta de su acción y, en lugar de molestarse, informa
         al grupo que la comida es gratuita, pero antes de intentar robarla,
@@ -88,90 +86,129 @@ import Section from '../../components/Section.astro';
         El tabernero, un hombre experimentado, decide aprovechar la oportunidad para
         darles una charla sobre la historia de un dragón que está a punto de nacer
         en las montañas cercanas. Este dragón es buscado por muchos, por lo que ofrecen
-        una gran cantidad de oro como recompensa por su cabeza. <strong
-          >Nyliss</strong
-        >, sin sentirse cómoda con el tono del tabernero, <span id='bad'
-          >decide amenazarlo</span
-        >.
+        una gran cantidad de oro como recompensa por su cabeza.
+        <strong id='hero'>Nyliss</strong>, sin sentirse cómoda con el tono del
+        tabernero,
+        <span id='bad'>decide amenazarlo</span>.
         <br />
         Molesto por ambas situaciones, el tabernero advierte al grupo que deben empezar
         a actuar con más cabeza y menos impulsividad si quieren sobrevivir en estas
         tierras inhóspitas. La advertencia queda flotando en el aire, pues nuestros
         aventureros solo asimilan las palabras del tabernero relacionadas con el
         oro.
-      </p>
-    </details>
-    <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
-    >
-      <summary class='list-none mb-4'>
-        <Section title='Primer Act ~ Formando Vínculos' />
-        <hr class='w-[60vw] mx-auto p-2 -mt-8' />
-      </summary>
-      <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
-        libero! Excepturi, repellat explicabo perferendis laborum blanditiis
-        minus voluptate in id unde ipsam deserunt, amet dolores nihil
-        accusantium voluptatum eveniet.
-      </p>
-    </details>
-    <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
-    >
-      <summary class='list-none mb-4'>
-        <Section title='Segundo Act ~ Asentando Bases' />
-        <hr class='w-[60vw] mx-auto p-2 -mt-8' />
-      </summary>
-      <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
-        libero! Excepturi, repellat explicabo perferendis laborum blanditiis
-        minus voluptate in id unde ipsam deserunt, amet dolores nihil
-        accusantium voluptatum eveniet.
-      </p>
-    </details>
-    <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
-    >
-      <summary class='list-none mb-4 text-[--subtitle]'>
-        <Section title='Tercer Act ~ Desafios de Tir' color='subtitle' />
-        <hr class='w-[60vw] mx-auto p-2 -mt-8' />
-      </summary>
-      <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
-        libero! Excepturi, repellat explicabo perferendis laborum blanditiis
-        minus voluptate in id unde ipsam deserunt, amet dolores nihil
-        accusantium voluptatum eveniet.
-      </p>
-    </details>
-    <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
-    >
-      <summary class='list-none mb-4 text-[--subtitle]'>
-        <Section title='Cuarto Act ~ Soledad' color='subtitle' />
-        <hr class='w-[60vw] mx-auto p-2 -mt-8' />
-      </summary>
-      <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
-        libero! Excepturi, repellat explicabo perferendis laborum blanditiis
-        minus voluptate in id unde ipsam deserunt, amet dolores nihil
-        accusantium voluptatum eveniet.
-      </p>
-    </details>
-    <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'
-    >
-      <summary class='list-none mb-4 text-[--grey]'>
-        <Section title='Quinto Act ~ ?' color='grey' />
-        <hr class='w-[60vw] mx-auto p-2 -mt-8' />
-      </summary>
-      <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
-        libero! Excepturi, repellat explicabo perferendis laborum blanditiis
-        minus voluptate in id unde ipsam deserunt, amet dolores nihil
-        accusantium voluptatum eveniet.
+        <br /><br />
+        Decididos a obtener el oro prometido, nuestros
+        <strong id='heros'>heroes</strong> se encaminan hacia la aldea en busca de
+        una manera de cumplir con la misión. En su trayecto, se cruzan con un par
+        de zombis aparentemente inofensivos. A pesar de ello,
+        <span id='neutral'>deciden enfrentarse a los no muertos</span> antes de continuar
+        hacia la aldea. No desaprovechan la oportunidad y saquean los cuerpos de
+        los zombis. Durante esta acción,
+        <strong id='hero'>Kenkart</strong> descubre
+        <span id='object'>un anillo</span> que captura su atención y
+        <span id='bad'>
+          decide guardárselo sin compartir la información con el resto del grupo
+        </span>. Una vez en la aldea, los <strong id='heros'>heroes</strong> se dirigen
+        directamente a <span id='location'>la biblioteca</span>.
+        <br /><br />
+        Estando en <span id='location'>la biblioteca</span>, nuestros
+        <strong id='heros'>heroes</strong> se topan con un montón de libros en mal
+        estado. Revisando dichos libros para encontrar alguna respuesta, escuchan
+        una voz aterradora alertando a nuestros
+        <strong id='heros'>heroes</strong> que se alejen de allí. Sin embargo, encuentran
+        la fuente de esa voz, que resulta ser una pequeña araña con poderes psíquicos.
+        Después de una conversación con la araña, esta decide ayudar a nuestros
+        <strong id='heros'>heroes</strong> otorgándoles un papel con respuestas.
+        <br />
+        <strong id='hero'>Kenkart</strong>, con un miedo irracional hacia las
+        arañas,
+        <span id='bad'>decide asesinarla brutalmente,</span> lo que hace que
+        <strong id='hero'>Baren</strong>, amante de los animales, se entristezca
+        y enfurezca con
+        <strong id='hero'>Kenkart</strong>.
+        <br />
+        Nuestros <strong id='heros'>heroes</strong>, sin saber qué hacer con el
+        papel, deciden preguntar a un par de enanos que pasaban por allí. Uno de
+        los enanos les da una respuesta, pero a cambio decide quedarse con el
+        papel.
+        <br />
+        <strong id='hero'>Nyliss</strong>, llena de odio, decide coger al enano
+        y elevarlo a una altura suficiente como para que la caída acabe con el
+        enano. <strong id='hero'>Nyliss</strong>, sin una pizca de bondad o
+        paciencia,
+        <span id='bad'>acaba soltando al enano, acabando con su vida</span> y cogiendo
+        el papel del cadáver. El otro enano, asustado y temblando, decide irse para
+        alertar el comportamiento de los <strong id='heros'>heroes</strong> a los
+        habitantes de <span id='location'>Murcia</span>.
+        <strong id='hero'>Kenkart</strong> e <strong id='hero'>Isidoro</strong>
+        <span id='bad'>saquean el cuerpo del enano muerto</span> antes de que este
+        sea engullido por la tierra, pero no parece que a nadie le importe este suceso.
+        Nuestros <strong id='heros'>heroes</strong> deciden seguir adelante
+        <span id='bad'>sin importarles nada en absoluto</span>.
+        <br /><br />
       </p>
     </details>
   </main>
+  <details class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'>
+    <summary class='list-none mb-4'>
+      <Section title='Primer Act ~ Formando Vínculos' />
+      <hr class='w-[60vw] mx-auto p-2 -mt-8' />
+    </summary>
+    <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
+      libero! Excepturi, repellat explicabo perferendis laborum blanditiis minus
+      voluptate in id unde ipsam deserunt, amet dolores nihil accusantium
+      voluptatum eveniet.
+    </p>
+  </details>
+  <details class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'>
+    <summary class='list-none mb-4'>
+      <Section title='Segundo Act ~ Asentando Bases' />
+      <hr class='w-[60vw] mx-auto p-2 -mt-8' />
+    </summary>
+    <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
+      libero! Excepturi, repellat explicabo perferendis laborum blanditiis minus
+      voluptate in id unde ipsam deserunt, amet dolores nihil accusantium
+      voluptatum eveniet.
+    </p>
+  </details>
+  <details class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'>
+    <summary class='list-none mb-4 text-[--subtitle]'>
+      <Section title='Tercer Act ~ Desafios de Tir' color='subtitle' />
+      <hr class='w-[60vw] mx-auto p-2 -mt-8' />
+    </summary>
+    <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
+      libero! Excepturi, repellat explicabo perferendis laborum blanditiis minus
+      voluptate in id unde ipsam deserunt, amet dolores nihil accusantium
+      voluptatum eveniet.
+    </p>
+  </details>
+  <details class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'>
+    <summary class='list-none mb-4 text-[--subtitle]'>
+      <Section title='Cuarto Act ~ Soledad' color='subtitle' />
+      <hr class='w-[60vw] mx-auto p-2 -mt-8' />
+    </summary>
+    <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
+      libero! Excepturi, repellat explicabo perferendis laborum blanditiis minus
+      voluptate in id unde ipsam deserunt, amet dolores nihil accusantium
+      voluptatum eveniet.
+    </p>
+  </details>
+  <details class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform'>
+    <summary class='list-none mb-4 text-[--grey]'>
+      <Section title='Quinto Act ~ ?' color='grey' />
+      <hr class='w-[60vw] mx-auto p-2 -mt-8' />
+    </summary>
+    <p class='text-justify p-4 px-10 -mt-8 text-pretty'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quas
+      libero! Excepturi, repellat explicabo perferendis laborum blanditiis minus
+      voluptate in id unde ipsam deserunt, amet dolores nihil accusantium
+      voluptatum eveniet.
+    </p>
+  </details>
 </Layout>
 
 <style>
