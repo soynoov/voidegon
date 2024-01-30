@@ -2,10 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import Title from '../../components/Title.astro';
 import Stats from '../../components/Stats.astro';
+import Money from '../../components/Money.astro';
 ---
 
-<Layout title="| Kriv Coppernico">
-  <Title title="Kriv Coppernico" />
+<Layout title='| Kriv Coppernico'>
+  <Title title='Kriv Coppernico' />
   <main
     class={`
     w-[80vw] mx-auto m-4
@@ -13,7 +14,7 @@ import Stats from '../../components/Stats.astro';
     
   `}
   >
-    <div class="bg-[--gray] rounded-xl">
+    <div>
       <Stats
         fue={16}
         des={6}
@@ -25,6 +26,9 @@ import Stats from '../../components/Stats.astro';
         com={[0, 0, 0, 0, 1, 1]}
         modcom={2}
       />
+    </div>
+    <div class='w-[80vw]'>
+      <Money pc={8} pp={13} pe={21} po={34} ppt={55} />
     </div>
   </main>
 </Layout>
