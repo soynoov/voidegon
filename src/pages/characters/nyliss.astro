@@ -2,13 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import Title from '../../components/Title.astro';
 import Stats from '../../components/Stats.astro';
+import Money from '../../components/Money.astro';
 ---
 
-<Layout title="Nyliss  Avacyn">
+<Layout title='Nyliss  Avacyn'>
   <Title
-    title="Nyliss Avacyn"
-    img="https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg"
-    center="center"
+    title='Nyliss Avacyn'
+    img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
+    center='center'
   />
   <main
     class={`
@@ -17,7 +18,7 @@ import Stats from '../../components/Stats.astro';
     gap-4
   `}
   >
-    <div class="col-span-4">
+    <div class='col-span-4'>
       <Stats
         fue={10}
         des={14}
@@ -30,19 +31,21 @@ import Stats from '../../components/Stats.astro';
         modcom={2}
       />
     </div>
-    <div class="col-span-4 row-span-2 size-fit">
+    <div class='col-span-4 row-span-2 size-fit'>
       <img
-        src="/img/nyliss/nyliss.png"
-        alt="Nyliss Avacyn"
-        class="rounded-2xl size-fit"
+        src='/img/nyliss/nyliss.png'
+        alt='Nyliss Avacyn'
+        class='rounded-2xl size-fit'
       />
+    </div>
+    <div class='col-span-2 row-span-4 w-full'>
+      <Money pc={2} pp={21} pe={6} po={13} ppt={0} />
     </div>
   </main>
 </Layout>
 
 <style>
   main > div {
-    background-color: var(--gray);
     border-radius: 1rem;
   }
 </style>
