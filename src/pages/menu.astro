@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HR from '../components/little/HR.astro';
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<Layout title='】 Voidegon'>
+	<main>
+		<nav>
+			<ul class='flex flex-col items-center mt-20'>
+				<li>
+					<a href='/diaries'>Diarios</a>
+				</li>
+				<HR />
+				<li>
+					<a href='/characters'> Personajes</a>
+				</li>
+				<HR />
+				<li>
+					<a href='/maps'> Mapas</a>
+				</li>
+				<HR />
+				<li>
+					<a href='/extras'> Extras</a>
+				</li>
+			</ul>
+		</nav>
+	</main>
+
+	<style>
+		li {
+			padding: 0.5rem 1rem;
+			text-align: center;
+		}
+		header > div > a,
+		header > nav > ul {
+			display: flex;
+			align-items: center;
+		}
+		a:hover {
+			color: var(--white);
+		}
+		.active {
+			font-weight: bold;
+			color: var(--light);
+			transform: none;
+		}
+		.active:hover {
+			color: var(--light);
+			transform: none;
+		}
+		li:hover {
+			transform: scale(1.05);
+		}
+	</style>
+</Layout>
