@@ -4,9 +4,12 @@ import Article from '../../components/Article.astro';
 import Section from '../../components/Section.astro';
 import Menu from '../../layouts/Menu.astro';
 import SmallCard from '../../components/SmallCard.astro';
+
+// Little Components
+import HR from '../../components/tags/HR.astro';
 ---
 
-<Layout title='| Murcia'>
+<Layout title='】 Voidegon ▸ Murcia'>
   <Article title='Murcia' img='/img/maps/murcia.png' />
   <Section title='Locales' />
   <Menu>
@@ -23,13 +26,9 @@ import SmallCard from '../../components/SmallCard.astro';
     />
     <SmallCard name='Forja' />
     <SmallCard name='Almacen' lock />
-    <SmallCard
-      name='Tienda de Pociones'
-      img='/img/npc/tir/var/bg_var.png'
-      lock
-    />
+    <SmallCard name='Tienda de Pociones' lock />
   </Menu>
-  <hr class='w-[80vw] mx-auto border-[--gray] border-2 rounded-lg mt-8' />
+  <HR />
   <Section title='Ubicaciones' />
   <Menu>
     <SmallCard name='Cueva' enlace='maps/murcia/cave' />
