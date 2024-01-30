@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Title from '../../../components/Title.astro';
+import Money from '../../../components/Money.astro';
 ---
 
 <Layout title='| Taberna'>
@@ -9,11 +10,17 @@ import Title from '../../../components/Title.astro';
     class={`
     w-[80vw] mx-auto my-4
     grid grid-cols-5 gap-4
-    
   `}
   >
-    <div class='col-span-5'>
-      <h1>The Bold Owl</h1>
+    <div class='w-full bg-[--gray] rounded-full h-1.5 col-span-5'>
+      <div class='bg-[--title] h-1.5 rounded-full' style='width: 25%'></div>
+      <div class='h-3.5 bg-[--title] w-3.5 rounded-full -mt-2.5'></div>
+      <div class='h-3.5 bg-[--title] w-3.5 rounded-full -mt-3.5 ml-[20%]'></div>
+      <div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[40%]'></div>
+      <div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[60%]'></div>
+      <div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[80%]'></div>
+      <div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[99.5%]'>
+      </div>
     </div>
     <div id='unlock'>
       <svg
@@ -172,13 +179,16 @@ import Title from '../../../components/Title.astro';
           desarrollo y bienestar del pueblo en este mundo desafiante. Economía
           actual:
         </p>
+        <div class='' id='dark'>
+          <Money pc={1} pe={1} po={4} ppt={2} />
+        </div>
       </section>
     </article>
   </main>
 </Layout>
 
 <style>
-  main > div {
+  main > div:not(:first-of-type) {
     background-color: var(--gray);
     border-radius: 0.5rem;
 
@@ -190,7 +200,6 @@ import Title from '../../../components/Title.astro';
     cursor: default;
   }
   main > div:hover {
-    transform: scale(1.01);
   }
 
   h1 {
@@ -216,11 +225,20 @@ import Title from '../../../components/Title.astro';
   #lock > * {
     color: var(--grey);
   }
-  #lock:hover {
+  #lock:hover,
+  #dark:hover {
     transform: none;
   }
 
   #unlock {
     cursor: pointer;
+  }
+
+  #dark {
+    background-color: var(--dark);
+  }
+
+  article {
+    text-align: justify;
   }
 </style>
