@@ -5,6 +5,9 @@ import Section from '../components/Section.astro';
 import Menu from '../layouts/Menu.astro';
 import Card from '../components/Card.astro';
 import SmallCard from '../components/SmallCard.astro';
+
+// Little Components
+import HR from '../components/little/HR.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Personajes'>
@@ -100,11 +103,12 @@ import SmallCard from '../components/SmallCard.astro';
       </Menu>
     </div>
     <div class='bg-[--gray] pb-6'>
-      <Section subtitle='Personajes Secundarios' />
+      <Section subtitle='Lore Secundario' />
       <Menu>
         <div class='blur-sm hover:blur-none'>
           <SmallCard lock />
         </div>
+        <HR dark />
       </Menu>
     </div>
   </main>
