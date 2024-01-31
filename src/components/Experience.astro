@@ -1,9 +1,9 @@
 ---
 interface Props {
-  race: string;
-  rol: string;
-  exp: number;
-  start?: number;
+	race: string;
+	rol: string;
+	exp: number;
+	start?: number;
 }
 
 const { race, rol, exp, start = 2 } = Astro.props;
@@ -13,17 +13,17 @@ let level = 0;
 let expUp = 0;
 
 function medirXP(exp: number) {
-  while (exp >= expUp) {
-    level++;
-    expUp += 300; // Incrementamos el umbral por cada nivel
-  }
+	while (exp >= expUp) {
+		level++;
+		expUp += 300; // Incrementamos el umbral por cada nivel
+	}
 
-  return { level, expUp };
+	return { level, expUp };
 }
 
 function medirPor(exp: number) {
-  porcentaje = Math.floor((exp / expUp) * 100);
-  return porcentaje;
+	porcentaje = Math.floor((exp / expUp) * 100);
+	return porcentaje;
 }
 
 medirXP(exp);
@@ -31,51 +31,54 @@ medirPor(exp);
 console.log(porcentaje);
 ---
 
-<article class='grid grid-cols-6 justify-around items-center text-center'>
-  <section class={`col-span-1 justify-self-center row-start-1`}>
-    <h6 class='text-[--title] font-[unbounded]'>{race}</h6>
-  </section>
+<article class='grid grid-cols-6 items-center'>
+	<section class={`col-span-1 row-start-1 w-[4cm]`}>
+		<h6 class='text-[--title] font-[unbounded]'>{race}</h6>
+	</section>
 
-  <section
-    class={`col-span-4 font-[caveat] font-bold text-[--white] row-start-1`}
-    style={`grid-column-start: ${start};`}
-  >
-    <div class='flex justify-center items-center w-full'>
-      <span class='text-base mx-4 w-20'>Nivel {level}</span>
-      <div class='w-full bg-[--dark] rounded-full h-1.5'>
-        <div
-          class='bg-[--date] h-1.5 rounded-full animate-pulse'
-          style={`width: ${porcentaje}%`}
-        >
-        </div>
-      </div>
-      <span class='text-base mx-4 w-20'>{exp}/{expUp}</span>
-    </div>
-  </section>
+	<section
+		class={`col-span-4 font-[caveat] font-bold text-[--white] row-start-1 w-[90%]`}
+		style={`grid-column-start: ${start};`}
+	>
+		<div class='flex justify-center items-center'>
+			<span class='text-base mx-4 w-20'>Nivel {level}</span>
+			<div class='w-full bg-[--dark] rounded-full h-1.5'>
+				<div
+					class='bg-[--date] h-1.5 rounded-full animate-pulse'
+					style={`width: ${porcentaje}%`}
+				>
+				</div>
+			</div>
+			<span class='text-base mx-4 w-20'>{exp}/{expUp}</span>
+		</div>
+	</section>
 
-  <section class={`col-span-1 justify-self-center row-start-1`}>
-    <h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
-  </section>
+	<section class={`col-span-1 row-start-1 w-[4cm]`}>
+		<h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
+	</section>
 </article>
 
 <style>
-  section {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    padding: 0.5rem 3rem;
-    margin: 0rem 3rem;
+	section {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0.5rem 1rem;
+		margin: 0 1rem;
 
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+		justify-self: center;
+		text-align: center;
 
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section:hover {
-    transform: scale(1.01);
-  }
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-  h6 {
-    font-weight: bold;
-  }
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section:hover {
+		transform: scale(1.01);
+	}
+
+	h6 {
+		font-weight: bold;
+	}
 </style>

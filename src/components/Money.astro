@@ -1,71 +1,77 @@
 ---
 interface Props {
-  pc?: number;
-  pp?: number;
-  pe?: number;
-  po?: number;
-  ppt?: number;
+	pc?: number;
+	pp?: number;
+	pe?: number;
+	po?: number;
+	ppt?: number;
 }
 
 const { pc = 0, pp = 0, pe = 0, po = 0, ppt = 0 } = Astro.props;
 ---
 
 <section
-  class={`
+	class={`
     flex gap-4 flex-wrap justify-center items-center
-    m-4 cursor-default text-center
+    my-4 cursor-default text-center
     w-full
 `}
 >
-  <!-- Cobre -->
-  <div>
-    <h3 class='text-[--copper]'>PC</h3>
-    <h6>{pc}</h6>
-  </div>
-  <!-- Plata -->
-  <div>
-    <h3 class='text-[--silver]'>PP</h3>
-    <h6>{pp}</h6>
-  </div>
-  <!-- Electro -->
-  <div>
-    <h3 class='text-[--electro]'>PE</h3>
-    <h6>{pe}</h6>
-  </div>
-  <!-- Oro -->
-  <div>
-    <h3 class='text-[--gold]'>PO</h3>
-    <h6>{po}</h6>
-  </div>
-  <!-- Platino -->
-  <div>
-    <h3 class='text-[--platinum]'>PPT</h3>
-    <h6>{ppt}</h6>
-  </div>
+	<!-- Cobre -->
+	<div>
+		<h3 class='text-[--copper]'>PC</h3>
+		<h6>{pc}</h6>
+	</div>
+	<!-- Plata -->
+	<div>
+		<h3 class='text-[--silver]'>PP</h3>
+		<h6>{pp}</h6>
+	</div>
+	<!-- Electro -->
+	<div>
+		<h3 class='text-[--electro]'>PE</h3>
+		<h6>{pe}</h6>
+	</div>
+	<!-- Oro -->
+	<div>
+		<h3 class='text-[--gold]'>PO</h3>
+		<h6>{po}</h6>
+	</div>
+	<!-- Platino -->
+	<div>
+		<h3 class='text-[--platinum]'>PPT</h3>
+		<h6>{ppt}</h6>
+	</div>
 </section>
 
 <style>
-  h3 {
-    font-family: 'Unbounded';
-    font-weight: bold;
+	h3 {
+		font-family: 'Unbounded';
+		font-weight: bold;
 
-    border-radius: 0.5rem;
-    background-color: var(--dark);
+		border-radius: 0.5rem;
+		background-color: var(--dark);
 
-    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
-  }
-  h6 {
-    font-family: 'Pacifico';
-    color: var(--white);
-    font-size: 1.5rem;
-  }
+		box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
+	}
+	h6 {
+		font-family: 'Pacifico';
+		color: var(--white);
+		font-size: 1.5rem;
+	}
 
-  section > div {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    width: 2.5cm;
+	section > div {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 1rem;
+		width: 2.5cm;
 
-    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
-  }
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+		transition: transform 100ms ease;
+	}
+	section > div:hover {
+		transform: scale(1.01);
+	}
 </style>

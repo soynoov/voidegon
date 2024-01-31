@@ -1,0 +1,58 @@
+---
+interface Props {
+	des: number;
+}
+
+const { des } = Astro.props;
+
+let ca = 10 + des;
+---
+
+<section
+	class={`
+    w-[80%] mx-auto
+    flex justify-center items-center flex-col
+`}
+>
+	<div class='px-4 bg-[--dark] py-2 rounded-lg'>
+		<svg
+			width='24'
+			height='24'
+			viewBox='0 0 24 24'
+			stroke-width='2'
+			stroke='currentColor'
+			fill='none'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+			><path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+			<path
+				d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
+				stroke-width='0'
+				fill='currentColor'></path>
+		</svg>
+	</div>
+	<h6 class='mx-4'>{ca}</h6>
+</section>
+
+<style>
+	section {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section:hover {
+		transform: scale(1.01);
+	}
+
+	h6 {
+		font-family: 'Pacifico';
+		color: var(--white);
+		font-size: 1.5rem;
+	}
+</style>

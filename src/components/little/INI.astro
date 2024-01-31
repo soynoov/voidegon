@@ -1,0 +1,56 @@
+---
+interface Props {
+	des: number;
+}
+
+const { des } = Astro.props;
+
+let ini = des;
+---
+
+<section
+	class={`
+    w-[80%] mx-auto
+    flex justify-center items-center flex-col
+`}
+>
+	<div class='px-4 bg-[--dark] py-2 rounded-lg'>
+		<svg
+			class='text-[--date]'
+			width='24'
+			height='24'
+			viewBox='0 0 24 24'
+			stroke-width='2'
+			stroke='currentColor'
+			fill='none'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+			><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+				d='M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11'></path></svg
+		>
+	</div>
+	<h6 class='mx-4'>+{ini}</h6>
+</section>
+
+<style>
+	section {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section:hover {
+		transform: scale(1.01);
+	}
+
+	h6 {
+		font-family: 'Pacifico';
+		color: var(--date);
+		font-size: 1.5rem;
+	}
+</style>
