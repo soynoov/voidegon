@@ -50,8 +50,8 @@ function sumarStats(x: number) {
 
 <section
   class={`
-    w-full p-4
-    flex gap-4 flex-wrap
+    w-full p-4 h-full
+    flex gap-8 gap-x-32 flex-wrap
     justify-center items-center
     cursor-default
 `}
@@ -126,12 +126,14 @@ function sumarStats(x: number) {
     padding: 1rem;
     width: 3.5cm;
 
-    transition: transform 300ms ease;
-    /** Box Shadow Definitive */
+    /** Box Shadow Definitivo */
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+    transition: transform 100ms ease;
+    cursor: default;
   }
   section > div:hover {
-    transform: scale(1.025);
+    transform: scale(1.01);
   }
   section > div > div {
     display: flex;
