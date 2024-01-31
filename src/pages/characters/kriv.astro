@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Title from '../../components/Title.astro';
 import Stats from '../../components/Stats.astro';
 import Money from '../../components/Money.astro';
+import Experience from '../../components/Experience.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Kriv Coppernico'>
@@ -30,5 +31,8 @@ import Money from '../../components/Money.astro';
     <div class='w-[80vw]'>
       <Money pc={100} pp={0} pe={16} po={2} ppt={0} />
     </div>
+    <section class='col-span-6'>
+      <Experience race='Dragonborn' rol='Paladin' exp={345} />
+    </section>
   </main>
 </Layout>

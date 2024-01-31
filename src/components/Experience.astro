@@ -1,9 +1,12 @@
 ---
 interface Props {
+  race: string;
+  rol: string;
   exp: number;
 }
 
-const { exp } = Astro.props;
+const { race, rol, exp } = Astro.props;
+
 let porcentaje = 0;
 let level = 0;
 let expUp = 0;
@@ -27,34 +30,47 @@ medirPor(exp);
 console.log(porcentaje);
 ---
 
-<article class="grid grid-cols-6 justify-around items-center">
-  <section class="col-span-2 justify-self-center">
-    <h6 class="text-[--title] font-[unbounded]">Monk</h6>
+<article class='grid grid-cols-6 justify-around items-center m-4'>
+  <section class='col-span-2 justify-self-center'>
+    <h6 class='text-[--title] font-[unbounded]'>{race}</h6>
   </section>
-  <section class="flex justify-between items-center col-span-2">
-    <p class="whitespace-nowrap">Nivel {level}</p>
-    <div class="bg-[--dark] w-[20vw] rounded-xl h-2 flex">
-      <div class={`rounded-xl bg-[--date] w-[59%]`}></div>
+
+  <section class='col-span-2 font-[caveat] font-bold text-[--white]'>
+    <div class='flex justify-center items-center w-full'>
+      <span class='text-base mx-4 w-20'>Nivel {level}</span>
+      <div class='w-full bg-[--dark] rounded-full h-1.5'>
+        <div
+          class='bg-[--date] h-1.5 rounded-full animate-pulse'
+          style={`width: ${porcentaje}%`}
+        >
+        </div>
+      </div>
+      <span class='text-base mx-4 w-20'>{exp}/{expUp}</span>
     </div>
-    <p>{exp}/{expUp}</p>
   </section>
-  <section class="col-span-2 justify-self-center">
-    <h6 class="text-[--subtitle] font-[unbounded]">Tiefling</h6>
+
+  <section class='col-span-2 justify-self-center'>
+    <h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
   </section>
 </article>
 
 <style>
-  section > * {
-    margin: 0.5rem;
-  }
+  section {
+    background-color: var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
 
-  p {
-    font-family: "caveat";
-    font-weight: bold;
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+    transition: transform 100ms ease;
+    cursor: default;
+  }
+  section:hover {
+    transform: scale(1.01);
   }
 
   h6 {
     font-weight: bold;
-    font-size: 1.5rem;
   }
 </style>

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Title from '../../components/Title.astro';
 import Stats from '../../components/Stats.astro';
 import Money from '../../components/Money.astro';
+import Experience from '../../components/Experience.astro';
 ---
 
 <Layout title='Nyliss  Avacyn'>
@@ -15,10 +16,20 @@ import Money from '../../components/Money.astro';
     class={`
     w-[80vw] mx-auto m-4
     grid grid-cols-6 grid-flow-row-dense
-    gap-4
+    gap-4 justify-center
   `}
   >
-    <div class='col-span-4'>
+    <section class='col-span-6'>
+      <Experience race='Aasimar' rol='Wizard' exp={245} />
+    </section>
+    <section class='col-span-3'>
+      <img
+        src='/img/nyliss/nyliss.png'
+        alt='Nyliss Avacyn'
+        class='rounded-2xl size-fit'
+      />
+    </section>
+    <div class='col-span-3'>
       <Stats
         fue={10}
         des={14}
@@ -31,13 +42,7 @@ import Money from '../../components/Money.astro';
         modcom={2}
       />
     </div>
-    <div class='col-span-4 row-span-2 size-fit'>
-      <img
-        src='/img/nyliss/nyliss.png'
-        alt='Nyliss Avacyn'
-        class='rounded-2xl size-fit'
-      />
-    </div>
+
     <div class='col-span-2 row-span-4 w-full'>
       <Money pc={2} pp={21} pe={6} po={13} ppt={0} />
     </div>
