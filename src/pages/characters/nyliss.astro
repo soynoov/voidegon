@@ -10,93 +10,97 @@ import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
 import VEL from '../../components/little/VEL.astro';
 import HR from '../../components/little/HR.astro';
+import HP from '../../components/little/HP.astro';
 
 // - Llamamiento a todos los datos y variables
 let mod_com = 2,
-	fue = 0,
-	des = 2,
-	con = 0,
-	int = 5,
-	sab = 4,
-	car = 0;
+  fue = 0,
+  des = 2,
+  con = 0,
+  int = 5,
+  sab = 4,
+  car = 0;
 ---
 
 <Layout title='Nyliss  Avacyn'>
-	<Title
-		title='Nyliss Avacyn'
-		img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
-		center='center'
-	/>
-	<main
-		class={`
+  <Title
+    title='Nyliss Avacyn'
+    img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
+    center='center'
+  />
+  <main
+    class={`
     w-[80vw] mx-auto m-4
     grid grid-cols-6 grid-flow-row-dense
     justify-center items-center
   `}
-	>
-		<section class='col-span-6'>
-			<Experience race='Aasimar' rol='Wizard' exp={245} start={1} />
-		</section>
-		<section class='col-span-4 p-4'>
-			<a href='/lore/nyliss'>
-				<img
-					src='/img/nyliss/nyliss.png'
-					alt='Nyliss Avacyn'
-					class='rounded-2xl h-full object-cover'
-					id='section'
-				/>
-			</a>
-		</section>
-		<section class='col-span-2 py-8'>
-			<Stats
-				fue={10}
-				des={14}
-				con={10}
-				int={16}
-				sab={14}
-				car={8}
-				mod={[1, 0, 0, 0, 0, 2]}
-				com={[0, 0, 0, 1, 1, 0]}
-				modcom={mod_com}
-			/>
-		</section>
-		<section class='col-span-1 flex items-center row-span-1 pl-4'>
-			<CA des={des} />
-		</section>
-		<section class='col-span-1 flex items-center row-span-1 pr-4'>
-			<INI des={des} />
-		</section>
-		<section class='col-span-4 row-span-3 p-4'>
-			<Skills />
-		</section>
-		<section class='col-span-2 p-4'>
-			<VEL vel={30} fly={60} />
-		</section>
+  >
+    <section class='col-span-6'>
+      <Experience race='Aasimar' rol='Wizard' exp={245} start={1} />
+    </section>
+    <section class='col-span-4 p-2 py-4'>
+      <a href='/lore/nyliss'>
+        <img
+          src='/img/nyliss/nyliss.png'
+          alt='Nyliss Avacyn'
+          class='rounded-2xl h-full object-cover'
+          id='section'
+        />
+      </a>
+    </section>
+    <section class='col-span-2 py-4 pr-4'>
+      <Stats
+        fue={10}
+        des={14}
+        con={10}
+        int={16}
+        sab={14}
+        car={8}
+        mod={[1, 0, 0, 0, 0, 2]}
+        com={[0, 0, 0, 1, 1, 0]}
+        modcom={mod_com}
+      />
+    </section>
+    <section class='col-span-6 px-2 pb-2'>
+      <HP hp={6} hpmax={6} />
+    </section>
+    <section class='col-span-1 p-2'>
+      <CA des={des} />
+    </section>
+    <section class='col-span-1 p-2'>
+      <INI des={des} />
+    </section>
+    <section class='col-span-4 row-span-3 p-4'>
+      <Skills />
+    </section>
+    <section class='col-span-2 p-2'>
+      <VEL vel={30} fly={60} />
+    </section>
 
-		<section class='col-span-6'>
-			<HR />
-		</section>
+    <section class='col-span-6'>
+      <HR />
+    </section>
 
-		<section class='col-span-3'>
-			<Money pc={2} pp={21} pe={6} po={13} ppt={0} />
-		</section>
-	</main>
+    <section class='col-span-3'>
+      <Money pc={2} pp={21} pe={6} po={13} ppt={0} />
+    </section>
+  </main>
 </Layout>
 
 <style>
-	section {
-		/* border: solid 1px var(--white); */
-		width: 100%;
-		height: 100%;
-	}
-	#section {
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  section {
+    /* border: solid 1px var(--white); */
+    width: 100%;
+    height: 100%;
+  }
+  #section {
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-		transition: transform 100ms ease;
-		cursor: pointer;
-	}
-	#section:hover {
-		transform: scale(1.01);
-	}
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  #section:hover {
+    transform: scale(1.01);
+  }
 </style>
