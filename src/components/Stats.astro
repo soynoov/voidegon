@@ -176,7 +176,10 @@ function sumarStats(x: number) {
 		color: var(--event);
 	}
 
-	* {
-		/* border: 1px solid white; */
+	/** MEDIA QUERYS */
+	@media (max-width: 768px) {
+		section {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 </style>

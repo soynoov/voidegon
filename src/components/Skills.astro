@@ -206,4 +206,17 @@ function sumarCom(x: number) {
 	#grey {
 		color: var(--grey);
 	}
+
+	/** MEDIA QUERYS */
+	@media (max-width: 1280px) {
+		section {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 768px) {
+		section {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
 </style>
