@@ -5,120 +5,179 @@ import Stats from '../../components/Stats.astro';
 import Money from '../../components/Money.astro';
 import Experience from '../../components/Experience.astro';
 import Skills from '../../components/Skills.astro';
-// Little
+// Little Components
 import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
 import VEL from '../../components/little/VEL.astro';
 import HR from '../../components/little/HR.astro';
 import HP from '../../components/little/HP.astro';
 import DG from '../../components/little/DG.astro';
+import COM from '../../components/little/COM.astro';
 
 // - Llamamiento a todos los datos y variables
 let mod_com = 2,
-	fue = 0,
-	des = 2,
-	con = 0,
-	int = 5,
-	sab = 4,
-	car = 0;
+  fue = 0,
+  des = 2,
+  con = 0,
+  int = 5,
+  sab = 4,
+  car = 0;
 ---
 
-<Layout title='Nyliss  Avacyn'>
-	<Title
-		title='Nyliss Avacyn'
-		img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
-		center='center'
-	/>
-	<main
-		class={`
+<Layout title='】 Voidegon ▸ Nyliss Avacyn'>
+  <Title
+    title='Nyliss Avacyn'
+    img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
+    center='center'
+  />
+  <main
+    class={`
     w-[80vw] mx-auto m-4
     grid grid-cols-6 grid-flow-row-dense
     justify-center items-center
   `}
-	>
-		<section class='col-span-6'>
-			<Experience race='Aasimar' rol='Wizard' exp={245} start={1} />
-		</section>
-		<section class='col-span-4 p-2 py-4'>
-			<a href='/lore/nyliss'>
-				<img
-					src='/img/nyliss/nyliss.png'
-					alt='Nyliss Avacyn'
-					class='rounded-2xl h-full object-cover'
-					id='section'
-				/>
-			</a>
-		</section>
-		<section class='col-span-2 py-4 pr-4'>
-			<Stats
-				fue={10}
-				des={14}
-				con={10}
-				int={16}
-				sab={14}
-				car={8}
-				mod={[1, 0, 0, 0, 0, 2]}
-				com={[0, 0, 0, 1, 1, 0]}
-				modcom={mod_com}
-			/>
-		</section>
-		<section class='col-span-1 p-2'>
-			<CA des={des} />
-		</section>
-		<section class='col-span-1 p-2'>
-			<INI des={des} />
-		</section>
-		<section class='col-span-4 row-span-3 p-2'>
-			<Skills
-				com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
-				punt={[2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0]}
-				modcom={mod_com}
-			/>
-		</section>
-		<section class='col-span-2 p-2'>
-			<VEL vel={30} fly={60} />
-		</section>
-		<section class='col-span-2 p-2'>
-			<DG cantidad={1} dice={6} />
-		</section>
-		<section class='col-span-6 p-2 pb-0'>
-			<HP hp={6} hpmax={6} />
-		</section>
+  >
+    <section class='col-span-6'>
+      <Experience race='Aasimar' rol='Wizard' exp={245} start={1} />
+    </section>
+    <section class='col-span-4 p-2 py-4'>
+      <a href='/lore/nyliss'>
+        <img
+          src='/img/nyliss/nyliss.png'
+          alt='Nyliss Avacyn'
+          class='rounded-2xl h-full object-cover'
+          id='section'
+        />
+      </a>
+    </section>
+    <section class='col-span-2 py-4 pr-4'>
+      <Stats
+        fue={10}
+        des={14}
+        con={10}
+        int={16}
+        sab={14}
+        car={8}
+        mod={[1, 0, 0, 0, 0, 2]}
+        com={[0, 0, 0, 1, 1, 0]}
+        modcom={mod_com}
+      />
+    </section>
+    <section class='col-span-1 p-2'>
+      <CA des={des} />
+    </section>
+    <section class='col-span-1 p-2'>
+      <INI des={des} />
+    </section>
+    <section class='col-span-4 row-span-3 p-2'>
+      <Skills
+        com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
+        punt={[2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0]}
+        modcom={mod_com}
+      />
+    </section>
+    <section class='col-span-2 p-2'>
+      <VEL vel={30} fly={60} />
+    </section>
+    <section class='col-span-2 p-2'>
+      <DG cantidad={1} dice={6} />
+    </section>
+    <section class='col-span-6 p-2 pb-0'>
+      <HP hp={6} hpmax={6} />
+    </section>
 
-		<section class='col-span-6'>
-			<HR />
-		</section>
+    <section class='col-span-6'>
+      <HR />
+    </section>
 
-		<section class='col-span-3 p-2'>
-			<Money pc={2} pp={21} pe={6} po={13} ppt={0} />
-		</section>
-	</main>
+    <section class='col-span-3 p-2'>
+      <COM
+        mod_com={mod_com}
+        com={['Dagas', 'Dardos', 'Hondas', 'Bastones', 'Ballestas Ligeras']}
+      />
+    </section>
+    <section class='col-span-3 p-2'>
+      <Money pc={2} pp={21} pe={6} po={13} ppt={0} />
+    </section>
+    <section class='col-span-2 p-2'>
+      <div id='weapons'>
+        <div class='bg-[--dark] rounded-lg p-2'>
+          <svg
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            stroke-width='2'
+            stroke='currentColor'
+            fill='none'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+              d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path><path
+              d='M6.5 11.5l6 6'></path></svg
+          >
+        </div>
+        <h3>Espada Corta</h3>
+        <p class='mx-4 font-[Lobster]'>
+          <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span
+          ><span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
+          >Perforante
+        </p>
+      </div>
+    </section>
+    <section class='col-span-4'>
+      <div id='backpack'>
+        <div></div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	section {
-		/* border: solid 1px var(--white); */
-		width: 100%;
-		height: 100%;
-	}
-	#section {
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  section {
+    border: solid 1px var(--white);
+    width: 100%;
+    height: 100%;
+  }
+  #section {
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-		transition: transform 100ms ease;
-		cursor: pointer;
-	}
-	#section:hover {
-		transform: scale(1.01);
-	}
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  #section:hover {
+    transform: scale(1.01);
+  }
 
-	/** MEDIA QUERYS */
-	@media (max-width: 640px) {
-		main {
-			grid-template-columns: repeat(1, 1fr);
-		}
-		section {
-			grid-column: span 1 / span 1;
-		}
-	}
+  #weapons {
+    background-color: var(--gray);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  #weapons:hover {
+    transform: scale(1.01);
+  }
+
+  /** MEDIA QUERYS */
+  @media (max-width: 640px) {
+    main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    section {
+      grid-column: span 1 / span 1;
+    }
+  }
 </style>
