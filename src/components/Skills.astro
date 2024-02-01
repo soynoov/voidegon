@@ -1,174 +1,199 @@
 ---
 interface Props {
-  mod?: Array<number>;
-  com?: Array<number>;
+	com: Array<number>; // Booleano, solo 0 y 1 (0 = -, 1 = x)
+	punt: Array<number>;
+	modcom: number;
 }
 
-const { mod, com } = Astro.props;
+const { com, punt, modcom } = Astro.props;
 
-function isZero() {}
+function printPunt(x: number) {
+	x--;
+	if (punt[x] >= 0) {
+		return `+${punt[x]}`;
+	}
+	return punt[x];
+}
+
+function sumarCom(x: number) {
+	x -= 1;
+	if (com[x] == 1) {
+		punt[x] += modcom;
+	}
+
+	if (punt[x] >= 0) {
+		return `+${punt[x]}`;
+	}
+
+	return punt[x];
+}
 ---
 
-<div class="flex justify-center flex-col">
-  <table class="m-4 p-4">
-    <tr>
-      <td>Acrobacias</td>
-      <td>(DES)</td>
-      <td>[-]</td>
-      <td>+2</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>Atletismo</td>
-      <td>(FUE)</td>
-      <td>[-]</td>
-      <td>+1</td>
-      <td>+1</td>
-    </tr>
-    <tr>
-      <td>C. Arcano</td>
-      <td>(INT)</td>
-      <td>[x]</td>
-      <td>+1</td>
-      <td>+3</td>
-    </tr>
-    <tr>
-      <td>Engaño</td>
-      <td>(CAR)</td>
-      <td>[x]</td>
-      <td>+0</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>Historia</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Interpretación</td>
-      <td>(CAR)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Intimidación</td>
-      <td>(CAR)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Investigación</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+2</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>Juego de Manos</td>
-      <td>(DES)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Medicina</td>
-      <td>(SAB)</td>
-      <td>[x]</td>
-      <td>+1</td>
-      <td>+3</td>
-    </tr>
-    <tr>
-      <td>Naturaleza</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Percepción</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+1</td>
-      <td>+1</td>
-    </tr>
-    <tr>
-      <td>Perspicacia</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Persuasión</td>
-      <td>(CAR)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Religión</td>
-      <td>(INT)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Sigilo</td>
-      <td>(DES)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-    <tr>
-      <td>Supervivencia</td>
-      <td>(SAB)</td>
-      <td>[x]</td>
-      <td>+0</td>
-      <td>+2</td>
-    </tr>
-    <tr>
-      <td>T. con Animales</td>
-      <td>(SAB)</td>
-      <td>[-]</td>
-      <td>+0</td>
-      <td>+0</td>
-    </tr>
-  </table>
-  <hr />
-  <div class="flex justify-center m-4">
-    <p class="text-[--subtitle] font-semibold">
-      Percepción Pasiva: <span
-        class="text-[--date] font-['pacifico'] font-normal">11</span
-      >
-    </p>
-  </div>
-</div>
+<section
+	class={`
+    w-full h-full
+    grid grid-cols-3 gap-2
+`}
+>
+	<div>
+		<p>(DES)</p>
+		<h3 id={com[1 - 1] == 1 ? 'x' : ''}>Acrobacias</h3>
+		<h6>{printPunt(1)}</h6>
+		<h5>[{sumarCom(1)}]</h5>
+	</div>
+	<div>
+		<p>(FUE)</p>
+		<h3 id={com[2 - 1] == 1 ? 'x' : ''}>Atletismo</h3>
+		<h6>{printPunt(2)}</h6>
+		<h5>[{sumarCom(2)}]</h5>
+	</div>
+	<div>
+		<p>(INT)</p>
+		<h3 id={com[3 - 1] == 1 ? 'x' : ''}>C. Arcano</h3>
+		<h6>{printPunt(3)}</h6>
+		<h5>[{sumarCom(3)}]</h5>
+	</div>
+	<div>
+		<p>(CAR)</p>
+		<h3 id={com[4 - 1] == 1 ? 'x' : ''}>Engaño</h3>
+		<h6>{printPunt(4)}</h6>
+		<h5>[{sumarCom(4)}]</h5>
+	</div>
+	<div>
+		<p>(INT)</p>
+		<h3 id={com[5 - 1] == 1 ? 'x' : ''}>Historia</h3>
+		<h6>{printPunt(5)}</h6>
+		<h5>[{sumarCom(5)}]</h5>
+	</div>
+	<div>
+		<p>(CAR)</p>
+		<h3 id={com[6 - 1] == 1 ? 'x' : ''}>Interpretación</h3>
+		<h6>{printPunt(6)}</h6>
+		<h5>[{sumarCom(6)}]</h5>
+	</div>
+	<div>
+		<p>(CAR)</p>
+		<h3 id={com[7 - 1] == 1 ? 'x' : ''}>Intimidación</h3>
+		<h6>{printPunt(7)}</h6>
+		<h5>[{sumarCom(7)}]</h5>
+	</div>
+	<div>
+		<p>(INT)</p>
+		<h3 id={com[8 - 1] == 1 ? 'x' : ''}>Investigación</h3>
+		<h6>{printPunt(8)}</h6>
+		<h5>[{sumarCom(8)}]</h5>
+	</div>
+	<div>
+		<p>(DES)</p>
+		<h3 id={com[9 - 1] == 1 ? 'x' : ''}>Juego de Manos</h3>
+		<h6>{printPunt(9)}</h6>
+		<h5>[{sumarCom(9)}]</h5>
+	</div>
+	<div>
+		<p>(SAB)</p>
+		<h3 id={com[10 - 1] == 1 ? 'x' : ''}>Medicina</h3>
+		<h6>{printPunt(10)}</h6>
+		<h5>[{sumarCom(10)}]</h5>
+	</div>
+	<div>
+		<p>(INT)</p>
+		<h3 id={com[11 - 1] == 1 ? 'x' : ''}>Naturaleza</h3>
+		<h6>{printPunt(11)}</h6>
+		<h5>[{sumarCom(11)}]</h5>
+	</div>
+	<div>
+		<p>(SAB)</p>
+		<h3 id={com[12 - 1] == 1 ? 'x' : ''}>Percepción</h3>
+		<h6>{printPunt(12)}</h6>
+		<h5>[{sumarCom(12)}]</h5>
+	</div>
+	<div>
+		<p>(SAB)</p>
+		<h3 id={com[13 - 1] == 1 ? 'x' : ''}>Perspicacia</h3>
+		<h6>{printPunt(13)}</h6>
+		<h5>[{sumarCom(13)}]</h5>
+	</div>
+	<div>
+		<p>(CAR)</p>
+		<h3 id={com[14 - 1] == 1 ? 'x' : ''}>Persuasión</h3>
+		<h6>{printPunt(14)}</h6>
+		<h5>[{sumarCom(14)}]</h5>
+	</div>
+	<div>
+		<p>(INT)</p>
+		<h3 id={com[15 - 1] == 1 ? 'x' : ''}>Religión</h3>
+		<h6>{printPunt(15)}</h6>
+		<h5>[{sumarCom(15)}]</h5>
+	</div>
+	<div>
+		<p>(DES)</p>
+		<h3 id={com[16 - 1] == 1 ? 'x' : ''}>Sigilo</h3>
+		<h6>{printPunt(16)}</h6>
+		<h5>[{sumarCom(16)}]</h5>
+	</div>
+	<div>
+		<p>(SAB)</p>
+		<h3 id={com[17 - 1] == 1 ? 'x' : ''}>Supervivencia</h3>
+		<h6>{printPunt(17)}</h6>
+		<h5>[{sumarCom(17)}]</h5>
+	</div>
+	<div>
+		<p>(SAB)</p>
+		<h3 id={com[18 - 1] == 1 ? 'x' : ''}>T. con Animales</h3>
+		<h6>{printPunt(18)}</h6>
+		<h5>[{sumarCom(18)}]</h5>
+	</div>
+</section>
 
 <style>
-  td {
-    padding: 0.35rem 0.5rem;
-  }
-  td:nth-of-type(1) {
-    color: var(--subtitle);
-    font-weight: bold;
-  }
-  td:nth-of-type(2),
-  td:nth-last-of-type(3) {
-    color: var(--grey);
-    font-family: "caveat";
-  }
-  td:nth-of-type(4),
-  td:nth-of-type(5) {
-    font-family: "pacifico";
-  }
-  td:nth-of-type(4) {
-    color: var(--date);
-  }
-  td:nth-of-type(5) {
-    color: var(--warning);
-  }
+	div {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0 1rem;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	div:hover {
+		transform: scale(1.01);
+	}
+	h3 {
+		color: var(--subtitle);
+		font-weight: bold;
+		font-size: 0.9rem;
+		text-align: start;
+		width: 4cm;
+	}
+	h6,
+	h5 {
+		font-family: 'pacifico';
+	}
+	p {
+		font-family: 'caveat';
+		color: var(--grey);
+		font-size: 0.6rem;
+	}
+	h5 {
+		color: var(--warning);
+		font-size: 1.2rem;
+	}
+	h6 {
+		color: var(--date);
+		font-size: 0.8rem;
+	}
+	p,
+	h6 {
+		margin-right: 0.5rem;
+	}
+
+	#x {
+		color: var(--event);
+	}
 </style>

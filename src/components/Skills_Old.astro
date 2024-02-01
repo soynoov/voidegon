@@ -1,0 +1,174 @@
+---
+interface Props {
+  mod?: Array<number>;
+  com?: Array<number>;
+}
+
+const { mod, com } = Astro.props;
+
+function isZero() {}
+---
+
+<div class="flex justify-center flex-col">
+  <table class="m-4 p-4">
+    <tr>
+      <td>Acrobacias</td>
+      <td>(DES)</td>
+      <td>[-]</td>
+      <td>+2</td>
+      <td>+2</td>
+    </tr>
+    <tr>
+      <td>Atletismo</td>
+      <td>(FUE)</td>
+      <td>[-]</td>
+      <td>+1</td>
+      <td>+1</td>
+    </tr>
+    <tr>
+      <td>C. Arcano</td>
+      <td>(INT)</td>
+      <td>[x]</td>
+      <td>+1</td>
+      <td>+3</td>
+    </tr>
+    <tr>
+      <td>Engaño</td>
+      <td>(CAR)</td>
+      <td>[x]</td>
+      <td>+0</td>
+      <td>+2</td>
+    </tr>
+    <tr>
+      <td>Historia</td>
+      <td>(INT)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Interpretación</td>
+      <td>(CAR)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Intimidación</td>
+      <td>(CAR)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Investigación</td>
+      <td>(INT)</td>
+      <td>[-]</td>
+      <td>+2</td>
+      <td>+2</td>
+    </tr>
+    <tr>
+      <td>Juego de Manos</td>
+      <td>(DES)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Medicina</td>
+      <td>(SAB)</td>
+      <td>[x]</td>
+      <td>+1</td>
+      <td>+3</td>
+    </tr>
+    <tr>
+      <td>Naturaleza</td>
+      <td>(INT)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Percepción</td>
+      <td>(SAB)</td>
+      <td>[-]</td>
+      <td>+1</td>
+      <td>+1</td>
+    </tr>
+    <tr>
+      <td>Perspicacia</td>
+      <td>(SAB)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Persuasión</td>
+      <td>(CAR)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Religión</td>
+      <td>(INT)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Sigilo</td>
+      <td>(DES)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>Supervivencia</td>
+      <td>(SAB)</td>
+      <td>[x]</td>
+      <td>+0</td>
+      <td>+2</td>
+    </tr>
+    <tr>
+      <td>T. con Animales</td>
+      <td>(SAB)</td>
+      <td>[-]</td>
+      <td>+0</td>
+      <td>+0</td>
+    </tr>
+  </table>
+  <hr />
+  <div class="flex justify-center m-4">
+    <p class="text-[--subtitle] font-semibold">
+      Percepción Pasiva: <span
+        class="text-[--date] font-['pacifico'] font-normal">11</span
+      >
+    </p>
+  </div>
+</div>
+
+<style>
+  td {
+    padding: 0.35rem 0.5rem;
+  }
+  td:nth-of-type(1) {
+    color: var(--subtitle);
+    font-weight: bold;
+  }
+  td:nth-of-type(2),
+  td:nth-last-of-type(3) {
+    color: var(--grey);
+    font-family: "caveat";
+  }
+  td:nth-of-type(4),
+  td:nth-of-type(5) {
+    font-family: "pacifico";
+  }
+  td:nth-of-type(4) {
+    color: var(--date);
+  }
+  td:nth-of-type(5) {
+    color: var(--warning);
+  }
+</style>
