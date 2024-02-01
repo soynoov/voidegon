@@ -12,9 +12,9 @@ const { pc = 0, pp = 0, pe = 0, po = 0, ppt = 0 } = Astro.props;
 
 <section
 	class={`
-    flex gap-4 flex-wrap justify-center items-center
-    my-4 cursor-default text-center
-    w-full
+    grid gap-2 grid-cols-5
+    cursor-default text-center
+    w-full h-full
 `}
 >
 	<!-- Cobre -->
@@ -64,7 +64,7 @@ const { pc = 0, pp = 0, pe = 0, po = 0, ppt = 0 } = Astro.props;
 		background-color: var(--gray);
 		border-radius: 0.5rem;
 		padding: 1rem;
-		width: 2.5cm;
+		width: 100%;
 
 		/** Box Shadow Definitivo */
 		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);

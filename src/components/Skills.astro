@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { com, punt, modcom } = Astro.props;
+let resul = [0];
 
 function printPunt(x: number) {
 	x--;
@@ -16,17 +17,23 @@ function printPunt(x: number) {
 }
 
 function sumarCom(x: number) {
-	x -= 1;
+	x--;
 	if (com[x] == 1) {
-		punt[x] += modcom;
+		resul[x] = punt[x] + modcom;
+	} else {
+		resul[x] = punt[x];
 	}
 
-	if (punt[x] >= 0) {
-		return `+${punt[x]}`;
+	if (resul[x] >= 0) {
+		return `+${resul[x]}`;
 	}
 
-	return punt[x];
+	return resul[x];
 }
+
+/* for (let x = 0; x < punt.length; x++) {
+	resul[x] = sumarCom(x + 1);
+} */
 ---
 
 <section
@@ -38,110 +45,110 @@ function sumarCom(x: number) {
 	<div>
 		<p>(DES)</p>
 		<h3 id={com[1 - 1] == 1 ? 'x' : ''}>Acrobacias</h3>
-		<h6>{printPunt(1)}</h6>
-		<h5>[{sumarCom(1)}]</h5>
+		<h6 id={punt[1 - 1] == 0 ? 'grey' : ''}>{printPunt(1)}</h6>
+		<h5 id={sumarCom(1) == 0 ? 'grey' : ''}>[{sumarCom(1)}]</h5>
 	</div>
 	<div>
 		<p>(FUE)</p>
 		<h3 id={com[2 - 1] == 1 ? 'x' : ''}>Atletismo</h3>
-		<h6>{printPunt(2)}</h6>
-		<h5>[{sumarCom(2)}]</h5>
+		<h6 id={punt[2 - 1] == 0 ? 'grey' : ''}>{printPunt(2)}</h6>
+		<h5 id={sumarCom(2) == 0 ? 'grey' : ''}>[{sumarCom(2)}]</h5>
 	</div>
 	<div>
 		<p>(INT)</p>
 		<h3 id={com[3 - 1] == 1 ? 'x' : ''}>C. Arcano</h3>
-		<h6>{printPunt(3)}</h6>
-		<h5>[{sumarCom(3)}]</h5>
+		<h6 id={punt[3 - 1] == 0 ? 'grey' : ''}>{printPunt(3)}</h6>
+		<h5 id={sumarCom(3) == 0 ? 'grey' : ''}>[{sumarCom(3)}]</h5>
 	</div>
 	<div>
 		<p>(CAR)</p>
 		<h3 id={com[4 - 1] == 1 ? 'x' : ''}>Engaño</h3>
-		<h6>{printPunt(4)}</h6>
-		<h5>[{sumarCom(4)}]</h5>
+		<h6 id={punt[4 - 1] == 0 ? 'grey' : ''}>{printPunt(4)}</h6>
+		<h5 id={sumarCom(4) == 0 ? 'grey' : ''}>[{sumarCom(4)}]</h5>
 	</div>
 	<div>
 		<p>(INT)</p>
 		<h3 id={com[5 - 1] == 1 ? 'x' : ''}>Historia</h3>
-		<h6>{printPunt(5)}</h6>
-		<h5>[{sumarCom(5)}]</h5>
+		<h6 id={punt[5 - 1] == 0 ? 'grey' : ''}>{printPunt(5)}</h6>
+		<h5 id={sumarCom(5) == 0 ? 'grey' : ''}>[{sumarCom(5)}]</h5>
 	</div>
 	<div>
 		<p>(CAR)</p>
 		<h3 id={com[6 - 1] == 1 ? 'x' : ''}>Interpretación</h3>
-		<h6>{printPunt(6)}</h6>
-		<h5>[{sumarCom(6)}]</h5>
+		<h6 id={punt[6 - 1] == 0 ? 'grey' : ''}>{printPunt(6)}</h6>
+		<h5 id={sumarCom(6) == 0 ? 'grey' : ''}>[{sumarCom(6)}]</h5>
 	</div>
 	<div>
 		<p>(CAR)</p>
 		<h3 id={com[7 - 1] == 1 ? 'x' : ''}>Intimidación</h3>
-		<h6>{printPunt(7)}</h6>
-		<h5>[{sumarCom(7)}]</h5>
+		<h6 id={punt[7 - 1] == 0 ? 'grey' : ''}>{printPunt(7)}</h6>
+		<h5 id={sumarCom(7) == 0 ? 'grey' : ''}>[{sumarCom(7)}]</h5>
 	</div>
 	<div>
 		<p>(INT)</p>
 		<h3 id={com[8 - 1] == 1 ? 'x' : ''}>Investigación</h3>
-		<h6>{printPunt(8)}</h6>
-		<h5>[{sumarCom(8)}]</h5>
+		<h6 id={punt[8 - 1] == 0 ? 'grey' : ''}>{printPunt(8)}</h6>
+		<h5 id={sumarCom(8) == 0 ? 'grey' : ''}>[{sumarCom(8)}]</h5>
 	</div>
 	<div>
 		<p>(DES)</p>
 		<h3 id={com[9 - 1] == 1 ? 'x' : ''}>Juego de Manos</h3>
-		<h6>{printPunt(9)}</h6>
-		<h5>[{sumarCom(9)}]</h5>
+		<h6 id={punt[9 - 1] == 0 ? 'grey' : ''}>{printPunt(9)}</h6>
+		<h5 id={sumarCom(9) == 0 ? 'grey' : ''}>[{sumarCom(9)}]</h5>
 	</div>
 	<div>
 		<p>(SAB)</p>
 		<h3 id={com[10 - 1] == 1 ? 'x' : ''}>Medicina</h3>
-		<h6>{printPunt(10)}</h6>
-		<h5>[{sumarCom(10)}]</h5>
+		<h6 id={punt[10 - 1] == 0 ? 'grey' : ''}>{printPunt(10)}</h6>
+		<h5 id={sumarCom(10) == 0 ? 'grey' : ''}>[{sumarCom(10)}]</h5>
 	</div>
 	<div>
 		<p>(INT)</p>
 		<h3 id={com[11 - 1] == 1 ? 'x' : ''}>Naturaleza</h3>
-		<h6>{printPunt(11)}</h6>
-		<h5>[{sumarCom(11)}]</h5>
+		<h6 id={punt[11 - 1] == 0 ? 'grey' : ''}>{printPunt(11)}</h6>
+		<h5 id={sumarCom(11) == 0 ? 'grey' : ''}>[{sumarCom(11)}]</h5>
 	</div>
 	<div>
 		<p>(SAB)</p>
 		<h3 id={com[12 - 1] == 1 ? 'x' : ''}>Percepción</h3>
-		<h6>{printPunt(12)}</h6>
-		<h5>[{sumarCom(12)}]</h5>
+		<h6 id={punt[12 - 1] == 0 ? 'grey' : ''}>{printPunt(12)}</h6>
+		<h5 id={sumarCom(12) == 0 ? 'grey' : ''}>[{sumarCom(12)}]</h5>
 	</div>
 	<div>
 		<p>(SAB)</p>
 		<h3 id={com[13 - 1] == 1 ? 'x' : ''}>Perspicacia</h3>
-		<h6>{printPunt(13)}</h6>
-		<h5>[{sumarCom(13)}]</h5>
+		<h6 id={punt[13 - 1] == 0 ? 'grey' : ''}>{printPunt(13)}</h6>
+		<h5 id={sumarCom(13) == 0 ? 'grey' : ''}>[{sumarCom(13)}]</h5>
 	</div>
 	<div>
 		<p>(CAR)</p>
 		<h3 id={com[14 - 1] == 1 ? 'x' : ''}>Persuasión</h3>
-		<h6>{printPunt(14)}</h6>
-		<h5>[{sumarCom(14)}]</h5>
+		<h6 id={punt[14 - 1] == 0 ? 'grey' : ''}>{printPunt(14)}</h6>
+		<h5 id={sumarCom(14) == 0 ? 'grey' : ''}>[{sumarCom(14)}]</h5>
 	</div>
 	<div>
 		<p>(INT)</p>
 		<h3 id={com[15 - 1] == 1 ? 'x' : ''}>Religión</h3>
-		<h6>{printPunt(15)}</h6>
-		<h5>[{sumarCom(15)}]</h5>
+		<h6 id={punt[15 - 1] == 0 ? 'grey' : ''}>{printPunt(15)}</h6>
+		<h5 id={sumarCom(15) == 0 ? 'grey' : ''}>[{sumarCom(15)}]</h5>
 	</div>
 	<div>
 		<p>(DES)</p>
 		<h3 id={com[16 - 1] == 1 ? 'x' : ''}>Sigilo</h3>
-		<h6>{printPunt(16)}</h6>
-		<h5>[{sumarCom(16)}]</h5>
+		<h6 id={punt[16 - 1] == 0 ? 'grey' : ''}>{printPunt(16)}</h6>
+		<h5 id={sumarCom(16) == 0 ? 'grey' : ''}>[{sumarCom(16)}]</h5>
 	</div>
 	<div>
 		<p>(SAB)</p>
 		<h3 id={com[17 - 1] == 1 ? 'x' : ''}>Supervivencia</h3>
-		<h6>{printPunt(17)}</h6>
-		<h5>[{sumarCom(17)}]</h5>
+		<h6 id={punt[17 - 1] == 0 ? 'grey' : ''}>{printPunt(17)}</h6>
+		<h5 id={sumarCom(17) == 0 ? 'grey' : ''}>[{sumarCom(17)}]</h5>
 	</div>
 	<div>
 		<p>(SAB)</p>
 		<h3 id={com[18 - 1] == 1 ? 'x' : ''}>T. con Animales</h3>
-		<h6>{printPunt(18)}</h6>
-		<h5>[{sumarCom(18)}]</h5>
+		<h6 id={punt[18 - 1] == 0 ? 'grey' : ''}>{printPunt(18)}</h6>
+		<h5 id={sumarCom(18) == 0 ? 'grey' : ''}>[{sumarCom(18)}]</h5>
 	</div>
 </section>
 
@@ -195,5 +202,8 @@ function sumarCom(x: number) {
 
 	#x {
 		color: var(--event);
+	}
+	#grey {
+		color: var(--grey);
 	}
 </style>
