@@ -24,111 +24,110 @@ const { title } = Astro.props;
   <body class='pb-20'>
     <Header />
     <slot />
+    <style is:global>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+      :root {
+        --dark: #212121;
+        --light: #fff;
+        --black: #111;
+        --white: #ccc;
+        --grey: #666;
+        --gray: #333;
+        --title: #25d366;
+        --subtitle: #f89d1f;
+        --section: #00a1b9;
+        --warning: #ff5349;
+        /* Span Tags */
+        --name: #fff;
+        --location: #a1a556;
+        --group: #008080;
+        --date: #dcbd4c;
+        --event: #ad70a4;
+        --deity: #ac0940;
+        --object: #ff4fa7;
+        /* Money Colors */
+        --copper: #ce7c56;
+        --silver: #848482;
+        --electro: #96aed0;
+        --gold: #f0c434;
+        --platinum: #eff3ee;
+      }
+
+      html {
+        font-family: 'lexend';
+        background: var(--dark);
+        color: var(--white);
+      }
+      body::-webkit-scrollbar {
+        display: none; /* Ocultar scroll */
+      }
+
+      /** Span */
+      strong#hero {
+        color: var(--name);
+        font-family: 'unbounded';
+        text-transform: capitalize;
+      }
+      strong#heros {
+        color: var(--group);
+        text-transform: capitalize;
+        font-size: 0.8rem;
+      }
+      span#name {
+        color: var(--name);
+        font-family: 'pacifico';
+        text-transform: capitalize;
+      }
+      span#location {
+        color: var(--location);
+        font-family: 'lobster';
+        text-transform: capitalize;
+      }
+      span#group {
+        color: var(--group);
+      }
+      span#date {
+        color: var(--date);
+        font-family: 'pacifico';
+      }
+      span#event {
+        color: var(--event);
+      }
+      span#deity {
+        color: var(--deity);
+      }
+      span#object {
+        color: var(--object);
+        font-family: 'caveat brush';
+        font-size: 1.15rem;
+      }
+      span#monster {
+        color: var(--copper);
+        font-family: 'lobster';
+      }
+      span#phrase {
+        color: var(--silver);
+        font-style: italic;
+        font-family: '';
+      }
+      span#hint {
+        color: var(--grey);
+        font-style: italic;
+        font-family: '';
+      }
+      span#good {
+        color: var(--title);
+      }
+      span#neutral {
+        color: var(--subtitle);
+      }
+      span#bad {
+        color: var(--warning);
+      }
+      span#gold {
+        color: var(--gold);
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
-
-	:root {
-	  --dark: #212121;
-	  --light: #fff;
-	  --black: #111;
-	  --white: #ccc;
-	  --grey: #666;
-	  --gray: #333;
-	  --title: #25d366;
-	  --subtitle: #f89d1f;
-	  --section: #00a1b9;
-	  --warning: #ff5349;
-	  /* Span Tags */
-	  --name: #fff;
-	  --location: #a1a556;
-	  --group: #008080;
-	  --date: #dcbd4c;
-	  --event: #ad70a4;
-	  --deity: #ac0940;
-	  --object: #ff4fa7;
-	  /* Money Colors */
-	  --copper: #ce7c56;
-	  --silver: #848482;
-	  --electro: #96aed0;
-	  --gold: #f0c434;
-	  --platinum: #eff3ee;
-	}
-
-	html {
-	  font-family: 'lexend';
-	  background: var(--dark);
-	  color: var(--white);
-	}
-	body::-webkit-scrollbar {
-	  display: none; /* Ocultar scroll */
-	}
-
-	/** Span */
-	strong#hero {
-	  color: var(--name);
-	  font-family: 'unbounded';
-	  text-transform: capitalize;
-	}
-	strong#heros {
-	  color: var(--group);
-	  text-transform: capitalize;
-	  font-size: 0.8rem;
-	}
-	span#name {
-	  color: var(--name);
-	  font-family: 'pacifico';
-	  text-transform: capitalize;
-	}
-	span#location {
-	  color: var(--location);
-	  font-family: 'lobster';
-	  text-transform: capitalize;
-	}
-	span#group {
-	  color: var(--group);
-	}
-	span#date {
-	  color: var(--date);
-	  font-family: 'pacifico';
-	}
-	span#event {
-	  color: var(--event);
-	}
-	span#deity {
-	  color: var(--deity);
-	}
-	span#object {
-	  color: var(--object);
-	  font-family: 'caveat brush';
-	  font-size: 1.15rem;
-	}
-	span#monster {
-	  color: var(--copper);
-	  font-family: 'lobster';
-	}
-	span#phrase {
-	  color: var(--silver);
-	  font-style: italic;
-	  font-family: '';
-	}
-	span#hint {
-	  color: var(--grey);
-	  font-style: italic;
-	  font-family: '';
-	}
-	span#good {
-	  color: var(--title);
-	}
-	span#neutral {
-	  color: var(--subtitle);
-	}
-	span#bad {
-	  color: var(--warning);
-	}
-	span#gold {
-	  color: var(--gold);
-	}
-  </style>
