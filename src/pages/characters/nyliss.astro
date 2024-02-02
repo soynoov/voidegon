@@ -168,7 +168,9 @@ let mod_com = 2,
             <li>Plumas (x5),</li>
             <li>Musgo Fluorescente (x3),</li>
             <li>Petalos de Rosa (x6),</li>
-            <li class='text-[--object]'>Silbato Mágico,</li>
+            <li class='text-[--object] font-["caveat_brush"]'>
+              Silbato Mágico,
+            </li>
             <li>Espada Oxidad de Cobre,</li>
             <li>Cupón para Var (2 Opciones).</li>
           </ul>
@@ -197,10 +199,8 @@ let mod_com = 2,
           <h4>Manos Sanadoras</h4>
           <p>
             Como una acción, puedes tocar a una criatura y hacer que recupere un
-            número de puntos de golpe igual a tu nivel <span
-              class='text-[--grey] italic'>(1)</span
-            >. No puedes volver a usar esta habilidad hasta finalizar un
-            descanso largo.
+            número de puntos de golpe igual a tu nivel. No puedes volver a usar
+            esta habilidad hasta finalizar un descanso largo.
           </p>
         </div>
         <div>
@@ -313,6 +313,12 @@ let mod_com = 2,
 
       /** Box Shadow Definitivo */
       box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+      transition: transform 100ms ease;
+      cursor: default;
+    }
+    #race > div:hover {
+      transform: scale(1.01);
     }
     #race p {
       font-size: 0.9rem;
