@@ -3,60 +3,62 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Error 404'>
-	<main class='flex justify-center flex-col h-full items-center'>
-		<svg
-			class='text-[--warning] mb-4 font-bold'
-			width='50'
-			height='50'
-			viewBox='0 0 24 24'
-			stroke-width='2'
-			stroke='currentColor'
-			fill='none'
-			stroke-linecap='round'
-			stroke-linejoin='round'
-			><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-				d='M12 9v4'></path><path
-				d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z'
-			></path><path d='M12 16h.01'></path>
-		</svg>
-		<h1 class='self-center font-[unbounded] text-4xl'>¡Cuidado!</h1>
-		<p class='text-center mt-4 w-80 text-pretty'>
-			Estas a punto de caerte en el vacio eterno de Voidegon, ten
-			paciencia y vuelve más tarde.
-		</p>
-	</main>
+  <main class='flex justify-center flex-col h-full items-center'>
+    <svg
+      class='text-[--warning] mb-4 font-bold'
+      width='50'
+      height='50'
+      viewBox='0 0 24 24'
+      stroke-width='2'
+      stroke='currentColor'
+      fill='none'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+      ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+        d='M12 9v4'></path><path
+        d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z'
+      ></path><path d='M12 16h.01'></path>
+    </svg>
+    <h1 class='self-center font-[unbounded] text-4xl'>¡Cuidado!</h1>
+    <p class='text-center mt-4 w-80 text-pretty'>
+      Estas a punto de caerte en el vacio eterno de Voidegon, ten paciencia y
+      vuelve más tarde.
+    </p>
+  </main>
 </Layout>
 
 <style>
-	body {
-		overflow-y: hidden;
-	}
-	main {
-		background: url('/img/background.png') bottom/cover;
-		height: 95dvh;
-	}
-	h1 {
-		color: var(--light);
-		font-weight: 900;
-	}
+  @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
-	img {
-		width: 10vw;
-		margin: 0 auto;
-		padding: 2rem;
-	}
+  body {
+    overflow-y: hidden;
+  }
+  main {
+    background: url('/img/background.png') bottom/cover;
+    height: 95dvh;
+  }
+  h1 {
+    color: var(--light);
+    font-weight: 900;
+  }
 
-	@media (max-width: 600px) {
-		h1 {
-			text-align: center;
-			margin: 1rem;
-		}
-		main {
-			background:;
-		}
-		p {
-			margin: 1rem;
-			text-wrap: balance;
-		}
-	}
+  img {
+    width: 10vw;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      text-align: center;
+      margin: 1rem;
+    }
+    main {
+      background:;
+    }
+    p {
+      margin: 1rem;
+      text-wrap: balance;
+    }
+  }
 </style>
