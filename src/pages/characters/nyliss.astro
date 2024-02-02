@@ -17,321 +17,370 @@ import H2 from '../../components/little/H2.astro';
 
 // - Llamamiento a todos los datos y variables
 let mod_com = 2,
-  fue = 0,
-  des = 2,
-  con = 0,
-  int = 5,
-  sab = 4,
-  car = 0;
+	fue = 0,
+	des = 2,
+	con = 0,
+	int = 5,
+	sab = 4,
+	car = 0;
 ---
 
 <Layout title='】 Voidegon ▸ Nyliss Avacyn'>
-  <Title
-    title='Nyliss Avacyn'
-    img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
-    center='center'
-  />
-  <main>
-    <article
-      class={`
+	<Title
+		title='Nyliss Avacyn'
+		img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
+		center='center'
+	/>
+	<main>
+		<article
+			class={`
       w-[80vw] mx-auto m-4
       grid grid-cols-6 grid-flow-row-dense
       justify-center items-center
     `}
-    >
-      <section class='col-span-6'>
-        <Experience race='Aasimar' rol='Wizard' exp={245} start={1} />
-      </section>
-      <section class='col-span-4 p-2 py-4'>
-        <a href='/lore/nyliss'>
-          <img
-            src='/img/nyliss/nyliss.png'
-            alt='Nyliss Avacyn'
-            class='rounded-2xl h-full object-cover'
-            id='section'
-          />
-        </a>
-      </section>
-      <section class='col-span-2 py-4 pr-4'>
-        <Stats
-          fue={10}
-          des={14}
-          con={10}
-          int={16}
-          sab={14}
-          car={8}
-          mod={[1, 0, 0, 0, 0, 2]}
-          com={[0, 0, 0, 1, 1, 0]}
-          modcom={mod_com}
-        />
-      </section>
-      <section class='col-span-1 p-2'>
-        <CA des={des} />
-      </section>
-      <section class='col-span-1 p-2'>
-        <INI des={des} />
-      </section>
-      <section class='col-span-4 row-span-3 p-2'>
-        <Skills
-          com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
-          punt={[2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0]}
-          modcom={mod_com}
-        />
-      </section>
-      <section class='col-span-2 p-2'>
-        <VEL vel={30} fly={60} />
-      </section>
-      <section class='col-span-2 p-2'>
-        <DG cantidad={1} dice={6} />
-      </section>
-      <section class='col-span-6 p-2 pb-0'>
-        <HP hp={6} hpmax={6 + con} />
-      </section>
+		>
+			<section class='col-span-6'>
+				<Experience race='Aasimar' rol='Wizard' exp={245} start={1} />
+			</section>
+			<section class='col-span-4 p-2 py-4'>
+				<a href='/lore/nyliss'>
+					<img
+						src='/img/nyliss/nyliss.png'
+						alt='Nyliss Avacyn'
+						class='rounded-2xl h-full object-cover'
+						id='section'
+					/>
+				</a>
+			</section>
+			<section class='col-span-2 py-4 pr-4'>
+				<Stats
+					fue={10}
+					des={14}
+					con={10}
+					int={16}
+					sab={14}
+					car={8}
+					mod={[1, 0, 0, 0, 0, 2]}
+					com={[0, 0, 0, 1, 1, 0]}
+					modcom={mod_com}
+				/>
+			</section>
+			<section class='col-span-1 p-2'>
+				<CA des={des} />
+			</section>
+			<section class='col-span-1 p-2'>
+				<INI des={des} />
+			</section>
+			<section class='col-span-4 row-span-3 p-2'>
+				<Skills
+					com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
+					punt={[
+						2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0,
+					]}
+					modcom={mod_com}
+				/>
+			</section>
+			<section class='col-span-2 p-2'>
+				<VEL vel={30} fly={60} />
+			</section>
+			<section class='col-span-2 p-2'>
+				<DG cantidad={1} dice={6} />
+			</section>
+			<section class='col-span-6 p-2 pb-0'>
+				<HP hp={6} hpmax={6 + con} />
+			</section>
 
-      <section class='col-span-6'>
-        <HR />
-      </section>
+			<section class='col-span-6'>
+				<HR />
+			</section>
 
-      <section class='col-span-3 p-2'>
-        <COM
-          mod_com={mod_com}
-          com={['Dagas', 'Dardos', 'Hondas', 'Bastones', 'Ballestas Ligeras']}
-        />
-      </section>
-      <section class='col-span-3 p-2'>
-        <Money pc={0} pp={21} pe={6} po={13} ppt={0} />
-      </section>
-      <section class='col-span-2 p-2 flex flex-col gap-2'>
-        <div id='weapons'>
-          <div class='bg-[--dark] rounded-lg p-2'>
-            <svg
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              stroke-width='2'
-              stroke='currentColor'
-              fill='none'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-              <path d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path>
-              <path d='M6.5 11.5l6 6'></path></svg
-            >
-          </div>
-          <h3 class='mx-4'>Espada Corta</h3>
-          <p class='text-xs italic text-[--grey]'>(Ligera, Sutil)</p>
-          <p class='mx-4 font-[Lobster]'>
-            <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span
-            ><span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
-            >Perforante
-          </p>
-        </div>
-        <div id='weapons'>
-          <div class='bg-[--dark] rounded-lg p-2'>
-            <svg
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              stroke-width='2'
-              stroke='currentColor'
-              fill='none'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-                d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path><path
-                d='M6.5 11.5l6 6'></path></svg
-            >
-          </div>
-          <h3 class='mx-4'>Lanza</h3>
-          <p class='text-xs italic text-[--grey]'>
-            (Arrojadiza, Distancia, Versátil)
-          </p>
-          <p class='mx-4 font-[Lobster]'>
-            <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span
-            ><span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
-            >Perforante
-          </p>
-        </div>
-      </section>
-      <section class='col-span-4 p-2 h-full w-full'>
-        <div id='backpack' class='bg-[--gray] rounded-lg p-2'>
-          <ul
-            class='grid grid-cols-3 font-[caveat] justify-center w-full h-full items-center'
-          >
-            <li>Botella de Tinta Negra,</li>
-            <li>Pluma,</li>
-            <li>Cuchillo Pequeño,</li>
-            <li>Carta de un Colega Muerto,</li>
-            <li>Ropas Comunes,</li>
-            <li>Grimorio + Hoja Suelta,</li>
-            <li>Libros (x3),</li>
-            <li>Plumas (x5),</li>
-            <li>Musgo Fluorescente (x3),</li>
-            <li>Petalos de Rosa (x6),</li>
-            <li class='text-[--object] font-["caveat_brush"]'>
-              Silbato Mágico,
-            </li>
-            <li>Espada Oxidad de Cobre,</li>
-            <li>Cupón para Var (2 Opciones).</li>
-          </ul>
-        </div>
-      </section>
-    </article>
+			<section class='col-span-3 p-2'>
+				<COM
+					mod_com={mod_com}
+					com={[
+						'Dagas',
+						'Dardos',
+						'Hondas',
+						'Bastones',
+						'Ballestas Ligeras',
+					]}
+				/>
+			</section>
+			<section class='col-span-3 p-2'>
+				<Money pc={0} pp={21} pe={6} po={13} ppt={0} />
+			</section>
+			<section class='col-span-2 p-2 flex flex-col gap-2'>
+				<div id='weapons'>
+					<div class='bg-[--dark] rounded-lg p-2'>
+						<svg
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							stroke-width='2'
+							stroke='currentColor'
+							fill='none'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							><path stroke='none' d='M0 0h24v24H0z' fill='none'
+							></path>
+							<path d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path>
+							<path d='M6.5 11.5l6 6'></path></svg
+						>
+					</div>
+					<h3 class='mx-4'>Espada Corta</h3>
+					<p class='text-xs italic text-[--grey]'>(Ligera, Sutil)</p>
+					<p class='mx-4 font-[Lobster] text-nowrap'>
+						<span class='mr-1'
+							>1 <span class='font-[lobster]'>d</span> 6</span
+						><span class='font-[pacifico] text-[--date] mr-4'
+							>+{fue}</span
+						>Perforante
+					</p>
+				</div>
+				<div id='weapons'>
+					<div class='bg-[--dark] rounded-lg p-2'>
+						<svg
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							stroke-width='2'
+							stroke='currentColor'
+							fill='none'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							><path stroke='none' d='M0 0h24v24H0z' fill='none'
+							></path><path d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'
+							></path><path d='M6.5 11.5l6 6'></path></svg
+						>
+					</div>
+					<h3 class='mx-4'>Lanza</h3>
+					<p class='text-xs italic text-[--grey]'>
+						(Arrojadiza, Distancia, Versátil)
+					</p>
+					<p class='mx-4 font-[Lobster] text-nowrap'>
+						<span class='mr-1'
+							>1 <span class='font-[lobster]'>d</span> 6</span
+						>
+						<span class='font-[pacifico] text-[--date] mr-4'
+							>+{fue}</span
+						>Perforante
+					</p>
+				</div>
+			</section>
+			<section class='col-span-4 p-2 h-full w-full'>
+				<div
+					id='backpack'
+					class='bg-[--gray] rounded-lg p-2 h-full w-full'
+				>
+					<ul
+						class='grid grid-cols-3 gap-2 font-[caveat] list-["-"] px-4'
+					>
+						<li>Botella de Tinta Negra</li>
+						<li>Pluma</li>
+						<li>Cuchillo Pequeño</li>
+						<li>Carta de un Colega Muerto</li>
+						<li>Ropas Comunes</li>
+						<li>
+							Grimorio
+							<span class='text-[--grey]'>(+Hoja Suelta)</span>
+						</li>
+						<li>Libros <span class='text-[--grey]'>(x3)</span></li>
+						<li>Plumas <span class='text-[--grey]'>(x5)</span></li>
+						<li>
+							Musgo Fluorescente
+							<span class='text-[--grey]'>(x3)</span>
+						</li>
+						<li>
+							Petalos de Rosa
+							<span class='text-[--grey]'>(x6)</span>
+						</li>
+						<li class='text-[--object] font-["caveat_brush"]'>
+							Silbato Mágico
+						</li>
+						<li>Espada Oxidad de Cobre</li>
+						<li>
+							Cupón para Var
+							<span class='text-[--grey]'>(2 Opciones)</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</article>
 
-    <div class='w-[80vw] mx-auto'>
-      <HR />
-    </div>
+		<div class='w-[80vw] mx-auto'>
+			<HR />
+		</div>
 
-    <article class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'>
-      <section>
-        <H2 txt='Rasgos de Raza' />
-      </section>
-      <section class='flex flex-wrap justify-center text-justify' id='race'>
-        <div>
-          <h4>Visión en la Oscuridad</h4>
-          <p>
-            Puedes ver en la oscuridad a 60 pies como si hubiera luz tenue, y en
-            la luz tenue como si estuviera bien iluminado. No puedes distinguir
-            colores en la oscuridad.
-          </p>
-        </div>
-        <div>
-          <h4>Manos Sanadoras</h4>
-          <p>
-            Como una acción, puedes tocar a una criatura y hacer que recupere un
-            número de puntos de golpe igual a tu nivel. No puedes volver a usar
-            esta habilidad hasta finalizar un descanso largo.
-          </p>
-        </div>
-        <div>
-          <h4>Resistecia Celestial</h4>
-          <p class='text-center'>
-            Eres resistente al daño radiante y necrótico.
-          </p>
-        </div>
-        <div>
-          <h4>Portador de la Luz</h4>
-          <p class='text-center'>
-            Conoces el truco '<span class='text-[--light]'>Lux</span>'. Usas tu
-            Carisma para lanzarlo.
-          </p>
-        </div>
-      </section>
+		<article
+			class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'
+		>
+			<section>
+				<H2 txt='Rasgos de Raza' />
+			</section>
+			<section
+				class='grid grid-cols-3 justify-center items-start text-justify gap-4 px-8'
+				id='race'
+			>
+				<div>
+					<h4>Visión en la Oscuridad</h4>
+					<p>
+						Puedes ver en la oscuridad a 60 pies como si hubiera luz
+						tenue, y en la luz tenue como si estuviera bien
+						iluminado. No puedes distinguir colores en la oscuridad.
+					</p>
+				</div>
+				<div class='row-span-2'>
+					<h4>Manos Sanadoras</h4>
+					<p>
+						Como una acción, puedes tocar a una criatura y hacer que
+						recupere un número de puntos de golpe igual a tu nivel.
+						No puedes volver a usar esta habilidad hasta finalizar
+						un descanso largo.
+					</p>
+				</div>
+				<div>
+					<h4>Resistecia Celestial</h4>
+					<p class='text-center'>
+						Eres resistente al daño radiante y necrótico.
+					</p>
+				</div>
+				<div>
+					<h4>Portador de la Luz</h4>
+					<p class='text-center'>
+						Conoces el truco '<span class='text-[--light]'>Lux</span
+						>'. Usas tu Carisma para lanzarlo.
+					</p>
+				</div>
+			</section>
 
-      <section>
-        <H2 txt='Rasgos de Clase' />
-      </section>
-      <section
-        class='flex flex-wrap justify-center text-justify text-pretty'
-        id='race'
-      >
-        <div>
-          <h4>Lanzamiento Ritual</h4>
-          <p>
-            Puedes lanzar cualquier conjuro de mago como si fuera un ritual, si
-            tiene la etiqueta «ritual» y si lo tienes en tu libro de conjuros.
-            No necesitas tener el conjuro preparado.
-          </p>
-        </div>
-        <div>
-          <h4 class='text-center'>Lanzamiento de Conjuros</h4>
-          <p>
-            Como estudiante de magia arcana, tienes un libro de conjuros que
-            contiene conjuros que muestran los primeros destellos del verdadero
-            poder.
-          </p>
-        </div>
-        <div>
-          <h4>Recuperación Arcana</h4>
-          <p>
-            has aprendido a recuperar parte de tu energía arcana estudiando tu
-            libro de conjuros. Una vez por día, cuando hagas un descaNso breve,
-            puedes recuperar espacios de conjuro. Los espAcios de conjuro pueden
-            tener un nivel coMbinado igual o menor que la mitad de tu nivel de
-            magO (redondeando hacia arriba) y, como máximo, Nivel 5. por
-            ejEmplo, si eres un mago De nivel 4, puedes recuperAr hasta un valor
-            de Dos niveles de Espacios de conjurO. puedes recuperar un espacio
-            de conjuRo de nivel 2 o dos espacios de conjurO de nivel 1.
-          </p>
-        </div>
-      </section>
-    </article>
-  </main>
+			<section>
+				<H2 txt='Rasgos de Clase' />
+			</section>
+			<section
+				class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8'
+				id='race'
+			>
+				<div class='row-span-2'>
+					<h4>Recuperación Arcana</h4>
+					<p>
+						has aprendido a recuperar parte de tu energía arcana
+						estudiando tu libro de conjuros. Una vez por día, cuando
+						hagas un descaNso breve, puedes recuperar espacios de
+						conjuro. Los espAcios de conjuro pueden tener un nivel
+						coMbinado igual o menor que la mitad de tu nivel de magO
+						(redondeando hacia arriba) y, como máximo, Nivel 5. por
+						ejEmplo, si eres un mago De nivel 4, puedes recuperAr
+						hasta un valor de Dos niveles de Espacios de conjurO.
+						puedes recuperar un espacio de conjuRo de nivel 2 o dos
+						espacios de conjurO de nivel 1.
+					</p>
+				</div>
+				<div>
+					<h4>Lanzamiento Ritual</h4>
+					<p>
+						Puedes lanzar cualquier conjuro de mago como si fuera un
+						ritual, si tiene la etiqueta «ritual» y si lo tienes en
+						tu libro de conjuros. No necesitas tener el conjuro
+						preparado.
+					</p>
+				</div>
 
-  <style>
-    section {
-      /* border: solid 1px var(--white); */
-      width: 100%;
-      height: 100%;
-    }
-    #section {
-      /** Box Shadow Definitivo */
-      box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+				<div>
+					<h4 class='text-center'>Lanzamiento de Conjuros</h4>
+					<p>
+						Como estudiante de magia arcana, tienes un libro de
+						conjuros que contiene conjuros que muestran los primeros
+						destellos del verdadero poder.
+					</p>
+				</div>
+			</section>
+		</article>
+	</main>
 
-      transition: transform 100ms ease;
-      cursor: pointer;
-    }
-    #section:hover {
-      transform: scale(1.01);
-    }
+	<style>
+		section {
+			/* border: solid 1px var(--white); */
+			width: 100%;
+			height: 100%;
+		}
+		#section {
+			/** Box Shadow Definitivo */
+			box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-    #weapons {
-      background-color: var(--gray);
-      width: 100%;
-      height: 100%;
+			transition: transform 100ms ease;
+			cursor: pointer;
+		}
+		#section:hover {
+			transform: scale(1.01);
+		}
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+		#weapons {
+			background-color: var(--gray);
+			width: 100%;
+			height: 100%;
 
-      padding: 0.5rem;
-      border-radius: 0.5rem;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			justify-content: center;
+			align-items: center;
 
-      /** Box Shadow Definitivo */
-      box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+			padding: 0.5rem 1rem;
+			border-radius: 0.5rem;
 
-      transition: transform 100ms ease;
-      cursor: pointer;
-    }
-    #weapons:hover {
-      transform: scale(1.01);
-      background-color: var(--black);
-    }
+			/** Box Shadow Definitivo */
+			box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-    h4 {
-      color: var(--section);
-      text-align: center;
-      font-family: 'Lobster';
-      font-size: 1.1rem;
-    }
-    #race > div {
-      background-color: var(--dark);
-      border-radius: 0.5rem;
-      margin: 1rem;
-      padding: 0.5rem 2rem 1rem;
-      width: 15cm;
+			transition: transform 100ms ease;
+			cursor: default;
+		}
+		#weapons:hover {
+			transform: scale(1.01);
+			/* background-color: var(--black); */
+		}
+		#backpack {
+			/** Box Shadow Definitivo */
+			box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-      /** Box Shadow Definitivo */
-      box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+			transition: transform 100ms ease;
+			cursor: default;
+		}
+		#backpack:hover {
+			transform: scale(1.01);
+		}
 
-      transition: transform 100ms ease;
-      cursor: default;
-    }
-    #race > div:hover {
-      transform: scale(1.01);
-    }
-    #race p {
-      font-size: 0.9rem;
-    }
+		h4 {
+			color: var(--section);
+			text-align: center;
+			font-family: 'Lobster';
+			font-size: 1.1rem;
+		}
+		#race > div {
+			background-color: var(--dark);
+			border-radius: 0.5rem;
+			padding: 0.5rem 2rem 1rem;
+			width: 100%;
 
-    /** MEDIA QUERYS */
-    @media (max-width: 640px) {
-      article {
-        grid-template-columns: repeat(1, 1fr);
-      }
-      section {
-        grid-column: span 1 / span 1;
-      }
-    }
-  </style>
+			/** Box Shadow Definitivo */
+			box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+			transition: transform 100ms ease;
+			cursor: default;
+		}
+		#race > div:hover {
+			transform: scale(1.01);
+		}
+		#race p {
+			font-size: 0.9rem;
+		}
+
+		/** MEDIA QUERYS */
+		@media (max-width: 640px) {
+			article {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			section {
+				grid-column: span 1 / span 1;
+			}
+		}
+	</style>
 </Layout>
