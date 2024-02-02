@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -12,101 +12,122 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang='es'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content='Voidegon description' />
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.ico' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body class='pb-20'>
-		<Header />
-		<slot />
-		<style is:global>
-			@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lexend&family=Lobster&family=Pacifico&family=Unbounded:wght@400;900&display=swap');
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Voidegon description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class='pb-20'>
+    <Header />
+    <slot />
+    <style is:global>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Lobster+Two&family=Pacifico&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
-			:root {
-				--dark: #212121;
-				--light: #fff;
-				--black: #111;
-				--white: #ccc;
-				--grey: #666;
-				--gray: #333;
-				--title: #25d366;
-				--subtitle: #f89d1f;
-				--section: #00a1b9;
-				--warning: #ff5349;
-				/* Span Tags */
-				--name: #fff;
-				--location: #a1a556;
-				--group: #008080;
-				--date: #dcbd4c;
-				--event: #ad70a4;
-				--deity: #ac0940;
-				--object: #ff4fa7;
-				/* Money Colors */
-				--copper: #ce7c56;
-				--silver: #848482;
-				--electro: #96aed0;
-				--gold: #f0c434;
-				--platinum: #eff3ee;
-			}
+      :root {
+        --dark: #212121;
+        --light: #fff;
+        --black: #111;
+        --white: #ccc;
+        --grey: #666;
+        --gray: #333;
+        --title: #25d366;
+        --subtitle: #f89d1f;
+        --section: #00a1b9;
+        --warning: #ff5349;
+        /* Span Tags */
+        --name: #fff;
+        --location: #a1a556;
+        --group: #008080;
+        --date: #dcbd4c;
+        --event: #ad70a4;
+        --deity: #ac0940;
+        --object: #ff4fa7;
+        /* Money Colors */
+        --copper: #ce7c56;
+        --silver: #848482;
+        --electro: #96aed0;
+        --gold: #f0c434;
+        --platinum: #eff3ee;
+      }
 
-			html {
-				font-family: 'Lexend';
-				background: var(--dark);
-				color: var(--white);
-			}
-			body::-webkit-scrollbar {
-				display: none; /* Ocultar scroll */
-			}
+      html {
+        font-family: 'Lexend';
+        background: var(--dark);
+        color: var(--white);
+      }
+      body::-webkit-scrollbar {
+        display: none; /* Ocultar scroll */
+      }
 
-			/** Span */
-			strong#hero {
-				color: var(--name);
-			}
-			strong#heros {
-				color: var(--group);
-			}
-			span#name {
-				color: var(--name);
-			}
-			span#location {
-				color: var(--location);
-			}
-			span#group {
-				color: var(--group);
-			}
-			span#date {
-				color: var(--date);
-			}
-			span#event {
-				color: var(--event);
-			}
-			span#deity {
-				color: var(--deity);
-			}
-			span#object {
-				color: var(--object);
-			}
-			span#hint {
-				color: var(--grey);
-				font-style: italic;
-			}
-			span#good {
-				color: var(--title);
-			}
-			span#neutral {
-				color: var(--subtitle);
-			}
-			span#bad {
-				color: var(--warning);
-			}
-			span#gold {
-				color: var(--gold);
-			}
-		</style>
-	</body>
+      /** Span */
+      strong#hero {
+        color: var(--name);
+        font-family: 'unbounded';
+        text-transform: capitalize;
+      }
+      strong#heros {
+        color: var(--group);
+        text-transform: capitalize;
+        font-size: 0.8rem;
+      }
+      span#name {
+        color: var(--name);
+        font-family: 'pacifico';
+        text-transform: capitalize;
+      }
+      span#location {
+        color: var(--location);
+        font-family: 'lobster';
+        text-transform: capitalize;
+      }
+      span#group {
+        color: var(--group);
+      }
+      span#date {
+        color: var(--date);
+        font-family: 'pacifico';
+      }
+      span#event {
+        color: var(--event);
+      }
+      span#deity {
+        color: var(--deity);
+      }
+      span#object {
+        color: var(--object);
+        font-family: 'caveat brush';
+        font-size: 1.15rem;
+      }
+      span#monster {
+        color: var(--copper);
+        font-family: 'lobster';
+      }
+      span#phrase {
+        color: var(--silver);
+        font-style: italic;
+        font-family: '';
+      }
+      span#hint {
+        color: var(--grey);
+        font-style: italic;
+        font-family: '';
+      }
+      span#good {
+        color: var(--title);
+      }
+      span#neutral {
+        color: var(--subtitle);
+      }
+      span#bad {
+        color: var(--warning);
+      }
+      span#gold {
+        color: var(--gold);
+      }
+    </style>
+  </body>
 </html>
