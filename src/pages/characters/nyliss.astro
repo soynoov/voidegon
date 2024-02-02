@@ -99,7 +99,31 @@ let mod_com = 2,
     <section class='col-span-3 p-2'>
       <Money pc={2} pp={21} pe={6} po={13} ppt={0} />
     </section>
-    <section class='col-span-2 p-2'>
+    <section class='col-span-2 p-2 flex flex-col gap-2'>
+      <div id='weapons'>
+        <div class='bg-[--dark] rounded-lg p-2'>
+          <svg
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            stroke-width='2'
+            stroke='currentColor'
+            fill='none'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+            <path d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path>
+            <path d='M6.5 11.5l6 6'></path></svg
+          >
+        </div>
+        <h3 class='mx-4'>Espada Corta</h3>
+        <p class='text-xs italic text-[--grey]'>(Ligera, Sutil)</p>
+        <p class='mx-4 font-[Lobster]'>
+          <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span
+          ><span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
+          >Perforante
+        </p>
+      </div>
       <div id='weapons'>
         <div class='bg-[--dark] rounded-lg p-2'>
           <svg
@@ -116,7 +140,10 @@ let mod_com = 2,
               d='M6.5 11.5l6 6'></path></svg
           >
         </div>
-        <h3>Espada Corta</h3>
+        <h3 class='mx-4'>Lanza</h3>
+        <p class='text-xs italic text-[--grey]'>
+          (Arrojadiza, Distancia, Versátil)
+        </p>
         <p class='mx-4 font-[Lobster]'>
           <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span
           ><span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
