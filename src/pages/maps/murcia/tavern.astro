@@ -2,253 +2,161 @@
 import Layout from '../../../layouts/Layout.astro';
 import Title from '../../../components/Title.astro';
 import Money from '../../../components/Money.astro';
+//
+import Levels from '../../../components/map/Levels.astro';
+//
+import HR from '../../../components/little/HR.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Murcia ▸ Taberna'>
-	<Title title='Taberna' img='/img/maps/murcia/tavern.png' center='center' />
-	<main
-		class={`
-    w-[80vw] mx-auto my-4
-    grid grid-cols-5 gap-4
-  `}
-	>
-		<div class='w-full bg-[--gray] rounded-full h-1.5 col-span-5'>
-			<div class='bg-[--title] h-1.5 rounded-full' style='width: 25%'>
-			</div>
-			<div class='h-3.5 bg-[--title] w-3.5 rounded-full -mt-2.5'></div>
-			<div class='h-3.5 bg-[--title] w-3.5 rounded-full -mt-3.5 ml-[20%]'>
-			</div>
-			<div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[40%]'>
-			</div>
-			<div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[60%]'>
-			</div>
-			<div class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[80%]'>
-			</div>
-			<div
-				class='h-3.5 bg-[--gray] w-3.5 rounded-full -mt-3.5 ml-[99.5%]'
-			>
-			</div>
-		</div>
-		<div id='unlock'>
-			<svg
-				class='text-[--subtitle]'
-				width='20'
-				height='20'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z'
-				></path>
-				<path d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0'></path>
-				<path d='M8 11v-5a4 4 0 0 1 8 0'></path>
-			</svg>
-			<h3>Nivel 1</h3>
-		</div>
-		<div id='unlock'>
-			<svg
-				class='text-[--subtitle]'
-				width='20'
-				height='20'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z'
-				></path>
-				<path d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0'></path>
-				<path d='M8 11v-5a4 4 0 0 1 8 0'></path>
-			</svg>
-			<h3>Nivel 2</h3>
-		</div>
-		<div id='lock'>
-			<svg
-				width='20'
-				height='20'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
-				>
-				</path>
-				<path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path>
-				<path d='M8 11v-4a4 4 0 1 1 8 0v4'></path>
-			</svg>
-			<h3>Nivel 3</h3>
-		</div>
-		<div id='lock'>
-			<svg
-				width='20'
-				height='20'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
-				>
-				</path>
-				<path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path>
-				<path d='M8 11v-4a4 4 0 1 1 8 0v4'></path>
-			</svg>
-			<h3>Nivel 4</h3>
-		</div>
-		<div id='lock'>
-			<svg
-				width='20'
-				height='20'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
-				>
-				</path>
-				<path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path>
-				<path d='M8 11v-4a4 4 0 1 1 8 0v4'></path>
-			</svg>
-			<h3>Nivel 5</h3>
-		</div>
-		<!-- Nivel 1 -->
-		<article>
-			<section>
-				<h6>Descanso Nocturno Gratuito</h6>
-				<p>
-					Los visitantes tienen la oportunidad de descansar sin costo
-					alguno durante la noche. Las habitaciones, aunque sencillas,
-					proporcionan un refugio cómodo para aquellos que necesitan
-					recargar energías después de sus jornadas.
-				</p>
-			</section>
-			<section>
-				<h6>Consejos Casi Ilimitados</h6>
-				<p>
-					El amable tabernero se convierte en un recurso invaluable
-					para los aventureros novatos. Ubicado detrás de la barra, el
-					tabernero ofrece asesoramiento, tips y orientación a
-					aquellos que buscan mejorar sus habilidades y comprender
-					mejor la ciudad y sus desafíos.
-				</p>
-			</section>
-			<section>
-				<h6>Tablón de Anuncios</h6>
-				<p>
-					Un tablón de anuncios que presenta diversas misiones y
-					encargos locales. El tablón ofrece a los aventureros la
-					oportunidad de embarcarse en emocionantes tareas y
-					contribuir al crecimiento de la ciudad.
-				</p>
-			</section>
-		</article>
-		<!-- Nivel 2 -->
-		<article>
-			<section>
-				<h6>Suministro de Agua Ilimitada</h6>
-				<p>
-					La taberna ha implementado con éxito un sistema de
-					suministro de agua confiable y duradero. Este servicio
-					garantiza que tanto los huéspedes como los locales tengan
-					acceso a agua limpia y fresca en cualquier momento, un
-					recurso invaluable en un mundo lleno de desafíos.
-				</p>
-			</section>
-			<section>
-				<h6>Centro de Gobierno Comunitario</h6>
-				<p>
-					Este edificio ha evolucionado para adaptarse como el centro
-					de gobierno de la comunidad. En su papel de ayuntamiento
-					improvisado, facilita reuniones comunitarias, consultas y
-					toma de decisiones colectivas. Además, proporciona servicios
-					administrativos esenciales para coordinar proyectos y
-					gestionar recursos, contribuyendo así al desarrollo y
-					bienestar del pueblo en este mundo desafiante. Economía
-					actual:
-				</p>
-				<div class='' id='dark'>
-					<Money pc={1} pe={1} po={4} ppt={2} />
-				</div>
-			</section>
-		</article>
-	</main>
+  <Title title='Taberna' img='/img/maps/murcia/tavern.png' center='center' />
+  <main class='mt-4 w-[80vw] mx-auto'>
+    <article>
+      <section>
+        <Levels xp={[100, 35, 0, 0, 0]} />
+      </section>
+      <!-- Nivel 1 -->
+      <section>
+        <div>
+          <h6>Descanso Nocturno Gratuito</h6>
+          <p>
+            Los visitantes tienen la oportunidad de descansar sin costo alguno
+            durante la noche. Las habitaciones, aunque sencillas, proporcionan
+            un refugio cómodo para aquellos que necesitan recargar energías
+            después de sus jornadas.
+          </p>
+        </div>
+        <div>
+          <h6>Consejos Casi Ilimitados</h6>
+          <p>
+            El amable tabernero se convierte en un recurso invaluable para los
+            aventureros novatos. Ubicado detrás de la barra, el tabernero ofrece
+            asesoramiento, tips y orientación a aquellos que buscan mejorar sus
+            habilidades y comprender mejor la ciudad y sus desafíos.
+          </p>
+        </div>
+        <div>
+          <h6>Tablón de Anuncios</h6>
+          <p>
+            Un tablón de anuncios que presenta diversas misiones y encargos
+            locales. El tablón ofrece a los aventureros la oportunidad de
+            embarcarse en emocionantes tareas y contribuir al crecimiento de la
+            ciudad.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <HR />
+      </section>
+
+      <!-- Nivel 2 -->
+      <section>
+        <div>
+          <h6>Suministro de Agua Ilimitada</h6>
+          <p>
+            La taberna ha implementado con éxito un sistema de suministro de
+            agua confiable y duradero. Este servicio garantiza que tanto los
+            huéspedes como los locales tengan acceso a agua limpia y fresca en
+            cualquier momento, un recurso invaluable en un mundo lleno de
+            desafíos.
+          </p>
+        </div>
+        <div>
+          <h6>Centro de Gobierno Comunitario</h6>
+          <p>
+            Este edificio ha evolucionado para adaptarse como el centro de
+            gobierno de la comunidad. En su papel de ayuntamiento improvisado,
+            facilita reuniones comunitarias, consultas y toma de decisiones
+            colectivas. Además, proporciona servicios administrativos esenciales
+            para coordinar proyectos y gestionar recursos, contribuyendo así al
+            desarrollo y bienestar del pueblo en este mundo desafiante. Economía
+            actual:
+          </p>
+        </div>
+        <Money pc={8} pe={0} po={12} ppt={4} />
+        <Money pc={1} pe={1} po={4} ppt={2} />
+        <Money pp={1} pe={8} po={1} ppt={4} />
+      </section>
+    </article>
+
+    <article>
+      <section></section>
+      <section></section>
+    </article>
+  </main>
 </Layout>
 
 <style>
-	main > div:not(:first-of-type) {
-		background-color: var(--gray);
-		border-radius: 0.5rem;
+  /** Para Controlar los Contenedores debajo de los Niveles */
+  section > div {
+    background-color: var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 1rem;
+    margin: 1rem 0;
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+    /** Efecto Global de Secciones */
+    transition: transform 100ms ease;
+    cursor: default;
+  }
+  section > div:hover {
+    /** Efecto Global de Secciones */
+    transform: scale(1.01);
+  }
 
-		transition: transform 300ms ease;
-		cursor: default;
-	}
-	main > div:hover {
-	}
+  main > div:not(:first-of-type) {
+    background-color: var(--gray);
+    border-radius: 0.5rem;
 
-	h1 {
-		color: var(--title);
-		font-family: 'Pacifico';
-		margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		font-size: 2rem;
-	}
-	h3 {
-		color: var(--subtitle);
-		font-family: 'Lobster';
-		margin: 1rem;
+    transition: transform 300ms ease;
+    cursor: default;
+  }
+  main > div:hover {
+  }
 
-		font-size: 1.5rem;
-	}
-	h6 {
-		color: var(--section);
-		font-weight: bold;
-		margin: 0.5rem 0;
-	}
+  h1 {
+    color: var(--title);
+    font-family: 'Pacifico';
+    margin: 1rem;
 
-	#lock > * {
-		color: var(--grey);
-	}
-	#lock:hover,
-	#dark:hover {
-		transform: none;
-	}
+    font-size: 2rem;
+  }
+  h3 {
+    color: var(--subtitle);
+    font-family: 'Lobster';
+    margin: 1rem;
 
-	#unlock {
-		cursor: pointer;
-	}
+    font-size: 1.5rem;
+  }
+  h6 {
+    color: var(--section);
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
 
-	#dark {
-		background-color: var(--dark);
-	}
+  #lock > * {
+    color: var(--grey);
+  }
+  #lock:hover,
+  #dark:hover {
+    transform: none;
+  }
 
-	article {
-		text-align: justify;
-	}
+  #unlock {
+    cursor: pointer;
+  }
+
+  #dark {
+    background-color: var(--dark);
+  }
+
+  article {
+    text-align: justify;
+  }
 </style>

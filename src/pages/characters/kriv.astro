@@ -4,35 +4,103 @@ import Title from '../../components/Title.astro';
 import Stats from '../../components/Stats.astro';
 import Money from '../../components/Money.astro';
 import Experience from '../../components/Experience.astro';
+import Skills from '../../components/Skills.astro';
+// Little Components
+import CA from '../../components/little/CA.astro';
+import INI from '../../components/little/INI.astro';
+import VEL from '../../components/little/VEL.astro';
+import HR from '../../components/little/HR.astro';
+import HP from '../../components/little/HP.astro';
+import DG from '../../components/little/DG.astro';
+import COM from '../../components/little/COM.astro';
+import H2 from '../../components/little/H2.astro';
+import H3 from '../../components/little/H3.astro';
+
+// - Llamamiento a todos los datos y variables
+let mod_com = 2,
+  fue = 4,
+  des = -2,
+  con = 2,
+  int = -1,
+  sab = 3,
+  car = 5;
 ---
 
 <Layout title='】 Voidegon ▸ Kriv Coppernico'>
   <Title title='Kriv Coppernico' />
-  <main
-    class={`
-    w-[80vw] mx-auto m-4
-    grid grid-cols-6
+  <main>
+    <article
+      class={`
+      w-[80vw] mx-auto m-4
+      grid grid-cols-6 grid-flow-row-dense
+      justify-center items-center
     
   `}
-  >
-    <div>
-      <Stats
-        fue={16}
-        des={6}
-        con={14}
-        int={8}
-        sab={12}
-        car={16}
-        mod={[2, 0, 0, 0, 0, 1]}
-        com={[0, 0, 0, 0, 1, 1]}
-        modcom={2}
-      />
-    </div>
-    <div class='w-[80vw]'>
-      <Money pc={100} pp={0} pe={16} po={2} ppt={0} />
-    </div>
-    <section class='col-span-6'>
-      <Experience race='Dragonborn' rol='Paladin' exp={345} />
-    </section>
+    >
+      <section class='col-span-6'>
+        <Experience race='Dragonborn' rol='Paladin' exp={345} />
+      </section>
+      <section class='col-span-2 py-2 pr-4'>
+        <Stats
+          fue={16}
+          des={6}
+          con={14}
+          int={8}
+          sab={12}
+          car={16}
+          mod={[2, 0, 0, 0, 0, 1]}
+          com={[0, 0, 0, 0, 1, 1]}
+          modcom={2}
+        />
+      </section>
+      <section class='col-span-2 row-span-3 p-2'>
+        <a href='/lore/kriv'>
+          <img
+            src='/img/kriv/kriv.png'
+            alt='Kriv Coppernico'
+            class='rounded-lg object-cover h-full'
+            id='section'
+          />
+        </a>
+      </section>
+      <section class='col-span-1 row-start-3 p-2'>
+        <CA des={des} />
+      </section>
+      <section class='col-span-1 row-start-3 p-2'>
+        <INI des={des} />
+      </section>
+      <section class='col-span-2 row-start-4 px-2'>
+        <VEL vel={30} />
+      </section>
+      <section class='col-span-2 row-start-5 col-start-3'>
+        <HP hp={12} hpmax={10 + con} />
+      </section>
+
+      <section class='col-span-6'>
+        <HR />
+      </section>
+
+      <section class='col-span-6'>
+        <Money pc={100} pp={0} pe={16} po={2} ppt={0} />
+      </section>
+    </article>
   </main>
 </Layout>
+
+<style>
+  section {
+    /* border: solid 1px var(--white); */
+    width: 100%;
+    height: 100%;
+  }
+  #section {
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  #section:hover {
+    transform: scale(1.01);
+  }
+</style>

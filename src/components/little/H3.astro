@@ -1,10 +1,17 @@
 ---
 interface Props {
   txt: string;
+  block?: boolean;
 }
-const { txt } = Astro.props;
+const { txt, block = false } = Astro.props;
+
+let color = 'subtitle';
+
+if (block) {
+  color = 'grey';
+}
 ---
 
 <section class='text-center p-2'>
-  <h1 class='text-[--subtitle] font-[lobster] text-xl p-2'>{txt}</h1>
+  <h1 class={`text-[--${color}] font-[lobster] text-xl p-2`}>{txt}</h1>
 </section>

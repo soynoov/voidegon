@@ -1,0 +1,102 @@
+---
+import H3 from '../little/H3.astro';
+// Posibilidad de agregar "Bolas de Objetivos", Mejora no prioriotaria pero agrega funcionalidad.
+// Funcionalidad de Desbloqueo (Prioritaria)
+interface Props {
+  xp: Array<number>; //Provisional
+}
+const { xp } = Astro.props;
+
+function styleBlock(x: number) {
+  if (xp[x] == 0) {
+    return `block`;
+  }
+}
+---
+
+<article class='grid grid-cols-5 gap-4 w-full'>
+  <section>
+    <!-- Progress Bar -->
+    <div class='w-full bg-[--gray] rounded-full h-2.5 mb-4'>
+      <div
+        class='bg-[--title] h-2.5 rounded-full animate-pulse'
+        style={`width: ${xp[0]}%`}
+      >
+      </div>
+    </div>
+    <!-- Casillas -->
+    <div>
+      <!-- SVG -->
+      <H3 txt='Nivel 1' />
+    </div>
+  </section>
+  <section>
+    <!-- Progress Bar -->
+    <div class='w-full bg-[--gray] rounded-full h-2.5 mb-4'>
+      <div
+        class='bg-[--date] h-2.5 rounded-full animate-pulse'
+        style={`width: ${xp[1]}%`}
+      >
+      </div>
+    </div>
+    <!-- Casillas -->
+    <div>
+      <!-- SVG -->
+      <H3 txt='Nivel 2' />
+    </div>
+  </section>
+  <section>
+    <!-- Progress Bar -->
+    <div class='w-full bg-[--gray] rounded-full h-2.5 mb-4'>
+      <div class='bg-[--title] h-2.5 rounded-full' style={`width: ${xp[2]}%`}>
+      </div>
+    </div>
+    <!-- Casillas -->
+    <div>
+      <!-- SVG -->
+      <H3 txt='Nivel 3' block />
+    </div>
+  </section>
+  <section>
+    <!-- Progress Bar -->
+    <div class='w-full bg-[--gray] rounded-full h-2.5 mb-4'>
+      <div class='bg-[--title] h-2.5 rounded-full' style={`width: ${xp[3]}%`}>
+      </div>
+    </div>
+    <!-- Casillas -->
+    <div>
+      <!-- SVG -->
+      <H3 txt='Nivel 4' block />
+    </div>
+  </section>
+  <section>
+    <!-- Progress Bar -->
+    <div class='w-full bg-[--gray] rounded-full h-2.5 mb-4'>
+      <div class='bg-[--title] h-2.5 rounded-full' style={`width: ${xp[4]}%`}>
+      </div>
+    </div>
+    <!-- Casillas -->
+    <div>
+      <!-- SVG -->
+      <H3 txt='Nivel 5' block />
+    </div>
+  </section>
+</article>
+
+<style>
+  /** Para Controlar los Contenedores debajo de los Niveles */
+  section > div {
+    background-color: var(--gray);
+    border-radius: 0.5rem;
+
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+    /** Efecto Global de Secciones */
+    transition: transform 100ms ease;
+    cursor: default;
+  }
+  section > div:hover {
+    /** Efecto Global de Secciones */
+    transform: scale(1.01);
+  }
+</style>

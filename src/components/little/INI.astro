@@ -5,12 +5,19 @@ interface Props {
 
 const { des } = Astro.props;
 
-let ini = des;
+function filtrarIni(des: number) {
+  let ini = des;
+  if (des >= 0) {
+    return `+${ini}`;
+  }
+
+  return ini;
+}
 ---
 
 <section
   class={`
-    w-full mx-auto
+    w-full mx-auto h-full
     flex justify-center items-center flex-col
 `}
 >
@@ -29,7 +36,7 @@ let ini = des;
         d='M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11'></path></svg
     >
   </div>
-  <h6 class='mx-4'>+{ini}</h6>
+  <h6 class='mx-4'>{filtrarIni(des)}</h6>
 </section>
 
 <style>
