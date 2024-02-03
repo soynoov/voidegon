@@ -52,7 +52,7 @@ function styleBlock(x: number) {
       </div>
     </div>
     <!-- Casillas -->
-    <div>
+    <div id='block'>
       <!-- SVG -->
       <H3 txt='Nivel 3' block />
     </div>
@@ -64,7 +64,7 @@ function styleBlock(x: number) {
       </div>
     </div>
     <!-- Casillas -->
-    <div>
+    <div id='block'>
       <!-- SVG -->
       <H3 txt='Nivel 4' block />
     </div>
@@ -76,7 +76,7 @@ function styleBlock(x: number) {
       </div>
     </div>
     <!-- Casillas -->
-    <div>
+    <div id='block'>
       <!-- SVG -->
       <H3 txt='Nivel 5' block />
     </div>
@@ -98,5 +98,9 @@ function styleBlock(x: number) {
   section > div:hover {
     /** Efecto Global de Secciones */
     transform: scale(1.01);
+  }
+
+  #block:hover {
+    transform: scale(1);
   }
 </style>
