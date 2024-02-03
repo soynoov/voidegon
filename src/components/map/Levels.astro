@@ -27,6 +27,20 @@ function styleBlock(x: number) {
     <!-- Casillas -->
     <div>
       <!-- SVG -->
+      <svg
+        width='22'
+        height='22'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z'
+        ></path><path d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0'></path><path
+          d='M8 11v-5a4 4 0 0 1 8 0'></path></svg
+      >
       <H3 txt='Nivel 1' />
     </div>
   </section>
@@ -42,6 +56,20 @@ function styleBlock(x: number) {
     <!-- Casillas -->
     <div>
       <!-- SVG -->
+      <svg
+        width='22'
+        height='22'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z'
+        ></path><path d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0'></path><path
+          d='M8 11v-5a4 4 0 0 1 8 0'></path></svg
+      >
       <H3 txt='Nivel 2' />
     </div>
   </section>
@@ -54,6 +82,20 @@ function styleBlock(x: number) {
     <!-- Casillas -->
     <div id='block'>
       <!-- SVG -->
+      <svg
+        width='22'
+        height='22'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
+        ></path><path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path><path
+          d='M8 11v-4a4 4 0 1 1 8 0v4'></path></svg
+      >
       <H3 txt='Nivel 3' block />
     </div>
   </section>
@@ -66,6 +108,20 @@ function styleBlock(x: number) {
     <!-- Casillas -->
     <div id='block'>
       <!-- SVG -->
+      <svg
+        width='22'
+        height='22'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
+        ></path><path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path><path
+          d='M8 11v-4a4 4 0 1 1 8 0v4'></path></svg
+      >
       <H3 txt='Nivel 4' block />
     </div>
   </section>
@@ -78,6 +134,20 @@ function styleBlock(x: number) {
     <!-- Casillas -->
     <div id='block'>
       <!-- SVG -->
+      <svg
+        width='22'
+        height='22'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z'
+        ></path><path d='M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0'></path><path
+          d='M8 11v-4a4 4 0 1 1 8 0v4'></path></svg
+      >
       <H3 txt='Nivel 5' block />
     </div>
   </section>
@@ -100,7 +170,18 @@ function styleBlock(x: number) {
     transform: scale(1.01);
   }
 
+  #block {
+    color: var(--grey);
+  }
   #block:hover {
     transform: scale(1);
+  }
+
+  /** Adaptar SVGs */
+  section > div:not(:first-child) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--subtitle);
   }
 </style>
