@@ -10,7 +10,7 @@ import Section from '../../components/Section.astro';
     <p class='m-8 px-14 mx-[10vw] text-justify text-balance mb-4'>
       Nos encontramos en las solitarias y tenebrosas tierras de
       <span id='location'>Murcia</span>, específicamente
-      <span id='date'>20 000 años</span>
+      <span id='date'>20.000 años</span>
       después de ███ ███████████ ██████████, también conocida como la creación de
       <span id='event' class='font-bold'>Voidegon</span>. En este momento, se
       avecina <span id='event'>el renacimiento</span> de uno de los elementos en
@@ -23,7 +23,7 @@ import Section from '../../components/Section.astro';
       Acompáñame en esta aventura para explorar sus elecciones y analizar las consecuencias:
     </p>
     <details
-      class='m-4 mx-[10vw] shadow-xl open:scale-105 transition-transform open:lg:mb-10 open:pb-4'
+      class='m-4 mx-[10vw] shadow-xl transition-transform open:lg:mb-10 open:pb-4'
     >
       <summary class='list-none mb-4 text-[--warning]'>
         <Section title='Prólogo ~ Nacimiento del Dragón' color='warning' />
@@ -278,6 +278,9 @@ import Section from '../../components/Section.astro';
     background-color: var(--gray);
     border-radius: 0.75rem;
     cursor: pointer;
+  }
+  details[open] {
+    transform: scale(1.01);
   }
 
   ul {
