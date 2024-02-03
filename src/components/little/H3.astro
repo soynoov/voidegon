@@ -1,0 +1,10 @@
+---
+interface Props {
+  txt: string;
+}
+const { txt } = Astro.props;
+---
+
+<section class='text-center p-2'>
+  <h1 class='text-[--subtitle] font-[lobster] text-xl p-2'>{txt}</h1>
+</section>
