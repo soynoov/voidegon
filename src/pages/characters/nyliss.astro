@@ -193,7 +193,10 @@ let mod_com = 2,
       <HR />
     </div>
 
-    <article class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'>
+    <article
+      class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'
+      id='traits'
+    >
       <section>
         <H2 txt='Rasgos de Raza' />
       </section>
@@ -223,7 +226,7 @@ let mod_com = 2,
             Eres resistente al daño radiante y necrótico.
           </p>
         </div>
-        <div class='col-start-3 -mt-11'>
+        <div class='col-start-3 -mt-11' id='x'>
           <h4>Portador de la Luz</h4>
           <p class='text-center'>
             Conoces el <span id='phrase'>truco</span>
@@ -348,7 +351,7 @@ let mod_com = 2,
           class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8'
           id='race'
         >
-          <p class='text-center text-pretty col-span-2 w-[15cm] mx-auto'>
+          <p class='text-center text-pretty col-span-2 mx-auto w-[70vw]'>
             Al nivel 2, comienzas a seguir una tradición arcana, que moldea tu
             forma de practicar la magia. Tu elección te otorga rasgos en el
             nivel 2 y de nuevo en los niveles 6, 10 y 14.
@@ -444,6 +447,16 @@ let mod_com = 2,
       }
       section {
         grid-column: span 1 / span 1;
+      }
+      #weapons {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      #traits #race {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      #traits #race #x {
+        grid-column-start: auto;
+        margin: 0;
       }
     }
   </style>
