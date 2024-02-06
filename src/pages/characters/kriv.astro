@@ -18,98 +18,96 @@ import H3 from '../../components/little/H3.astro';
 
 // - Llamamiento a todos los datos y variables
 let mod_com = 2,
-	fue = 4,
-	des = -2,
-	con = 2,
-	int = -1,
-	sab = 1,
-	car = 3;
+  fue = 4,
+  des = -2,
+  con = 2,
+  int = -1,
+  sab = 1,
+  car = 3;
 ---
 
 <Layout title='】 Voidegon ▸ Kriv Coppernico'>
-	<Title title='Kriv Coppernico' />
-	<main>
-		<article
-			class={`
+  <Title title='Kriv Coppernico' />
+  <main>
+    <article
+      class={`
       w-[80vw] mx-auto m-4
       grid grid-cols-6 grid-flow-row-dense
       justify-center items-center
     
   `}
-		>
-			<section class='col-span-6'>
-				<Experience race='Dragonborn' rol='Paladin' exp={345} />
-			</section>
-			<section class='col-span-2 py-2'>
-				<Stats
-					fue={16}
-					des={6}
-					con={14}
-					int={8}
-					sab={12}
-					car={16}
-					mod={[2, 0, 0, 0, 0, 1]}
-					com={[0, 0, 0, 0, 1, 1]}
-					modcom={2}
-				/>
-			</section>
-			<section class='col-span-2 row-span-3 p-2'>
-				<a href='/lore/kriv'>
-					<img
-						src='/img/kriv/kriv.png'
-						alt='Kriv Coppernico'
-						class='rounded-lg object-cover h-full'
-						id='section'
-					/>
-				</a>
-			</section>
-			<section class='col-span-1 row-start-3 pr-1'>
-				<CA des={des} />
-			</section>
-			<section class='col-span-1 row-start-3 pl-1' '>
-				<INI des={des} />
-			</section>
-			<section class='col-span-2 row-start-4 py-2'>
-				<VEL vel={30} />
-			</section>
-			<section class='col-span-6 py-2'>
-				<HP hp={12} hpmax={10 + con} />
-			</section>
+    >
+      <section class='col-span-6'>
+        <Experience race='Dragonborn' rol='Paladin' exp={345} />
+      </section>
+      <section class='col-span-2 py-2'>
+        <Stats
+          fue={16}
+          des={6}
+          con={14}
+          int={8}
+          sab={12}
+          car={16}
+          mod={[2, 0, 0, 0, 0, 1]}
+          com={[0, 0, 0, 0, 1, 1]}
+          modcom={2}
+        />
+      </section>
+      <section class='col-span-2 row-span-3 p-2'>
+        <a href='/lore/kriv'>
+          <img
+            src='/img/kriv/kriv.png'
+            alt='Kriv Coppernico'
+            class='rounded-lg object-cover h-full'
+            id='section'
+          />
+        </a>
+      </section>
+      <section class='col-span-1 row-start-3 pr-1'>
+        <CA des={des} />
+      </section>
+      <section class='col-span-1 row-start-3 pl-1' '>
+        <INI des={des} />
+      </section>
+      <section class='col-span-2 row-start-4 py-2'>
+        <VEL vel={30} />
+      </section>
+      <section class='col-span-6 py-2'>
+        <HP hp={12} hpmax={10 + con} />
+      </section>
 
-			<section class='col-span-6'>
-				<HR />
-			</section>
+      <section class='col-span-6'>
+        <HR />
+      </section>
 
-			<section class='col-span-6 pt-2'>
-				<Money pc={100} pp={0} pe={16} po={2} ppt={0} />
-			</section>
-			<section class='col-span-6 pt-2'>
-				<Skills
-					punt={[
-						-1, 4, 0, 0, 0, 0, 3, 0, 0, 0, -1, 0, 1, 3, 0, -1, 0, 0,
-					]}
-					com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]}
-					modcom={mod_com}
-				/>
-			</section>
-		</article>
-	</main>
+      <section class='col-span-6 pt-2'>
+        <Money pc={100} pp={0} pe={16} po={2} ppt={0} />
+      </section>
+      <section class='col-span-6 pt-2'>
+        <Skills
+          punt={[-1, 4, 0, 0, 0, 0, 3, 0, 0, 0, -1, 0, 1, 3, 0, -1, 0, 0]}
+          com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]}
+          modcom={mod_com}
+        />
+      </section>
+    </article>
+  </main>
 </Layout>
 
 <style>
-	section {
-		/* border: solid 1px var(--white); */
-		width: 100%;
-		height: 100%;
-	}
-	#section {
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  section {
+    /* border: solid 1px var(--white); */
+    width: 100%;
+    height: 100%;
+  }
+  #section {
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-		transition: transform 100ms ease;
-		cursor: pointer;
-	}
-	#section:hover {
-		transform: scale(1.01);
-	}
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  #section:hover {
+    transform: scale(1.01);
+  }
 </style>

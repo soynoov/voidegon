@@ -5,81 +5,103 @@ import Name from '../../../components/Name.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Tir'>
-  <Title title='Tir' />
-  <main class='w-[80vw] mx-auto'>
-    <article
-      class={`
-      grid grid-cols-6 gap-2
+	<Title title='Tir' />
+	<main class='w-[80vw] mx-auto'>
+		<article
+			class={`
+      grid grid-cols-6 gap-2 grid-flow-row-dense
+      items-center
     `}
-    >
-      <section class='col-span-6'>
-        <Name name='The Blacksmith' />
-      </section>
-      <section class='col-span-2 row-span-5'>
-        <img src='/img/npc/tir/tir.png' alt='Tir' class='rounded-lg' />
-      </section>
-      <section class='col-span-4'>
-        <p>
-          El ██████ enano ████ ██████ █████ ██████ ███ █████ ██████████, ██████
-          de ██████ ██████, ████████████ y ██████. Su historia es ████████ en
-          ██████ los ██████ ███ ██████████. Es el enano ████████████ ██████
-          ████████████ ██████.
-        </p>
-      </section>
-      <section class='col-span-2'>
-        <div>
-          <h3>Dwarf</h3>
-        </div>
-      </section>
-      <section class='col-span-2'>
-        <div>
-          <h3></h3>
-        </div>
-      </section>
-      <section class='col-span-4'>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolor
-          vitae perferendis, at commodi consequatur provident saepe laborum
-          voluptate aliquam iusto quasi quibusdam cumque iure accusamus. Quos
-          excepturi amet commodi.
-        </p>
-      </section>
-    </article>
-  </main>
+		>
+			<section class='col-span-6'>
+				<Name name='The Blacksmith' />
+			</section>
+			<section class='col-span-2 row-span-5'>
+				<img src='/img/npc/tir/tir.png' alt='Tir' class='rounded-lg' />
+			</section>
+			<section class='col-span-2'>
+				<div>
+					<h3>Dwarf</h3>
+				</div>
+			</section>
+			<section class='col-span-2'>
+				<div>
+					<h3></h3>
+				</div>
+			</section>
+			<section class='col-span-4'>
+				<p>
+					El ██████ enano ████ ██████ █████ ██████ ███ █████
+					██████████, ██████ de ██████ ██████, ████████████ y ██████.
+					Su historia es ████████ en ██████ los ██████ ███ ██████████.
+					Es el enano ████████████ ██████ ████████████ ██████.
+				</p>
+			</section>
+			<section class='col-span-2'>
+				<div>
+					<h3>Blacksmith</h3>
+				</div>
+			</section>
+			<section class='col-span-2'>
+				<div>
+					<h3></h3>
+				</div>
+			</section>
+			<section class='col-span-4'>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Totam, dolor vitae perferendis, at commodi consequatur
+					provident saepe laborum voluptate aliquam iusto quasi
+					quibusdam cumque iure accusamus. Quos excepturi amet
+					commodi.
+				</p>
+			</section>
+			<section class='col-span-2'>
+				<div>
+					<h3>70 kg</h3>
+				</div>
+			</section>
+			<section class='col-span-2'>
+				<div>
+					<h3>127 cm</h3>
+				</div>
+			</section>
+		</article>
+	</main>
 </Layout>
 
 <style>
-  section {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
+	section {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
 
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-    /** Efecto Global de Secciones */
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section:hover {
-    /** Efecto Global de Secciones */
-    transform: scale(1.01);
-  }
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+		/** Efecto Global de Secciones */
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section:hover {
+		/** Efecto Global de Secciones */
+		transform: scale(1.01);
+	}
 
-  p {
-    padding: 1rem 2rem 1.1rem;
-    text-align: justify;
-  }
-  section:has(h3) {
-    background-color: var(--subtitle);
-  }
-  section > div:has(h3) {
-    margin: 0.3rem;
-    padding: 0.5rem;
-    font-family: 'lobster';
-    background-color: var(--gray);
-    color: var(--subtitle);
-    text-align: center;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    height: 80%;
-  }
+	p {
+		padding: 1rem 2rem 1.1rem;
+		text-align: justify;
+	}
+	section:has(h3) {
+		background-color: var(--subtitle);
+	}
+	section > div:has(h3) {
+		margin: 0.3rem;
+		padding: 0.5rem;
+		font-family: 'lobster';
+		background-color: var(--gray);
+		color: var(--subtitle);
+		text-align: center;
+		font-weight: bold;
+		border-radius: 0.5rem;
+		height: 80%;
+	}
 </style>
