@@ -22,18 +22,18 @@ let level = 2,
 	car = 0;
 ---
 
-<Layout title="】 Voidegon ▸ Lion'El Jonson">
-	<Title title="Lion'El Jonson" />
+<Layout title='】 Voidegon ▸ Isidoro Matamoros'>
+	<Title title='Isidoro Matamoros' img='/img/isidoro/bg_isidoro.png' />
 	<main>
-		<article class={'w-[80vw] mx-auto mt-4 grid grid-cols-6'}>
+		<article class={'w-[80vw] mx-auto mt-4 grid grid-cols-6 '}>
 			<section class='col-span-6'>
 				<Experience race='Tiefling' rol='Monk' exp={355} />
 			</section>
 			<section class='col-span-2 row-span-5 pt-2 section'>
 				<img
 					src='/img/isidoro/isidoro.png'
-					alt="Lion'El Jonson"
-					class='rounded-lg'
+					alt='Isidoro Matamoros'
+					class='rounded-lg h-full object-cover'
 				/>
 			</section>
 			<section class='col-span-2 row-span-4 pt-2 pl-2'>
@@ -87,5 +87,15 @@ let level = 2,
 	}
 	.section:hover {
 		transform: scale(1.01);
+	}
+
+	/** MEDIA QUERYS */
+	@media (max-width: 640px) {
+		article {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		section {
+			grid-column: span 1 / span 1;
+		}
 	}
 </style>
