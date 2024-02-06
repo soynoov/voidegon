@@ -4,13 +4,15 @@ import Title from '../../components/Title.astro';
 //
 import Experience from '../../components/Experience.astro';
 import Stats from '../../components/Stats.astro';
+import Skills from '../../components/Skills.astro';
 //
 import HP from '../../components/little/HP.astro';
+import CA from '../../components/little/CA.astro';
 //
 let mod_com = 2,
-  fue = 5,
+  fue = 3,
   des = 2,
-  con = 5,
+  con = 3,
   int = -2,
   sab = 0,
   car = 1;
@@ -35,7 +37,7 @@ let mod_com = 2,
           com={[1, 0, 1, 0, 0, 0]}
         />
       </section>
-      <section class='col-span-2 pt-2 section'>
+      <section class='col-span-2 row-span-2 pt-2 section'>
         <img
           src='/img/lionel/lionel.png'
           alt="Lion'El Jonson"
@@ -43,7 +45,17 @@ let mod_com = 2,
         />
       </section>
       <section class='col-span-6 pt-2'>
-        <HP hp={15} hpmax={10 + con} />
+        <HP hp={10 + con - 0} hpmax={10 + con} />
+      </section>
+      <section class='col-span-1 pt-2'>
+        <CA des={des} />
+      </section>
+      <section class='col-span-6 pt-2'>
+        <Skills
+          punt={[1, 3, -2, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+          com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]}
+          modcom={mod_com}
+        />
       </section>
     </article>
   </main>

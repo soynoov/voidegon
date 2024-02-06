@@ -46,6 +46,28 @@ function sumarStats(x: number) {
     return `+${mod[x]}`;
   }
 }
+
+// Provisionalmente hacemos el codigo mal. Luego habra que mejorarlo cuando me apetezca JS. El codigo se repite por lo que no es optimo.
+function sumaSimple(stat: number, x: number) {
+  let modificador = 0;
+  x -= 1;
+
+  stat += mod[x];
+
+  if (stat > 10) {
+    modificador = Math.floor((stat - 10) / 2); // Ajustado el cálculo aquí
+  } else if (stat > 0 && stat <= 10) {
+    modificador = -Math.ceil((10 - stat) / 2);
+  } else if (stat <= 0) {
+    modificador = -5;
+  }
+
+  if (com[x] == 1) {
+    if (modificador >= 0) {
+      return `[+${modificador}]`;
+    }
+  }
+}
 ---
 
 <section
@@ -63,6 +85,7 @@ function sumarStats(x: number) {
       <p>{sumarStats(1)}</p>
     </div>
     <div>
+      <h5>{sumaSimple(fue, 1)}</h5>
       <h5>[{modificadorStats(fue, 1)}]</h5>
     </div>
   </div>
@@ -73,6 +96,7 @@ function sumarStats(x: number) {
       <p>{sumarStats(2)}</p>
     </div>
     <div>
+      <h5>{sumaSimple(des, 2)}</h5>
       <h5>[{modificadorStats(des, 2)}]</h5>
     </div>
   </div>
@@ -83,6 +107,7 @@ function sumarStats(x: number) {
       <p>{sumarStats(3)}</p>
     </div>
     <div>
+      <h5>{sumaSimple(con, 3)}</h5>
       <h5>[{modificadorStats(con, 3)}]</h5>
     </div>
   </div>
@@ -93,6 +118,7 @@ function sumarStats(x: number) {
       <p>{sumarStats(4)}</p>
     </div>
     <div>
+      <h5>{sumaSimple(int, 4)}</h5>
       <h5>[{modificadorStats(int, 4)}]</h5>
     </div>
   </div>
@@ -103,6 +129,7 @@ function sumarStats(x: number) {
       <p>{sumarStats(5)}</p>
     </div>
     <div>
+      <h5>{sumaSimple(sab, 5)}</h5>
       <h5>[{modificadorStats(sab, 5)}]</h5>
     </div>
   </div>
@@ -113,6 +140,7 @@ function sumarStats(x: number) {
       <p>{sumarStats(6)}</p>
     </div>
     <div>
+      <h5>{sumaSimple(car, 6)}</h5>
       <h5>[{modificadorStats(car, 6)}]</h5>
     </div>
   </div>
@@ -160,6 +188,10 @@ function sumarStats(x: number) {
     padding: 0.5rem 1rem;
   }
   h6 {
+    font-size: 1.5rem;
+  }
+  h5:first-of-type {
+    color: var(--date);
     font-size: 1.5rem;
   }
   h5 {
