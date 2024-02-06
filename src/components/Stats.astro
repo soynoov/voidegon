@@ -65,8 +65,17 @@ function sumaSimple(stat: number, x: number) {
   if (com[x] == 1) {
     if (modificador >= 0) {
       return `[+${modificador}]`;
+    } else {
+      return `[${modificador}]`;
     }
   }
+}
+
+// -- Controlar si las Estadisticas Totales suman 72.
+const sumaStats = fue + des + con + int + sab + car;
+
+if (sumaStats !== 72) {
+  console.log('Las Stats asignadas no suman 72. Suma actual: ' + sumaStats);
 }
 ---
 
