@@ -1,6 +1,6 @@
 ---
 interface Props {
-	dark?: boolean;
+  dark?: boolean;
 }
 
 const { dark } = Astro.props;
@@ -10,6 +10,6 @@ let id_color = dark ? 'dark' : 'gray';
 ---
 
 <hr
-	class='w-[99%] mx-auto border-2 rounded-full mb-2'
-	style={`border-color: var(--${id_color});`}
+  class='w-full mx-auto border-2 rounded-full mt-4'
+  style={`border-color: var(--${id_color});`}
 />
