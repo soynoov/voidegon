@@ -1,230 +1,230 @@
 ---
 interface Props {
-  fue: number;
-  des: number;
-  con: number;
-  int: number;
-  sab: number;
-  car: number;
-  mod: Array<number>;
-  com: Array<number>;
-  modcom?: number;
+	fue: number;
+	des: number;
+	con: number;
+	int: number;
+	sab: number;
+	car: number;
+	mod: Array<number>;
+	com: Array<number>;
+	modcom?: number;
 }
 
 const { fue, des, con, int, sab, car, mod, com, modcom = 2 } = Astro.props;
 
 function modificadorStats(stat: number, x: number) {
-  let modificador = 0;
-  x -= 1;
+	let modificador = 0;
+	x -= 1;
 
-  stat += mod[x];
+	stat += mod[x];
 
-  if (stat > 10) {
-    modificador = Math.floor((stat - 10) / 2); // Ajustado el cálculo aquí
-  } else if (stat > 0 && stat <= 10) {
-    modificador = -Math.ceil((10 - stat) / 2);
-  } else if (stat <= 0) {
-    modificador = -5;
-  }
+	if (stat > 10) {
+		modificador = Math.floor((stat - 10) / 2); // Ajustado el cálculo aquí
+	} else if (stat > 0 && stat <= 10) {
+		modificador = -Math.ceil((10 - stat) / 2);
+	} else if (stat <= 0) {
+		modificador = -5;
+	}
 
-  // Sumamos el modificador por competencia
-  if (com[x] == 1) {
-    modificador += modcom;
-  }
+	// Sumamos el modificador por competencia
+	if (com[x] == 1) {
+		modificador += modcom;
+	}
 
-  if (modificador >= 0) {
-    return `+${modificador}`;
-  }
+	if (modificador >= 0) {
+		return `+${modificador}`;
+	}
 
-  return `${modificador}`;
+	return `${modificador}`;
 }
 
 function sumarStats(x: number) {
-  x -= 1;
+	x -= 1;
 
-  if (mod[x] != 0) {
-    return `+${mod[x]}`;
-  }
+	if (mod[x] != 0) {
+		return `+${mod[x]}`;
+	}
 }
 
 // Provisionalmente hacemos el codigo mal. Luego habra que mejorarlo cuando me apetezca JS. El codigo se repite por lo que no es optimo.
 function sumaSimple(stat: number, x: number) {
-  let modificador = 0;
-  x -= 1;
+	let modificador = 0;
+	x -= 1;
 
-  stat += mod[x];
+	stat += mod[x];
 
-  if (stat > 10) {
-    modificador = Math.floor((stat - 10) / 2); // Ajustado el cálculo aquí
-  } else if (stat > 0 && stat <= 10) {
-    modificador = -Math.ceil((10 - stat) / 2);
-  } else if (stat <= 0) {
-    modificador = -5;
-  }
+	if (stat > 10) {
+		modificador = Math.floor((stat - 10) / 2); // Ajustado el cálculo aquí
+	} else if (stat > 0 && stat <= 10) {
+		modificador = -Math.ceil((10 - stat) / 2);
+	} else if (stat <= 0) {
+		modificador = -5;
+	}
 
-  if (com[x] == 1) {
-    if (modificador >= 0) {
-      return `[+${modificador}]`;
-    } else {
-      return `[${modificador}]`;
-    }
-  }
+	if (com[x] == 1) {
+		if (modificador >= 0) {
+			return `[+${modificador}]`;
+		} else {
+			return `[${modificador}]`;
+		}
+	}
 }
 
 // -- Controlar si las Estadisticas Totales suman 72.
 const sumaStats = fue + des + con + int + sab + car;
 
 if (sumaStats !== 72) {
-  console.log('Las Stats asignadas no suman 72. Suma actual: ' + sumaStats);
+	console.log('Las Stats asignadas no suman 72. Suma actual: ' + sumaStats);
 }
 ---
 
 <section
-  class={`
+	class={`
     w-full h-full
     grid gap-2 grid-cols-2
     justify-center items-center
     cursor-default
 `}
 >
-  <div>
-    <h3 id={com[1 - 1] == 1 ? 'x' : ''}>FUE</h3>
-    <div>
-      <h6>{fue}</h6>
-      <p>{sumarStats(1)}</p>
-    </div>
-    <div>
-      <h5>{sumaSimple(fue, 1)}</h5>
-      <h5>[{modificadorStats(fue, 1)}]</h5>
-    </div>
-  </div>
-  <div>
-    <h3 id={com[2 - 1] == 1 ? 'x' : ''}>DES</h3>
-    <div>
-      <h6>{des}</h6>
-      <p>{sumarStats(2)}</p>
-    </div>
-    <div>
-      <h5>{sumaSimple(des, 2)}</h5>
-      <h5>[{modificadorStats(des, 2)}]</h5>
-    </div>
-  </div>
-  <div>
-    <h3 id={com[3 - 1] == 1 ? 'x' : ''}>CON</h3>
-    <div>
-      <h6>{con}</h6>
-      <p>{sumarStats(3)}</p>
-    </div>
-    <div>
-      <h5>{sumaSimple(con, 3)}</h5>
-      <h5>[{modificadorStats(con, 3)}]</h5>
-    </div>
-  </div>
-  <div>
-    <h3 id={com[4 - 1] == 1 ? 'x' : ''}>INT</h3>
-    <div>
-      <h6>{int}</h6>
-      <p>{sumarStats(4)}</p>
-    </div>
-    <div>
-      <h5>{sumaSimple(int, 4)}</h5>
-      <h5>[{modificadorStats(int, 4)}]</h5>
-    </div>
-  </div>
-  <div>
-    <h3 id={com[5 - 1] == 1 ? 'x' : ''}>SAB</h3>
-    <div>
-      <h6>{sab}</h6>
-      <p>{sumarStats(5)}</p>
-    </div>
-    <div>
-      <h5>{sumaSimple(sab, 5)}</h5>
-      <h5>[{modificadorStats(sab, 5)}]</h5>
-    </div>
-  </div>
-  <div>
-    <h3 id={com[6 - 1] == 1 ? 'x' : ''}>CAR</h3>
-    <div>
-      <h6>{car}</h6>
-      <p>{sumarStats(6)}</p>
-    </div>
-    <div>
-      <h5>{sumaSimple(car, 6)}</h5>
-      <h5>[{modificadorStats(car, 6)}]</h5>
-    </div>
-  </div>
+	<div>
+		<h3 id={com[1 - 1] == 1 ? 'x' : ''}>FUE</h3>
+		<div>
+			<h6>{fue}</h6>
+			<p>{sumarStats(1)}</p>
+		</div>
+		<div>
+			<h5>{sumaSimple(fue, 1)}</h5>
+			<h5>[{modificadorStats(fue, 1)}]</h5>
+		</div>
+	</div>
+	<div>
+		<h3 id={com[2 - 1] == 1 ? 'x' : ''}>DES</h3>
+		<div>
+			<h6>{des}</h6>
+			<p>{sumarStats(2)}</p>
+		</div>
+		<div>
+			<h5>{sumaSimple(des, 2)}</h5>
+			<h5>[{modificadorStats(des, 2)}]</h5>
+		</div>
+	</div>
+	<div>
+		<h3 id={com[3 - 1] == 1 ? 'x' : ''}>CON</h3>
+		<div>
+			<h6>{con}</h6>
+			<p>{sumarStats(3)}</p>
+		</div>
+		<div>
+			<h5>{sumaSimple(con, 3)}</h5>
+			<h5>[{modificadorStats(con, 3)}]</h5>
+		</div>
+	</div>
+	<div>
+		<h3 id={com[4 - 1] == 1 ? 'x' : ''}>INT</h3>
+		<div>
+			<h6>{int}</h6>
+			<p>{sumarStats(4)}</p>
+		</div>
+		<div>
+			<h5>{sumaSimple(int, 4)}</h5>
+			<h5>[{modificadorStats(int, 4)}]</h5>
+		</div>
+	</div>
+	<div>
+		<h3 id={com[5 - 1] == 1 ? 'x' : ''}>SAB</h3>
+		<div>
+			<h6>{sab}</h6>
+			<p>{sumarStats(5)}</p>
+		</div>
+		<div>
+			<h5>{sumaSimple(sab, 5)}</h5>
+			<h5>[{modificadorStats(sab, 5)}]</h5>
+		</div>
+	</div>
+	<div>
+		<h3 id={com[6 - 1] == 1 ? 'x' : ''}>CAR</h3>
+		<div>
+			<h6>{car}</h6>
+			<p>{sumarStats(6)}</p>
+		</div>
+		<div>
+			<h5>{sumaSimple(car, 6)}</h5>
+			<h5>[{modificadorStats(car, 6)}]</h5>
+		</div>
+	</div>
 </section>
 
 <style>
-  section > div {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+	section > div {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		text-align: center;
+		padding: 1rem;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section > div:hover {
-    transform: scale(1.01);
-  }
-  section > div > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Pacifico';
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section > div:hover {
+		transform: scale(1.01);
+	}
+	section > div > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Pacifico';
 
-    border-radius: 0.5rem;
-    color: var(--grey);
-  }
+		border-radius: 0.5rem;
+		color: var(--grey);
+	}
 
-  h3 {
-    font-family: 'Unbounded';
-    font-weight: bold;
-    color: var(--subtitle);
+	h3 {
+		font-family: 'Unbounded';
+		font-weight: bold;
+		color: var(--subtitle);
 
-    border-radius: 0.5rem;
-    background-color: var(--dark);
+		border-radius: 0.5rem;
+		background-color: var(--dark);
 
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1rem;
-  }
-  h6 {
-    font-size: 1.5rem;
-  }
-  h5:first-of-type {
-    color: var(--date);
-    font-size: 1.5rem;
-  }
-  h5 {
-    font-size: 2rem;
-    color: var(--warning);
-  }
-  p {
-    color: var(--date);
-    font-size: 0.75rem;
-  }
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+		padding: 0.5rem 1rem;
+	}
+	h6 {
+		font-size: 1.5rem;
+	}
+	h5:first-of-type {
+		color: var(--date);
+		font-size: 1.5rem;
+	}
+	h5 {
+		font-size: 2rem;
+		color: var(--warning);
+	}
+	p {
+		color: var(--date);
+		font-size: 0.75rem;
+	}
 
-  #x {
-    color: var(--event);
-  }
+	#x {
+		color: var(--event);
+	}
 
-  /** MEDIA QUERYS */
-  @media (max-width: 768px) {
-    section {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  @media (max-width: 640px) {
-    section {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+	/** MEDIA QUERYS */
+	@media (max-width: 768px) {
+		section {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	@media (max-width: 640px) {
+		section {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 </style>
