@@ -13,67 +13,67 @@ import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
 //
 let mod_com = 2,
-	fue = 0,
-	des = 7,
-	con = -1,
-	int = 0,
-	sab = -1,
-	car = 2;
+  fue = 0,
+  des = 7,
+  con = -1,
+  int = 0,
+  sab = -1,
+  car = 2;
 ---
 
 <Layout title='】 Voidegon ▸ Kenkart Silkson'>
-	<Title title='Kenkart Silkson' />
-	<main>
-		<article
-			class={`
+  <Title title='Kenkart Silkson' />
+  <main>
+    <article
+      class={`
             w-[80vw] mx-auto mt-4 
             grid grid-cols-6
         `}
-		>
-			<section class='col-span-6'>
-				<Experience exp={210} race='Dwarf' rol='Rogue' />
-			</section>
-			<section class='col-span-2 pt-2 pr-2'>
-				<Stats
-					fue={10}
-					des={24}
-					con={6}
-					int={10}
-					sab={8}
-					car={14}
-					mod={[0, 0, 2, 0, 0, 0]}
-					com={[0, 1, 0, 1, 0, 0]}
-				/>
-			</section>
-			<section class='col-span-2 pt-2 section'>
-				<img
-					src='/img/kenkart/kenkart.png'
-					alt='Kenkart Silkson'
-					class='rounded-lg h-full object-cover'
-				/>
-			</section>
-			<section class='col-span-1 pl-2 pt-2'>
-				<CA des={des} />
-			</section>
-			<section class='col-span-1 pl-2 pt-2'>
-				<INI des={des} />
-			</section>
-			<section class='col-span-6 pt-2'>
-				<HP hp={8 + con - 0} hpmax={8 + con} />
-			</section>
-		</article>
-	</main>
+    >
+      <section class='col-span-6'>
+        <Experience exp={210} race='Dwarf' rol='Rogue' />
+      </section>
+      <section class='col-span-2 pt-2 pr-2'>
+        <Stats
+          fue={10}
+          des={24}
+          con={6}
+          int={10}
+          sab={8}
+          car={14}
+          mod={[0, 0, 2, 0, 0, 0]}
+          com={[0, 1, 0, 1, 0, 0]}
+        />
+      </section>
+      <section class='col-span-2 pt-2 section'>
+        <img
+          src='/img/kenkart/kenkart.png'
+          alt='Kenkart Silkson'
+          class='rounded-lg h-full w-full object-cover'
+        />
+      </section>
+      <section class='col-span-1 pl-2 pt-2'>
+        <CA des={des} />
+      </section>
+      <section class='col-span-1 pl-2 pt-2'>
+        <INI des={des} />
+      </section>
+      <section class='col-span-6 pt-2'>
+        <HP hp={8 + con - 0} hpmax={8 + con} />
+      </section>
+    </article>
+  </main>
 </Layout>
 
 <style>
-	.section {
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  .section {
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-		transition: transform 100ms ease;
-		cursor: pointer;
-	}
-	.section:hover {
-		transform: scale(1.01);
-	}
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  .section:hover {
+    transform: scale(1.01);
+  }
 </style>
