@@ -21,11 +21,18 @@
     }
   },
   {
-    "nombre": "Camiseta Roja",
-    "talla": "M",
-    "color": "Rojo",
-    "precio": 9.99,
-    "stock": 100,
+    "name": "Nyliss Avacynn",
+    "race": "Aasimar",
+    "rol": "Wizard",
+    "xp": 400,
+    "stats": {
+      "fue": 14,
+      "des": 18,
+      "con": 12,
+      "int": 10,
+      "sab": 10,
+      "car": 8
+    },
     "categoria": "Moda",
     "disponible": true
   }

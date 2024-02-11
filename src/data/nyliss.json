@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Nyliss Avacynn",
+    "race": "Aasimar",
+    "rol": "Wizard",
+    "xp": 400,
+    "level": 2,
+    "stats": {
+      "fue": 10,
+      "des": 14,
+      "con": 10,
+      "int": 16,
+      "sab": 14,
+      "car": 8
+    },
+    "skills": {
+      "acrobacias": 2,
+      "atletismo": 1,
+      "c.arcano": 1,
+      "engaño": 0,
+      "historia": 0
+    },
+    "comps": {
+      "mod_comp": 2,
+      "stats": ["int", "sab"],
+      "skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
+      "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
+    },
+    "weapons": ["espada corta", "lanza"]
+  }
+]
