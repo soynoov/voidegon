@@ -31,6 +31,10 @@
         {
             "folderPath": "voidegon\\src\\pages\\characters\\npc\\",
             "badge": "🤖"
+        },
+        {
+            "folderPath": "voidegon\\src\\data\\",
+            "badge": "ℹ️"
         }
     ]
 }

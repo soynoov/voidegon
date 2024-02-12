@@ -26,6 +26,13 @@
       "skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
       "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
     },
-    "weapons": ["espada corta", "lanza"]
+    "weapons": ["espada corta", "lanza"],
+    "money": {
+      "pc": 0,
+      "pp": 18,
+      "pe": 6,
+      "po": 18,
+      "ppt": 0
+    }
   }
 ]

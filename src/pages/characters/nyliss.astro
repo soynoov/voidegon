@@ -17,19 +17,29 @@ import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
 
 // - Llamamiento a todos los datos y variables (Por JSON a ser posible).
-let mod_com = 2,
-  fue = 0,
-  des = 2,
-  con = 0,
-  int = 3,
-  sab = 2,
-  car = 0,
-  level = 2;
+import data from '../../data/nyliss.json';
+
+const nyliss = data[0],
+  fue = nyliss.stats.fue,
+  des = nyliss.stats.des,
+  con = nyliss.stats.con,
+  int = nyliss.stats.int,
+  sab = nyliss.stats.sab,
+  car = nyliss.stats.car,
+  mod_comp = nyliss.comps.mod_comp,
+  money = nyliss.money;
+
+const mod_fue = 0,
+  mod_des = 2,
+  mod_con = 0,
+  mod_int = 3,
+  mod_sab = 2,
+  mod_car = 0;
 ---
 
 <Layout title='】 Voidegon ▸ Nyliss Avacyn'>
   <Title
-    title='Nyliss Avacyn'
+    title={nyliss.name}
     img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
     center='center'
   />
@@ -42,7 +52,12 @@ let mod_com = 2,
     `}
     >
       <section class='col-span-6 px-2'>
-        <Experience race='Aasimar' rol='Wizard' exp={400} start={1} />
+        <Experience
+          race={nyliss.race}
+          rol={nyliss.rol}
+          exp={nyliss.xp}
+          start={1}
+        />
       </section>
       <section class='col-span-4 p-2 pb-0'>
         <a href='/lore/nyliss'>
@@ -54,40 +69,40 @@ let mod_com = 2,
           />
         </a>
       </section>
-      <section class='col-span-2 pt-2 pr-2'>
+      <section class='col-span-2 pt-2 pr-2 pl-1'>
         <Stats
-          fue={10}
-          des={14}
-          con={10}
-          int={16}
-          sab={14}
-          car={8}
+          fue={fue}
+          des={des}
+          con={con}
+          int={int}
+          sab={sab}
+          car={car}
           mod={[1, 0, 0, 0, 0, 2]}
           com={[0, 0, 0, 1, 1, 0]}
-          modcom={mod_com}
+          modcom={mod_comp}
         />
       </section>
       <section class='col-span-1 py-2 pl-2 pt-4'>
-        <CA des={des} />
+        <CA des={mod_des} />
       </section>
       <section class='col-span-1 p-2 pr-0 pt-4'>
-        <INI des={des} />
+        <INI des={mod_des} />
       </section>
       <section class='col-span-4 row-span-3 p-2 pt-4'>
         <Skills
           com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
           punt={[2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0]}
-          modcom={mod_com}
+          modcom={mod_comp}
         />
       </section>
-      <section class='col-span-2 px-2 pr-0'>
+      <section class='col-span-2 pl-2'>
         <VEL vel={30} fly={60} />
       </section>
       <section class='col-span-2 p-2 pr-0'>
-        <DG cantidad={level} dice={6} />
+        <DG cantidad={nyliss.level} dice={6} />
       </section>
-      <section class='col-span-6 p-2'>
-        <HP hp={6 * 2 + con * level - 0} hpmax={6 * 2 + con} />
+      <section class='col-span-6 px-6 pt-2'>
+        <HP hp={6 * 2 + mod_con * nyliss.level - 0} hpmax={6 * 2 + mod_con} />
       </section>
 
       <section class='col-span-6'>
@@ -96,12 +111,18 @@ let mod_com = 2,
 
       <section class='col-span-3 p-2 pt-0'>
         <COM
-          mod_com={mod_com}
+          mod_com={mod_comp}
           com={['Dagas', 'Dardos', 'Hondas', 'Bastones', 'Ballestas Ligeras']}
         />
       </section>
       <section class='col-span-3 pb-2 pt-0'>
-        <Money pc={0} pp={21} pe={6} po={14} ppt={0} />
+        <Money
+          pc={money.pc}
+          pp={money.pp}
+          pe={money.pe}
+          po={money.po}
+          ppt={money.ppt}
+        />
       </section>
       <section class='col-span-2 p-2 flex flex-col gap-2 py-0'>
         <div id='weapons'>
