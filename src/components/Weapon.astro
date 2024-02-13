@@ -1,0 +1,70 @@
+---
+interface Props {
+  weapon: string;
+  details: Array<string>;
+  bonus: number;
+  type: string;
+  link?: string;
+}
+
+const { weapon, details, bonus, type, link } = Astro.props;
+
+function printDetails(array: Array<string>) {
+  return array.join(', ');
+}
+---
+
+<article class='p-1 h-full w-full'>
+  <a href={link}>
+    <section
+      class={`
+        flex items-center justify-around gap-2
+        p-2 text-center flex-col h-full w-full
+        bg-[--gray] rounded-lg
+      `}
+    >
+      <div class='bg-[--dark] rounded-lg p-2'>
+        <svg
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          stroke-width='2'
+          stroke='currentColor'
+          fill='none'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+        >
+          <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+          <path d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path>
+          <path d='M6.5 11.5l6 6'></path>
+        </svg>
+      </div>
+      <h3>{weapon}</h3>
+      <p class='text-xs italic text-[--grey]'>({printDetails(details)})</p>
+      <p class='font-[pacifico] text-nowrap'>
+        <span>
+          1
+          <span class='font-[lobster]'> d</span>
+          6
+        </span>
+        <span class='font-[pacifico] text-[--date]'>+{bonus}</span>
+      </p>
+      <p class='font-[lobster]'>
+        {type}
+      </p>
+    </section>
+  </a>
+</article>
+
+<style>
+  article {
+    /** Box Shadow Definitivo */
+    box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
+
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  article:hover {
+    transform: scale(1.01);
+  }
+</style>

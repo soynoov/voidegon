@@ -28,11 +28,27 @@
     },
     "weapons": ["espada corta", "lanza"],
     "money": {
-      "pc": 0,
-      "pp": 18,
+      "pc": 2,
+      "pp": 16,
       "pe": 6,
       "po": 18,
       "ppt": 0
+    },
+    "backpack": {
+      "common": {
+        "libros": 3,
+        "plumas": 5,
+        "petalos": 6,
+        "hierro pulverizado": 10,
+        "plata pulverizada": 4,
+        "musgo": 3
+      },
+      "rare": ["botella de tinta negra", "pluma", "espada oxidada de cobre"],
+      "epic": {
+        "grimorio": "+hoja suelta",
+        "cupon var": "2 opciones"
+      },
+      "legendary": ["silbato magico"]
     }
   }
 ]

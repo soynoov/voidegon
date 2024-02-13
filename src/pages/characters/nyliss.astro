@@ -5,6 +5,7 @@ import Stats from '../../components/Stats.astro';
 import Money from '../../components/Money.astro';
 import Experience from '../../components/Experience.astro';
 import Skills from '../../components/Skills.astro';
+import Weapon from '../../components/Weapon.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
@@ -17,7 +18,7 @@ import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
 
 // - Llamamiento a todos los datos y variables (Por JSON a ser posible).
-import data from '../../data/nyliss.json';
+import data from '../../data/characters/nyliss.json';
 
 const nyliss = data[0],
   fue = nyliss.stats.fue,
@@ -37,7 +38,7 @@ const mod_fue = 0,
   mod_car = 0;
 ---
 
-<Layout title='】 Voidegon ▸ Nyliss Avacyn'>
+<Layout title=`】 Voidegon ▸ ${nyliss.name}`>
   <Title
     title={nyliss.name}
     img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
@@ -64,12 +65,12 @@ const mod_fue = 0,
           <img
             src='/img/nyliss/nyliss.png'
             alt='Nyliss Avacyn'
-            class='rounded-2xl h-full object-cover'
+            class='rounded-lg h-full object-cover'
             id='section'
           />
         </a>
       </section>
-      <section class='col-span-2 pt-2 pr-2 pl-1'>
+      <section class='col-span-2 pt-2 pr-2'>
         <Stats
           fue={fue}
           des={des}
@@ -110,10 +111,7 @@ const mod_fue = 0,
       </section>
 
       <section class='col-span-3 p-2 pt-0'>
-        <COM
-          mod_com={mod_comp}
-          com={['Dagas', 'Dardos', 'Hondas', 'Bastones', 'Ballestas Ligeras']}
-        />
+        <COM mod_com={mod_comp} com={nyliss.comps.weapons} />
       </section>
       <section class='col-span-3 pb-2 pt-0'>
         <Money
@@ -124,64 +122,30 @@ const mod_fue = 0,
           ppt={money.ppt}
         />
       </section>
-      <section class='col-span-2 p-2 flex flex-col gap-2 py-0'>
-        <div id='weapons'>
-          <div class='bg-[--dark] rounded-lg p-2'>
-            <svg
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              stroke-width='2'
-              stroke='currentColor'
-              fill='none'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-              <path d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path>
-              <path d='M6.5 11.5l6 6'></path></svg
-            >
-          </div>
-          <h3 class='mx-4'>Espada Corta</h3>
-          <p class='text-xs italic text-[--grey]'>(Ligera, Sutil)</p>
-          <p class='mx-4 font-[Lobster] text-nowrap'>
-            <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span
-            ><span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
-            >Perforante
-          </p>
-        </div>
-        <div id='weapons'>
-          <div class='bg-[--dark] rounded-lg p-2'>
-            <svg
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              stroke-width='2'
-              stroke='currentColor'
-              fill='none'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-                d='M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z'></path><path
-                d='M6.5 11.5l6 6'></path></svg
-            >
-          </div>
-          <h3 class='mx-4'>Lanza</h3>
-          <p class='text-xs italic text-[--grey]'>
-            (Arrojadiza, Distancia, Versátil)
-          </p>
-          <p class='mx-4 font-[Lobster] text-nowrap'>
-            <span class='mr-1'>1 <span class='font-[lobster]'>d</span> 6</span>
-            <span class='font-[pacifico] text-[--date] mr-4'>+{fue}</span
-            >Perforante
-          </p>
-        </div>
+      <section class='col-span-1 pl-1'>
+        <Weapon
+          weapon='Espada Corta'
+          details={['Ligera', 'Sútil']}
+          bonus={mod_fue}
+          type='Perforante'
+        />
+      </section>
+      <section class='col-span-1 pr-1'>
+        <Weapon
+          weapon='Lanza'
+          details={['Arrojadiza', 'Distancia', 'Versátil']}
+          bonus={mod_fue}
+          type='Perforante'
+          link='/extras/weapons/lance'
+        />
       </section>
       <section class='col-span-4 h-full w-full pt-0'>
         <div id='backpack' class='bg-[--gray] rounded-lg p-2 h-full w-full'>
           <ul class='grid grid-cols-3 gap-2 font-[caveat] px-4'>
             <li>Botella de Tinta Negra</li>
             <li>Pluma</li>
-            <li>Cuchillo Pequeño</li>
+            <li>Plata Pulverizada <span class='text-[--grey]'>(x4)</span></li>
+            <li>Hierro Pulverizado <span class='text-[--grey]'>(x10)</span></li>
             <li>Carta de un Colega Muerto</li>
             <li>Ropas Comunes</li>
             <li>
@@ -238,8 +202,9 @@ const mod_fue = 0,
           <h4>Manos Sanadoras</h4>
           <p>
             Como una acción, puedes tocar a una criatura y hacer que recupere un
-            número de puntos de golpe igual a tu nivel. No puedes volver a usar
-            esta habilidad hasta finalizar un descanso largo.
+            número de puntos de golpe igual a tu nivel ({nyliss.level}). No
+            puedes volver a usar esta habilidad hasta finalizar un descanso
+            largo.
           </p>
         </div>
         <div>
