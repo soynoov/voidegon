@@ -12,11 +12,12 @@ import CA from '../../components/little/CA.astro';
 import VEL from '../../components/little/VEL.astro';
 import INI from '../../components/little/INI.astro';
 import HR from '../../components/little/HR.astro';
+import H2 from '../../components/little/H2.astro';
 //
 let mod_com = 2,
-  fue = 3,
+  mod_fue = 3,
   des = 2,
-  con = 3,
+  mod_con = 3,
   int = -2,
   sab = 0,
   car = 1;
@@ -49,13 +50,13 @@ let mod_com = 2,
         />
       </section>
       <section class='col-span-6 pt-2'>
-        <HP hp={12 + con - 0} hpmax={12 + con} />
+        <HP hp={12 + mod_con - 0} hpmax={12 + mod_con} />
       </section>
       <section class='col-span-1 pt-2'>
         <CA des={des} />
       </section>
       <section class='col-span-2 p-2 pb-0'>
-        <VEL vel={30} />
+        <VEL vel={35} />
       </section>
       <section class='col-span-1 pt-2'>
         <INI des={des} />
@@ -72,7 +73,43 @@ let mod_com = 2,
       </section>
     </article>
     <HR />
-    <article></article>
+    <article class={`bg-[--gray] w-[80vw] mx-auto rounded-lg traits pb-2`}>
+      <H2 txt='Rasgos de Raza' />
+      <section>
+        <div>
+          <h4>Visión en la Oscuridad</h4>
+          <p>
+            Puedes ver en la oscuridad a 60 pies como si hubiera luz tenue, y en
+            la luz tenue como si estuviera bien iluminado. No puedes distinguir
+            colores en la oscuridad.
+          </p>
+        </div>
+        <div>
+          <h4>Garras</h4>
+          <p>
+            Tus garras son armas naturales que puedes usar para realizar ataques
+            desarmados. Si golpeas con ellos, puedes infligir un daño cortante
+            igual a 1d4 + tu modificador de Fuerza
+            <span id='date'>[+{mod_fue}]</span>.
+          </p>
+        </div>
+        <div>
+          <h4>Rugido Desalentador</h4>
+          <p>
+            Como acción adicional, puedes soltar un rugido especialmente
+            amenazador. Las criaturas de tu elección a 10 pies de ti que puedan
+            oírte deben superar una tirada de salvación de Sabiduría o te
+            tendrán miedo hasta el final de tu siguiente turno. La CD de la
+            salvación es igual a 8 + tu bonificación de competencia
+            <span class='font-[pacifico]' id='event'>
+              [+{mod_com}]
+            </span> + tu modificador de Constitución
+            <span id='date'>[+{mod_con}]</span>. Una vez que uses este rasgo, no
+            podrás volver a usarlo hasta que termines un descanso corto o largo.
+          </p>
+        </div>
+      </section>
+    </article>
   </main>
 </Layout>
 
@@ -86,5 +123,30 @@ let mod_com = 2,
   }
   .section:hover {
     transform: scale(1.01);
+  }
+
+  .traits section > div {
+    background-color: var(--dark);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    text-align: center;
+  }
+  .traits h4 {
+    color: var(--section);
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 1.1rem;
+  }
+  .traits p {
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    text-wrap: balance;
+  }
+  .traits section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
