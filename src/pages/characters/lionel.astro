@@ -177,13 +177,16 @@ let mod_fue = 3,
 </Layout>
 
 <style>
+  section:has(a) {
+    cursor: pointer;
+  }
+
   .section,
   .traits section > div {
     /** Box Shadow Definitivo */
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
     transition: transform 100ms ease;
-    cursor: pointer;
   }
   .section:hover,
   .traits section > div:hover{
