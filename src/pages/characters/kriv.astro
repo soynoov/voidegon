@@ -15,103 +15,259 @@ import DG from '../../components/little/DG.astro';
 import COM from '../../components/little/COM.astro';
 import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
-
 // - Llamamiento a todos los datos y variables
-let mod_com = 2,
-  fue = 4,
-  des = -2,
-  con = 2,
-  int = -1,
-  sab = 1,
-  car = 3,
-  level = 2;
+import data from '../../data/characters/kriv.json';
+const kriv = data[0],
+	fue = kriv.stats.fue,
+	des = kriv.stats.des,
+	con = kriv.stats.con,
+	int = kriv.stats.int,
+	sab = kriv.stats.sab,
+	car = kriv.stats.car,
+	bon_com = kriv.comps.bon_com,
+	money = kriv.money;
+
+let mod_fue = 4,
+	mod_des = -2,
+	mod_con = 2,
+	mod_int = -1,
+	mod_sab = 1,
+	mod_car = 3;
 ---
 
 <Layout title='】 Voidegon ▸ Kriv Coppernico'>
-  <Title title='Kriv Coppernico' />
-  <main>
-    <article
-      class={`
+	<Title title='Kriv Coppernico' />
+	<main>
+		<article
+			class={`
       w-[80vw] mx-auto m-4
       grid grid-cols-6 grid-flow-row-dense
       justify-center items-center
     
   `}
-    >
-      <section class='col-span-6'>
-        <Experience race='Dragonborn' rol='Paladin' exp={345} />
-      </section>
-      <section class='col-span-2 py-2'>
-        <Stats
-          fue={16}
-          des={6}
-          con={14}
-          int={8}
-          sab={12}
-          car={16}
-          mod={[2, 0, 0, 0, 0, 1]}
-          com={[0, 0, 0, 0, 1, 1]}
-          modcom={2}
-        />
-      </section>
-      <section class='col-span-2 row-span-3 p-2'>
-        <a href='/lore/kriv'>
-          <img
-            src='/img/kriv/kriv.png'
-            alt='Kriv Coppernico'
-            class='rounded-lg object-cover h-full w-full'
-            id='section'
-          />
-        </a>
-      </section>
-      <section class='col-span-2 pt-2'>
-        <DG cantidad={level} dice={10} />
-      </section>
-      <section class='col-span-1 row-start-3 pr-1'>
-        <CA des={des} />
-      </section>
-      <section class='col-span-1 row-start-3 pl-1' '>
-        <INI des={des} />
-      </section>
-      <section class='col-span-2 row-start-4 py-2'>
-        <VEL vel={30} />
-      </section>
-      <section class='col-span-6 py-2'>
-        <HP hp={10 + 9 + con * level - 0} hpmax={10 + 9 + con * level} />
-      </section>
+		>
+			<section class='col-span-6'>
+				<Experience race='Dragonborn' rol='Paladin' exp={345} />
+			</section>
+			<section class='col-span-2 py-2'>
+				<Stats
+					fue={16}
+					des={6}
+					con={14}
+					int={8}
+					sab={12}
+					car={16}
+					mod={[2, 0, 0, 0, 0, 1]}
+					com={[0, 0, 0, 0, 1, 1]}
+					modcom={2}
+				/>
+			</section>
+			<section class='col-span-2 row-span-3 p-2'>
+				<a href='/lore/kriv'>
+					<img
+						src='/img/kriv/kriv.png'
+						alt='Kriv Coppernico'
+						class='rounded-lg object-cover h-full w-full'
+						id='section'
+					/>
+				</a>
+			</section>
+			<section class='col-span-2 pt-2'>
+				<DG cantidad={kriv.level} dice={10} />
+			</section>
+			<section class='col-span-1 row-start-3 pr-1'>
+				<CA mod={mod_des} />
+			</section>
+			<section class='col-span-1 row-start-3 pl-1' '>
+				<INI des={mod_des} />
+			</section>
+			<section class='col-span-2 row-start-4 py-2'>
+				<VEL vel={30} />
+			</section>
+			<section class='col-span-6 py-2'>
+				<HP
+					hp={10 + 9 + bon_com * kriv.level - 0}
+					hpmax={10 + 9 + bon_com * kriv.level}
+				/>
+			</section>
 
-      <section class='col-span-6'>
-        <HR />
-      </section>
+			<section class='col-span-6'>
+				<HR />
+			</section>
 
-      <section class='col-span-6 pt-2'>
-        <Money pc={100} pp={0} pe={16} po={2} ppt={0} />
-      </section>
-      <section class='col-span-6 pt-2'>
-        <Skills
-          punt={[-1, 4, 0, 0, 0, 0, 3, 0, 0, 0, -1, 0, 1, 3, 0, -1, 0, 0]}
-          com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]}
-          modcom={mod_com}
-        />
-      </section>
-    </article>
-  </main>
+			<section class='col-span-6 pt-2'>
+				<Money pc={100} pp={0} pe={16} po={2} ppt={0} />
+			</section>
+			<section class='col-span-6 pt-2'>
+				<Skills
+					punt={[
+						-1, 4, 0, 0, 0, 0, 3, 0, 0, 0, -1, 0, 1, 3, 0, -1, 0, 0,
+					]}
+					com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]}
+					modcom={bon_com}
+				/>
+			</section>
+		</article>
+		<HR />
+		<!-- Rasgos (FEATURES) -->
+		<article
+			class={`bg-[--gray] w-[80vw] mx-auto rounded-lg features p-2 px-10 cursor-default`}
+		>
+			<HR dark />
+			<h2 class='text-[--title]'>Rasgos de {kriv.race}</h2>
+			<HR dark />
+			<section>
+				<div class='col-span-2'>
+					<h4>Linaje dracónico</h4>
+					<p>
+						Tienes un antepasado dragón. Elige un tipo de dragón de
+						la tabla de antepasado dragón. Tu arma de aliento y tu
+						resistencia al daño están determinadas por el tipo de
+						dragón <strong class='danger'>(Cobre)</strong>.
+					</p>
+				</div>
+				<div class='col-span-2'>
+					<h4>Resistencia al daño</h4>
+					<p>
+						Tienes resistencia al tipo de daño asociado con tu
+						antepasado dragón <strong class='danger'>(Ácido)</strong
+						>.
+					</p>
+				</div>
+				<div class='col-span-4'>
+					<h4>Ataque de aliento</h4>
+					<p>
+						Puedes usar tu acción para exhalar energía destructiva.
+						Tu antepasado dragón determina el tamaño, la forma y el
+						tipo de daño de la exhalación
+						<strong class='danger'>(Línea de 5 a 30 pies)</strong>.
+						<br /><br />
+						Cuando usas tu arma de aliento, todas las criaturas que se
+						encuentren en el área de la exhalación deben hacer una tirada
+						de salvación, según determine tu antepasado dragón
+						<strong class='danger'>(salvación de Destreza)</strong>.
+						La CD de esta tirada de salvación es igual a 8 + tu
+						modificador por Constitución + tu bonificador por
+						competencia
+						<strong class='danger'>[{8 + mod_con + bon_com}]</strong
+						>. Si la criatura falla la tirada, recibe
+						<strong>2d6</strong> puntos de daño, y si tiene éxito, la
+						mitad. (El daño aumenta a 3d6 en el nivel 6, a 4d6 en el
+						nivel 11 y a 5d6 en el nivel 16).
+						<br /><br />
+						Después de usar tu arma de aliento, tienes que completar
+						un descanso corto o largo para volver a utilizarla.
+					</p>
+				</div>
+			</section>
+			<HR dark />
+			<h2 class='text-[--subtitle]'>Rasgos de {kriv.rol}</h2>
+			<HR dark />
+			<section>
+				<div class='col-span-2'>
+					<h4>Sentidos divinos</h4>
+					<p>
+						Para tus sentidos, la presencia de un gran mal se
+						percibe como un hedor nocivo, mientras que un bien
+						poderoso es como música celestial. Como acción, puedes
+						abrir tus sentidos para detectar tales fuerzas. Hasta el
+						final de tu siguiente turno, sabes dónde se encuentra
+						cualquier celestial, infernal o no muerto que esté a
+						menos de 60 pies de ti y que no esté completamente
+						cubierto. Sabes de qué tipo es (celestial, infernal o no
+						muerto), pero no su identidad (el vampiro conde Strahd
+						von Zarovich, por ejemplo). Dentro del mismo radio,
+						también puedes detectar la presencia de cualquier lugar
+						u objeto que haya sido bendecido o desacralizado, como
+						con el conjuro Sacralizar.
+						<br /><br />
+						Puedes usar este rasgo un número de veces igual a 1 + tu
+						modificador por Carisma
+						<strong class='danger'>[{1 + mod_car}]</strong>. Cuando
+						termines un descanso largo, recuperas todos los usos que
+						hayas gastado.
+					</p>
+				</div>
+				<div class='col-span-2'>
+					<h4>Imponer las manos</h4>
+					<p>
+						Tu toque sagrado puede curar heridas. Tienes una reserva
+						de poder curativo que se recupera cuando terminas un
+						descanso largo. Con dicha reserva, puedes recuperar un
+						número de puntos de golpe igual a tu nivel de paladín
+						multiplicado por 5
+						<strong class='danger'>[{kriv.level * 5}]</strong>.
+						<br /><br />
+						Como acción, puedes tocar a una criatura y extraer poder
+						de la reserva para hacer que esta recupere puntos de golpe
+						hasta la cantidad máxima que quede en tu reserva.
+						<br /><br />
+						De forma alternativa, puedes gastar 5 puntos de golpe de
+						tu reserva de curación para curar al objetivo de una enfermedad
+						o neutralizar el veneno que le afecta. Puedes curar varias
+						enfermedades y neutralizar varios venenos con un único uso
+						de Imposición de manos gastando puntos de golpe independientes
+						para cada uno.
+						<br /><br />
+						Este rasgo no afecta ni a los no muertos ni a los constructos.
+					</p>
+				</div>
+			</section>
+			<HR dark />
+		</article>
+	</main>
 </Layout>
 
 <style>
-  section {
-    /* border: solid 1px var(--white); */
-    width: 100%;
-    height: 100%;
-  }
-  #section {
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+	section:has(a) {
+		cursor: pointer;
+	}
 
-    transition: transform 100ms ease;
-    cursor: pointer;
-  }
-  #section:hover {
-    transform: scale(1.01);
-  }
+	.features section > div {
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+		transition: transform 100ms ease;
+	}
+	.features section > div:hover {
+		transform: scale(1.01);
+	}
+
+	.features section > div {
+		background-color: var(--dark);
+		border-radius: 0.5rem;
+		padding: 0.5rem 2rem;
+		margin: 0.5rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		text-align: justify;
+		text-wrap: pretty;
+	}
+	.features h4 {
+		color: var(--section);
+		text-align: center;
+		font-family: 'Lobster';
+		font-size: 1.1rem;
+		padding: 0.5rem;
+		padding-top: 0;
+	}
+	.features p {
+		font-size: 0.9rem;
+		margin: 0.5rem;
+		margin-top: 0;
+	}
+	.features section {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: center;
+	}
+	.features h2 {
+		text-align: center;
+		font-family: 'unbounded';
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
 </style>

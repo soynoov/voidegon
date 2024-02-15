@@ -1,9 +1,9 @@
 [
 	{
-		"name": "Lion'El Jonson",
-		"race": "Leonin",
-		"rol": "Barbarian",
-		"xp": 140,
+		"name": "Kriv Coppernico",
+		"race": "Dragonborn",
+		"rol": "Paladin",
+		"xp": 345,
 		"level": 2,
 		"stats": {
 			"fue": 16,

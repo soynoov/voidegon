@@ -17,213 +17,238 @@ import H2 from '../../components/little/H2.astro';
 import data from '../../data/characters/lionel.json';
 
 const lionel = data[0],
-  fue = lionel.stats.fue,
-  des = lionel.stats.des,
-  con = lionel.stats.con,
-  int = lionel.stats.int,
-  sab = lionel.stats.sab,
-  car = lionel.stats.car,
-  mod_comp = lionel.comps.mod_comp,
-  money = lionel.money;
+	fue = lionel.stats.fue,
+	des = lionel.stats.des,
+	con = lionel.stats.con,
+	int = lionel.stats.int,
+	sab = lionel.stats.sab,
+	car = lionel.stats.car,
+	bon_com = lionel.comps.bon_com,
+	money = lionel.money;
 
 let mod_fue = 3,
-  mod_des = 2,
-  mod_con = 3,
-  mod_int = -2,
-  mod_sab = 0,
-  mod_car = 1;
+	mod_des = 2,
+	mod_con = 3,
+	mod_int = -2,
+	mod_sab = 0,
+	mod_car = 1;
 ---
 
 <Layout title=`】 Voidegon ▸ ${lionel.name}`>
-  <Title title=`${lionel.name}` />
-  <main>
-    <article class={'w-[80vw] mx-auto mt-4 grid grid-cols-6'}>
-      <section class='col-span-6'>
-        <Experience exp={lionel.xp} race=`${lionel.race}` rol=`${lionel.rol}` />
-      </section>
-      <section class='col-span-2 pt-2 pr-2'>
-        <Stats
-          fue={fue}
-          des={des}
-          con={con}
-          int={int}
-          sab={sab}
-          car={car}
-          mod={[1, 0, 2, 0, 0, 0]}
-          com={[1, 0, 1, 0, 0, 0]}
-        />
-      </section>
-      <section class='col-span-2 row-span-2 pt-2 section'>
-        <img
-          src='/img/lionel/lionel.png'
-          alt="Lion'El Jonson"
-          class='rounded-lg'
-        />
-      </section>
-      <section class='col-span-6 pt-2'>
-        <HP hp={12 + mod_con - 0} hpmax={12 + mod_con} />
-      </section>
-      <section class='col-span-1 pt-2'>
-        <CA des={mod_des} />
-      </section>
-      <section class='col-span-2 p-2 pb-0'>
-        <VEL vel={35} />
-      </section>
-      <section class='col-span-1 pt-2'>
-        <INI des={mod_des} />
-      </section>
-      <section class='col-span-2 pt-2 pl-2'>
-        <Money />
-      </section>
-      <section class='col-span-6 pt-2'>
-        <Skills
-          punt={[1, 3, -2, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
-          com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]}
-          modcom={mod_comp}
-        />
-      </section>
-    </article>
-    <HR />
-    <article
-      class={`bg-[--gray] w-[80vw] mx-auto rounded-lg traits p-2 px-10 cursor-default`}
-    >
-      <HR dark />
-      <h2 class='text-[--title]'>Rasgos de {lionel.race}</h2>
-      <HR dark />
-      <section>
-        <div class='col-span-2'>
-          <h4>Visión en la Oscuridad</h4>
-          <p>
-            Puedes ver en la oscuridad a 60 pies como si hubiera luz tenue, y en
-            la luz tenue como si estuviera bien iluminado. No puedes distinguir
-            colores en la oscuridad.
-          </p>
-        </div>
-        <div class='col-span-2'>
-          <h4>Garras</h4>
-          <p>
-            Tus garras son armas naturales que puedes usar para realizar ataques
-            desarmados. Si golpeas con ellos, puedes infligir un daño cortante
-            igual a 1d4 + tu modificador de Fuerza
-            <span id='date'>[+{mod_fue}]</span>.
-          </p>
-        </div>
-        <div class='col-span-4'>
-          <h4>Rugido Desalentador</h4>
-          <p>
-            Como acción adicional, puedes soltar un rugido especialmente
-            amenazador. Las criaturas de tu elección a 10 pies de ti que puedan
-            oírte deben superar una tirada de salvación de Sabiduría o te
-            tendrán miedo hasta el final de tu siguiente turno. La CD de la
-            salvación es igual a 8 + tu bonificación de competencia
-            <span class='font-[pacifico]' id='event'>
-              [+{mod_comp}]
-            </span> + tu modificador de Constitución
-            <span id='date'>[+{mod_con}]</span>. Una vez que uses este rasgo, no
-            podrás volver a usarlo hasta que termines un descanso corto o largo.
-          </p>
-        </div>
-      </section>
-      <HR dark />
-      <h2 class='text-[--subtitle]'>Rasgos de {lionel.rol}</h2>
-      <HR dark />
-      <section>
-        <div class='col-span-2'>
-          <h4>Defensa sin armadura</h4>
-          <p>
-            Mientras no llevas la armadura, tu CA es igual a 10 + tu modificador
-            por Destreza + tu modificador por Constitución. Sigues pudiendo
-            utilizar escudo y recibir sus beneficios.
-          </p>
-        </div>
-        <div class='col-span-2'>
-          <h4>Furia</h4>
-          <p>
-            Luchas con una ferocidad primitiva en la batalla. Durante tu turno,
-            puedes dejarte llevar por la furia como acción adicional. Mientras
-            estás en furia, consigues los siguientes beneficios si no llevas
-            armadura pesada:
-          </p>
-          <ul class='list-disc px-6 pb-2 text-xs text-justify'>
-            <li>
-              Tienes ventaja en las pruebas de Fuerza y en las tiradas de
-              salvación de Fuerza.
-            </li>
-            <li>
-              Cuando realizas un ataque con armas cuerpo a cuerpo usando Fuerza,
-              recibes un bonificador a la tirada de daño que aumenta según vas
-              subiendo niveles de bárbaro, como se muestra en la columna «Daño
-              de furia» de la tabla del bárbaro.
-            </li>
-            <li>
-              Tienes resistencia al daño contundente, perforante y cortante.
-            </li>
-            <li>
-              Si sabes lanzar conjuros, no puedes lanzarlos ni concentrarte en
-              ellos mientras estás en furia.
-            </li>
-          </ul>
-          <p>
-            Tu furia dura un minuto. Acaba antes si te quedas inconsciente o, si
-            antes de que acabe tu turno, no has atacado a una criatura hostil o
-            no has recibido daño desde tu último turno. También puedes terminar
-            tu furia durante tu turno como acción adicional.
-          </p>
-        </div>
-      </section>
-      <HR dark />
-    </article>
-  </main>
+	<Title title=`${lionel.name}` />
+	<main>
+		<article class={'w-[80vw] mx-auto mt-4 grid grid-cols-6'}>
+			<section class='col-span-6'>
+				<Experience
+					exp={lionel.xp}
+					race=`${lionel.race}`
+					rol=`${lionel.rol}`
+				/>
+			</section>
+			<section class='col-span-2 pt-2 pr-2'>
+				<Stats
+					fue={fue}
+					des={des}
+					con={con}
+					int={int}
+					sab={sab}
+					car={car}
+					mod={[1, 0, 2, 0, 0, 0]}
+					com={[1, 0, 1, 0, 0, 0]}
+				/>
+			</section>
+			<section class='col-span-2 row-span-2 pt-2 section'>
+				<img
+					src='/img/lionel/lionel.png'
+					alt="Lion'El Jonson"
+					class='rounded-lg'
+				/>
+			</section>
+			<section class='col-span-6 pt-2'>
+				<HP hp={12 + mod_con - 0} hpmax={12 + mod_con} />
+			</section>
+			<section class='col-span-1'>
+				<a href='#ca'>
+					<CA mod={mod_des + mod_con} />
+				</a>
+			</section>
+			<section class='col-span-2 p-2 pb-0'>
+				<VEL vel={35} />
+			</section>
+			<section class='col-span-1 pt-2'>
+				<INI des={mod_des} />
+			</section>
+			<section class='col-span-2 pt-2 pl-2'>
+				<Money />
+			</section>
+			<section class='col-span-6 pt-2'>
+				<Skills
+					punt={[
+						1, 3, -2, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+					]}
+					com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]}
+					modcom={bon_com}
+				/>
+			</section>
+		</article>
+		<HR />
+		<article
+			class={`bg-[--gray] w-[80vw] mx-auto rounded-lg features p-2 px-10 cursor-default`}
+		>
+			<HR dark />
+			<h2 class='text-[--title]'>Rasgos de {lionel.race}</h2>
+			<HR dark />
+			<section>
+				<div class='col-span-2'>
+					<h4>Visión en la Oscuridad</h4>
+					<p>
+						Puedes ver en la oscuridad a 60 pies como si hubiera luz
+						tenue, y en la luz tenue como si estuviera bien
+						iluminado. No puedes distinguir colores en la oscuridad.
+					</p>
+				</div>
+				<div class='col-span-2'>
+					<h4>Garras</h4>
+					<p>
+						Tus garras son armas naturales que puedes usar para
+						realizar ataques desarmados. Si golpeas con ellos,
+						puedes infligir un daño cortante igual a 1d4 + tu
+						modificador de Fuerza
+						<span id='date'>[+{mod_fue}]</span>.
+					</p>
+				</div>
+				<div class='col-span-4'>
+					<h4>Rugido Desalentador</h4>
+					<p>
+						Como acción adicional, puedes soltar un rugido
+						especialmente amenazador. Las criaturas de tu elección a
+						10 pies de ti que puedan oírte deben superar una tirada
+						de salvación de Sabiduría o te tendrán miedo hasta el
+						final de tu siguiente turno. La CD de la salvación es
+						igual a 8 + tu bonificación de competencia + tu
+						modificador de Constitución
+						<strong class='danger'>[{8 + bon_com + mod_con}]</strong
+						>. Una vez que uses este rasgo, no podrás volver a
+						usarlo hasta que termines un descanso corto o largo.
+					</p>
+				</div>
+			</section>
+			<HR dark />
+			<h2 class='text-[--subtitle]'>Rasgos de {lionel.rol}</h2>
+			<HR dark />
+			<section>
+				<div class='col-span-2 row-span-2'>
+					<h4>Furia</h4>
+					<p>
+						Luchas con una ferocidad primitiva en la batalla.
+						Durante tu turno, puedes dejarte llevar por la furia
+						como acción adicional. Mientras estás en furia,
+						consigues los siguientes beneficios si no llevas
+						armadura pesada:
+					</p>
+					<ul class='list-disc px-6 pb-2 text-xs text-justify'>
+						<li>
+							Tienes ventaja en las pruebas de Fuerza y en las
+							tiradas de salvación de Fuerza.
+						</li>
+						<li>
+							Cuando realizas un ataque con armas cuerpo a cuerpo
+							usando Fuerza, recibes un bonificador a la tirada de
+							daño que aumenta según vas subiendo niveles de
+							bárbaro, como se muestra en la columna «Daño de
+							furia» de la tabla del bárbaro.
+						</li>
+						<li>
+							Tienes resistencia al daño contundente, perforante y
+							cortante.
+						</li>
+						<li>
+							Si sabes lanzar conjuros, no puedes lanzarlos ni
+							concentrarte en ellos mientras estás en furia.
+						</li>
+					</ul>
+					<p>
+						Tu furia dura un minuto
+						<strong class='danger'>(3 Turnos)</strong>. Acaba antes
+						si te quedas inconsciente o, si antes de que acabe tu
+						turno, no has atacado a una criatura hostil o no has
+						recibido daño desde tu último turno. También puedes
+						terminar tu furia durante tu turno como acción
+						adicional.
+					</p>
+				</div>
+				<div class='col-span-2'>
+					<h4 id='ca'>Defensa sin armadura</h4>
+					<p>
+						Mientras no llevas la armadura, tu CA es igual a 10 + tu
+						modificador por Destreza+ tu modificador por
+						Constitución <strong class='danger'
+							>[{10 + mod_des + mod_con}]</strong
+						>. Sigues pudiendo utilizar escudo y recibir sus
+						beneficios.
+					</p>
+				</div>
+			</section>
+			<HR dark />
+		</article>
+	</main>
 </Layout>
 
 <style>
-  section:has(a) {
-    cursor: pointer;
-  }
+	section:has(a) > section {
+		cursor: pointer;
+	}
+	section {
+		padding: 0.25rem;
+	}
 
-  .section,
-  .traits section > div {
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+	.section,
+	.features section > div {
+		/** Box Shadow Definitivo */
+		box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
 
-    transition: transform 100ms ease;
-  }
-  .section:hover,
-  .traits section > div:hover{
-    transform: scale(1.01);
-  }
+		transition: transform 100ms ease;
+	}
+	.section:hover,
+	.features section > div:hover {
+		transform: scale(1.01);
+	}
 
-  .traits section > div {
-    background-color: var(--dark);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
+	.features section > div {
+		background-color: var(--dark);
+		border-radius: 0.5rem;
+		padding: 0.5rem 2rem;
+		margin: 0.5rem;
 
-    text-align: justify;
-  }
-  .traits h4 {
-    color: var(--section);
-    text-align: center;
-    font-family: 'Lobster';
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    padding-top: 0;
-  }
-  .traits p {
-    font-size: 0.9rem;
-    margin: 0.5rem;
-    margin-top: 0;
-  }
-  .traits section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    align-items: start;
-  }
-  .traits h2 {
-    text-align: center;
-    font-family: 'unbounded';
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		text-align: justify;
+		text-wrap: pretty;
+	}
+	.features h4 {
+		color: var(--section);
+		text-align: center;
+		font-family: 'Lobster';
+		font-size: 1.1rem;
+		padding: 0.5rem;
+		padding-top: 0;
+	}
+	.features p {
+		font-size: 0.9rem;
+		margin: 0.5rem;
+		margin-top: 0;
+	}
+	.features section {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: center;
+	}
+	.features h2 {
+		text-align: center;
+		font-family: 'unbounded';
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
 </style>
