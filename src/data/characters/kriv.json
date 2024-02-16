@@ -1,38 +1,49 @@
 [
-  {
-    "name": "Kriv Coppernico",
-    "race": "Dragonborn",
-    "rol": "Paladin",
-    "xp": 345,
-    "level": 2,
-    "stats": {
-      "fue": 16,
-      "des": 6,
-      "con": 14,
-      "int": 8,
-      "sab": 12,
-      "car": 16
-    },
-    "skills": {
-      "acrobacias": 2,
-      "atletismo": 1,
-      "c.arcano": 1,
-      "engaño": 0,
-      "historia": 0
-    },
-    "comps": {
-      "bon_com": 2,
-      "stats": ["int", "sab"],
-      "skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
-      "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
-    },
-    "weapons": ["espada corta"],
-    "money": {
-      "pc": 0,
-      "pp": 0,
-      "pe": 0,
-      "po": 0,
-      "ppt": 0
-    }
-  }
+	{
+		"name": "Kriv Coppernico",
+		"race": "Dragonborn",
+		"rol": "Paladin",
+		"xp": 345,
+		"level": 2,
+		"stats": {
+			"fue": 16,
+			"des": 6,
+			"con": 14,
+			"int": 8,
+			"sab": 12,
+			"car": 16
+		},
+		"skills": {
+			"acrobacias": -1,
+			"atletismo": 5,
+			"c.arcano": 0,
+			"engaño": 0,
+			"historia": 0,
+			"interpretacion": 0,
+			"intimidacion": 3,
+			"investigacion": 0,
+			"juego_manos": 0
+		},
+		"comps": {
+			"bon_com": 2,
+			"stats": ["sab", "car"],
+			"skills": ["atletismo", "intimidacion", "perpicacia", "persuasion"],
+			"weapons": [
+				"armas sencillas",
+				"armas marciales",
+				"armadura ligera",
+				"armadura intermedia",
+				"armadura pesada",
+				"escudo"
+			]
+		},
+		"weapons": ["espada corta"],
+		"money": {
+			"pc": 0,
+			"pp": 0,
+			"pe": 0,
+			"po": 0,
+			"ppt": 0
+		}
+	}
 ]

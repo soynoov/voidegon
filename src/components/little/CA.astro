@@ -1,8 +1,8 @@
 ---
 interface Props {
-  mod: number;
-  armor?: number;
-  shield?: boolean;
+	mod: number;
+	armor?: number;
+	shield?: boolean;
 }
 
 const { mod, armor = 0, shield } = Astro.props;
@@ -11,119 +11,121 @@ let ca = 10 + mod;
 
 // Si no tiene armadura no aparece. Si tiene armadura, difuminar un poco el CA.
 let display,
-  blur,
-  sh = 'none';
+	blur,
+	sh = 'none';
 if (armor == 0) {
-  display = 'none';
+	display = 'none';
 } else {
-  blur = 'blur(2px)';
+	blur = 'blur(2px)';
 }
 // Si tiene escudo se le indica el número de la suma.
 if (shield) {
-  sh = 'block';
+	sh = 'block';
 }
 ---
 
 <section
-  class={`
+	class={`
 		rounded-lg bg-[--gray]
 		p-2 w-full h-full
 		cursor-default
 	`}
 >
-  <div
-    class={`
+	<div
+		class={`
 		p-4 bg-[--dark] rounded-lg 
 		flex justify-center items-center flex-wrap gap-y-8
 		h-full w-full
 	`}
-  >
-    <div
-      class='flex flex-col justify-center items-center mx-2'
-      style={`filter: ${blur}`}
-    >
-      <h3 class='font-[unbounded] font-bold -mt-2.5'>CA</h3>
-      <svg
-        width='45'
-        height='45'
-        viewBox='0 0 24 24'
-        stroke-width='2'
-        stroke='currentColor'
-        fill='none'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-      >
-        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-        <path
-          d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
-          stroke-width='0'
-          fill='currentColor'></path>
-      </svg>
-      <h6 class='-mt-10 text-[--dark] font-[pacifico] text-2xl font-bold'>
-        {ca}
-      </h6>
-    </div>
-    <div
-      class='flex flex-col justify-center items-center mx-2'
-      style={`display: ${display}`}
-    >
-      <h3 class='font-[unbounded] font-bold -mt-2.5'>AR</h3>
-      <svg
-        style={`color: var(--${sh})`}
-        width='45'
-        height='45'
-        viewBox='0 0 24 24'
-        stroke-width='2'
-        stroke='currentColor'
-        fill='none'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-      >
-        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-        <path
-          d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
-          stroke-width='0'
-          fill='currentColor'></path>
-      </svg>
-      <h6 class='-mt-10 text-[--dark] font-[pacifico] text-2xl font-bold'>
-        {armor}
-      </h6>
-    </div>
-    <div
-      class='flex flex-col justify-center items-center mx-2'
-      style={`display: ${sh}`}
-    >
-      <h3 class='font-[unbounded] font-bold -mt-2.5 mx-2'>SH</h3>
-      <svg
-        style={`color: var(--gray)`}
-        width='45'
-        height='45'
-        viewBox='0 0 24 24'
-        stroke-width='2'
-        stroke='currentColor'
-        fill='none'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-      >
-        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-        <path
-          d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
-          stroke-width='0'
-          fill='currentColor'></path>
-      </svg>
-      <h6 class='-mt-10 text-[--] font-[pacifico] text-2xl font-bold mx-1.5'>
-        +2
-      </h6>
-    </div>
-  </div>
+	>
+		<div
+			class='flex flex-col justify-center items-center mx-2'
+			style={`filter: ${blur}`}
+		>
+			<h3 class='font-[unbounded] font-bold -mt-2.5'>CA</h3>
+			<svg
+				width='45'
+				height='45'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
+					stroke-width='0'
+					fill='currentColor'></path>
+			</svg>
+			<h6 class='-mt-10 text-[--dark] font-[pacifico] text-2xl font-bold'>
+				{ca}
+			</h6>
+		</div>
+		<div
+			class='flex flex-col justify-center items-center mx-2'
+			style={`display: ${display}`}
+		>
+			<h3 class='font-[unbounded] font-bold -mt-2.5'>AR</h3>
+			<svg
+				style={`color: var(--${sh})`}
+				width='45'
+				height='45'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
+					stroke-width='0'
+					fill='currentColor'></path>
+			</svg>
+			<h6 class='-mt-10 text-[--dark] font-[pacifico] text-2xl font-bold'>
+				{armor}
+			</h6>
+		</div>
+		<div
+			class='flex flex-col justify-center items-center mx-2'
+			style={`display: ${sh}`}
+		>
+			<h3 class='font-[unbounded] font-bold -mt-2.5 mx-2'>SH</h3>
+			<svg
+				style={`color: var(--gray)`}
+				width='45'
+				height='45'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M11.884 2.007l.114 -.007l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021z'
+					stroke-width='0'
+					fill='currentColor'></path>
+			</svg>
+			<h6
+				class='-mt-10 text-[--] font-[pacifico] text-2xl font-bold mx-1.5'
+			>
+				+2
+			</h6>
+		</div>
+	</div>
 </section>
 
 <style>
-  section {
-    transition: all 100ms ease;
-  }
-  section:hover {
-    box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
-    transform: scale(1.01);
-  }
+	section {
+		transition: all 100ms ease;
+	}
+	section:hover {
+		box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
+		transform: scale(1.01);
+	}
 </style>

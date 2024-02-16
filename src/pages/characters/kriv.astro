@@ -15,7 +15,7 @@ import DG from '../../components/little/DG.astro';
 import COM from '../../components/little/COM.astro';
 import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
-// - Llamamiento a todos los datos y variables
+// - Llamamiento a todos los datos y variables (JSON - BDD)
 import data from '../../data/characters/kriv.json';
 const kriv = data[0],
 	fue = kriv.stats.fue,
@@ -27,6 +27,7 @@ const kriv = data[0],
 	bon_com = kriv.comps.bon_com,
 	money = kriv.money;
 
+// Modificadores
 let mod_fue = 4,
 	mod_des = -2,
 	mod_con = 2,
@@ -34,8 +35,9 @@ let mod_fue = 4,
 	mod_sab = 1,
 	mod_car = 3;
 
-let dg = 10 + 9;
-let pg = dg + bon_com * kriv.level;
+// Datos Adicionales Independientes que avanzan de forma no lineal (RNG)
+let dg = 10 + 9; // DG: Dados de Golpe
+let pg = dg + bon_com * kriv.level; // PG: Puntos de Golpe
 ---
 
 <Layout title=`】 Voidegon ▸ ${kriv.name}`>
@@ -49,7 +51,7 @@ let pg = dg + bon_com * kriv.level;
 			<section class='col-span-6'>
 				<Experience race={kriv.race} rol={kriv.rol} exp={kriv.xp} />
 			</section>
-			<section class='col-span-2 row-span-2'>
+			<section class='col-span-2'>
 				<Stats
 					fue={fue}
 					des={des}
@@ -62,7 +64,7 @@ let pg = dg + bon_com * kriv.level;
 					modcom={bon_com}
 				/>
 			</section>
-			<section class='col-span-2 row-span-3'>
+			<section class='col-span-2'>
 				<a href='/lore/kriv'>
 					<img
 						src='/img/kriv/kriv.png'
@@ -72,16 +74,16 @@ let pg = dg + bon_com * kriv.level;
 					/>
 				</a>
 			</section>
-			<section class='col-span-2'>
+			<section class='col-span-1'>
 				<CA mod={mod_des} armor={17} shield />
 			</section>
-			<section class='col-span-2'>
+			<section class='col-span-1'>
 				<INI des={mod_des} />
 			</section>
 			<section class='col-span-2'>
 				<DG cantidad={kriv.level} dice={10} />
 			</section>
-			<section class='col-span-2'>
+			<section class='col-span-4'>
 				<VEL vel={30} />
 			</section>
 			<section class='col-span-6'>
