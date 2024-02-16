@@ -1,132 +1,137 @@
 ---
 interface Props {
-  vel: number;
-  fly?: number;
-  dig?: number;
-  add?: Array<number>;
+	vel: number;
+	fly?: number;
+	dig?: number;
+	add?: Array<number>;
 }
 
 const { vel, fly = 0, dig = 0, add = [0, 0, 0] } = Astro.props;
 
 function addVel(x: number) {
-  x--;
-  if (add[x] > 0) {
-    return `+${add[x]}`;
-  }
+	x--;
+	if (add[x] > 0) {
+		return `+${add[x]}`;
+	}
 }
 ---
 
 <article class='grid grid-cols-6 w-full gap-2 h-full'>
-  <section
-    class={`
+	<section
+		class={`
         w-full col-span-2
         flex justify-center items-center flex-col
     `}
-  >
-    <div class='px-4 bg-[--dark] py-2 rounded-lg'>
-      <svg
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        stroke-width='2'
-        stroke='currentColor'
-        fill='none'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-          d='M12 18.176a3 3 0 1 1 -4.953 -2.449l-.025 .023a4.502 4.502 0 0 1 1.483 -8.75c1.414 0 2.675 .652 3.5 1.671a4.5 4.5 0 1 1 4.983 7.079a3 3 0 1 1 -4.983 2.25z'
-        ></path><path d='M12 19v-10'></path><path d='M9 3l3 2l3 -2'></path></svg
-      >
-    </div>
-    <h5 class='mx-4'>{fly}</h5>
-    <h6>{addVel(2)}</h6>
-  </section>
+	>
+		<div class='px-4 bg-[--dark] py-2 rounded-lg'>
+			<svg
+				width='24'
+				height='24'
+				viewBox='0 0 24 24'
+				stroke-width='1.5'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			>
+				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+				<path
+					d='M4 20l10 -10m0 -5v5h5m-9 -1v5h5m-9 -1v5h5m-5 -5l4 -4l4 -4'
+				></path>
+				<path
+					d='M19 10c.638 -.636 1 -1.515 1 -2.486a3.515 3.515 0 0 0 -3.517 -3.514c-.97 0 -1.847 .367 -2.483 1m-3 13l4 -4l4 -4'
+				></path>
+			</svg>
+		</div>
+		<h5 class='mx-4'>{fly}</h5>
+		<h6>{addVel(2)}</h6>
+	</section>
 
-  <section
-    class={`
+	<section
+		class={`
         w-full col-span-3
         flex justify-center items-center flex-col
     `}
-  >
-    <div class='px-4 bg-[--dark] py-2 rounded-lg'>
-      <svg
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        stroke-width='2'
-        stroke='currentColor'
-        fill='none'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-          d='M4 6h5.426a1 1 0 0 1 .863 .496l1.064 1.823a3 3 0 0 0 1.896 1.407l4.677 1.114a4 4 0 0 1 3.074 3.89v2.27a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1z'
-        ></path><path d='M14 13l1 -2'></path><path
-          d='M8 18v-1a4 4 0 0 0 -4 -4h-1'></path><path d='M10 12l1.5 -3'
-        ></path></svg
-      >
-    </div>
-    <div>
-      <h5 class='mx-4'>{vel}</h5>
-      <h6>{addVel(1)}</h6>
-    </div>
-  </section>
+	>
+		<div class='px-4 bg-[--dark] py-2 rounded-lg'>
+			<svg
+				width='24'
+				height='24'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+					d='M4 6h5.426a1 1 0 0 1 .863 .496l1.064 1.823a3 3 0 0 0 1.896 1.407l4.677 1.114a4 4 0 0 1 3.074 3.89v2.27a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1z'
+				></path><path d='M14 13l1 -2'></path><path
+					d='M8 18v-1a4 4 0 0 0 -4 -4h-1'></path><path
+					d='M10 12l1.5 -3'></path></svg
+			>
+		</div>
+		<div>
+			<h5 class='mx-4'>{vel}</h5>
+			<h6>{addVel(1)}</h6>
+		</div>
+	</section>
 
-  <section
-    class={`
+	<section
+		class={`
         w-full col-span-1
         flex justify-center items-center flex-col
     `}
-  >
-    <div class='px-2 bg-[--dark] py-2 rounded-lg'>
-      <svg
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        stroke-width='2'
-        stroke='currentColor'
-        fill='none'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-          d='M17 4l3 3'></path><path d='M18.5 5.5l-8 8'></path><path
-          d='M8.276 11.284l4.44 4.44a.968 .968 0 0 1 0 1.369l-2.704 2.704a4.108 4.108 0 0 1 -5.809 -5.81l2.704 -2.703a.968 .968 0 0 1 1.37 0z'
-        ></path></svg
-      >
-    </div>
-    <h5 class='mx-4'>{dig}</h5>
-    <h6>{addVel(3)}</h6>
-  </section>
+	>
+		<div class='px-2 bg-[--dark] py-2 rounded-lg'>
+			<svg
+				width='24'
+				height='24'
+				viewBox='0 0 24 24'
+				stroke-width='2'
+				stroke='currentColor'
+				fill='none'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+					d='M17 4l3 3'></path><path d='M18.5 5.5l-8 8'></path><path
+					d='M8.276 11.284l4.44 4.44a.968 .968 0 0 1 0 1.369l-2.704 2.704a4.108 4.108 0 0 1 -5.809 -5.81l2.704 -2.703a.968 .968 0 0 1 1.37 0z'
+				></path></svg
+			>
+		</div>
+		<h5 class='mx-4'>{dig}</h5>
+		<h6>{addVel(3)}</h6>
+	</section>
 </article>
 
 <style>
-  section {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+	section {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0.5rem;
 
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section:hover {
-    transform: scale(1.01);
-  }
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section:hover {
+		transform: scale(1.01);
+	}
 
-  h5 {
-    font-family: 'Pacifico';
-    color: var(--white);
-    font-size: 1.5rem;
-  }
-  h6 {
-    color: var(--date);
-    font-family: 'pacifico';
-    margin-left: -1rem;
-  }
-  div:has(h6) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	h5 {
+		font-family: 'Pacifico';
+		color: var(--white);
+		font-size: 1.5rem;
+	}
+	h6 {
+		color: var(--date);
+		font-family: 'pacifico';
+		margin-left: -1rem;
+	}
+	div:has(h6) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 </style>
