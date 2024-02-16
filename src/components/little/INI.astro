@@ -1,63 +1,61 @@
 ---
 interface Props {
-  des: number;
+	des: number;
 }
 
 const { des } = Astro.props;
 
 function filtrarIni(des: number) {
-  let ini = des;
-  if (des >= 0) {
-    return `+${ini}`;
-  }
+	let ini = des;
+	if (des >= 0) {
+		return `+${ini}`;
+	}
 
-  return ini;
+	return ini;
 }
 ---
 
 <section
-  class={`
-    w-full mx-auto h-full
-    flex justify-center items-center flex-col
+	class={`
+    rounded-lg bg-[--gray]
+		p-2 w-full h-full
+		cursor-default
 `}
 >
-  <div class='px-4 bg-[--dark] py-2 rounded-lg'>
-    <svg
-      class='text-[--date]'
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      stroke-width='2'
-      stroke='currentColor'
-      fill='none'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-      ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-        d='M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11'></path></svg
-    >
-  </div>
-  <h6 class='mx-4'>{filtrarIni(des)}</h6>
+	<div
+		class={`
+      p-4 bg-[--dark] rounded-lg 
+		  flex justify-center items-center flex-wrap gap-4
+		  h-full w-full 
+    `}
+	>
+		<svg
+			class='text-[--date]'
+			width='40'
+			height='40'
+			viewBox='0 0 24 24'
+			stroke-width='2'
+			stroke='currentColor'
+			fill='none'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+		>
+			<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+			<path d='M20.984 12.53a9 9 0 1 0 -7.552 8.355'></path>
+			<path d='M12 7v5l3 3'></path><path d='M19 16l-2 3h4l-2 3'></path>
+		</svg>
+		<h6 class='font-[pacifico] text-xl font-semibold text-[--date]'>
+			[{filtrarIni(des)}]
+		</h6>
+	</div>
 </section>
 
 <style>
-  section {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section:hover {
-    transform: scale(1.01);
-  }
-
-  h6 {
-    font-family: 'Pacifico';
-    color: var(--date);
-    font-size: 1.5rem;
-  }
+	section {
+		transition: all 100ms ease;
+	}
+	section:hover {
+		box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
+		transform: scale(1.01);
+	}
 </style>

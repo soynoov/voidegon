@@ -1,0 +1,57 @@
+[
+	{
+		"name": "Isidoro Matamoros",
+		"race": "Tiefling",
+		"rol": "Monk",
+		"xp": 440,
+		"level": 2,
+		"stats": {
+			"fue": 16,
+			"des": 18,
+			"con": 12,
+			"int": 10,
+			"sab": 8,
+			"car": 8
+		},
+		"skills": {
+			"acrobacias": 4,
+			"atletismo": 3,
+			"c.arcano": 0,
+			"engaño": 0,
+			"historia": 0,
+			"interpretacion": 1,
+			"intimidacion": 0,
+			"investigacion": 1,
+			"juego_manos": 0,
+			"medicina": -1,
+			"naturaleza": 0,
+			"percepcion": 0,
+			"perspicacia": 0,
+			"persuasion": 0,
+			"religion": 0,
+			"sigilo": 0,
+			"supervivencia": 0,
+			"t.animales": 0
+		},
+		"comps": {
+			"bon_com": 2,
+			"stats": ["int", "sab"],
+			"skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
+			"weapons": [
+				"dagas",
+				"dardos",
+				"hondas",
+				"bastones",
+				"ballestas ligeras"
+			]
+		},
+		"weapons": ["espada corta"],
+		"money": {
+			"pc": 0,
+			"pp": 0,
+			"pe": 0,
+			"po": 0,
+			"ppt": 0
+		}
+	}
+]
