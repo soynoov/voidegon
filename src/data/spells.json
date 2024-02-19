@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Luz",
+		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/301/small-e3b4a99ea8ba68b6a156b811434935d56721ef8f.png?1637057057",
+		"type": "Truco",
+		"school": "Evocación",
+		"components": ["V", "M"],
+		"materials": ["Una Luciérnaga", "Musgo Fosforescente"],
+		"time": "1 acción",
+		"range": "Toque",
+		"duration": "1 Hora",
+		"description": "Tocas un objeto de no más de 10 pies en cualquier dimensión. Hasta que el conjuro termine, el objeto emite luz brillante en un radio de 20 pies y luz tenue en otros 20 pies adicionales. La luz puede ser del color que quieras. Cubrir completamente el objeto con algo opaco bloquea la luz. El conjuro termina si lo lanzas otra vez o si lo disipas como acción.\n Si eliges como objetivo a un objeto que una criatura hostil lleva puesto o transporta, dicha criatura debe superar una tirada de salvación de Destreza para evitar el conjuro."
+	},
+	{
+		"name": "Gay",
+		"src": "",
+		"type": "Truco",
+		"school": "Evocación",
+		"components": ["V", "M"],
+		"materials": ["Una Luciérnaga", "Musgo Fosforescente"],
+		"time": "1 acción",
+		"range": "Toque",
+		"duration": "212 Hora (120 Turnos)",
+		"description": "Lorem Ipstun"
+	}
+]
