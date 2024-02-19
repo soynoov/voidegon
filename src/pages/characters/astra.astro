@@ -5,12 +5,14 @@ import Title from '../../components/Title.astro';
 import Experience from '../../components/Experience.astro';
 import Stats from '../../components/Stats.astro';
 import Skills from '../../components/Skills.astro';
+import Money from '../../components/Money.astro';
 //
 import HP from '../../components/little/HP.astro';
 import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
 import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
+import HR from '../../components/little/HR.astro';
 //
 let mod_com = 2,
   fue = 0,
@@ -61,6 +63,17 @@ let mod_com = 2,
       <section class='col-span-6 pt-2'>
         <HP hp={10 + con - 0} hpmax={10 + con} />
       </section>
+    </article>
+    <HR />
+    <article class='w-[80vw] mx-auto mt-[10000vh]'>
+      <Money ppt={1} po={1} pe={1} pp={1} pc={1} />
+      <Money po={1} pe={1} pp={1} pc={1} />
+      <Money ppt={1} pp={1} />
+      <Money po={1} />
+      <Money po={1} pp={1} />
+      <Money />
+      <Money pe={1} pc={1} />
+      <p class='text-center'>中文閱讀</p>
     </article>
   </main>
 </Layout>

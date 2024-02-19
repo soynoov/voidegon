@@ -23,470 +23,442 @@ import data from '../../data/characters/nyliss.json';
 import Spell from '../../components/character/Spell.astro';
 
 const nyliss = data[0],
-	fue = nyliss.stats.fue,
-	des = nyliss.stats.des,
-	con = nyliss.stats.con,
-	int = nyliss.stats.int,
-	sab = nyliss.stats.sab,
-	car = nyliss.stats.car,
-	mod_comp = nyliss.comps.mod_comp,
-	money = nyliss.money;
+  fue = nyliss.stats.fue,
+  des = nyliss.stats.des,
+  con = nyliss.stats.con,
+  int = nyliss.stats.int,
+  sab = nyliss.stats.sab,
+  car = nyliss.stats.car,
+  mod_comp = nyliss.comps.mod_comp,
+  money = nyliss.money;
 
 const mod_fue = 0,
-	mod_des = 2,
-	mod_con = 0,
-	mod_int = 3,
-	mod_sab = 2,
-	mod_car = 0;
+  mod_des = 2,
+  mod_con = 0,
+  mod_int = 3,
+  mod_sab = 2,
+  mod_car = 0;
 ---
 
 <Layout title=`】 Voidegon ▸ ${nyliss.name}`>
-	<Title
-		title={nyliss.name}
-		img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
-		center='center'
-	/>
-	<main>
-		<article
-			class={`
+  <Title
+    title={nyliss.name}
+    img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
+    center='center'
+  />
+  <main>
+    <article
+      class={`
     	w-[80vw] mx-auto mt-4 grid grid-cols-6
     `}
-		>
-			<section class='col-span-6 px-2'>
-				<Experience
-					race={nyliss.race}
-					rol={nyliss.rol}
-					exp={nyliss.xp}
-					start={1}
-				/>
-			</section>
-			<section class='col-span-4 p-2 pb-0'>
-				<a href='/lore/nyliss'>
-					<img
-						src='/img/nyliss/nyliss.png'
-						alt='Nyliss Avacyn'
-						class='rounded-lg h-full object-cover'
-						id='section'
-					/>
-				</a>
-			</section>
-			<section class='col-span-2 pt-2 pr-2'>
-				<Stats
-					fue={fue}
-					des={des}
-					con={con}
-					int={int}
-					sab={sab}
-					car={car}
-					mod={[1, 0, 0, 0, 0, 2]}
-					com={[0, 0, 0, 1, 1, 0]}
-					modcom={mod_comp}
-				/>
-			</section>
-			<section class='col-span-1 pb-3 px-1 pt-3'>
-				<CA mod={mod_des} />
-			</section>
-			<section class='col-span-1 p-2 pr-0 pt-4'>
-				<INI des={mod_des} />
-			</section>
-			<section class='col-span-4 row-span-3 p-2 pt-4'>
-				<Skills
-					com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
-					punt={[
-						2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0,
-					]}
-					modcom={mod_comp}
-				/>
-			</section>
-			<section class='col-span-2 pl-2'>
-				<VEL vel={30} fly={60} />
-			</section>
-			<section class='col-span-2 p-2 pr-0'>
-				<DG cantidad={nyliss.level} dice={6} />
-			</section>
-			<section class='col-span-6 px-6 pt-2'>
-				<HP
-					hp={6 * 2 + mod_con * nyliss.level - 0}
-					hpmax={6 * 2 + mod_con}
-				/>
-			</section>
+    >
+      <section class='col-span-6 px-2'>
+        <Experience
+          race={nyliss.race}
+          rol={nyliss.rol}
+          exp={nyliss.xp}
+          start={1}
+        />
+      </section>
+      <section class='col-span-4 p-2 pb-0'>
+        <a href='/lore/nyliss'>
+          <img
+            src='/img/nyliss/nyliss.png'
+            alt='Nyliss Avacyn'
+            class='rounded-lg h-full object-cover'
+            id='section'
+          />
+        </a>
+      </section>
+      <section class='col-span-2 pt-2 pr-2'>
+        <Stats
+          fue={fue}
+          des={des}
+          con={con}
+          int={int}
+          sab={sab}
+          car={car}
+          mod={[1, 0, 0, 0, 0, 2]}
+          com={[0, 0, 0, 1, 1, 0]}
+          modcom={mod_comp}
+        />
+      </section>
+      <section class='col-span-1 pb-3 px-1 pt-3'>
+        <CA mod={mod_des} />
+      </section>
+      <section class='col-span-1 p-2 pr-0 pt-4'>
+        <INI des={mod_des} />
+      </section>
+      <section class='col-span-4 row-span-3 p-2 pt-4'>
+        <Skills
+          com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
+          punt={[2, 1, 1, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0]}
+          modcom={mod_comp}
+        />
+      </section>
+      <section class='col-span-2 pl-2'>
+        <VEL vel={30} fly={60} />
+      </section>
+      <section class='col-span-2 p-2 pr-0'>
+        <DG cantidad={nyliss.level} dice={6} />
+      </section>
+      <section class='col-span-6 px-6 pt-2'>
+        <HP hp={6 * 2 + mod_con * nyliss.level - 0} hpmax={6 * 2 + mod_con} />
+      </section>
 
-			<section class='col-span-6'>
-				<HR />
-			</section>
+      <section class='col-span-6'>
+        <HR />
+      </section>
 
-			<section class='col-span-3 p-2 pt-0'>
-				<COM mod_com={mod_comp} com={nyliss.comps.weapons} />
-			</section>
-			<section class='col-span-3 pb-2 pt-0'>
-				<Money
-					pc={money.pc}
-					pp={money.pp}
-					pe={money.pe}
-					po={money.po}
-					ppt={money.ppt}
-				/>
-			</section>
-			<section class='col-span-1 pl-1'>
-				<Weapon
-					weapon='Espada Corta'
-					details={['Ligera', 'Sútil']}
-					bonus={mod_des}
-					type='Perforante'
-				/>
-			</section>
-			<section class='col-span-1 pr-1'>
-				<Weapon
-					weapon='Lanza'
-					details={['Arrojadiza', 'Distancia', 'Versátil']}
-					bonus={mod_fue}
-					type='Perforante'
-					link='/extras/weapons/lance'
-				/>
-			</section>
-			<section class='col-span-4 h-full w-full pt-0'>
-				<div
-					id='backpack'
-					class='bg-[--gray] rounded-lg p-2 h-full w-full'
-				>
-					<ul class='grid grid-cols-3 gap-2 font-[caveat] px-4'>
-						<li>Botella de Tinta Negra</li>
-						<li>Pluma</li>
-						<li>
-							Plata Pulverizada <span class='text-[--grey]'
-								>(x4)</span
-							>
-						</li>
-						<li>
-							Hierro Pulverizado <span class='text-[--grey]'
-								>(x10)</span
-							>
-						</li>
-						<li>Carta de un Colega Muerto</li>
-						<li>Ropas Comunes</li>
-						<li>
-							Grimorio
-							<span class='text-[--grey]'>(+Hoja Suelta)</span>
-						</li>
-						<li>Libros <span class='text-[--grey]'>(x3)</span></li>
-						<li>Plumas <span class='text-[--grey]'>(x5)</span></li>
-						<li>
-							Musgo Fluorescente
-							<span class='text-[--grey]'>(x3)</span>
-						</li>
-						<li>
-							Petalos de Rosa
-							<span class='text-[--grey]'>(x6)</span>
-						</li>
-						<li class='text-[--object] font-["caveat_brush"]'>
-							Silbato Mágico
-						</li>
-						<li>Espada Oxidad de Cobre</li>
-						<li>
-							Cupón para Var
-							<span class='text-[--grey]'>(2 Opciones)</span>
-						</li>
-					</ul>
-				</div>
-			</section>
-		</article>
+      <section class='col-span-3 p-2 pt-0'>
+        <COM mod_com={mod_comp} com={nyliss.comps.weapons} />
+      </section>
+      <section class='col-span-3 pb-2 pt-0'>
+        <Money
+          pc={money.pc}
+          pp={money.pp}
+          pe={money.pe}
+          po={money.po}
+          ppt={money.ppt}
+        />
+      </section>
+      <section class='col-span-1 pl-1'>
+        <Weapon
+          weapon='Espada Corta'
+          details={['Ligera', 'Sútil']}
+          bonus={mod_des}
+          type='Perforante'
+        />
+      </section>
+      <section class='col-span-1 pr-1'>
+        <Weapon
+          weapon='Lanza'
+          details={['Arrojadiza', 'Distancia', 'Cersátil']}
+          bonus={mod_fue}
+          type='Perforante'
+          link='/extras/weapons/lance'
+        />
+      </section>
+      <section class='col-span-4 h-full w-full pt-0'>
+        <div id='backpack' class='bg-[--gray] rounded-lg p-2 h-full w-full'>
+          <ul class='grid grid-cols-3 gap-2 font-[caveat] px-4'>
+            <li>Botella de Tinta Negra</li>
+            <li>Pluma</li>
+            <li>
+              Plata Pulverizada <span class='text-[--grey]'>(x4)</span>
+            </li>
+            <li>
+              Hierro Pulverizado <span class='text-[--grey]'>(x10)</span>
+            </li>
+            <li>Carta de un Colega Muerto</li>
+            <li>Ropas Comunes</li>
+            <li>
+              Grimorio
+              <span class='text-[--grey]'>(+Hoja Suelta)</span>
+            </li>
+            <li>Libros <span class='text-[--grey]'>(x3)</span></li>
+            <li>Plumas <span class='text-[--grey]'>(x5)</span></li>
+            <li>
+              Musgo Fluorescente
+              <span class='text-[--grey]'>(x3)</span>
+            </li>
+            <li>
+              Petalos de Rosa
+              <span class='text-[--grey]'>(x6)</span>
+            </li>
+            <li class='text-[--object] font-["caveat_brush"]'>
+              Silbato Mágico
+            </li>
+            <li>Espada Oxidad de Cobre</li>
+            <li>
+              Cupón para Var
+              <span class='text-[--grey]'>(2 Opciones)</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
 
-		<div class='w-[80vw] mx-auto'>
-			<HR />
-		</div>
+    <div class='w-[80vw] mx-auto'>
+      <HR />
+    </div>
 
-		<article
-			class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'
-			id='traits'
-		>
-			<section>
-				<H2 txt='Rasgos de Raza' />
-			</section>
-			<section
-				class='grid grid-cols-3 justify-center items-start text-justify gap-4 px-8'
-				id='race'
-			>
-				<div>
-					<h4>Visión en la Oscuridad</h4>
-					<p>
-						Puedes ver en la oscuridad a 60 pies como si hubiera luz
-						tenue, y en la luz tenue como si estuviera bien
-						iluminado. No puedes distinguir colores en la oscuridad.
-					</p>
-				</div>
-				<div class='row-span-2'>
-					<h4>Manos Sanadoras</h4>
-					<p>
-						Como una acción, puedes tocar a una criatura y hacer que
-						recupere un número de puntos de golpe igual a tu nivel ({
-							nyliss.level
-						}). No puedes volver a usar esta habilidad hasta
-						finalizar un descanso largo.
-					</p>
-				</div>
-				<div>
-					<h4>Resistecia Celestial</h4>
-					<p class='text-center'>
-						Eres resistente al daño radiante y necrótico.
-					</p>
-				</div>
-				<div class='col-start-3 -mt-11' id='x'>
-					<h4>Portador de la Luz</h4>
-					<p class='text-center'>
-						Conoces el <span id='phrase'>truco</span>
-						<span id='spell'>Luz</span>. Usas tu
-						<span class='text-[--subtitle]'>Carisma</span> para lanzarlo.
-					</p>
-				</div>
-			</section>
+    <article
+      class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'
+      id='traits'
+    >
+      <section>
+        <H2 txt='Rasgos de Raza' />
+      </section>
+      <section
+        class='grid grid-cols-3 justify-center items-start text-justify gap-4 px-8'
+        id='race'
+      >
+        <div>
+          <h4>Visión en la Oscuridad</h4>
+          <p>
+            Puedes ver en la oscuridad a 60 pies como si hubiera luz tenue, y en
+            la luz tenue como si estuviera bien iluminado. No puedes distinguir
+            colores en la oscuridad.
+          </p>
+        </div>
+        <div class='row-span-2'>
+          <h4>Manos Sanadoras</h4>
+          <p>
+            Como una acción, puedes tocar a una criatura y hacer que recupere un
+            número de puntos de golpe igual a tu nivel ({nyliss.level}). No
+            puedes volver a usar esta habilidad hasta finalizar un descanso
+            largo.
+          </p>
+        </div>
+        <div>
+          <h4>Resistecia Celestial</h4>
+          <p class='text-center'>
+            Eres resistente al daño radiante y necrótico.
+          </p>
+        </div>
+        <div class='col-start-3 -mt-11' id='x'>
+          <h4>Portador de la Luz</h4>
+          <p class='text-center'>
+            Conoces el <span id='phrase'>truco</span>
+            <span id='spell'>Luz</span>. Usas tu
+            <span class='text-[--subtitle]'>Carisma</span> para lanzarlo.
+          </p>
+        </div>
+      </section>
 
-			<section>
-				<H2 txt='Rasgos de Clase' />
-			</section>
-			<section
-				class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8 pb-4'
-				id='race'
-			>
-				<div class='row-span-2'>
-					<h4>Recuperación Arcana</h4>
-					<p>
-						Has aprendido a recuperar parte de tu energía arcana
-						estudiando tu libro de conjuros. Una vez por día, cuando
-						hagas un descanso breve, puedes recuperar espacios de
-						conjuro. Los espacios de conjuro pueden tener un nivel
-						combinado igual o menor que la mitad de tu nivel de mago
-						(redondeando hacia arriba) y, como máximo, nivel 5. Por
-						ejemplo, si eres un mago de nivel 4, puedes recuperar
-						hasta un valor de dos niveles de espacios de conjuro.
-						Puedes recuperar un espacio de conjuro de nivel 2 o dos
-						espacios de conjuro de nivel 1.
-					</p>
-				</div>
-				<div>
-					<h4>Lanzamiento Ritual</h4>
-					<p>
-						Puedes lanzar cualquier conjuro de mago como si fuera un
-						ritual, si tiene la etiqueta «ritual» y si lo tienes en
-						tu libro de conjuros. No necesitas tener el conjuro
-						preparado.
-					</p>
-				</div>
+      <section>
+        <H2 txt='Rasgos de Clase' />
+      </section>
+      <section
+        class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8 pb-4'
+        id='race'
+      >
+        <div class='row-span-2'>
+          <h4>Recuperación Arcana</h4>
+          <p>
+            Has aprendido a recuperar parte de tu energía arcana estudiando tu
+            libro de conjuros. Una vez por día, cuando hagas un descanso breve,
+            puedes recuperar espacios de conjuro. Los espacios de conjuro pueden
+            tener un nivel combinado igual o menor que la mitad de tu nivel de
+            mago (redondeando hacia arriba) y, como máximo, nivel 5. Por
+            ejemplo, si eres un mago de nivel 4, puedes recuperar hasta un valor
+            de dos niveles de espacios de conjuro. Puedes recuperar un espacio
+            de conjuro de nivel 2 o dos espacios de conjuro de nivel 1.
+          </p>
+        </div>
+        <div>
+          <h4>Lanzamiento Ritual</h4>
+          <p>
+            Puedes lanzar cualquier conjuro de mago como si fuera un ritual, si
+            tiene la etiqueta «ritual» y si lo tienes en tu libro de conjuros.
+            No necesitas tener el conjuro preparado.
+          </p>
+        </div>
 
-				<div>
-					<h4 class='text-center'>Lanzamiento de Conjuros</h4>
-					<p>
-						Como estudiante de magia arcana, tienes un libro de
-						conjuros que contiene conjuros que muestran los primeros
-						destellos del verdadero poder.
-					</p>
-				</div>
-			</section>
-			<section>
-				<H3 txt='Libro de Conjuros' />
-			</section>
-			<section
-				class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8 pb-4'
-				id='race'
-			>
-				<div class='row-span-2'>
-					<h4>Copiar un conjuro en el libro</h4>
-					<p>
-						Cuando encuentres un conjuro de mago de nivel 1 o
-						superior, puedes añadirlo a tu libro de conjuros si es
-						de un nivel de conjuro que puedes preparar y si puedes
-						dedicar tiempo a descifrarlo y copiarlo. Esta tarea
-						implica reproducir la esencia del conjuro y luego
-						descifrar el sistema único de anotación utilizado por el
-						mago que lo escribió. Debes practicar el conjuro hasta
-						que entiendas los sonidos o los gestos que requiere, y
-						luego transcribirlo en tu libro de conjuros usando tu
-						propia anotación.
-						<br /><br />
-						Por cada nivel de conjuro, el proceso lleva 2 horas y cuesta
-						50 po. El precio representa los componentes materiales que
-						gastas mientras experimentas con el conjuro para dominarlo,
-						así como las tintas de calidad que necesitas para anotarlo.
-						Una vez le hayas dedicado tiempo y dinero, puedes preparar
-						el conjuro igual que el resto de tus conjuros.
-					</p>
-				</div>
-				<div>
-					<h4>La apariencia del libro</h4>
-					<p>
-						Tu libro de conjuros es una compilación única de
-						conjuros, con sus propias florituras y notas al margen.
-						Puede ser un volumen de cuero liso funcional que
-						recibiste como regalo de tu maestro, un tomo de gran
-						valor delicadamente encuadernado que encontraste en una
-						antigua biblioteca o incluso una colección de notas
-						dispersas que uniste después de perder tu anterior libro
-						de conjuros en un accidente.
-					</p>
-				</div>
-				<div class='row-span-2'>
-					<h4>Remplazar el libro</h4>
-					<p>
-						Puedes copiar un conjuro de tu propio libro de conjuros
-						en otro libro, por ejemplo, si quieres hacer una copia
-						de seguridad. Esto se hace igual que copiar un conjuro
-						nuevo en tu libro de conjuros, pero más rápido y fácil,
-						dado que entiendes tu propia anotación y ya sabes cómo
-						lanzar el conjuro. Solo necesitas gastar 1 hora y 10 po
-						por cada nivel del conjuro copiado.
-						<br /><br />
-						Si pierdes tu libro de conjuros, puedes usar el mismo proceso
-						para transcribir los conjuros que tienes preparados en un
-						nuevo libro de conjuros. Completar el resto de tu libro de
-						conjuros requiere que encuentres nuevos conjuros, como siempre.
-						Por esta razón, muchos magos guardan copias de seguridad
-						de sus libros de conjuros en un lugar seguro.
-					</p>
-				</div>
-				<div>
-					<h4>Tu libro de conjuros</h4>
-					<p>
-						Tu libro de conjuros es un repositorio de los conjuros
-						de mago que conoces, excepto los trucos, los cuales
-						tienes memorizados.
-						<br /><br />
-						Los conjuros que añadas a tu libro de conjuros conforme vayas
-						subiendo de nivel reflejan la investigación arcana que vas
-						llevando a cabo, así como los avances intelectuales que has
-						hecho sobre la naturaleza del multiverso. Puedes encontrarte
-						conjuros durante tus aventuras. Por ejemplo, puedes descubrir
-						un conjuro escrito en un pergamino en el cofre de un mago
-						maligno o en un tomo polvoriento de una antigua biblioteca.
-					</p>
-				</div>
-			</section>
-			<section>
-				<H3 txt='Tradición Arcana (Nivel 2)' />
-			</section>
-			<div class='text-[--grey]'>
-				<section
-					class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8'
-					id='race'
-				>
-					<p
-						class='text-center text-pretty col-span-2 mx-auto w-[70vw]'
-					>
-						Al nivel 2, comienzas a seguir una tradición arcana, que
-						moldea tu forma de practicar la magia. Tu elección te
-						otorga rasgos en el nivel 2 y de nuevo en los niveles 6,
-						10 y 14.
-					</p>
-				</section>
-			</div>
-		</article>
-		<HR />
-		<article>
-			<H2 txt='Conjuros Conocidos' />
-			<H3 txt='Trucos' />
-			<section class='flex gap-4 w-[80vw] mx-auto my-4'>
-				<Spell name='Luz' />
-				<Spell name='Luz' />
-				<Spell name='Luz' />
-			</section>
-		</article>
+        <div>
+          <h4 class='text-center'>Lanzamiento de Conjuros</h4>
+          <p>
+            Como estudiante de magia arcana, tienes un libro de conjuros que
+            contiene conjuros que muestran los primeros destellos del verdadero
+            poder.
+          </p>
+        </div>
+      </section>
+      <section>
+        <H3 txt='Libro de Conjuros' />
+      </section>
+      <section
+        class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8 pb-4'
+        id='race'
+      >
+        <div class='row-span-2'>
+          <h4>Copiar un conjuro en el libro</h4>
+          <p>
+            Cuando encuentres un conjuro de mago de nivel 1 o superior, puedes
+            añadirlo a tu libro de conjuros si es de un nivel de conjuro que
+            puedes preparar y si puedes dedicar tiempo a descifrarlo y copiarlo.
+            Esta tarea implica reproducir la esencia del conjuro y luego
+            descifrar el sistema único de anotación utilizado por el mago que lo
+            escribió. Debes practicar el conjuro hasta que entiendas los sonidos
+            o los gestos que requiere, y luego transcribirlo en tu libro de
+            conjuros usando tu propia anotación.
+            <br /><br />
+            Por cada nivel de conjuro, el proceso lleva 2 horas y cuesta 50 po. El
+            precio representa los componentes materiales que gastas mientras experimentas
+            con el conjuro para dominarlo, así como las tintas de calidad que necesitas
+            para anotarlo. Una vez le hayas dedicado tiempo y dinero, puedes preparar
+            el conjuro igual que el resto de tus conjuros.
+          </p>
+        </div>
+        <div>
+          <h4>La apariencia del libro</h4>
+          <p>
+            Tu libro de conjuros es una compilación única de conjuros, con sus
+            propias florituras y notas al margen. Puede ser un volumen de cuero
+            liso funcional que recibiste como regalo de tu maestro, un tomo de
+            gran valor delicadamente encuadernado que encontraste en una antigua
+            biblioteca o incluso una colección de notas dispersas que uniste
+            después de perder tu anterior libro de conjuros en un accidente.
+          </p>
+        </div>
+        <div class='row-span-2'>
+          <h4>Remplazar el libro</h4>
+          <p>
+            Puedes copiar un conjuro de tu propio libro de conjuros en otro
+            libro, por ejemplo, si quieres hacer una copia de seguridad. Esto se
+            hace igual que copiar un conjuro nuevo en tu libro de conjuros, pero
+            más rápido y fácil, dado que entiendes tu propia anotación y ya
+            sabes cómo lanzar el conjuro. Solo necesitas gastar 1 hora y 10 po
+            por cada nivel del conjuro copiado.
+            <br /><br />
+            Si pierdes tu libro de conjuros, puedes usar el mismo proceso para transcribir
+            los conjuros que tienes preparados en un nuevo libro de conjuros. Completar
+            el resto de tu libro de conjuros requiere que encuentres nuevos conjuros,
+            como siempre. Por esta razón, muchos magos guardan copias de seguridad
+            de sus libros de conjuros en un lugar seguro.
+          </p>
+        </div>
+        <div>
+          <h4>Tu libro de conjuros</h4>
+          <p>
+            Tu libro de conjuros es un repositorio de los conjuros de mago que
+            conoces, excepto los trucos, los cuales tienes memorizados.
+            <br /><br />
+            Los conjuros que añadas a tu libro de conjuros conforme vayas subiendo
+            de nivel reflejan la investigación arcana que vas llevando a cabo, así
+            como los avances intelectuales que has hecho sobre la naturaleza del
+            multiverso. Puedes encontrarte conjuros durante tus aventuras. Por ejemplo,
+            puedes descubrir un conjuro escrito en un pergamino en el cofre de un
+            mago maligno o en un tomo polvoriento de una antigua biblioteca.
+          </p>
+        </div>
+      </section>
+      <section>
+        <H3 txt='Tradición Arcana (Nivel 2)' />
+      </section>
+      <div class='text-[--grey]'>
+        <section
+          class='grid grid-cols-2 justify-center items-start text-justify gap-4 px-8'
+          id='race'
+        >
+          <p class='text-center text-pretty col-span-2 mx-auto w-[70vw]'>
+            Al nivel 2, comienzas a seguir una tradición arcana, que moldea tu
+            forma de practicar la magia. Tu elección te otorga rasgos en el
+            nivel 2 y de nuevo en los niveles 6, 10 y 14.
+          </p>
+        </section>
+      </div>
+    </article>
+    <HR />
+    <article>
+      <H2 txt='Conjuros Conocidos' />
+      <H3 txt='Trucos' />
+      <section class='flex gap-4 w-[80vw] mx-auto my-4'>
+        <Spell name='Luz' />
+        <Spell name='Luz' />
+        <Spell name='Luz' />
+      </section>
+    </article>
 
-		<style>
-			/** Este CSS para las Sectiones es Universal, debe usarse en todas las Fichas de Personajes */
-			section {
-				padding: 0.25rem;
-			}
-			/** */
-			#section {
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+    <style>
+      /** Este CSS para las Sectiones es Universal, debe usarse en todas las Fichas de Personajes */
+      section {
+        padding: 0.25rem;
+      }
+      /** */
+      #section {
+        /** Box Shadow Definitivo */
+        box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-				transition: transform 100ms ease;
-				cursor: pointer;
-			}
-			#section:hover {
-				transform: scale(1.01);
-			}
+        transition: transform 100ms ease;
+        cursor: pointer;
+      }
+      #section:hover {
+        transform: scale(1.01);
+      }
 
-			#weapons {
-				background-color: var(--gray);
-				width: 100%;
-				height: 100%;
+      #weapons {
+        background-color: var(--gray);
+        width: 100%;
+        height: 100%;
 
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				justify-content: center;
-				align-items: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
 
-				padding: 0.5rem 1rem;
-				border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
 
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+        /** Box Shadow Definitivo */
+        box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-				transition: transform 100ms ease;
-				cursor: default;
-			}
-			#weapons:hover {
-				transform: scale(1.01);
-				/* background-color: var(--black); */
-			}
-			#backpack {
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 100ms ease;
+        cursor: default;
+      }
+      #weapons:hover {
+        transform: scale(1.01);
+        /* background-color: var(--black); */
+      }
+      #backpack {
+        /** Box Shadow Definitivo */
+        box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-				transition: transform 100ms ease;
-				cursor: default;
-			}
-			#backpack:hover {
-				transform: scale(1.01);
-			}
-			#backpack li::before {
-				content: '- ';
-			}
+        transition: transform 100ms ease;
+        cursor: default;
+      }
+      #backpack:hover {
+        transform: scale(1.01);
+      }
+      #backpack li::before {
+        content: '- ';
+      }
 
-			h4 {
-				color: var(--section);
-				text-align: center;
-				font-family: 'Lobster';
-				font-size: 1.1rem;
-			}
-			#race > div {
-				background-color: var(--dark);
-				border-radius: 0.5rem;
-				padding: 0.5rem 2rem 1rem;
-				width: 100%;
+      h4 {
+        color: var(--section);
+        text-align: center;
+        font-family: 'Lobster';
+        font-size: 1.1rem;
+      }
+      #race > div {
+        background-color: var(--dark);
+        border-radius: 0.5rem;
+        padding: 0.5rem 2rem 1rem;
+        width: 100%;
 
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+        /** Box Shadow Definitivo */
+        box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-				transition: transform 100ms ease;
-				cursor: default;
-			}
-			#race > div:hover {
-				transform: scale(1.01);
-			}
-			#race p {
-				font-size: 0.9rem;
-			}
+        transition: transform 100ms ease;
+        cursor: default;
+      }
+      #race > div:hover {
+        transform: scale(1.01);
+      }
+      #race p {
+        font-size: 0.9rem;
+      }
 
-			/** MEDIA QUERYS */
-			@media (max-width: 640px) {
-				article {
-					grid-template-columns: repeat(1, 1fr);
-				}
-				section {
-					grid-column: span 1 / span 1;
-				}
-				#weapons {
-					grid-template-columns: repeat(1, 1fr);
-				}
-				#traits #race {
-					grid-template-columns: repeat(1, 1fr);
-				}
-				#traits #race #x {
-					grid-column-start: auto;
-					margin: 0;
-				}
-			}
-		</style>
-	</main>
+      /** MEDIA QUERYS */
+      @media (max-width: 640px) {
+        article {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        section {
+          grid-column: span 1 / span 1;
+        }
+        #weapons {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        #traits #race {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        #traits #race #x {
+          grid-column-start: auto;
+          margin: 0;
+        }
+      }
+    </style>
+  </main>
 </Layout>
