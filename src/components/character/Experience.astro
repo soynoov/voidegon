@@ -56,12 +56,14 @@ console.log(porcentaje);
 	</a>
 
 	<section
-		class={`col-span-4 font-[caveat] font-bold text-[--white] row-start-1`}
+		class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1`}
 		style={`grid-column-start: ${start};`}
 		id='exp'
 	>
 		<div class='flex justify-center items-center'>
-			<span class='text-base mx-4 w-20'>Nivel {level}</span>
+			<span class='text-base mx-4 w-20'>
+				Nivel <span class='text-[--light] text-lg'>{level}</span>
+			</span>
 			<div class='w-full bg-[--gray] rounded-full h-1.5'>
 				<div
 					class='h-1.5 rounded-full'
@@ -70,8 +72,11 @@ console.log(porcentaje);
 				>
 				</div>
 			</div>
-			<span class='text-base mx-4 w-20'>{exp}/{expThresholds[level]}</span
-			>
+			<span class='text-base mx-4 w-20'>
+				<span class='text-[--electro]'>{exp}</span>
+				/
+				<span class='text-xs'>{expThresholds[level]}</span>
+			</span>
 		</div>
 	</section>
 
