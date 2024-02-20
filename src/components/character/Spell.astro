@@ -1,6 +1,6 @@
 ---
 interface Props {
-  name: string;
+	name: string;
 }
 const { name } = Astro.props;
 
@@ -8,103 +8,105 @@ import data from '../../data/spells.json';
 
 // Buscar el objeto con el nombre coincidente
 const matchSpell = data.find((spell: any) => spell.name === name) ?? {
-  name,
-  src: '',
-  time: '',
-  duration: '',
-  range: '',
-  components: '',
-  materials: '',
-  description: '',
+	name,
+	src: '',
+	time: '',
+	duration: '',
+	range: '',
+	components: '',
+	materials: '',
+	description: '',
 };
 ---
 
 <article
-  class={`
+	class={`
     bg-[--gray] rounded-lg p-4
-    justify-center
-    flex flex-col gap-4
+    flex flex-col gap-4 w-[25vw]
 `}
 >
-  <section class='flex rounded-lg'>
-    <div id='padding' class='border-2'>
-      <img src={matchSpell.src} class='rounded-lg h-full w-full object-cover' />
-    </div>
-    <!-- SVG -->
-    <div class='w-full flex items-center pl-4'>
-      <h2 class='font-bold text-4xl'>
-        {matchSpell.name}
-      </h2>
-    </div>
-    <!-- Titulo -->
-  </section>
-  <section>
-    <div>
-      <h4>Componentes</h4>
-      <p>{matchSpell.components}</p>
-    </div>
-    <!-- Componentes -->
-    <div>
-      <h4>Tiempo de Lanzamiento:</h4>
-      <p>{matchSpell.time}</p>
-    </div>
-    <!-- Tiempo Lanzamiento -->
-    <section class='flex justify-between'>
-      <div class='w-full'>
-        <h4>Duración:</h4>
-        <p>{matchSpell.duration}</p>
-      </div>
-      <!-- Duración -->
-      <div class='w-full'>
-        <h4>Alcance:</h4>
-        <p>{matchSpell.range}</p>
-      </div>
-    </section>
-    <!-- Alcance -->
-    <div>
-      <h4>Materiales:</h4>
-      <p>{matchSpell.materials}</p>
-    </div>
-    <!-- Materiales -->
-  </section>
-  <section class='p-4'>
-    <!-- Detalles -->
-    <h6>Detalles</h6>
-    {
-      matchSpell.description
-        .split('\n')
-        .map((line, index) => <p class='pr-8'>{line}</p>)
-    }
-  </section>
+	<section class='flex rounded-lg'>
+		<div id='padding' class='border-2'>
+			<img
+				src={matchSpell.src}
+				class='rounded-lg h-full w-full object-cover'
+			/>
+		</div>
+		<!-- SVG -->
+		<div class='w-full flex items-center pl-4'>
+			<h2 class='font-bold text-2xl text-nowrap'>
+				{matchSpell.name}
+			</h2>
+		</div>
+		<!-- Titulo -->
+	</section>
+	<section>
+		<div>
+			<h4>Componentes</h4>
+			<p>{matchSpell.components}</p>
+		</div>
+		<!-- Componentes -->
+		<div>
+			<h4>Tiempo de Lanzamiento:</h4>
+			<p>{matchSpell.time}</p>
+		</div>
+		<!-- Tiempo Lanzamiento -->
+		<section class='flex justify-between'>
+			<div class='w-full'>
+				<h4>Duración:</h4>
+				<p>{matchSpell.duration}</p>
+			</div>
+			<!-- Duración -->
+			<div class='w-full'>
+				<h4>Alcance:</h4>
+				<p>{matchSpell.range}</p>
+			</div>
+		</section>
+		<!-- Alcance -->
+		<div>
+			<h4>Materiales:</h4>
+			<p>{matchSpell.materials}</p>
+		</div>
+		<!-- Materiales -->
+	</section>
+	<section class='p-4'>
+		<!-- Detalles -->
+		<h6>Detalles</h6>
+		{
+			matchSpell.description
+				.split('\n')
+				.map((line, index) => <p class='pr-8'>{line}</p>)
+		}
+	</section>
 </article>
 
 <style>
-  section {
-    background-color: var(--dark);
-    border-radius: 0.5rem;
-  }
-  div {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
+	section {
+		background-color: var(--dark);
+		border-radius: 0.5rem;
+	}
+	div {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+		margin: 0.5rem;
 
-    display: flex;
-    gap: 1rem;
-  }
-  h6 {
-    font-family: 'lobster';
-    color: var(--section);
-  }
-  h4 {
-    color: var(--subtitle);
-    font-family: 'pacifico';
-  }
-  p {
-    font-family: 'caveat';
-  }
-  #padding {
-    padding: 0;
-    width: 2cm;
-  }
+		display: flex;
+		gap: 1rem;
+	}
+	h6 {
+		font-family: 'lobster';
+		color: var(--section);
+	}
+	h4 {
+		color: var(--subtitle);
+		font-family: 'pacifico';
+	}
+	p {
+		font-family: 'caveat';
+	}
+	#padding {
+		padding: 0;
+		width: 2cm;
+	}
 </style>
