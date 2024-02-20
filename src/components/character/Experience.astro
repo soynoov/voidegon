@@ -55,28 +55,26 @@ console.log(porcentaje);
   </a>
 
   <section
-    class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1`}
+    class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1 flex items-center justify-around w-full text-nowrap`}
     style={`grid-column-start: ${start};`}
     id='exp'
   >
-    <div class='flex justify-center items-center'>
-      <span class='text-base mx-4 w-20'>
-        Nivel <span class='text-[--light] text-lg'>{level}</span>
-      </span>
-      <div class='w-full bg-[--gray] rounded-full h-1.5'>
-        <div
-          class='h-1.5 rounded-full'
-          style={`width: ${porcentaje}%`}
-          id='pulse'
-        >
-        </div>
+    <span class='text-base'>
+      Nivel <span class='text-[--light] text-lg'>{level}</span>
+    </span>
+    <div class='w-[80%] bg-[--gray] rounded-full h-1.5'>
+      <div
+        class='h-1.5 rounded-full'
+        style={`width: ${porcentaje}%`}
+        id='pulse'
+      >
       </div>
-      <span class='text-base mx-4 w-20'>
-        <span class='text-[--electro]'>{exp}</span>
-        /
-        <span class='text-xs'>{expThresholds[level]}</span>
-      </span>
     </div>
+    <span class='text-base'>
+      <span class='text-[--electro]'>{exp}</span>
+      /
+      <span class='text-xs'>{expThresholds[level]}</span>
+    </span>
   </section>
 
   <a href={`/extras/rol/${rol.toLowerCase()}`}>
@@ -88,16 +86,21 @@ console.log(porcentaje);
 
 <style>
   section {
+    padding: 0.5rem;
+    line-height: 200%;
+  }
+  a,
+  section {
     background-color: var(--dark);
     border-radius: 0.5rem;
-    padding: 0.5rem 2rem;
 
     text-align: center;
 
     transition: all 100ms ease;
     cursor: default;
-  }
 
+    height: 100%;
+  }
   a > section {
     cursor: pointer;
   }
@@ -110,9 +113,14 @@ console.log(porcentaje);
     font-weight: bold;
   }
 
+  #exp > * {
+    margin: 0 1rem;
+  }
+
   /** MEDIA QUERYS */
   @media (max-width: 1024px) {
     article {
+      display: flex;
       flex-direction: column;
     }
     #race {
@@ -123,6 +131,9 @@ console.log(porcentaje);
     }
     #exp {
       order: 1;
+    }
+    a {
+      width: 100%;
     }
   }
 
