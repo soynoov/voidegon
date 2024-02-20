@@ -1,20 +1,20 @@
 ---
 interface Props {
-	txt: string;
-	block?: boolean;
+  txt: string;
+  block?: boolean;
 }
 const { txt, block = false } = Astro.props;
 
 let color = 'subtitle';
 
 if (block) {
-	color = 'grey';
+  color = 'grey';
 }
 ---
 
 <h1
-	class='font-["lobster_two"] font-bold text-xl text-center'
-	style={`color: var(--${color})`}
+  class='font-["lobster_two"] font-bold text-xl text-center p-2'
+  style={`color: var(--${color})`}
 >
-	{txt}
+  {txt}
 </h1>

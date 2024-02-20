@@ -2,10 +2,10 @@
 import { bundlerModuleNameResolver } from 'typescript';
 
 interface Props {
-	race: string;
-	rol: string;
-	exp: number;
-	start?: number;
+  race: string;
+  rol: string;
+  exp: number;
+  start?: number;
 }
 
 const { race, rol, exp, start = 2 } = Astro.props;
@@ -15,32 +15,31 @@ let level = 0;
 let expUp = 0;
 
 const expThresholds = [
-	0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000,
-	120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000,
+  0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000,
+  120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000,
 ];
 
 function medirXP(exp: number) {
-	while (exp >= expThresholds[level]) {
-		level++;
-	}
+  while (exp >= expThresholds[level]) {
+    level++;
+  }
 
-	expUp = expThresholds[level] - expThresholds[level - 1];
+  expUp = expThresholds[level] - expThresholds[level - 1];
 
-	return { level, expUp };
+  return { level, expUp };
 }
 
 function calcularPorcentaje(exp: number) {
-	if (exp === expThresholds[level - 1]) {
-		porcentaje = 0;
-	} else {
-		porcentaje = Math.floor(
-			((exp - expThresholds[level - 1]) /
-				(expUp - expThresholds[level - 1])) *
-				100
-		);
-	}
+  if (exp === expThresholds[level - 1]) {
+    porcentaje = 0;
+  } else {
+    porcentaje = Math.floor(
+      ((exp - expThresholds[level - 1]) / (expUp - expThresholds[level - 1])) *
+        100
+    );
+  }
 
-	return porcentaje;
+  return porcentaje;
 }
 
 medirXP(exp);
@@ -49,111 +48,107 @@ console.log(porcentaje);
 ---
 
 <article class='grid grid-cols-6 items-center gap-2 bg-[--gray] rounded-lg p-2'>
-	<a href={`/extras/race/${race.toLowerCase()}`}>
-		<section class={`col-span-1 row-start-1`} id='race'>
-			<h6 class='text-[--title] font-[unbounded]'>{race}</h6>
-		</section>
-	</a>
+  <a href={`/extras/race/${race.toLowerCase()}`}>
+    <section class={`col-span-1 row-start-1`} id='race'>
+      <h6 class='text-[--title] font-[unbounded]'>{race}</h6>
+    </section>
+  </a>
 
-	<section
-		class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1`}
-		style={`grid-column-start: ${start};`}
-		id='exp'
-	>
-		<div class='flex justify-center items-center'>
-			<span class='text-base mx-4 w-20'>
-				Nivel <span class='text-[--light] text-lg'>{level}</span>
-			</span>
-			<div class='w-full bg-[--gray] rounded-full h-1.5'>
-				<div
-					class='h-1.5 rounded-full'
-					style={`width: ${porcentaje}%`}
-					id='pulse'
-				>
-				</div>
-			</div>
-			<span class='text-base mx-4 w-20'>
-				<span class='text-[--electro]'>{exp}</span>
-				/
-				<span class='text-xs'>{expThresholds[level]}</span>
-			</span>
-		</div>
-	</section>
+  <section
+    class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1`}
+    style={`grid-column-start: ${start};`}
+    id='exp'
+  >
+    <div class='flex justify-center items-center'>
+      <span class='text-base mx-4 w-20'>
+        Nivel <span class='text-[--light] text-lg'>{level}</span>
+      </span>
+      <div class='w-full bg-[--gray] rounded-full h-1.5'>
+        <div
+          class='h-1.5 rounded-full'
+          style={`width: ${porcentaje}%`}
+          id='pulse'
+        >
+        </div>
+      </div>
+      <span class='text-base mx-4 w-20'>
+        <span class='text-[--electro]'>{exp}</span>
+        /
+        <span class='text-xs'>{expThresholds[level]}</span>
+      </span>
+    </div>
+  </section>
 
-	<a href={`/extras/rol/${rol.toLowerCase()}`}>
-		<section class={`col-span-1 md:row-start-1 row-start-2`} id='rol'>
-			<h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
-		</section>
-	</a>
+  <a href={`/extras/rol/${rol.toLowerCase()}`}>
+    <section class={`col-span-1 md:row-start-1 row-start-2`} id='rol'>
+      <h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
+    </section>
+  </a>
 </article>
 
 <style>
-	section {
-		background-color: var(--dark);
-		border-radius: 0.5rem;
-		padding: 0.5rem;
+  section {
+    background-color: var(--dark);
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
 
-		text-align: center;
+    text-align: center;
 
-		transition: all 100ms ease;
-		cursor: default;
-	}
+    transition: all 100ms ease;
+    cursor: default;
+  }
 
-	a > section {
-		cursor: pointer;
-	}
-	a:hover > section {
-		scale: 1.01;
-		background-color: var(--black);
-	}
+  a > section {
+    cursor: pointer;
+  }
+  a:hover > section {
+    scale: 1.01;
+    background-color: var(--black);
+  }
 
-	h6 {
-		font-weight: bold;
-	}
+  h6 {
+    font-weight: bold;
+  }
 
-	/** MEDIA QUERYS */
-	@media (max-width: 1024px) {
-		article {
-			display: flex;
-			flex-direction: column;
-		}
-		section {
-			width: 100%;
-		}
-		#race {
-			grid-row-start: 1;
-		}
-		#rol {
-			grid-row-start: 2;
-		}
-		#exp {
-			order: 1;
-		}
-	}
+  /** MEDIA QUERYS */
+  @media (max-width: 1024px) {
+    article {
+      flex-direction: column;
+    }
+    #race {
+      grid-row-start: 1;
+    }
+    #rol {
+      grid-row-start: 2;
+    }
+    #exp {
+      order: 1;
+    }
+  }
 
-	/** Animations */
-	@keyframes cambioDeColor {
-		0% {
-			opacity: 0.25;
-		}
-		50% {
-			opacity: 0.75;
-		}
-		100% {
-			opacity: 0.25;
-		}
-	}
+  /** Animations */
+  @keyframes cambioDeColor {
+    0% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 0.25;
+    }
+  }
 
-	@keyframes cargarExp {
-		from {
-			width: 0;
-		}
-	}
+  @keyframes cargarExp {
+    from {
+      width: 0;
+    }
+  }
 
-	#pulse {
-		background: linear-gradient(90deg, var(--date) 70%, var(--gray) 100%);
-		animation:
-			cargarExp 3s forwards ease-in-out,
-			cambioDeColor 3s ease infinite;
-	}
+  #pulse {
+    background: linear-gradient(90deg, var(--date) 70%, var(--gray) 100%);
+    animation:
+      cargarExp 3s forwards ease-in-out,
+      cambioDeColor 5s ease infinite;
+  }
 </style>
