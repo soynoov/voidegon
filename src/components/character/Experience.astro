@@ -31,8 +31,11 @@ function calcularPorcentaje(exp: number) {
 	if (exp === expThresholds[level - 1]) {
 		porcentaje = 0;
 	} else {
-		const expEnNivel = exp - expThresholds[level - 1];
-		porcentaje = Math.floor((expEnNivel / expUp) * 100);
+		porcentaje = Math.floor(
+			((exp - expThresholds[level - 1]) /
+				(expUp - expThresholds[level - 1])) *
+				100
+		);
 	}
 
 	return porcentaje;
@@ -148,6 +151,6 @@ console.log(porcentaje);
 			var(--subtitle) 50%,
 			var(--date) 100%
 		);
-		animation: cargarExp 5s forwards ease-in-out;
+		animation: cargarExp 3s forwards ease-in-out;
 	}
 </style>
