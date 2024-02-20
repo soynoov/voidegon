@@ -1,4 +1,6 @@
 ---
+import { bundlerModuleNameResolver } from 'typescript';
+
 interface Props {
 	race: string;
 	rol: string;
@@ -127,30 +129,29 @@ console.log(porcentaje);
 		}
 	}
 
-	/** Animation */
+	/** Animations */
 	@keyframes cambioDeColor {
 		0% {
-			background-color: var(--date);
+			opacity: 0.5;
 		}
 		50% {
-			background-color: var(--gray);
+			opacity: 1;
 		}
 		100% {
-			background-color: var(--date);
+			opacity: 0.5;
 		}
 	}
+
 	@keyframes cargarExp {
-		0% {
+		from {
 			width: 0;
 		}
 	}
 
 	#pulse {
-		background: linear-gradient(
-			90deg,
-			var(--subtitle) 50%,
-			var(--date) 100%
-		);
-		animation: cargarExp 3s forwards ease-in-out;
+		background: linear-gradient(90deg, var(--date) 70%, var(--gray) 100%);
+		animation:
+			cargarExp 3s forwards ease-in-out,
+			cambioDeColor 3s ease infinite;
 	}
 </style>
