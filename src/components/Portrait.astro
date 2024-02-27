@@ -1,0 +1,45 @@
+---
+interface Props {
+	src?: string;
+	alt?: string;
+	href?: string;
+}
+
+const { src = '/img/background.png', alt, href } = Astro.props;
+---
+
+<article
+	class={`
+        p-2 bg-[--gray] rounded-lg
+        h-full w-full 
+    `}
+>
+	<a href={href}>
+		<figure class='w-full h-full'>
+			<img
+				src={src}
+				alt={alt}
+				class='rounded-lg h-full w-full object-cover hover:opacity-15'
+			/>
+			<figcaption
+				class='-mt-[8cm] flex gap-2 flex-col text-center uppercase top-[14cm] left-[11cm] text-4xl'
+			>
+				<h1>Trasfondo</h1>
+				<h1>Alineamiento</h1>
+			</figcaption>
+		</figure>
+	</a>
+</article>
+
+<style>
+	img,
+	figcaption {
+		transition: all 0.23s ease;
+	}
+	figcaption {
+		visibility: hidden;
+	}
+	figure:hover > figcaption {
+		visibility: visible;
+	}
+</style>
