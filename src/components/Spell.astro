@@ -4,7 +4,7 @@ interface Props {
 }
 const { name } = Astro.props;
 
-import data from '../../data/spells.json';
+import data from '../data/spells.json';
 
 // Buscar el objeto con el nombre coincidente
 const matchSpell = data.find((spell: any) => spell.name === name) ?? {
@@ -73,9 +73,13 @@ const matchSpell = data.find((spell: any) => spell.name === name) ?? {
 		<!-- Detalles -->
 		<h6>Detalles</h6>
 		{
-			matchSpell.description
-				.split('\n')
-				.map((line, index) => <p class='pr-8'>{line}</p>)
+			matchSpell.description.split('\n').map((line) => (
+				<p class='pr-6'>
+					{line}
+					<br />
+					<br />
+				</p>
+			))
 		}
 	</section>
 </article>

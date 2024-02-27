@@ -5,11 +5,24 @@ interface Props {
 
 const { dark } = Astro.props;
 
+let bg_color = 'dark',
+	border_color = 'gray';
 // dark mode
-let id_color = dark ? 'dark' : 'gray';
+if (dark) {
+	bg_color = 'gray';
+	border_color = 'dark';
+}
 ---
 
-<hr
-	class='w-[75vw] mx-auto border-2 rounded-full my-4'
-	style={`border-color: var(--${id_color});`}
-/>
+<div
+	class={`
+		w-full h-full
+		rounded-lg p-2 m-2
+	`}
+	style={`background-color: var(--${bg_color});`}
+>
+	<hr
+		class='w-[75vw] mx-auto border-2 rounded-full'
+		style={`border-color: var(--${border_color});`}
+	/>
+</div>

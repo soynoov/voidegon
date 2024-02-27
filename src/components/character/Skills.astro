@@ -39,7 +39,8 @@ function sumarCom(x: number) {
 <section
 	class={`
     w-full h-full
-    grid grid-cols-3 gap-2
+    grid grid-cols-3 gap-2 p-2
+		bg-[--gray] rounded-lg
 `}
 >
 	<div>
@@ -154,50 +155,42 @@ function sumarCom(x: number) {
 
 <style>
 	div {
-		background-color: var(--gray);
+		background-color: var(--dark);
 		border-radius: 0.5rem;
-		padding: 0 1rem;
-
+		padding: 0.5rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-		transition: transform 100ms ease;
 		cursor: default;
+		gap: 0.5rem;
 	}
-	div:hover {
-		transform: scale(1.01);
-	}
+
 	h3 {
+		font-family: 'lobster two';
 		color: var(--subtitle);
-		font-weight: bold;
-		font-size: 0.9rem;
-		text-align: start;
-		width: 4cm;
+		font-weight: bolder;
+		width: 100%;
 	}
+
 	h6,
 	h5 {
 		font-family: 'pacifico';
 	}
+
 	p {
-		font-family: 'caveat';
+		font-family: 'caveat brush';
 		color: var(--grey);
 		font-size: 0.6rem;
 	}
+
 	h5 {
 		color: var(--warning);
 		font-size: 1.2rem;
 	}
+
 	h6 {
 		color: var(--date);
 		font-size: 0.8rem;
-	}
-	p,
-	h6 {
-		margin-right: 0.5rem;
 	}
 
 	#x {

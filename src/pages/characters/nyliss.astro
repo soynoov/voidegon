@@ -4,11 +4,11 @@ import Title from '../../components/Title.astro';
 import Stats from '../../components/character/Stats.astro';
 import Money from '../../components/Money.astro';
 import Experience from '../../components/character/Experience.astro';
-import Skills from '../../components/Skills.astro';
+import Skills from '../../components/character/Skills.astro';
 import Weapon from '../../components/Weapon.astro';
-import Spells from '../../components/character/Spell.astro';
+import Spells from '../../components/Spell.astro';
 
-import Portrait from '@/components/Portrait.astro';
+import Portrait from '@/components/character/Portrait.astro';
 // Characters Components
 // Little Components
 import CA from '../../components/little/CA.astro';
@@ -23,7 +23,7 @@ import VEL from '../../components/little/VEL.astro';
 
 // - Llamamiento a todos los datos y variables (Por JSON a ser posible).
 import data from '../../data/characters/nyliss.json';
-import Spell from '../../components/character/Spell.astro';
+import Spell from '../../components/Spell.astro';
 
 const nyliss = data[0],
 	fue = nyliss.stats.fue,
@@ -52,7 +52,7 @@ const mod_fue = 0,
 	<main>
 		<article
 			class={`
-    	w-[80vw] mx-auto mt-4 grid grid-cols-6
+    	w-[80vw] mx-auto mt-2 grid grid-cols-6
     `}
 		>
 			<section class='col-span-6 px-2'>
@@ -65,9 +65,14 @@ const mod_fue = 0,
 			</section>
 			<!-- Portrait -->
 			<section class='col-span-4'>
-				<Portrait src='/img/nyliss/nyliss.png' alt={nyliss.name} />
+				<Portrait
+					src='/img/nyliss/nyliss.png'
+					alt={nyliss.name}
+					trasfondo='Fugitiva'
+					alineamiento='Neutral Malvada'
+				/>
 			</section>
-			<section class='col-span-2 pt-2 pr-2'>
+			<section class='col-span-2'>
 				<Stats
 					fue={fue}
 					des={des}
@@ -80,13 +85,13 @@ const mod_fue = 0,
 					modcom={mod_comp}
 				/>
 			</section>
-			<section class='col-span-1 pb-3 px-1 pt-3'>
+			<section class='col-span-1'>
 				<CA mod={mod_des} />
 			</section>
-			<section class='col-span-1 p-2 pr-0 pt-4'>
+			<section class='col-span-1'>
 				<INI des={mod_des} />
 			</section>
-			<section class='col-span-4 row-span-3 p-2 pt-4'>
+			<section class='col-span-4 row-span-3'>
 				<Skills
 					com={[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}
 					punt={[
@@ -95,13 +100,13 @@ const mod_fue = 0,
 					modcom={mod_comp}
 				/>
 			</section>
-			<section class='col-span-2 pl-2'>
+			<section class='col-span-2'>
 				<VEL vel={30} fly={60} />
 			</section>
-			<section class='col-span-2 p-2 pr-0'>
+			<section class='col-span-2'>
 				<DG cantidad={nyliss.level} dice={6} />
 			</section>
-			<section class='col-span-6 px-6 pt-2'>
+			<section class='col-span-6'>
 				<HP
 					hp={6 * 2 + mod_con * nyliss.level - 0}
 					hpmax={6 * 2 + mod_con}
@@ -112,10 +117,10 @@ const mod_fue = 0,
 				<HR />
 			</section>
 
-			<section class='col-span-3 p-2 pt-0'>
+			<section class='col-span-3'>
 				<COM mod_com={mod_comp} com={nyliss.comps.weapons} />
 			</section>
-			<section class='col-span-3 pb-2 pt-0'>
+			<section class='col-span-3'>
 				<Money
 					pc={money.pc}
 					pp={money.pp}
@@ -188,12 +193,12 @@ const mod_fue = 0,
 			</section>
 		</article>
 
-		<div class='w-[80vw] mx-auto'>
+		<div class='w-[80vw] mx-auto m-2'>
 			<HR />
 		</div>
 
 		<article
-			class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8 shadow-2xl'
+			class='bg-[--gray] w-[80vw] mx-auto rounded-lg pb-8'
 			id='traits'
 		>
 			<section>
@@ -396,14 +401,7 @@ const mod_fue = 0,
 			}
 			/** */
 			#section {
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-				transition: transform 100ms ease;
 				cursor: pointer;
-			}
-			#section:hover {
-				transform: scale(1.01);
 			}
 
 			#weapons {
@@ -418,11 +416,6 @@ const mod_fue = 0,
 
 				padding: 0.5rem 1rem;
 				border-radius: 0.5rem;
-
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-				transition: transform 100ms ease;
 				cursor: default;
 			}
 			#weapons:hover {
@@ -430,14 +423,7 @@ const mod_fue = 0,
 				/* background-color: var(--black); */
 			}
 			#backpack {
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-				transition: transform 100ms ease;
 				cursor: default;
-			}
-			#backpack:hover {
-				transform: scale(1.01);
 			}
 			#backpack li::before {
 				content: '- ';
@@ -454,15 +440,7 @@ const mod_fue = 0,
 				border-radius: 0.5rem;
 				padding: 0.5rem 2rem 1rem;
 				width: 100%;
-
-				/** Box Shadow Definitivo */
-				box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-				transition: transform 100ms ease;
 				cursor: default;
-			}
-			#race > div:hover {
-				transform: scale(1.01);
 			}
 			#race p {
 				font-size: 0.9rem;

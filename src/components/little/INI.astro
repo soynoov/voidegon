@@ -17,19 +17,21 @@ function filtrarIni(des: number) {
 
 <section
 	class={`
-    	rounded-lg bg-[--gray]
+    rounded-lg bg-[--gray]
 		p-2 w-full h-full
-		cursor-default pb-8
-`}
+		cursor-default
+	`}
 >
-	<h3 class='font-[unbounded] font-bold text-center'>INI</h3>
 	<div
 		class={`
-      	  p-2 bg-[--dark] rounded-lg 
+      p-2 bg-[--dark] rounded-lg 
 		  flex justify-center items-center flex-wrap gap-4
 		  h-full w-full 
     `}
 	>
+		<div>
+			<!-- <h3 class='font-[unbounded] font-bold text-center'>INI</h3> -->
+		</div>
 		<svg
 			class='text-[--date]'
 			width='40'
@@ -50,13 +52,3 @@ function filtrarIni(des: number) {
 		</h6>
 	</div>
 </section>
-
-<style>
-	section {
-		transition: all 100ms ease;
-	}
-	section:hover {
-		box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.1);
-		transform: scale(1.01);
-	}
-</style>

@@ -16,7 +16,12 @@ function addVel(x: number) {
 }
 ---
 
-<article class='grid grid-cols-6 w-full gap-2 h-full'>
+<article
+	class={`
+		grid grid-cols-6 w-full h-full 
+		p-2 gap-2 bg-[--gray] rounded-lg
+	`}
+>
 	<section
 		class={`
         w-full col-span-2
@@ -70,10 +75,8 @@ function addVel(x: number) {
 					d='M10 12l1.5 -3'></path></svg
 			>
 		</div>
-		<div>
-			<h5 class='mx-4'>{vel}</h5>
-			<h6>{addVel(1)}</h6>
-		</div>
+		<h5 class='mx-4'>{vel}</h5>
+		<h6>{addVel(1)}</h6>
 	</section>
 
 	<section
@@ -105,33 +108,20 @@ function addVel(x: number) {
 
 <style>
 	section {
-		background-color: var(--gray);
+		background-color: var(--dark);
 		border-radius: 0.5rem;
 		padding: 0.5rem;
-
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-		transition: transform 100ms ease;
 		cursor: default;
-	}
-	section:hover {
-		transform: scale(1.01);
 	}
 
 	h5 {
-		font-family: 'Pacifico';
+		font-family: 'pacifico';
 		color: var(--white);
 		font-size: 1.5rem;
 	}
+
 	h6 {
 		color: var(--date);
 		font-family: 'pacifico';
-		margin-left: -1rem;
-	}
-	div:has(h6) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 </style>
