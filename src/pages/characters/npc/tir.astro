@@ -20,50 +20,16 @@ import Portrait from '@/components/character/npc/Portrait.astro';
 		</sectionn>
 		<section class='col-span-2'>
 			<h3>Dwarf</h3>
+			<div class='flex gap-8'>
+				<h3>80 kg</h3>
+				<h3>152 cm</h3>
+			</div>
 		</section>
-		<section class='col-span-2 row-span-3'>
+		<section class='col-span-2'>
 			<Portrait src='/img/npc/tir/tir.png' alt='Tir' />
 		</section>
 		<section class='col-span-2'>
-			<div>
-				<h3></h3>
-			</div>
-		</section>
-		<!-- <section class='col-span-4'>
-        <p>
-          El ██████ enano ████ ██████ █████ ██████ ███ █████ ██████████, ██████
-          de ██████ ██████, ████████████ y ██████. Su historia es ████████ en
-          ██████ los ██████ ███ ██████████. Es el enano ████████████ ██████
-          ████████████ ██████.
-        </p>
-      </section> -->
-		<section class='col-span-2'>
-			<div>
-				<h3>Blacksmith</h3>
-			</div>
-		</section>
-		<section class='col-span-2'>
-			<div>
-				<h3></h3>
-			</div>
-		</section>
-		<!-- <section class='col-span-4'>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolor
-          vitae perferendis, at commodi consequatur provident saepe laborum
-          voluptate aliquam iusto quasi quibusdam cumque iure accusamus. Quos
-          excepturi amet commodi.
-        </p>
-      </section> -->
-		<section class='col-span-2'>
-			<div>
-				<h3>70 kg</h3>
-			</div>
-		</section>
-		<section class='col-span-2'>
-			<div>
-				<h3>127 cm</h3>
-			</div>
+			<h3>Blacksmith</h3>
 		</section>
 	</article>
 </Layout>
@@ -75,6 +41,7 @@ import Portrait from '@/components/character/npc/Portrait.astro';
 
 		display: flex;
 		align-items: center;
+		flex-direction: column;
 		justify-content: center;
 
 		font-family: 'lobster';
@@ -82,7 +49,16 @@ import Portrait from '@/components/character/npc/Portrait.astro';
 
 		cursor: default;
 	}
-	/* section:has(h3):hover {
-		background-color: var(--black);
-	} */
+
+	div:has(h3) {
+		background-color: var(--dark);
+		padding: 0.5rem;
+		margin: 0.5rem;
+
+		border-radius: 0.5rem;
+	}
+
+	section > h3 {
+		font-size: 1.25rem;
+	}
 </style>

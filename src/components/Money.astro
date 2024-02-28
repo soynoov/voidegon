@@ -19,27 +19,27 @@ const { pc = 0, pp = 0, pe = 0, po = 0, ppt = 0 } = Astro.props;
 >
 	<!-- Cobre -->
 	<div>
-		<h3 class='text-[--copper]'>PC</h3>
+		<h3 class='bg-[--copper]'>PC</h3>
 		<h6>{pc}</h6>
 	</div>
 	<!-- Plata -->
 	<div>
-		<h3 class='text-[--silver]'>PP</h3>
+		<h3 class='bg-[--silver]'>PP</h3>
 		<h6>{pp}</h6>
 	</div>
 	<!-- Electro -->
 	<div>
-		<h3 class='text-[--electro]'>PE</h3>
+		<h3 class='bg-[--electro]'>PE</h3>
 		<h6>{pe}</h6>
 	</div>
 	<!-- Oro -->
 	<div>
-		<h3 class='text-[--gold]'>PO</h3>
+		<h3 class='bg-[--gold]'>PO</h3>
 		<h6>{po}</h6>
 	</div>
 	<!-- Platino -->
 	<div>
-		<h3 class='text-[--platinum]'>PPT</h3>
+		<h3 class='bg-[--platinum]'>PPT</h3>
 		<h6>{ppt}</h6>
 	</div>
 </section>
@@ -47,9 +47,9 @@ const { pc = 0, pp = 0, pe = 0, po = 0, ppt = 0 } = Astro.props;
 <style>
 	h3 {
 		font-family: 'unbounded';
-		font-weight: bold;
-		background-color: var(--gray);
 		border-radius: 0.5rem;
+		color: var(--dark);
+		font-weight: bold;
 	}
 
 	h6 {
