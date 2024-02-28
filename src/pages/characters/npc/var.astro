@@ -1,82 +1,74 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import Title from '../../../components/Title.astro';
-import Name from '../../../components/Name.astro';
+// Main Components
+import Layout from '@/layouts/Layout.astro';
+import Name from '@/components/character/Name.astro';
+// NPC Components
+import Hearts from '@/components/character/npc/Hearts.astro';
+import Portrait from '@/components/character/npc/Portrait.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Var'>
-  <Title title='Var' img='/img/npc/tir/var/bg_var.png' center='center' />
-  <main
-    class={`
-    w-[80vw] mx-auto
-    grid grid-cols-6 gap-4 auto-rows-auto
-    mt-4
-  `}
-  >
-    <div class='col-span-6 row-span-1'>
-      <Name name='The Mad Alchemist' />
-    </div>
-    <div class='lg:col-span-2 lg:row-span-5 md:col-span-3 col-span-6'>
-      <img
-        src='/img/npc/tir/var/var.png'
-        alt='Var'
-        class='rounded-xl w-full h-full'
-      />
-    </div>
-    <div class='col-span-2 row-span-1'>
-      <h3>Dwarf</h3>
-    </div>
-    <div class='col-span-2 row-span-1'>
-      <h3>372 años</h3>
-    </div>
-    <div class='col-span-4 row-span-1'>
-      <p class='p-4 px-8'>[████████ ██████████ █████████ ███████████]</p>
-    </div>
-    <div class='col-span-2 row-span-1'>
-      <h3>Alchemist</h3>
-    </div>
-    <div class='col-span-2 row-span-1'>
-      <h3>Caótico Neutro</h3>
-    </div>
-    <div class='col-span-4 row-span-1'>
-      <p class='p-4 px-8 text-justify'>
-        Este enano anciano presenta un rostro marcado por numerosas arrugas y
-        cejas pelirrojas densas, casi ocultando sus ojos entre ellas. La
-        calvicie es evidente, y su barba sigue la misma tonalidad. Viste con
-        harapos largos que se asemejan a un manto descosido, y su apariencia
-        refleja un aire de excentricidad.
-      </p>
-    </div>
-    <div class='col-span-2 row-span-1'>
-      <h3>62 Kilos</h3>
-    </div>
-    <div class='col-span-2 row-span-1'>
-      <h3>1.18 Metros</h3>
-    </div>
-  </main>
+	<Name name='Var' img='/img/npc/tir/var/bg_var.png' center='center' />
+	<article
+		class={`
+      w-[80vw] mx-auto
+      grid grid-cols-6 gap-2 auto-rows-auto
+    `}
+	>
+		<section class='col-span-6'>
+			<Hearts />
+		</section>
+		<section class='col-span-2'>
+			<h3>Dwarf</h3>
+		</section>
+		<section class='col-span-2 row-span-3'>
+			<Portrait src='/img/npc/tir/var/var.png' alt='Var' />
+		</section>
+		<section class='col-span-2'>
+			<h3>372 años</h3>
+		</section>
+		<section class='col-span-2'>
+			<p class='p-4 px-8'>[████████ ██████████ █████████ ███████████]</p>
+		</section>
+		<section class='col-span-2'>
+			<h3>Alchemist</h3>
+		</section>
+		<section class='col-span-2'>
+			<h3>Caótico Neutral</h3>
+		</section>
+		<section class='col-span-2'>
+			<p class='p-4 px-8 text-justify'>
+				Este enano anciano presenta un rostro marcado por numerosas
+				arrugas y cejas pelirrojas densas, casi ocultando sus ojos entre
+				ellas. La calvicie es evidente, y su barba sigue la misma
+				tonalidad. Viste con harapos largos que se asemejan a un manto
+				descosido, y su apariencia refleja un aire de excentricidad.
+			</p>
+		</section>
+		<section class='col-span-2'>
+			<h3>62 Kilos</h3>
+		</section>
+		<section class='col-span-2'>
+			<h3>1.18 Metros</h3>
+		</section>
+	</article>
 </Layout>
 
 <style>
-  main > div {
-    display: flex;
-    cursor: default;
-    background-color: var(--gray);
-    transition: transform 300ms ease;
-    border-radius: 0.75rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+	section:has(h3) {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
 
-    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
-  }
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-  main > div:hover {
-    transform: scale(1.01);
-  }
+		font-family: 'lobster';
+		color: var(--subtitle);
 
-  h3 {
-    padding: 1rem;
-    font-family: 'Lobster';
-    color: var(--subtitle);
-  }
+		cursor: default;
+	}
+	/* section:has(h3):hover {
+		background-color: var(--black);
+	} */
 </style>

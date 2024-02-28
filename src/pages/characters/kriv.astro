@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Title from '../../components/Title.astro';
+import Name from '../../components/character/Name.astro';
 import Stats from '../../components/character/Stats.astro';
 import Money from '../../components/Money.astro';
 import Experience from '../../components/character/Experience.astro';
@@ -41,7 +41,7 @@ let pg = dg + bon_com * kriv.level; // PG: Puntos de Golpe
 ---
 
 <Layout title=`】 Voidegon ▸ ${kriv.name}`>
-	<Title title={kriv.name} />
+	<Name name={kriv.name} />
 	<main>
 		<article
 			class={`

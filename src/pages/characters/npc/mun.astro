@@ -7,8 +7,8 @@ import Hearts from '@/components/character/npc/Hearts.astro';
 import Portrait from '@/components/character/npc/Portrait.astro';
 ---
 
-<Layout title='】 Voidegon ▸ Rel'>
-	<Name name='Rel' />
+<Layout title='】 Voidegon ▸ Mun'>
+	<Name name='Mun' />
 	<article
 		class={`
 			w-[80vw] mx-auto
@@ -17,10 +17,10 @@ import Portrait from '@/components/character/npc/Portrait.astro';
 		`}
 	>
 		<section class='col-span-6'>
-			<Hearts level={1} />
+			<Hearts max_level={3} />
 		</section>
 		<section class='col-span-2'>
-			<Portrait src='/img/npc/tir/rel/rel.png' />
+			<Portrait />
 		</section>
 	</article>
 </Layout>

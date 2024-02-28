@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Title from '../../components/Title.astro';
+import Name from '../../components/character/Name.astro';
+
+import Portrait from '@/components/character/Portrait.astro';
 //
 import Experience from '../../components/character/Experience.astro';
 import Stats from '../../components/character/Stats.astro';
@@ -12,6 +14,9 @@ import INI from '../../components/little/INI.astro';
 import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
 //
+import data from '@/data/characters/isidoro.json';
+const isidoro = data[0];
+
 let level = 2,
 	mod_com = 2,
 	fue = 2,
@@ -23,72 +28,63 @@ let level = 2,
 ---
 
 <Layout title='】 Voidegon ▸ Isidoro Matamoros'>
-	<Title title='Isidoro Matamoros' img='/img/isidoro/bg_isidoro.png' />
-	<main>
-		<article class={'w-[80vw] mx-auto mt-4 grid grid-cols-6 '}>
-			<section class='col-span-6'>
-				<Experience race='Tiefling' rol='Monk' exp={355} />
-			</section>
-			<section class='col-span-2 row-span-5 pt-2 section'>
-				<img
-					src='/img/isidoro/isidoro.png'
-					alt='Isidoro Matamoros'
-					class='rounded-lg h-full object-cover'
-				/>
-			</section>
-			<section class='col-span-2 row-span-4 pt-2 pl-2'>
-				<Stats
-					fue={14}
-					des={18}
-					con={12}
-					int={10}
-					sab={10}
-					car={8}
-					mod={[0, 0, 0, 1, 0, 2]}
-					com={[1, 1, 0, 0, 0, 0]}
-					modcom={2}
-				/>
-			</section>
-			<section class='col-span-1 pt-2 pl-2'>
-				<CA mod={des + sab} />
-			</section>
-			<section class='col-span-1 pt-2 pl-2'>
-				<INI des={des} />
-			</section>
-			<section class='col-span-2 pt-2 pl-2 pb-2'>
-				<DG cantidad={level} dice={8} />
-			</section>
-			<section class='col-span-2 pl-2'>
-				<HP hp={8 + 4 + con * level - 0} hpmax={8 + 4 + con * level} />
-			</section>
-			<section class='col-span-2 pl-2'>
-				<VEL vel={30} add={[10, 0, 0]} />
-			</section>
-			<section class='col-span-4 pt-2 pl-2'>
-				<Skills
-					punt={[
-						1, 3, -2, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-					]}
-					com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]}
-					modcom={mod_com}
-				/>
-			</section>
-		</article>
-	</main>
+	<Name name='Isidoro Matamoros' img='/img/isidoro/bg_isidoro.png' />
+	<article
+		class={`
+				w-[80vw] mx-auto mt-4 grid grid-cols-6
+				gap-2
+			`}
+	>
+		<section class='col-span-6'>
+			<Experience race='Tiefling' rol='Monk' exp={355} />
+		</section>
+		<section class='col-span-2 row-span-5 section'>
+			<Portrait
+				src='/img/isidoro/isidoro.png'
+				alt={isidoro.name}
+				alineamiento='Noble'
+				trasfondo='Caotico Neutral'
+			/>
+		</section>
+		<section class='col-span-2 row-span-4'>
+			<Stats
+				fue={14}
+				des={18}
+				con={12}
+				int={10}
+				sab={10}
+				car={8}
+				mod={[0, 0, 0, 1, 0, 2]}
+				com={[1, 1, 0, 0, 0, 0]}
+				modcom={2}
+			/>
+		</section>
+		<section class='col-span-1'>
+			<CA mod={des + sab} />
+		</section>
+		<section class='col-span-1'>
+			<INI des={des} />
+		</section>
+		<section class='col-span-2'>
+			<DG cantidad={level} dice={8} />
+		</section>
+		<section class='col-span-2'>
+			<HP hp={8 + 4 + con * level - 0} hpmax={8 + 4 + con * level} />
+		</section>
+		<section class='col-span-2'>
+			<VEL vel={30} add={[10, 0, 0]} />
+		</section>
+		<section class='col-span-4'>
+			<Skills
+				punt={[1, 3, -2, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+				com={[0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]}
+				modcom={mod_com}
+			/>
+		</section>
+	</article>
 </Layout>
 
 <style>
-	.section {
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-		transition: transform 100ms ease;
-		cursor: pointer;
-	}
-	.section:hover {
-		transform: scale(1.01);
-	}
-
 	/** MEDIA QUERYS */
 	@media (max-width: 640px) {
 		article {

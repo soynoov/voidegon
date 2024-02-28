@@ -1,13 +1,13 @@
 ---
 interface Props {
-	title: string;
+	name: string;
 	img?: string;
 	center?: string;
 	opacity?: number;
 }
 
 const {
-	title,
+	name,
 	img = '/img/background.png',
 	center = 'bottom',
 	opacity = 0.5,
@@ -25,11 +25,10 @@ const {
 	</div>
 	<h1
 		class={`
-			font-extrabold font-[unbounded] text-[--light] text-center 
-			relative mx-8 text-balance uppercase
-			md:text-6xl sm:text-4xl text-2xl
-		`}
+      text-6xl font-["lobster"] text-[--light] text-center 
+      relative mx-8 text-balance capitalize
+    `}
 	>
-		{title}
+		{name}
 	</h1>
 </section>

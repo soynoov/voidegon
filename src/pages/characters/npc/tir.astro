@@ -1,34 +1,35 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import Title from '../../../components/Title.astro';
-import Name from '../../../components/Name.astro';
+// Main Components
+import Layout from '@/layouts/Layout.astro';
+import Name from '@/components/character/Name.astro';
+// NPC Components
+import Hearts from '@/components/character/npc/Hearts.astro';
+import Portrait from '@/components/character/npc/Portrait.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Tir'>
-  <Title title='Tir' />
-  <main class='w-[80vw] mx-auto'>
-    <article
-      class={`
-      	grid grid-cols-6 gap-2
+	<Name name='Tir' />
+	<article
+		class={`
+      w-[80vw] mx-auto
+      grid grid-cols-6 gap-2
     `}
-    >
-      <section class='col-span-6'>
-        <Name name='The Blacksmith' />
-      </section>
-      <section class='col-span-2 row-span-3'>
-        <img src='/img/npc/tir/tir.png' alt='Tir' class='rounded-lg' />
-      </section>
-      <section class='col-span-2'>
-        <div>
-          <h3>Dwarf</h3>
-        </div>
-      </section>
-      <section class='col-span-2'>
-        <div>
-          <h3></h3>
-        </div>
-      </section>
-      <!-- <section class='col-span-4'>
+	>
+		<sectionn class='col-span-6'>
+			<Hearts level={2} />
+		</sectionn>
+		<section class='col-span-2'>
+			<h3>Dwarf</h3>
+		</section>
+		<section class='col-span-2 row-span-3'>
+			<Portrait src='/img/npc/tir/tir.png' alt='Tir' />
+		</section>
+		<section class='col-span-2'>
+			<div>
+				<h3></h3>
+			</div>
+		</section>
+		<!-- <section class='col-span-4'>
         <p>
           El ██████ enano ████ ██████ █████ ██████ ███ █████ ██████████, ██████
           de ██████ ██████, ████████████ y ██████. Su historia es ████████ en
@@ -36,17 +37,17 @@ import Name from '../../../components/Name.astro';
           ████████████ ██████.
         </p>
       </section> -->
-      <section class='col-span-2'>
-        <div>
-          <h3>Blacksmith</h3>
-        </div>
-      </section>
-      <section class='col-span-2'>
-        <div>
-          <h3></h3>
-        </div>
-      </section>
-      <!-- <section class='col-span-4'>
+		<section class='col-span-2'>
+			<div>
+				<h3>Blacksmith</h3>
+			</div>
+		</section>
+		<section class='col-span-2'>
+			<div>
+				<h3></h3>
+			</div>
+		</section>
+		<!-- <section class='col-span-4'>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolor
           vitae perferendis, at commodi consequatur provident saepe laborum
@@ -54,52 +55,34 @@ import Name from '../../../components/Name.astro';
           excepturi amet commodi.
         </p>
       </section> -->
-      <section class='col-span-2'>
-        <div>
-          <h3>70 kg</h3>
-        </div>
-      </section>
-      <section class='col-span-2'>
-        <div>
-          <h3>127 cm</h3>
-        </div>
-      </section>
-    </article>
-  </main>
+		<section class='col-span-2'>
+			<div>
+				<h3>70 kg</h3>
+			</div>
+		</section>
+		<section class='col-span-2'>
+			<div>
+				<h3>127 cm</h3>
+			</div>
+		</section>
+	</article>
 </Layout>
 
 <style>
-  section {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
+	section:has(h3) {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
 
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-    /** Efecto Global de Secciones */
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section:hover {
-    /** Efecto Global de Secciones */
-    transform: scale(1.01);
-  }
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-  p {
-    padding: 1rem 2rem 1.1rem;
-    text-align: justify;
-  }
-  section:has(h3) {
-    background-color: var(--subtitle);
-  }
-  section > div:has(h3) {
-    margin: 0.3rem;
-    padding: 0.5rem;
-    font-family: 'lobster';
-    background-color: var(--gray);
-    color: var(--subtitle);
-    text-align: center;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    height: 80%;
-  }
+		font-family: 'lobster';
+		color: var(--subtitle);
+
+		cursor: default;
+	}
+	/* section:has(h3):hover {
+		background-color: var(--black);
+	} */
 </style>

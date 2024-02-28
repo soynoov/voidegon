@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Title from '../../../components/Title.astro';
+import Name from '../../../components/character/Name.astro';
 import Money from '../../../components/Money.astro';
 //
 import Levels from '../../../components/map/Levels.astro';
@@ -11,316 +11,338 @@ import H3 from '../../../components/little/H3.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Murcia ▸ Taberna'>
-  <Title title='Taberna' img='/img/maps/murcia/tavern.png' center='center' />
-  <main class='mt-4 w-[80vw] mx-auto'>
-    <article>
-      <section>
-        <Levels xp={[100, 35, 0, 0, 0]} />
-      </section>
-      <!-- Nivel 1 -->
-      <section>
-        <div>
-          <h6>Descanso Nocturno Gratuito</h6>
-          <p>
-            Los visitantes tienen la oportunidad de descansar sin costo alguno
-            durante la noche. Las habitaciones, aunque sencillas, proporcionan
-            un refugio cómodo para aquellos que necesitan recargar energías
-            después de sus jornadas.
-          </p>
-        </div>
-        <div>
-          <h6>Consejos Casi Ilimitados</h6>
-          <p>
-            El amable tabernero se convierte en un recurso invaluable para los
-            aventureros novatos. Ubicado detrás de la barra, el tabernero ofrece
-            asesoramiento, tips y orientación a aquellos que buscan mejorar sus
-            habilidades y comprender mejor la ciudad y sus desafíos.
-          </p>
-        </div>
-        <div>
-          <h6>Tablón de Anuncios</h6>
-          <p>
-            Un tablón de anuncios que presenta diversas misiones y encargos
-            locales. El tablón ofrece a los aventureros la oportunidad de
-            embarcarse en emocionantes tareas y contribuir al crecimiento de la
-            ciudad.
-          </p>
-        </div>
-      </section>
+	<Name name='Taberna' img='/img/maps/murcia/tavern.png' center='center' />
+	<main class='mt-4 w-[80vw] mx-auto'>
+		<article>
+			<section>
+				<Levels xp={[100, 35, 0, 0, 0]} />
+			</section>
+			<!-- Nivel 1 -->
+			<section>
+				<div>
+					<h6>Descanso Nocturno Gratuito</h6>
+					<p>
+						Los visitantes tienen la oportunidad de descansar sin
+						costo alguno durante la noche. Las habitaciones, aunque
+						sencillas, proporcionan un refugio cómodo para aquellos
+						que necesitan recargar energías después de sus jornadas.
+					</p>
+				</div>
+				<div>
+					<h6>Consejos Casi Ilimitados</h6>
+					<p>
+						El amable tabernero se convierte en un recurso
+						invaluable para los aventureros novatos. Ubicado detrás
+						de la barra, el tabernero ofrece asesoramiento, tips y
+						orientación a aquellos que buscan mejorar sus
+						habilidades y comprender mejor la ciudad y sus desafíos.
+					</p>
+				</div>
+				<div>
+					<h6>Tablón de Anuncios</h6>
+					<p>
+						Un tablón de anuncios que presenta diversas misiones y
+						encargos locales. El tablón ofrece a los aventureros la
+						oportunidad de embarcarse en emocionantes tareas y
+						contribuir al crecimiento de la ciudad.
+					</p>
+				</div>
+			</section>
 
-      <section>
-        <HR />
-      </section>
+			<section>
+				<HR />
+			</section>
 
-      <!-- Nivel 2 -->
-      <section>
-        <div>
-          <h6>Suministro de Agua Ilimitada</h6>
-          <p>
-            La taberna ha implementado con éxito un sistema de suministro de
-            agua confiable y duradero. Este servicio garantiza que tanto los
-            huéspedes como los locales tengan acceso a agua limpia y fresca en
-            cualquier momento, un recurso invaluable en un mundo lleno de
-            desafíos.
-          </p>
-        </div>
-        <div>
-          <h6>Centro de Gobierno Comunitario</h6>
-          <p>
-            Este edificio ha evolucionado para adaptarse como el centro de
-            gobierno de la comunidad. En su papel de ayuntamiento improvisado,
-            facilita reuniones comunitarias, consultas y toma de decisiones
-            colectivas. Además, proporciona servicios administrativos esenciales
-            para coordinar proyectos y gestionar recursos, contribuyendo así al
-            desarrollo y bienestar del pueblo en este mundo desafiante. Economía
-            actual:
-          </p>
-        </div>
-        <Money pc={1} pe={1} po={4} ppt={2} />
-      </section>
-    </article>
-    <HR />
-    <article class='bg-[--gray] mt-4 rounded-lg grid grid-cols-6' id='section'>
-      <section class='col-span-6'>
-        <H2 txt='Descripciones Detalladas' />
-      </section>
-      <section class='col-span-6'>
-        <H3 txt='Nivel 1' />
-      </section>
-      <section class='col-span-6'>
-        <div>
-          <h6>Entrada Exterior de la Taberna</h6>
-          <p>
-            La taberna se presenta ante los visitantes con una entrada rústica
-            que evoca la esencia de un refugio acogedor en medio de la
-            naturaleza. La fachada está construida principalmente con madera,
-            revelando sus años de historia en las vetas desgastadas por el
-            tiempo. Las paredes de piedra que la sostienen añaden una sensación
-            de solidez y durabilidad, sugiriendo que esta taberna ha resistido
-            los embates de las estaciones y las historias compartidas.
-            <br /><br />
-            La puerta, hecha de una madera envejecida, pero sorprendentemente resistente,
-            se erige como el umbral que da paso a un mundo de historias y encuentros.
-            A pesar de su aspecto desgastado, la madera ha mantenido su integridad,
-            brindando a los visitantes una bienvenida que propone que hay secretos
-            y tesoros esperando dentro.
-            <br /><br />
-            El camino de tierra que conduce a la puerta sigue un recorrido montañoso,
-            marcado por la irregularidad del terreno y rodeado de la tierra muerta
-            que se abre camino en cada grieta. Este camino, testigo de innumerables
-            pasos y conversaciones, invita a los viajeros a adentrarse en la taberna
-            con la promesa de experiencias únicas y memorables que aguardan en su
-            interior.
-          </p>
-          <h6>Entrada Interna de la Taberna</h6>
-          <p>
-            Al entrar en la taberna, te recibe una atmósfera de nostalgia y
-            desgaste. A tu derecha, unas escaleras chirriantes de madera podrida
-            amenazan con ceder en cualquier momento bajo el peso adicional. Las
-            mesas y sillas, todas fabricadas con la misma madera envejecida,
-            cuentan historias de innumerables encuentros y momentos compartidos.
-            <br /><br />
-            La barra, afortunadamente, parece ser la parte más resistente del lugar.
-            Banquetas relativamente nuevas y firmes están dispuestas en ella, de
-            diversos tamaños, para acomodar a los variados visitantes. Contrastando
-            con la decadencia general, la barra proyecta una sensación de solidez
-            y estabilidad.
-            <br /><br />
-            Las paredes de madera, que podrían describirse como 'mojadas', revelan
-            los estragos del tiempo y la humedad. La esquina superior izquierda de
-            la taberna alberga barriles de cerveza aparentemente vacíos, y hacia
-            el final del local, a la izquierda, un tablón de anuncios muestra su
-            estado de descomposición con un material corcho podrido. Misiones, fijadas
-            con pinchos de madera y papeles en tono blanco huevo, ofrecen una gama
-            de tareas y desafíos a los visitantes.
-            <br /><br />
-            Finalmente, al fondo, destaca una chimenea de piedra, proporcionando
-            un rincón acogedor y cumpliendo eficazmente su función al esparcir una
-            cálida luz y calor por toda la taberna. Este contraste entre lo desgastado
-            y lo acogedor da vida a la singularidad de la taberna.
-          </p>
-          <h6>Cocina</h6>
-          <p>
-            █████ █ ██████ █ ██████ █ ████, ███ █ ██ ████████ █ ████. ██████ █
-            ████████ ██ ███ █ ████████ █ ██ ████ ██ ███ ███ █████ █ ██████.
-          </p>
-          <h6>Piso Superior y Habitaciones</h6>
-          <p>
-            Subir al segundo piso revela un pasillo crujiente, donde cada paso
-            parece resonar en la taberna. La dificultad de andar sigilosamente
-            sin despertar a nadie es evidente, añadiendo un toque de intriga al
-            lugar. A lo largo del pasillo, una serie de puertas se presentan
-            ante ti.
-            <br /><br />
-            Las puertas a la derecha y al fondo conducen directamente a las habitaciones,
-            mientras que las puertas a la izquierda revelan los aseos. Al abrir las
-            primeras habitaciones, te encuentras con lujosos alojamientos. Camas
-            dobles con sábanas rojas impecables, adornadas con velas y mesitas de
-            noche, crean un ambiente acogedor para aquellos que buscan descanso.
-            Sin embargo, la antigüedad del lugar deja un atisbo de incertidumbre:
-            esperemos que ninguna rata se atreva a interrumpir el sueño de los huéspedes
-            en estas habitaciones bien decoradas.
-            <br /><br />
-            Al llegar a las dos habitaciones finales, te encuentras con camas individuales.
-            Las camas del fondo, aunque más deterioradas que las anteriores, aún
-            ofrecen una opción más cómoda que dormir en la calle. A pesar de su desgaste,
-            la taberna intenta proporcionar una solución habitable para aquellos
-            que buscan un refugio temporal en estas camas individuales, aunque su
-            estado sugiere que la comodidad puede ser relativa.
-          </p>
-          <h6>Baños y Vistas</h6>
-          <p>
-            █████ █ ██████ █ ██████ █ ████, ███ █ ██ ████████ █ ████. ██████ █
-            ████████ ██ ███ █ ████████ █ ██ ████ ██ ███ ███ █████ █ ██████.
-          </p>
-          <h6>La Comida</h6>
-          <p>
-            La oferta culinaria en el lugar es algo modesta, ya que parece que
-            lo único abundante es la cerveza. Aunque la comida sea escasa, puede
-            considerarse como un recurso de emergencia para evitar depender
-            únicamente de setas sospechosas para alimentarse. La taberna, con su
-            enfoque en mejorar, podría encontrar maneras de ampliar y mejorar su
-            oferta gastronómica en el futuro.
-          </p>
-        </div>
-      </section>
-      <section class='col-span-6'>
-        <H3 txt='Nivel 2' />
-      </section>
-      <section class='col-span-6'>
-        <div>
-          <h6>Mesas Renovadas</h6>
-          <p>
-            El tabernero, decidido a mejorar el ambiente, ha iniciado unas
-            pequeñas reparaciones que comienzan por las mesas de madera. Ahora,
-            las mesas desprenden una sensación de madera recién cortada y
-            barnizada, con una firmeza que las hace tan atractivas como
-            resistentes. Esta renovación invita a los clientes a disfrutar de
-            sus bebidas con confianza, permitiéndoles dar golpes sin temor a que
-            la mesa se desmorone. Este toque de frescura en el mobiliario agrega
-            un nuevo nivel de comodidad y calidad al ambiente de la taberna.
-          </p>
-          <h6>Escalones más firmes</h6>
-          <p>
-            Ahora, los escalones son igual de firmes que las mesas, fabricados
-            con la misma madera recién cortada y barnizada. Puedes subir y bajar
-            con firmeza, sin miedo a romper ningún tablón. Esta mejora no solo
-            garantiza una mayor estabilidad al transitar por las escaleras, sino
-            que también facilita el transporte de materiales pesados a las
-            habitaciones sin problema alguno.
-          </p>
-          <h6>La Comida</h6>
-          <p>
-            Ahora, con tres lobos salvajes en su poder, el tabernero ha logrado
-            preparar manjares dignos. Platos de carne adornados con especias
-            ofrecen una experiencia culinaria mejorada. Con estas deliciosas
-            opciones, ya no tendrás que preocuparte por pasar hambre en el
-            futuro. El tabernero ha elevado la calidad de sus servicios
-            gastronómicos, y será interesante ver cuánto tiempo puede mantener
-            esta mejora.
-          </p>
-        </div>
-      </section>
-    </article>
-    <article>
-      <section>
-        <H2 txt='Galeria' />
-      </section>
-      <section class='flex justify-center items-center'>
-        <img
-          src='/img/maps/murcia/tavern/tavern_1.png'
-          class='rounded-lg mt-2'
-        />
-      </section>
-    </article>
-  </main>
+			<!-- Nivel 2 -->
+			<section>
+				<div>
+					<h6>Suministro de Agua Ilimitada</h6>
+					<p>
+						La taberna ha implementado con éxito un sistema de
+						suministro de agua confiable y duradero. Este servicio
+						garantiza que tanto los huéspedes como los locales
+						tengan acceso a agua limpia y fresca en cualquier
+						momento, un recurso invaluable en un mundo lleno de
+						desafíos.
+					</p>
+				</div>
+				<div>
+					<h6>Centro de Gobierno Comunitario</h6>
+					<p>
+						Este edificio ha evolucionado para adaptarse como el
+						centro de gobierno de la comunidad. En su papel de
+						ayuntamiento improvisado, facilita reuniones
+						comunitarias, consultas y toma de decisiones colectivas.
+						Además, proporciona servicios administrativos esenciales
+						para coordinar proyectos y gestionar recursos,
+						contribuyendo así al desarrollo y bienestar del pueblo
+						en este mundo desafiante. Economía actual:
+					</p>
+				</div>
+				<Money pc={1} pe={1} po={4} ppt={2} />
+			</section>
+		</article>
+		<HR />
+		<article
+			class='bg-[--gray] mt-4 rounded-lg grid grid-cols-6'
+			id='section'
+		>
+			<section class='col-span-6'>
+				<H2 txt='Descripciones Detalladas' />
+			</section>
+			<section class='col-span-6'>
+				<H3 txt='Nivel 1' />
+			</section>
+			<section class='col-span-6'>
+				<div>
+					<h6>Entrada Exterior de la Taberna</h6>
+					<p>
+						La taberna se presenta ante los visitantes con una
+						entrada rústica que evoca la esencia de un refugio
+						acogedor en medio de la naturaleza. La fachada está
+						construida principalmente con madera, revelando sus años
+						de historia en las vetas desgastadas por el tiempo. Las
+						paredes de piedra que la sostienen añaden una sensación
+						de solidez y durabilidad, sugiriendo que esta taberna ha
+						resistido los embates de las estaciones y las historias
+						compartidas.
+						<br /><br />
+						La puerta, hecha de una madera envejecida, pero sorprendentemente
+						resistente, se erige como el umbral que da paso a un mundo
+						de historias y encuentros. A pesar de su aspecto desgastado,
+						la madera ha mantenido su integridad, brindando a los visitantes
+						una bienvenida que propone que hay secretos y tesoros esperando
+						dentro.
+						<br /><br />
+						El camino de tierra que conduce a la puerta sigue un recorrido
+						montañoso, marcado por la irregularidad del terreno y rodeado
+						de la tierra muerta que se abre camino en cada grieta. Este
+						camino, testigo de innumerables pasos y conversaciones, invita
+						a los viajeros a adentrarse en la taberna con la promesa
+						de experiencias únicas y memorables que aguardan en su interior.
+					</p>
+					<h6>Entrada Interna de la Taberna</h6>
+					<p>
+						Al entrar en la taberna, te recibe una atmósfera de
+						nostalgia y desgaste. A tu derecha, unas escaleras
+						chirriantes de madera podrida amenazan con ceder en
+						cualquier momento bajo el peso adicional. Las mesas y
+						sillas, todas fabricadas con la misma madera envejecida,
+						cuentan historias de innumerables encuentros y momentos
+						compartidos.
+						<br /><br />
+						La barra, afortunadamente, parece ser la parte más resistente
+						del lugar. Banquetas relativamente nuevas y firmes están
+						dispuestas en ella, de diversos tamaños, para acomodar a
+						los variados visitantes. Contrastando con la decadencia general,
+						la barra proyecta una sensación de solidez y estabilidad.
+						<br /><br />
+						Las paredes de madera, que podrían describirse como 'mojadas',
+						revelan los estragos del tiempo y la humedad. La esquina
+						superior izquierda de la taberna alberga barriles de cerveza
+						aparentemente vacíos, y hacia el final del local, a la izquierda,
+						un tablón de anuncios muestra su estado de descomposición
+						con un material corcho podrido. Misiones, fijadas con pinchos
+						de madera y papeles en tono blanco huevo, ofrecen una gama
+						de tareas y desafíos a los visitantes.
+						<br /><br />
+						Finalmente, al fondo, destaca una chimenea de piedra, proporcionando
+						un rincón acogedor y cumpliendo eficazmente su función al
+						esparcir una cálida luz y calor por toda la taberna. Este
+						contraste entre lo desgastado y lo acogedor da vida a la
+						singularidad de la taberna.
+					</p>
+					<h6>Cocina</h6>
+					<p>
+						█████ █ ██████ █ ██████ █ ████, ███ █ ██ ████████ █
+						████. ██████ █ ████████ ██ ███ █ ████████ █ ██ ████ ██
+						███ ███ █████ █ ██████.
+					</p>
+					<h6>Piso Superior y Habitaciones</h6>
+					<p>
+						Subir al segundo piso revela un pasillo crujiente, donde
+						cada paso parece resonar en la taberna. La dificultad de
+						andar sigilosamente sin despertar a nadie es evidente,
+						añadiendo un toque de intriga al lugar. A lo largo del
+						pasillo, una serie de puertas se presentan ante ti.
+						<br /><br />
+						Las puertas a la derecha y al fondo conducen directamente
+						a las habitaciones, mientras que las puertas a la izquierda
+						revelan los aseos. Al abrir las primeras habitaciones, te
+						encuentras con lujosos alojamientos. Camas dobles con sábanas
+						rojas impecables, adornadas con velas y mesitas de noche,
+						crean un ambiente acogedor para aquellos que buscan descanso.
+						Sin embargo, la antigüedad del lugar deja un atisbo de incertidumbre:
+						esperemos que ninguna rata se atreva a interrumpir el sueño
+						de los huéspedes en estas habitaciones bien decoradas.
+						<br /><br />
+						Al llegar a las dos habitaciones finales, te encuentras con
+						camas individuales. Las camas del fondo, aunque más deterioradas
+						que las anteriores, aún ofrecen una opción más cómoda que
+						dormir en la calle. A pesar de su desgaste, la taberna intenta
+						proporcionar una solución habitable para aquellos que buscan
+						un refugio temporal en estas camas individuales, aunque su
+						estado sugiere que la comodidad puede ser relativa.
+					</p>
+					<h6>Baños y Vistas</h6>
+					<p>
+						█████ █ ██████ █ ██████ █ ████, ███ █ ██ ████████ █
+						████. ██████ █ ████████ ██ ███ █ ████████ █ ██ ████ ██
+						███ ███ █████ █ ██████.
+					</p>
+					<h6>La Comida</h6>
+					<p>
+						La oferta culinaria en el lugar es algo modesta, ya que
+						parece que lo único abundante es la cerveza. Aunque la
+						comida sea escasa, puede considerarse como un recurso de
+						emergencia para evitar depender únicamente de setas
+						sospechosas para alimentarse. La taberna, con su enfoque
+						en mejorar, podría encontrar maneras de ampliar y
+						mejorar su oferta gastronómica en el futuro.
+					</p>
+				</div>
+			</section>
+			<section class='col-span-6'>
+				<H3 txt='Nivel 2' />
+			</section>
+			<section class='col-span-6'>
+				<div>
+					<h6>Mesas Renovadas</h6>
+					<p>
+						El tabernero, decidido a mejorar el ambiente, ha
+						iniciado unas pequeñas reparaciones que comienzan por
+						las mesas de madera. Ahora, las mesas desprenden una
+						sensación de madera recién cortada y barnizada, con una
+						firmeza que las hace tan atractivas como resistentes.
+						Esta renovación invita a los clientes a disfrutar de sus
+						bebidas con confianza, permitiéndoles dar golpes sin
+						temor a que la mesa se desmorone. Este toque de frescura
+						en el mobiliario agrega un nuevo nivel de comodidad y
+						calidad al ambiente de la taberna.
+					</p>
+					<h6>Escalones más firmes</h6>
+					<p>
+						Ahora, los escalones son igual de firmes que las mesas,
+						fabricados con la misma madera recién cortada y
+						barnizada. Puedes subir y bajar con firmeza, sin miedo a
+						romper ningún tablón. Esta mejora no solo garantiza una
+						mayor estabilidad al transitar por las escaleras, sino
+						que también facilita el transporte de materiales pesados
+						a las habitaciones sin problema alguno.
+					</p>
+					<h6>La Comida</h6>
+					<p>
+						Ahora, con tres lobos salvajes en su poder, el tabernero
+						ha logrado preparar manjares dignos. Platos de carne
+						adornados con especias ofrecen una experiencia culinaria
+						mejorada. Con estas deliciosas opciones, ya no tendrás
+						que preocuparte por pasar hambre en el futuro. El
+						tabernero ha elevado la calidad de sus servicios
+						gastronómicos, y será interesante ver cuánto tiempo
+						puede mantener esta mejora.
+					</p>
+				</div>
+			</section>
+		</article>
+		<article>
+			<section>
+				<H2 txt='Galeria' />
+			</section>
+			<section class='flex justify-center items-center'>
+				<img
+					src='/img/maps/murcia/tavern/tavern_1.png'
+					class='rounded-lg mt-2'
+				/>
+			</section>
+		</article>
+	</main>
 </Layout>
 
 <style>
-  /** Para Controlar los Contenedores debajo de los Niveles */
-  section > div,
-  #section {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-    padding: 0.5rem 2rem 1rem 1rem;
-    margin: 1rem 0;
+	/** Para Controlar los Contenedores debajo de los Niveles */
+	section > div,
+	#section {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
+		padding: 0.5rem 2rem 1rem 1rem;
+		margin: 1rem 0;
 
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-    /** Efecto Global de Secciones */
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section > div:hover {
-    /** Efecto Global de Secciones */
-    transform: scale(1.01);
-  }
+		/** Box Shadow Definitivo */
+		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+		/** Efecto Global de Secciones */
+		transition: transform 100ms ease;
+		cursor: default;
+	}
+	section > div:hover {
+		/** Efecto Global de Secciones */
+		transform: scale(1.01);
+	}
 
-  main > div:not(:first-of-type) {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
+	main > div:not(:first-of-type) {
+		background-color: var(--gray);
+		border-radius: 0.5rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    transition: transform 300ms ease;
-    cursor: default;
-  }
-  main > div:hover {
-  }
+		transition: transform 300ms ease;
+		cursor: default;
+	}
+	main > div:hover {
+	}
 
-  h1 {
-    color: var(--title);
-    font-family: 'Pacifico';
-    margin: 1rem;
+	h1 {
+		color: var(--title);
+		font-family: 'Pacifico';
+		margin: 1rem;
 
-    font-size: 2rem;
-  }
-  h3 {
-    color: var(--subtitle);
-    font-family: 'Lobster';
-    margin: 1rem;
+		font-size: 2rem;
+	}
+	h3 {
+		color: var(--subtitle);
+		font-family: 'Lobster';
+		margin: 1rem;
 
-    font-size: 1.5rem;
-  }
-  h6 {
-    color: var(--section);
-    font-weight: bold;
-    margin: 0.5rem 0;
-  }
+		font-size: 1.5rem;
+	}
+	h6 {
+		color: var(--section);
+		font-weight: bold;
+		margin: 0.5rem 0;
+	}
 
-  #lock > * {
-    color: var(--grey);
-  }
-  #lock:hover,
-  #dark:hover {
-    transform: none;
-  }
+	#lock > * {
+		color: var(--grey);
+	}
+	#lock:hover,
+	#dark:hover {
+		transform: none;
+	}
 
-  #unlock {
-    cursor: pointer;
-  }
+	#unlock {
+		cursor: pointer;
+	}
 
-  #dark {
-    background-color: var(--dark);
-  }
+	#dark {
+		background-color: var(--dark);
+	}
 
-  article {
-    text-align: justify;
-  }
+	article {
+		text-align: justify;
+	}
 
-  #section div {
-    background-color: var(--dark);
-    margin: 0 2rem;
-  }
-  #section {
-    padding-bottom: 3rem;
-  }
-  #section img {
-    border-radius: 0.5rem;
-  }
-  #section h6:not(:first-of-type) {
-    margin-top: 2rem;
-  }
+	#section div {
+		background-color: var(--dark);
+		margin: 0 2rem;
+	}
+	#section {
+		padding-bottom: 3rem;
+	}
+	#section img {
+		border-radius: 0.5rem;
+	}
+	#section h6:not(:first-of-type) {
+		margin-top: 2rem;
+	}
 </style>

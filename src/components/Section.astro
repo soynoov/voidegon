@@ -8,9 +8,25 @@ interface Props {
 const { title, subtitle, color = 'title' } = Astro.props;
 ---
 
-<section class='text-center p-4 pt-1'>
-	<h1 class={`text-[--${color}] font-[pacifico] text-2xl my-4`}>
+<section class='text-center p-2 w-[80vw] mx-auto'>
+	<h1
+		class={`
+			text-[--${color}] font-[cinzel] text-4xl font-extrabold
+			m-2 capitalize
+		`}
+	>
 		{title}
 	</h1>
-	<h2 class='text-[--subtitle] font-[lobster] text-lg my-4'>{subtitle}</h2>
+	<h2
+		class={`
+			text-[--subtitle] font-[merienda] text-lg font-medium
+			m-2 capitalize
+		`}
+	>
+		{subtitle}
+	</h2>
 </section>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Merienda:wght@300..900&display=swap');
+</style>

@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Title from '../../components/Title.astro';
+import Name from '../../components/character/Name.astro';
 //
 import Experience from '../../components/character/Experience.astro';
 import Stats from '../../components/character/Stats.astro';
@@ -35,8 +35,8 @@ let mod_fue = 3,
 ---
 
 <Layout title=`】 Voidegon ▸ ${lionel.name}`>
-	<Title
-		title=`${lionel.name}`
+	<Name
+		name=`${lionel.name}`
 		img='/img/lionel/bg_lionel.png'
 		center='center'
 		opacity={0.7}

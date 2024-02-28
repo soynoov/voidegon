@@ -1,0 +1,36 @@
+---
+interface Props {
+	title: string;
+	color?: string;
+}
+
+const { title, color = 'title' } = Astro.props;
+---
+
+<details
+	class={`
+    w-[80vw] mx-auto
+    bg-[--gray] rounded-lg
+    open:pb-4
+  `}
+>
+	<summary
+		class={`
+      cursor-pointer text-center list-none
+      hover:bg-[--black] rounded-lg p-2 pb-4
+    `}
+	>
+		<h1
+			class='font-[cinzel] text-4xl capitalize font-extrabold'
+			style={`color: var(--${color});`}
+		>
+			{title}
+		</h1>
+		<hr class='w-[75vw] mx-auto -mt-1' />
+	</summary>
+	<slot />
+</details>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+</style>

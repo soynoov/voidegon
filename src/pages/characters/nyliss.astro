@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Title from '../../components/Title.astro';
+import Name from '../../components/character/Name.astro';
 import Stats from '../../components/character/Stats.astro';
 import Money from '../../components/Money.astro';
 import Experience from '../../components/character/Experience.astro';
@@ -44,8 +44,8 @@ const mod_fue = 0,
 ---
 
 <Layout title=`】 Voidegon ▸ ${nyliss.name}`>
-	<Title
-		title={nyliss.name}
+	<Name
+		name={nyliss.name}
 		img='https://www.shutterstock.com/image-vector/angel-wings-illustration-vector-desing-600nw-2289365543.jpg'
 		center='center'
 	/>

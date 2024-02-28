@@ -1,6 +1,8 @@
 ---
+// Main Components & Layouts
 import Layout from '../../layouts/Layout.astro';
 import Article from '../../components/Article.astro';
+import Capitulo from '@/layouts/Capitulo.astro';
 import Section from '../../components/Section.astro';
 ---
 
@@ -410,7 +412,7 @@ import Section from '../../components/Section.astro';
 					title='Primer Acto ~ Formando Vínculos'
 					color='subtitle'
 				/>
-				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
+				<hr />
 			</summary>
 			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
 				<strong class='text-[--date]'>[Día 1]:</strong> Nuestros
@@ -501,7 +503,7 @@ import Section from '../../components/Section.astro';
 		>
 			<summary class='list-none mb-4'>
 				<Section title='Segundo Act ~ Asentando Bases' />
-				<hr class='w-[60vw] mx-auto p-2 -mt-8' />
+				<hr class='w-[60vw] mx-auto' />
 			</summary>
 			<p class='text-justify p-4 px-10 -mt-8 text-pretty'>
 				<strong class='text-[--date]'>[Día 2]:</strong> Segundo día de nuestros
@@ -570,17 +572,33 @@ import Section from '../../components/Section.astro';
 				<strong class='text-[--date]'>[Día 97]:</strong> a
 			</p>
 		</details>
+		<!-- Septimo Acto -->
+		<Capitulo title='Septimo Acto ~ Test' color='grey'>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Repudiandae iure voluptatem ex ipsa a commodi perspiciatis
+				aspernatur ratione ab ad, ea nostrum dolor facere sit doloremque
+				in. Nisi, architecto odit?
+			</p>
+		</Capitulo>
 	</main>
 </Layout>
 
 <style>
 	details {
 		background-color: var(--gray);
-		border-radius: 0.75rem;
+		border-radius: 0.5rem;
 		cursor: pointer;
 	}
 	details[open] {
 		transform: scale(1.01);
+	}
+
+	hr {
+		margin-top: -1rem;
+		margin: 0 auto;
+		width: 75vw;
+		padding: 0;
 	}
 
 	ul {
