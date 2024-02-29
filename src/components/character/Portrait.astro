@@ -20,38 +20,31 @@ const {
   <article
     class={`
     	p-2 bg-[--gray] rounded-lg transition-all
-    	h-full w-full hover:bg-[--black] hover:blur-sm
+    	h-full w-full hover:bg-[--black]
   	`}
   >
-    <figure class='w-full h-full'>
-      <img
-        src={src}
-        alt={alt}
-        class='rounded-lg h-full w-full object-cover object-top'
-      />
-      <!-- 
-			<figcaption
-        class='flex flex-col items-center justify-center uppercase text-4xl w-full h-full gap-y-8 font-bold font-[unbounded]'
-      >
-        <h1 class='text-[--event]'>{trasfondo}</h1>
-        <h1>{alineamiento}</h1>
-      </figcaption> 
-			-->
-    </figure>
+    <!-- <div class='absolute z-10 ml-[30%] mt-[10%]'>
+      <h1 class='text-4xl font-[unbounded] font-bold uppercase text-[--event]'>
+        {trasfondo}
+      </h1>
+      <h1>{alineamiento}</h1>
+    </div> -->
+    <img
+      src={src}
+      alt={alt}
+      class='rounded-lg h-full w-full object-cover object-top hover:blur-sm'
+    />
   </article>
 </a>
 
-<!-- 
-<style>
-  img,
-  figcaption {
+<!-- <style>
+  article > * {
     transition: all 0.23s ease;
   }
-  figcaption {
+  div {
     visibility: hidden;
   }
-  figure:hover > figcaption {
+  article:hover div {
     visibility: visible;
   }
-</style> 
--->
+</style> -->

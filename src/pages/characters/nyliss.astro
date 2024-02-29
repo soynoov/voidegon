@@ -52,14 +52,15 @@ const mod_fue = 0,
   <main>
     <article
       class={`
-    	w-[80vw] mx-auto mt-2 grid grid-cols-6
-    `}
+    	  w-[80vw] mx-auto
+        mt-2 grid grid-cols-6
+      `}
     >
-      <section class='col-span-6 px-2'>
+      <section class='col-span-6'>
         <Experience
           race={nyliss.race}
           rol={nyliss.rol}
-          exp={nyliss.xp}
+          xp={nyliss.xp}
           start={1}
         />
       </section>
@@ -69,6 +70,8 @@ const mod_fue = 0,
           src='/img/nyliss/nyliss.png'
           alt={nyliss.name}
           href='/lore/nyliss'
+          trasfondo='fugitiva'
+          alineamiento=''
         />
       </section>
       <section class='col-span-2'>
@@ -112,7 +115,7 @@ const mod_fue = 0,
       </section>
 
       <section class='col-span-3'>
-        <COM mod_com={mod_comp} com={nyliss.comps.weapons} />
+        <COM bon_com={mod_comp} com={nyliss.comps.weapons} />
       </section>
       <section class='col-span-3'>
         <Money
@@ -123,24 +126,11 @@ const mod_fue = 0,
           ppt={money.ppt}
         />
       </section>
-      <section class='col-span-1 pl-1'>
-        <Weapon
-          weapon='Espada Corta'
-          details={['Ligera', 'Sútil']}
-          bonus={mod_des}
-          type='Perforante'
-        />
+      <section class='col-span-2'>
+        <Weapon name='espada corta' />
+        <Weapon name='lanza' />
       </section>
-      <section class='col-span-1 pr-1'>
-        <Weapon
-          weapon='Lanza'
-          details={['Arrojadiza', 'Distancia', 'Cersátil']}
-          bonus={mod_fue}
-          type='Perforante'
-          link='/extras/weapons/lance'
-        />
-      </section>
-      <section class='col-span-4 h-full w-full pt-0'>
+      <section class='col-span-4 h-full w-full'>
         <div id='backpack' class='bg-[--gray] rounded-lg p-2 h-full w-full'>
           <ul class='grid grid-cols-3 gap-2 font-[caveat] px-4'>
             <li>Botella de Tinta Negra</li>
@@ -406,16 +396,16 @@ const mod_fue = 0,
       #race > div {
         background-color: var(--dark);
         border-radius: 0.5rem;
+        cursor: default;
         padding: 0.5rem 2rem 1rem;
         width: 100%;
-        cursor: default;
       }
       #race p {
         font-size: 0.9rem;
       }
 
       /** MEDIA QUERYS */
-      @media (max-width: 640px) {
+      @media (max-width: 1024px) {
         article {
           grid-template-columns: repeat(1, 1fr);
         }

@@ -1,12 +1,11 @@
 ---
 interface Props {
-  mod_com: number;
+  bon_com: number;
   com?: Array<string>;
 }
-const { mod_com, com } = Astro.props;
+const { bon_com, com = [] } = Astro.props;
 
 function printCom() {
-  // @ts-ignore
   const result = com.join(', ');
   return `${result}${result.length > 0 ? '.' : ''}`;
 }
@@ -17,25 +16,12 @@ function printCom() {
     bg-[--gray] rounded-lg px-4
     flex items-center
     w-full h-full
-`}
+  `}
 >
   <div class='bg-[--dark] rounded-lg p-4 gap-2'>
     <h3 class='text-[--event] font-[pacifico] text-2xl text-center'>
-      +{mod_com}
+      +{bon_com}
     </h3>
   </div>
   <p class='mx-4 capitalize'>{printCom()}</p>
 </section>
-
-<style>
-  section {
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-    transition: transform 100ms ease;
-    cursor: default;
-  }
-  section:hover {
-    transform: scale(1.01);
-  }
-</style>
