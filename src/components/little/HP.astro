@@ -22,9 +22,13 @@ calcularPorcentaje(hp);
 		h-full w-full
 	`}
 >
-	<div class='w-full bg-[--dark] rounded-lg'>
+	<div class='w-full h-full bg-[--dark] rounded-lg'>
 		<div
-			class='bg-red-600 text-xs font-bold font-[pacifico] text-[--gray] text-center rounded-lg'
+			class={`
+				font-bold font-[pacifico] text-[--gray] bg-red-600
+				rounded-lg h-full
+				flex items-center justify-center
+			`}
 			style={`width: ${porcentaje}%`}
 		>
 			{hp} | {hpmax}

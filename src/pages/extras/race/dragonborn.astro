@@ -1,0 +1,180 @@
+---
+// Main Components
+import Layout from '@/layouts/Layout.astro';
+import Title from '@/components/Title.astro';
+// Little Components
+import VEL from '@/components/little/VEL.astro';
+---
+
+<Layout title='】 Voidegon ▸ Dragonborn'>
+	<Title title='Dragonborn' />
+	<main
+		class={`
+			w-[80vw] mx-auto
+			text-justify
+		`}
+	>
+		<section>
+			<p>
+				Tu herencia dracónida se manifiesta en una serie de rasgos que
+				compartes con otros dracónidos. Los dracónidos tienden hacia los
+				extremos en la guerra cósmica entre el bien y el mal. La mayoría
+				son buenos, pero los que se ponen de lado del mal pueden ser
+				terriblemente malignos.
+			</p>
+		</section>
+		<article>
+			<section class='text-center'>
+				<h3>Rasgos de los Dragonborn</h3>
+				<p>
+					Tu personaje Dracónido tiene unos cuantos rasgos en común
+					con el resto de miembros de su raza:
+				</p>
+				<VEL vel={30} />
+			</section>
+			<section>
+				<p>
+					<strong>Linaje dracónico.</strong> Tienes un antepasado dragón.
+					Elige un tipo de dragón de la tabla de antepasado dragón. Tu
+					arma de aliento y tu resistencia al daño están determinadas por
+					el tipo de dragón, como se indica en la siguiente tabla:
+				</p>
+				<table class='mx-auto mt-2 text-center cursor-default'>
+					<tr>
+						<th>Tipo</th>
+						<th>Elemento</th>
+						<th>Área de Efecto</th>
+						<th>T. Salvación</th>
+					</tr>
+					<tr>
+						<td>Azul</td>
+						<td>Relámpago</td>
+						<td>Línea de 5 a 30 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Blanco</td>
+						<td>Frío</td>
+						<td>Cono de 15 pies</td>
+						<td>Constitución</td>
+					</tr>
+					<tr>
+						<td>Bronce</td>
+						<td>Relámpago</td>
+						<td>Línea de 5 a 30 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Cobre</td>
+						<td>Ácido</td>
+						<td>Línea de 5 a 30 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Oro</td>
+						<td>Fuego</td>
+						<td>Cono de 15 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Oropel</td>
+						<td>Fuego</td>
+						<td>Línea de 5 a 30 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Plata</td>
+						<td>Frío</td>
+						<td>Cono de 15 pies</td>
+						<td>Constitución</td>
+					</tr>
+					<tr>
+						<td>Negro</td>
+						<td>Ácido</td>
+						<td>Línea de 5 a 30 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Rojo</td>
+						<td>Fuego</td>
+						<td>Cono de 15 pies</td>
+						<td>Destreza</td>
+					</tr>
+					<tr>
+						<td>Verde</td>
+						<td>Veneno</td>
+						<td>Cono de 15 pies</td>
+						<td>Constitución</td>
+					</tr>
+				</table>
+				<p>
+					<strong>Ataque de aliento.</strong> Puedes usar tu acción para
+					exhalar energía destructiva. Tu antepasado dragón determina el
+					tamaño, la forma y el tipo de daño de la exhalación.
+					<br /><br />
+					Cuando usas tu arma de aliento, todas las criaturas que se encuentren
+					en el área de la exhalación deben hacer una tirada de salvación,
+					según determine tu antepasado dragón. La CD de esta tirada de
+					salvación es igual a 8 + tu modificador por Constitución + tu
+					bonificador por competencia. Si la criatura falla la tirada,
+					recibe 2d6 puntos de daño, y si tiene éxito, la mitad. El daño
+					aumenta a 3d6 en el nivel 6, a 4d6 en el nivel 11 y a 5d6 en
+					el nivel 16.
+					<br /><br />
+					Después de usar tu arma de aliento, tienes que completar un descanso
+					corto o largo para volver a utilizarla.
+				</p>
+				<p>
+					<strong> Resistencia al daño.</strong> Tienes resistencia al
+					tipo de daño asociado con tu antepasado dragón.
+				</p>
+				<p>
+					<strong>Idiomas.</strong> Puedes hablar, leer y escribir común
+					y dragón. Se cree que el dragón es uno de los idiomas más antiguos,
+					y a menudo se usa en el estudio de la magia. Esta lengua suena
+					áspera para la mayoría de criaturas e incluye muchas consonantes
+					duras y sibilantes.
+				</p>
+				<p>
+					<strong>Modificadores.</strong> Los personajes Dracónido obtienen
+					los siguientes modificadores y competencias:
+					<ul class='list-disc list-inside mx-4'>
+						<li>+2 Fuerza</li>
+						<li>+1 Carisma</li>
+					</ul>
+				</p>
+			</section>
+		</article>
+	</main>
+</Layout>
+
+<style>
+	section {
+		margin-top: 1rem;
+	}
+	h3 {
+		font-family: 'unbounded';
+		color: var(--subtitle);
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	p {
+		padding: 0.5rem 1rem;
+		margin-top: 0.5rem;
+	}
+
+	th {
+		background-color: var(--gray);
+		padding: 0 4rem;
+	}
+	tr {
+		border-bottom: solid 2px var(--gray);
+	}
+	tr:hover {
+		background-color: var(--black);
+	}
+
+	strong {
+		color: var(--section);
+	}
+</style>

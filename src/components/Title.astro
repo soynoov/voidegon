@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<article
+	class='relative h-[25vh] flex justify-center items-center cursor-default'
+>
+	<div class='absolute inset-0 opacity-35 bg-black'></div>
+	<h1
+		class={`
+			font-extrabold font-[unbounded] text-[--light] text-center 
+			relative mx-8 text-balance uppercase
+			md:text-6xl sm:text-4xl text-2xl
+		`}
+	>
+		{title}
+	</h1>
+</article>
+
+<style>
+	article {
+		background: url(/img/background.png) center/cover;
+	}
+</style>

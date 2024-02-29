@@ -39,10 +39,10 @@
 		},
 		"weapons": ["espada corta"],
 		"money": {
-			"pc": 0,
+			"pc": 100,
 			"pp": 0,
-			"pe": 0,
-			"po": 0,
+			"pe": 16,
+			"po": 2,
 			"ppt": 0
 		}
 	}
