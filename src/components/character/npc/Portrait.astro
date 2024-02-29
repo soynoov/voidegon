@@ -1,24 +1,24 @@
 ---
 interface Props {
-	src?: string;
-	alt?: string;
-	href?: string;
+  src?: string;
+  alt?: string;
+  href?: string;
 }
 
 const { src = '/img/background.png', alt, href } = Astro.props;
 ---
 
 <article
-	class={`
+  class={`
     p-2 bg-[--gray] rounded-lg
     h-full w-full 
   `}
 >
-	<a href={href}>
-		<img
-			src={src}
-			alt={alt}
-			class='rounded-lg h-full w-full object-cover'
-		/>
-	</a>
+  <a href={href}>
+    <img
+      src={src}
+      alt={alt}
+      class='rounded-lg h-full w-full object-cover object-top'
+    />
+  </a>
 </article>

@@ -1,53 +1,57 @@
 ---
 interface Props {
-	src?: string;
-	alt?: string;
-	href?: string;
-	trasfondo: string;
-	alineamiento: string;
+  src?: string;
+  alt?: string;
+  href?: string;
+  trasfondo?: string;
+  alineamiento?: string;
 }
 
 const {
-	src = '/img/background.png',
-	alt,
-	href,
-	trasfondo,
-	alineamiento,
+  src = '/img/background.png',
+  alt,
+  href,
+  trasfondo,
+  alineamiento,
 } = Astro.props;
 ---
 
-<article
-	class={`
-    p-2 bg-[--gray] rounded-lg
-    h-full w-full 
-  `}
->
-	<a href={href}>
-		<figure class='w-full h-full'>
-			<img
-				src={src}
-				alt={alt}
-				class='rounded-lg h-full w-full object-cover hover:opacity-15'
-			/>
+<a href={href}>
+  <article
+    class={`
+    	p-2 bg-[--gray] rounded-lg transition-all
+    	h-full w-full hover:bg-[--black] hover:blur-sm
+  	`}
+  >
+    <figure class='w-full h-full'>
+      <img
+        src={src}
+        alt={alt}
+        class='rounded-lg h-full w-full object-cover object-top'
+      />
+      <!-- 
 			<figcaption
-				class='-mt-[12.4cm] flex flex-col items-center justify-center uppercase text-4xl w-full h-full gap-y-8 font-bold font-[unbounded]'
-			>
-				<h1 class='text-[--event]'>{trasfondo}</h1>
-				<h1>{alineamiento}</h1>
-			</figcaption>
-		</figure>
-	</a>
-</article>
+        class='flex flex-col items-center justify-center uppercase text-4xl w-full h-full gap-y-8 font-bold font-[unbounded]'
+      >
+        <h1 class='text-[--event]'>{trasfondo}</h1>
+        <h1>{alineamiento}</h1>
+      </figcaption> 
+			-->
+    </figure>
+  </article>
+</a>
 
+<!-- 
 <style>
-	img,
-	figcaption {
-		transition: all 0.23s ease;
-	}
-	figcaption {
-		visibility: hidden;
-	}
-	figure:hover > figcaption {
-		visibility: visible;
-	}
-</style>
+  img,
+  figcaption {
+    transition: all 0.23s ease;
+  }
+  figcaption {
+    visibility: hidden;
+  }
+  figure:hover > figcaption {
+    visibility: visible;
+  }
+</style> 
+-->
