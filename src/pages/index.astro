@@ -3,8 +3,12 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='】 Voidegon'>
-  <main class='flex justify-center flex-col h-full'>
-    <h1 class='self-center font-[unbounded] text-4xl'>Welcome to Voidegon!</h1>
+  <main class='flex justify-center flex-col h-[100vh]'>
+    <h1
+      class='text-center font-[unbounded] md:text-8xl sm:text-6xl text-4xl capitalize text-balance px-8'
+    >
+      Welcome to Voidegon!
+    </h1>
     <!-- 
     <p class='text-center mt-4 mx-4'>
       Los acertijos en la Biblioteca (#roleplay) has de resolver.
@@ -16,9 +20,8 @@ import Layout from '../layouts/Layout.astro';
       Dificultad: <span id='bad'>Ultra Mega Jodidamente Difícil</span>
     </p>
     -->
-    <div class='flex mx-auto mt-4'>
+    <div class='flex mx-auto mt-4 gap-4'>
       <svg
-        class='m-2'
         width='24'
         height='24'
         viewBox='0 0 24 24'
@@ -38,7 +41,6 @@ import Layout from '../layouts/Layout.astro';
         ></path>
       </svg>
       <svg
-        class='m-2'
         width='24'
         height='24'
         viewBox='0 0 24 24'
@@ -56,7 +58,6 @@ import Layout from '../layouts/Layout.astro';
         ></path>
       </svg>
       <svg
-        class='m-2'
         width='24'
         height='24'
         viewBox='0 0 24 24'
@@ -74,7 +75,6 @@ import Layout from '../layouts/Layout.astro';
         <path d='M15 15l3 3'></path>
       </svg>
       <svg
-        class='m-2'
         width='24'
         height='24'
         viewBox='0 0 24 24'
@@ -83,9 +83,11 @@ import Layout from '../layouts/Layout.astro';
         fill='none'
         stroke-linecap='round'
         stroke-linejoin='round'
-        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-          d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0'></path><path
-          d='M12 16a4 4 0 1 0 -4 -4v1'></path><path d='M6 12l2 2l2 -2'></path>
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0'></path>
+        <path d='M12 16a4 4 0 1 0 -4 -4v1'></path>
+        <path d='M6 12l2 2l2 -2'></path>
       </svg>
     </div>
   </main>
@@ -107,10 +109,6 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (max-width: 600px) {
-    h1 {
-      text-align: center;
-      margin: 1rem;
-    }
     main {
       background:;
     }
