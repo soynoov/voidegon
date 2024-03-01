@@ -2,19 +2,19 @@
 // Main Components
 import Layout from '@/layouts/Layout.astro';
 import Name from '@/components/character/Name.astro';
-// NPC Components
-import Hearts from '@/components/character/npc/Hearts.astro';
+// Map Components
+import Stars from '@/components/map/Stars.astro';
 ---
 
-<Layout title='】 Voidegon ▸ Almawrid'>
+<Layout title='】 Voidegon ▸ Murcia ▸ Iglesia'>
   <main>
-    <Name name='Almawrid' />
+    <Name name='Iglesia' />
     <article
       class={`
 				w-[80vw] mx-auto
 			`}
     >
-      <Hearts level={3} max_level={8} />
+      <Stars level={0} max_level={2} />
     </article>
   </main>
 </Layout>
