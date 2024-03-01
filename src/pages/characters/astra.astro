@@ -15,78 +15,78 @@ import VEL from '../../components/little/VEL.astro';
 import HR from '../../components/little/HR.astro';
 //
 let mod_com = 2,
-	fue = 0,
-	des = 5,
-	con = 1,
-	int = 0,
-	sab = 0,
-	car = 0;
+  fue = 0,
+  des = 5,
+  con = 1,
+  int = 0,
+  sab = 0,
+  car = 0;
 ---
 
 <Layout title='】 Voidegon ▸ Astra Starlink'>
-	<Name name='Astra Starlink' />
-	<main>
-		<article
-			class={`
+  <Name name='Astra Starlink' />
+  <main>
+    <article
+      class={`
         w-[80vw] mx-auto mt-4 
         grid grid-cols-6
     `}
-		>
-			<section class='col-span-6'>
-				<Experience exp={130} race='Astral Elf' rol='Ranger' />
-			</section>
-			<section class='col-span-2 pt-2 pr-2'>
-				<Stats
-					fue={7}
-					des={20}
-					con={10}
-					int={10}
-					sab={16}
-					car={9}
-					mod={[1, 0, 2, 0, 0, 0]}
-					com={[1, 0, 1, 0, 0, 0]}
-				/>
-			</section>
-			<section class='col-span-2 pt-2 section'>
-				<img
-					src='/img/astra/astra.png'
-					alt='Astra Starlink'
-					class='rounded-lg h-full object-cover'
-				/>
-			</section>
-			<section class='col-span-1 pl-2 pt-2'>
-				<CA mod={des} />
-			</section>
-			<section class='col-span-1 pl-2 pt-2'>
-				<INI des={des} />
-			</section>
-			<section class='col-span-6 pt-2'>
-				<HP hp={10 + con - 0} hpmax={10 + con} />
-			</section>
-		</article>
-		<HR />
-		<article class='w-[80vw] mx-auto mt-[10000vh]'>
-			<Money ppt={1} po={1} pe={1} pp={1} pc={1} />
-			<Money po={1} pe={1} pp={1} pc={1} />
-			<Money ppt={1} pp={1} />
-			<Money po={1} />
-			<Money po={1} pp={1} />
-			<Money />
-			<Money pe={1} pc={1} />
-			<p class='text-center'>中文閱讀</p>
-		</article>
-	</main>
+    >
+      <section class='col-span-6'>
+        <Experience xp={130} race='Astral Elf' rol='Ranger' />
+      </section>
+      <section class='col-span-2 pt-2 pr-2'>
+        <Stats
+          fue={7}
+          des={20}
+          con={10}
+          int={10}
+          sab={16}
+          car={9}
+          mod={[1, 0, 2, 0, 0, 0]}
+          com={[1, 0, 1, 0, 0, 0]}
+        />
+      </section>
+      <section class='col-span-2 pt-2 section'>
+        <img
+          src='/img/astra/astra.png'
+          alt='Astra Starlink'
+          class='rounded-lg h-full object-cover'
+        />
+      </section>
+      <section class='col-span-1 pl-2 pt-2'>
+        <CA mod={des} />
+      </section>
+      <section class='col-span-1 pl-2 pt-2'>
+        <INI des={des} />
+      </section>
+      <section class='col-span-6 pt-2'>
+        <HP hp={10 + con - 0} hpmax={10 + con} />
+      </section>
+    </article>
+    <HR />
+    <article class='w-[80vw] mx-auto mt-[10000vh]'>
+      <Money ppt={1} po={1} pe={1} pp={1} pc={1} />
+      <Money po={1} pe={1} pp={1} pc={1} />
+      <Money ppt={1} pp={1} />
+      <Money po={1} />
+      <Money po={1} pp={1} />
+      <Money />
+      <Money pe={1} pc={1} />
+      <p class='text-center'>中文閱讀</p>
+    </article>
+  </main>
 </Layout>
 
 <style>
-	.section {
-		/** Box Shadow Definitivo */
-		box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  .section {
+    /** Box Shadow Definitivo */
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
 
-		transition: transform 100ms ease;
-		cursor: pointer;
-	}
-	.section:hover {
-		transform: scale(1.01);
-	}
+    transition: transform 100ms ease;
+    cursor: pointer;
+  }
+  .section:hover {
+    transform: scale(1.01);
+  }
 </style>
