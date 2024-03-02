@@ -21,16 +21,14 @@ const matchSpell = data.find((spell: any) => spell.name === name) ?? {
 
 <article
 	class={`
-    bg-[--gray] rounded-lg p-4
-    flex flex-col gap-4 w-[25vw]
+    bg-[--gray] rounded-lg p-2
+    flex flex-col gap-2
+		w-[25vw]
 `}
 >
 	<section class='flex rounded-lg'>
-		<div id='padding' class='border-2'>
-			<img
-				src={matchSpell.src}
-				class='rounded-lg h-full w-full object-cover'
-			/>
+		<div id='padding'>
+			<img src={matchSpell.src} class='rounded-lg object-cover' />
 		</div>
 		<!-- SVG -->
 		<div class='w-full flex items-center pl-4'>
