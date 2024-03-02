@@ -1,50 +1,25 @@
 ---
 interface Props {
-  src?: string;
-  alt?: string;
-  href?: string;
-  trasfondo?: string;
-  alineamiento?: string;
+	name: string;
 }
 
-const {
-  src = '/img/background.png',
-  alt,
-  href,
-  trasfondo,
-  alineamiento,
-} = Astro.props;
+const { name } = Astro.props;
+
+let simple = name.split(' ')[0].toLowerCase();
+console.log(simple);
 ---
 
-<a href={href}>
-  <article
-    class={`
-    	p-2 bg-[--gray] rounded-lg transition-all
-    	h-full w-full hover:bg-[--black] hover:blur-sm
-  	`}
-  >
-    <!-- <div class='absolute z-10 ml-[30%] mt-[10%]'>
-      <h1 class='text-4xl font-[unbounded] font-bold uppercase text-[--event]'>
-        {trasfondo}
-      </h1>
-      <h1>{alineamiento}</h1>
-    </div> -->
-    <img
-      src={src}
-      alt={alt}
-      class='rounded-lg h-full w-full object-cover object-top'
-    />
-  </article>
-</a>
-
-<!-- <style>
-  article > * {
-    transition: all 0.23s ease;
-  }
-  div {
-    visibility: hidden;
-  }
-  article:hover div {
-    visibility: visible;
-  }
-</style> -->
+<article
+	class={`
+  	p-2 bg-[--gray] rounded-lg transition-all
+    h-full w-full
+  `}
+>
+	<a href=`lore/${simple}`>
+		<img
+			src=`/img/${simple}/${simple}.png`
+			alt={name}
+			class='rounded-lg h-full w-full object-cover object-top hover:blur-sm'
+		/>
+	</a>
+</article>
