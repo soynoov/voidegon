@@ -57,13 +57,7 @@ let pg = dg + bon_com * kriv.level; // PG: Puntos de Golpe
         <Experience race={kriv.race} rol={kriv.rol} xp={kriv.xp} start={3} />
       </section>
       <section class='col-span-2 row-span-3'>
-        <Portrait
-          src='/img/kriv/kriv.png'
-          alt={kriv.name}
-          href='/lore/kriv'
-          trasfondo='Soldado'
-          alineamiento='Legal Bueno'
-        />
+        <Portrait name={kriv.name} />
       </section>
       <section class='col-span-4'>
         <Stats
