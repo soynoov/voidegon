@@ -1,228 +1,235 @@
 ---
 interface Props {
-	level?: number;
-	max_level?: number;
+  level?: number;
+  max_level?: number;
 }
 
 const { level = 0, max_level = 5 } = Astro.props;
 
 let filled = [
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
 ];
 let blocked = [true, true, true, true, true, true, true, true, true, true];
 for (let i = 0; i < level && i < filled.length; i++) {
-	filled[i] = true;
+  filled[i] = true;
 }
 for (let i = 0; i < max_level && i < blocked.length; i++) {
-	blocked[i] = false;
+  blocked[i] = false;
 }
-
-console.log(filled);
-console.log(blocked);
 ---
 
 <article class='bg-[--gray] p-2 rounded-lg mt-2'>
-	<div
-		class={`
+  <section
+    class={`
       bg-[--dark] rounded-lg
       flex gap-2 justify-around
     `}
-	>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[0] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[0] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[1] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[1] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[2] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[2] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[3] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[3] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[4] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[4] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[5] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[5] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[6] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[6] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[7] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[7] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[8] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[8] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-		<section>
-			<svg
-				width='50'
-				height='50'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke={blocked[9] ? 'var(--gray)' : 'currentColor'}
-				fill={filled[9] ? 'red' : 'none'}
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
-				></path>
-			</svg>
-		</section>
-	</div>
+  >
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[0] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[0] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[1] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[1] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[2] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[2] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[3] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[3] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[4] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[4] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[5] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[5] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[6] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[6] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[7] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[7] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[8] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[8] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <svg
+        width='50'
+        height='50'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke={blocked[9] ? 'var(--gray)' : 'currentColor'}
+        fill={filled[9] ? 'red' : 'none'}
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path
+          d='M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572'
+        ></path>
+      </svg>
+    </div>
+  </section>
 </article>
 
 <style>
-	section {
-		background-color: var(--dark);
-		border-radius: 0.5rem;
-		padding: 0.5rem;
-		width: 100%;
+  div {
+    background-color: var(--dark);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
 
-		display: flex;
-		justify-content: center;
+    display: flex;
+    justify-content: center;
 
-		border-right: solid 2px var(--gray);
-	}
-	svg {
-		color: red;
-	}
+    border-right: solid 2px var(--gray);
+  }
+  svg {
+    color: red;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      flex-wrap: wrap;
+    }
+    div {
+      border-bottom: solid 2px var(--gray);
+      border-right: none;
+    }
+  }
 </style>
