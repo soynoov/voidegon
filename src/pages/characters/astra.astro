@@ -13,6 +13,7 @@ import INI from '../../components/little/INI.astro';
 import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
 import HR from '../../components/little/HR.astro';
+import Portrait from '@/components/character/Portrait.astro';
 //
 let mod_com = 2,
   fue = 0,
@@ -28,14 +29,14 @@ let mod_com = 2,
   <main>
     <article
       class={`
-        w-[80vw] mx-auto mt-4 
+        w-[80vw] mx-auto mt-2
         grid grid-cols-6
-    `}
+      `}
     >
       <section class='col-span-6'>
         <Experience xp={130} race='Astral Elf' rol='Ranger' />
       </section>
-      <section class='col-span-2 pt-2 pr-2'>
+      <section class='col-span-2'>
         <Stats
           fue={7}
           des={20}
@@ -47,46 +48,30 @@ let mod_com = 2,
           com={[1, 0, 1, 0, 0, 0]}
         />
       </section>
-      <section class='col-span-2 pt-2 section'>
-        <img
-          src='/img/astra/astra.png'
-          alt='Astra Starlink'
-          class='rounded-lg h-full object-cover'
-        />
+      <section class='col-span-2'>
+        <Portrait name='Astra Starlink' />
       </section>
-      <section class='col-span-1 pl-2 pt-2'>
+      <section class='col-span-1'>
         <CA mod={des} />
       </section>
-      <section class='col-span-1 pl-2 pt-2'>
+      <section class='col-span-1'>
         <INI des={des} />
       </section>
-      <section class='col-span-6 pt-2'>
+      <section class='col-span-6'>
         <HP hp={10 + con - 0} hpmax={10 + con} />
       </section>
-    </article>
-    <HR />
-    <article class='w-[80vw] mx-auto mt-[10000vh]'>
-      <Money ppt={1} po={1} pe={1} pp={1} pc={1} />
-      <Money po={1} pe={1} pp={1} pc={1} />
-      <Money ppt={1} pp={1} />
-      <Money po={1} />
-      <Money po={1} pp={1} />
-      <Money />
-      <Money pe={1} pc={1} />
-      <p class='text-center'>中文閱讀</p>
+      <section class='col-span-6'>
+        <HR />
+      </section>
+      <section class='col-span-6'>
+        <Money />
+      </section>
     </article>
   </main>
 </Layout>
 
 <style>
-  .section {
-    /** Box Shadow Definitivo */
-    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
-
-    transition: transform 100ms ease;
-    cursor: pointer;
-  }
-  .section:hover {
-    transform: scale(1.01);
+  section {
+    padding: 0.25rem;
   }
 </style>

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Kenkart Silkson",
+    "race": "Dwarf",
+    "rol": "Rogue",
+    "xp": 210,
+    "level": 1,
+    "stats": {
+      "fue": 10,
+      "des": 24,
+      "con": 6,
+      "int": 10,
+      "sab": 8,
+      "car": 14
+    },
+    "skills": {},
+    "comps": {
+      "bon_com": 2,
+      "stats": ["des", "int"],
+      "skills": [],
+      "weapons": []
+    },
+    "weapons": ["espada corta", "ballesta de mano"],
+    "money": {
+      "pc": 0,
+      "pp": 6,
+      "pe": 1,
+      "po": 41,
+      "ppt": 0
+    }
+  }
+]
