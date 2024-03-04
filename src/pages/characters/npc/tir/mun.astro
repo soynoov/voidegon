@@ -8,19 +8,19 @@ import Portrait from '@/components/character/npc/Portrait.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Mun'>
-	<Name name='Mun' />
-	<article
-		class={`
+  <Name name='Mun' />
+  <article
+    class={`
 			w-[80vw] mx-auto
 			grid grid-cols-6
 			gap-2
 		`}
-	>
-		<section class='col-span-6'>
-			<Hearts max_level={3} />
-		</section>
-		<section class='col-span-2'>
-			<Portrait />
-		</section>
-	</article>
+  >
+    <section class='col-span-6'>
+      <Hearts level={-3} max_level={3} />
+    </section>
+    <section class='col-span-2'>
+      <Portrait />
+    </section>
+  </article>
 </Layout>
