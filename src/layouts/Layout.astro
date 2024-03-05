@@ -27,6 +27,9 @@ const { title } = Astro.props;
 		<style is:global>
 			@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
+			/** 3 Fonts (Capitulos, Lore, Estilo Medieval): Nunito, Grenze Gotisch y New Rocker */
+			@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=New+Rocker&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 			:root {
 				--dark: #212121;
 				--light: #fff;
@@ -148,6 +151,13 @@ const { title } = Astro.props;
 			span#info {
 				color: var(--warning);
 				letter-spacing: 0px;
+			}
+
+			/** Nuevos Formatos (Esperemos que los Fijos) */
+			strong#day {
+				font-family: 'Grenze Gotisch', serif;
+				color: var(--date);
+				font-size: 1.2rem;
 			}
 		</style>
 	</body>

@@ -1,36 +1,44 @@
 ---
 interface Props {
-  title: string;
-  color?: string;
+	title: string;
+	color?: string;
 }
 
 const { title, color = 'title' } = Astro.props;
 ---
 
 <details
-  class={`
+	class={`
     w-[80vw] mx-auto
     bg-[--gray] rounded-lg
-    open:pb-4 my-4
+    open:pb-4 my-4 
   `}
 >
-  <summary
-    class={`
+	<summary
+		class={`
       cursor-pointer text-center list-none transition-colors
-      hover:bg-[--black] rounded-lg p-2 pb-4
+      hover:bg-[--black] py-4 
     `}
-  >
-    <h1
-      class='font-[cinzel] text-4xl capitalize font-extrabold'
-      style={`color: var(--${color});`}
-    >
-      {title}
-    </h1>
-    <hr class='w-[75vw] mx-auto -mt-1' />
-  </summary>
-  <slot />
+	>
+		<h1
+			class='font-["new_rocker"] text-4xl capitalize font-bold'
+			style={`color: var(--${color});`}
+		>
+			{title}
+		</h1>
+		<hr class='w-[75vw] mx-auto -mt-1 border-[--grey]' />
+	</summary>
+	<p class='text-justify font-[nunito] px-10 font-medium mt-2'>
+		<slot />
+	</p>
 </details>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+	details[open] summary {
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+	}
+	details:not([open]) summary {
+		border-radius: 0.5rem;
+	}
 </style>
