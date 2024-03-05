@@ -41,4 +41,7 @@ const { title, color = 'title' } = Astro.props;
 	details:not([open]) summary {
 		border-radius: 0.5rem;
 	}
+	details[open] summary:hover {
+		background: linear-gradient(var(--black) 90%, var(--gray));
+	}
 </style>
