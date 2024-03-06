@@ -1,68 +1,68 @@
 ---
 interface Props {
-	name?: string;
-	img?: string;
-	enlace?: string;
-	center?: string;
-	lock?: boolean;
-	light?: boolean;
+  name?: string;
+  img?: string;
+  enlace?: string;
+  center?: string;
+  lock?: boolean;
+  light?: boolean;
 }
 
 const {
-	name,
-	img = '/img/background.png',
-	enlace,
-	center = 'top',
-	lock = false,
-	light = false,
+  name,
+  img = '/img/background.png',
+  enlace,
+  center = 'top',
+  lock = false,
+  light = false,
 } = Astro.props;
 
 // Controlar si esta bloqueado o no
 let id_lock;
 if (lock) {
-	id_lock = 'lock';
+  id_lock = 'lock';
 }
 let id_light;
 if (light) {
-	id_light = 'light';
+  id_light = 'light';
 }
 ---
 
 <section
-	class={`
+  class={`
   	flex justify-center items-center flex-col 
   	transition-transform hover:shadow-lg
   	rounded-lg text-center
     ${id_light} ${id_lock}
   `}
 >
-	<a href={enlace}>
-		<div
-			class='size-[7.5cm] rounded-t-lg'
-			style={{ background: `url(${img}) ${center}/cover` }}
-		>
-		</div>
-		<h3 class='my-2 font-[caveat] font-semibold text-lg'>{name}</h3>
-	</a>
+  <a href={enlace}>
+    <div
+      class='size-[7.5cm] rounded-t-lg'
+      style={{ background: `url(${img}) ${center}/cover` }}
+    >
+    </div>
+    <h3 class='my-2 font-[caveat] font-semibold text-lg'>{name}</h3>
+  </a>
 </section>
 
 <style>
-	section:hover {
-		background-color: var(--gray);
-		scale: 1.01;
-	}
-	.lock {
-		opacity: 0.5;
-		filter: blur(4px);
-		color: var(--gray);
-	}
-	.lock:hover {
-		transform: none;
-		background-color: transparent;
-		box-shadow: none;
-		filter: blur(2px);
-	}
-	.light:hover {
-		background-color: var(--dark);
-	}
+  section:hover {
+    background-color: var(--gray);
+    transform: scale(1.01);
+  }
+  .lock {
+    opacity: 0.5;
+    filter: blur(4px);
+    color: var(--gray);
+  }
+  .lock:hover {
+    transform: none;
+    background-color: transparent;
+    box-shadow: none;
+    filter: blur(2px);
+  }
+  .light:hover {
+    background-color: var(--dark);
+  }
 </style>
