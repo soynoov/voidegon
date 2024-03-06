@@ -18,7 +18,7 @@ const matchWeapon = data.find((weapon: any) => weapon.name === name) ?? {
 
 <article class='bg-[--gray] p-2 rounded-lg'>
 	<a
-		href=`/extras/weapon/${matchWeapon.name.toLowerCase().replace(" ", "-")}`
+		href=`/extras/weapon/${matchWeapon.name.toLowerCase().replaceAll(" ", "-")}`
 	>
 		<section
 			class={`

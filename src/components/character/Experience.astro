@@ -1,9 +1,9 @@
 ---
 interface Props {
-  race: string;
-  rol: string;
-  xp: number;
-  start?: number;
+	race: string;
+	rol: string;
+	xp: number;
+	start?: number;
 }
 
 const { race, rol, xp, start = 2 } = Astro.props;
@@ -13,30 +13,32 @@ let level = 0;
 let xpUp = 0;
 
 const xpThresholds = [
-  0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000,
-  120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000,
+	0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000,
+	120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000,
 ];
 
 function medirXP(xp: number) {
-  while (xp >= xpThresholds[level]) {
-    level++;
-  }
+	while (xp >= xpThresholds[level]) {
+		level++;
+	}
 
-  xpUp = xpThresholds[level] - xpThresholds[level - 1];
+	xpUp = xpThresholds[level] - xpThresholds[level - 1];
 
-  return { level, xpUp };
+	return { level, xpUp };
 }
 
 function calcularPorcentaje(xp: number) {
-  if (xp === xpThresholds[level - 1]) {
-    porcentaje = 0;
-  } else {
-    porcentaje = Math.floor(
-      ((xp - xpThresholds[level - 1]) / (xpUp - xpThresholds[level - 1])) * 100
-    );
-  }
+	if (xp === xpThresholds[level - 1]) {
+		porcentaje = 0;
+	} else {
+		porcentaje = Math.floor(
+			((xp - xpThresholds[level - 1]) /
+				(xpUp - xpThresholds[level - 1])) *
+				100
+		);
+	}
 
-  return porcentaje;
+	return porcentaje;
 }
 
 medirXP(xp);
@@ -45,117 +47,117 @@ console.log(porcentaje);
 ---
 
 <article
-  class={`
+	class={`
 		grid grid-cols-6 items-center gap-2 
 		bg-[--gray] rounded-lg p-2
 	`}
 >
-  <a href={`/extras/race/${race.toLowerCase()}`}>
-    <section class={`col-span-1 row-start-1`} id='race'>
-      <h6 class='text-[--title] font-[unbounded]'>{race}</h6>
-    </section>
-  </a>
+	<a href={`/extras/race/${race.toLowerCase().replaceAll(' ', '-')}`}>
+		<section class={`col-span-1 row-start-1`} id='race'>
+			<h6 class='text-[--title] font-[unbounded]'>{race}</h6>
+		</section>
+	</a>
 
-  <section
-    class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1 flex items-center justify-around w-full text-nowrap`}
-    style={`grid-column-start: ${start};`}
-    id='xp'
-  >
-    <span class='text-base'>
-      Nivel <span class='text-[--light] text-lg'>{level}</span>
-    </span>
-    <div class='w-[80%] bg-[--gray] rounded-full h-1.5'>
-      <div
-        class='h-1.5 rounded-full'
-        style={`width: ${porcentaje}%`}
-        id='pulse'
-      >
-      </div>
-    </div>
-    <span class='text-base'>
-      <span class='text-[--date]'>{xp}</span>
-      /
-      <span class='text-xs'>{xpThresholds[level]}</span>
-    </span>
-  </section>
+	<section
+		class={`col-span-4 font-["caveat_brush"] text-[--white] row-start-1 flex items-center justify-around w-full text-nowrap`}
+		style={`grid-column-start: ${start};`}
+		id='xp'
+	>
+		<span class='text-base'>
+			Nivel <span class='text-[--light] text-lg'>{level}</span>
+		</span>
+		<div class='w-[80%] bg-[--gray] rounded-full h-1.5'>
+			<div
+				class='h-1.5 rounded-full'
+				style={`width: ${porcentaje}%`}
+				id='pulse'
+			>
+			</div>
+		</div>
+		<span class='text-base'>
+			<span class='text-[--date]'>{xp}</span>
+			/
+			<span class='text-xs'>{xpThresholds[level]}</span>
+		</span>
+	</section>
 
-  <a href={`/extras/rol/${rol.toLowerCase()}`}>
-    <section class={`col-span-1 md:row-start-1 row-start-2`} id='rol'>
-      <h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
-    </section>
-  </a>
+	<a href={`/extras/rol/${rol.toLowerCase().replaceAll(' ', '-')}`}>
+		<section class={`col-span-1 md:row-start-1 row-start-2`} id='rol'>
+			<h6 class='text-[--subtitle] font-[unbounded]'>{rol}</h6>
+		</section>
+	</a>
 </article>
 
 <style>
-  section {
-    padding: 0.5rem;
-    line-height: 200%;
-  }
-  a,
-  section {
-    background-color: var(--dark);
-    border-radius: 0.5rem;
+	section {
+		padding: 0.5rem;
+		line-height: 200%;
+	}
+	a,
+	section {
+		background-color: var(--dark);
+		border-radius: 0.5rem;
 
-    text-align: center;
+		text-align: center;
 
-    transition: all 100ms ease;
-    cursor: default;
+		transition: all 100ms ease;
+		cursor: default;
 
-    height: 100%;
-  }
-  a > section {
-    cursor: pointer;
-  }
+		height: 100%;
+	}
+	a > section {
+		cursor: pointer;
+	}
 
-  a:hover > section {
-    background-color: var(--black);
-  }
+	a:hover > section {
+		background-color: var(--black);
+	}
 
-  h6 {
-    font-weight: bold;
-  }
+	h6 {
+		font-weight: bold;
+	}
 
-  #xp > * {
-    margin: 0 1rem;
-  }
+	#xp > * {
+		margin: 0 1rem;
+	}
 
-  /** MEDIA QUERYS */
-  @media (max-width: 1024px) {
-    article {
-      display: flex;
-      flex-direction: column;
-    }
-    #xp {
-      order: 1;
-    }
-    a {
-      width: 100%;
-    }
-  }
+	/** MEDIA QUERYS */
+	@media (max-width: 1024px) {
+		article {
+			display: flex;
+			flex-direction: column;
+		}
+		#xp {
+			order: 1;
+		}
+		a {
+			width: 100%;
+		}
+	}
 
-  /** Animations */
-  @keyframes pulse {
-    0% {
-      opacity: 0.25;
-    }
-    50% {
-      opacity: 0.75;
-    }
-    100% {
-      opacity: 0.25;
-    }
-  }
+	/** Animations */
+	@keyframes pulse {
+		0% {
+			opacity: 0.25;
+		}
+		50% {
+			opacity: 0.75;
+		}
+		100% {
+			opacity: 0.25;
+		}
+	}
 
-  @keyframes cargarXP {
-    from {
-      width: 0;
-    }
-  }
+	@keyframes cargarXP {
+		from {
+			width: 0;
+		}
+	}
 
-  #pulse {
-    background: linear-gradient(90deg, var(--date) 0%, var(--gold) 100%);
-    animation:
-      cargarXP 3s forwards ease-in-out,
-      pulse 5s ease infinite;
-  }
+	#pulse {
+		background: linear-gradient(90deg, var(--date) 0%, var(--gold) 100%);
+		animation:
+			cargarXP 3s forwards ease-in-out,
+			pulse 5s ease infinite;
+	}
 </style>

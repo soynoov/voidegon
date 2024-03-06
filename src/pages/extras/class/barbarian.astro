@@ -1,7 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Weapon from '../../components/Weapon.astro';
-import Spell from '../../components/Spell.astro';
+import Layout from '@/layouts/Layout.astro';
+import Weapon from '@/components/Weapon.astro';
+import Spell from '@/components/Spell.astro';
+import VEL from '@/components/little/VEL.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Extras ▸ Barbarian'>
@@ -13,5 +14,8 @@ import Spell from '../../components/Spell.astro';
 	</section>
 	<section class='w-[30vw] mx-auto mt-8'>
 		<Spell name='Luz' />
+	</section>
+	<section class='mt-4 w-[30vw] mx-auto'>
+		<VEL vel='30' fly='60' />
 	</section>
 </Layout>

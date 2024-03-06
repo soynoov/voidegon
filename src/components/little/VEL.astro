@@ -8,6 +8,9 @@ interface Props {
 
 const { vel, fly = 0, dig = 0, add = [0, 0, 0] } = Astro.props;
 
+const d_fly = fly <= 0 ? 'none' : 'flex';
+const d_dig = dig <= 0 ? 'none' : 'flex';
+
 function addVel(x: number) {
 	x--;
 	if (add[x] > 0) {
@@ -18,17 +21,13 @@ function addVel(x: number) {
 
 <article
 	class={`
-		grid grid-cols-6 w-full h-full 
+		flex justify-center
 		p-2 gap-2 bg-[--gray] rounded-lg
+		w-full h-full
 	`}
 >
-	<section
-		class={`
-        w-full col-span-2
-        flex justify-center items-center flex-col
-    `}
-	>
-		<div class='px-4 bg-[--dark] py-2 rounded-lg'>
+	<section class='w-[50%]' style={`display: ${d_fly};`}>
+		<div>
 			<svg
 				width='24'
 				height='24'
@@ -48,17 +47,12 @@ function addVel(x: number) {
 				></path>
 			</svg>
 		</div>
-		<h5 class='mx-4'>{fly}</h5>
+		<h5>{fly}</h5>
 		<h6>{addVel(2)}</h6>
 	</section>
 
-	<section
-		class={`
-        w-full col-span-3
-        flex justify-center items-center flex-col
-    `}
-	>
-		<div class='px-4 bg-[--dark] py-2 rounded-lg'>
+	<section class='w-full'>
+		<div>
 			<svg
 				width='24'
 				height='24'
@@ -75,17 +69,12 @@ function addVel(x: number) {
 					d='M10 12l1.5 -3'></path></svg
 			>
 		</div>
-		<h5 class='mx-4'>{vel}</h5>
+		<h5>{vel}</h5>
 		<h6>{addVel(1)}</h6>
 	</section>
 
-	<section
-		class={`
-        w-full col-span-1
-        flex justify-center items-center flex-col
-    `}
-	>
-		<div class='px-2 bg-[--dark] py-2 rounded-lg'>
+	<section class='w-[35%]' style={`display: ${d_dig};`}>
+		<div>
 			<svg
 				width='24'
 				height='24'
@@ -101,27 +90,43 @@ function addVel(x: number) {
 				></path></svg
 			>
 		</div>
-		<h5 class='mx-4'>{dig}</h5>
+		<h5>{dig}</h5>
 		<h6>{addVel(3)}</h6>
 	</section>
 </article>
 
 <style>
 	section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+
 		background-color: var(--dark);
 		border-radius: 0.5rem;
 		padding: 0.5rem;
 		cursor: default;
+
+		transition: width 300ms ease;
+	}
+	section:hover {
+		width: 100%;
 	}
 
 	h5 {
 		font-family: 'pacifico';
+		margin-bottom: 0.35rem;
 		color: var(--white);
 		font-size: 1.5rem;
 	}
-
 	h6 {
-		color: var(--date);
 		font-family: 'pacifico';
+		margin-left: -0.5rem;
+		color: var(--date);
+		font-size: 0.9rem;
+	}
+
+	svg {
+		color: var(--white);
 	}
 </style>
