@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
     <h1 class='text-center md:text-8xl sm:text-6xl text-4xl'>
       Welcome to <br /> Voidegon
     </h1>
-    <div class='flex mx-auto mt-8 gap-4'>
+    <div class='flex mx-auto mt-20 gap-4'>
       <!-- Creative Commons -->
       <svg
         width='24'
@@ -85,9 +85,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /** Title Artistic Font: Moirai One */
-  @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
-
   h1 {
     font-family: 'Moirai One', system-ui;
     color: var(--light);
@@ -99,7 +96,11 @@ import Layout from '../layouts/Layout.astro';
   }
   main {
     background: url('/img/background.png') center/cover;
-    height: 95dvh;
+    height: 100dvh;
+  }
+
+  svg {
+    color: var(--white);
   }
 
   @media (max-width: 600px) {

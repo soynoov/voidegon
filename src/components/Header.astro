@@ -4,7 +4,11 @@ const currentPath = pathname.slice(1);
 ---
 
 <header
-  class='flex justify-between hover:shadow-xl sticky top-0 bg-[--dark] z-50'
+  class={`
+    flex justify-between hover:shadow-lg
+    sticky top-0 bg-[--dark]
+    z-50 p-2 mr-4 ml-2
+  `}
 >
   <div>
     <a class={currentPath === '' ? 'active' : ''} href='/'>
@@ -12,9 +16,8 @@ const currentPath = pathname.slice(1);
       <h1 class='text-2xl mx-4'>Voidegon</h1>
     </a>
   </div>
-  <nav
-    class='flex justify-between items-center text-base text-[--light] font-medium'
-  >
+  <nav>
+    <!-- Menu Hamburguesa -->
     <a href='/menu'>
       <svg
         class='hidden'
@@ -33,9 +36,13 @@ const currentPath = pathname.slice(1);
         <path d='M4 18l16 0'></path>
       </svg>
     </a>
-    <ul>
+    <!-- Menu -->
+    <ul class='gap-8'>
       <li>
-        <a class={currentPath.includes('lore') ? 'active' : ''} href='/museum'>
+        <a
+          class={currentPath.includes('museum') ? 'active' : ''}
+          href='/museum'
+        >
           Museo
         </a>
       </li>
@@ -70,28 +77,24 @@ const currentPath = pathname.slice(1);
     color: var(--light);
     font-weight: 900;
   }
-
-  header,
-  ul > li {
-    padding: 0.5rem 1rem;
-    transition: transform 150ms ease-out;
+  nav {
+    font-family: 'Lexend', system-ui;
+    color: var(--white);
+    font-weight: 600;
   }
+  nav a:hover {
+    color: var(--light);
+  }
+
+  .active {
+    color: var(--light);
+  }
+
   header > div > a,
-  header > nav > ul {
+  header > nav > ul,
+  header > nav {
     display: flex;
     align-items: center;
-  }
-  a:hover {
-    color: var(--white);
-  }
-  .active {
-    font-weight: bolder;
-    color: var(--light);
-    transform: none;
-  }
-  .active:hover {
-    color: var(--light);
-    transform: none;
   }
 
   @media screen and (max-width: 620px) {
