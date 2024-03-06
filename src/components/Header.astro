@@ -4,106 +4,102 @@ const currentPath = pathname.slice(1);
 ---
 
 <header
-	class='flex justify-between hover:shadow-xl sticky top-0 bg-[--dark] z-50'
+  class='flex justify-between hover:shadow-xl sticky top-0 bg-[--dark] z-50'
 >
-	<div>
-		<a class={currentPath === '' ? 'active' : ''} href='/'>
-			<img src='/logo.png' alt='Logotype' class='w-auto h-10' />
-			<h1 class='text-2xl font-bold mx-4 text-[--light]'>Voidegon</h1>
-		</a>
-	</div>
-	<nav
-		class='flex justify-between items-center text-base text-[--light] font-medium'
-	>
-		<a href='/menu'>
-			<svg
-				class='hidden'
-				width='30'
-				height='30'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path d='M4 6l16 0'></path>
-				<path d='M4 12l16 0'></path>
-				<path d='M4 18l16 0'></path>
-			</svg>
-		</a>
-		<ul>
-			<li>
-				<a
-					class={currentPath.includes('diaries') ? 'active' : ''}
-					href='/lore'
-				>
-					Enciclopedia
-				</a>
-			</li>
-			<li>
-				<a
-					class={currentPath.includes('characters') ? 'active' : ''}
-					href='/characters'
-				>
-					Personajes
-				</a>
-			</li>
-			<li>
-				<a
-					class={currentPath.includes('maps') ? 'active' : ''}
-					href='/maps'
-				>
-					Mapa
-				</a>
-			</li>
-			<li>
-				<a
-					class={currentPath.includes('extras') ? 'active' : ''}
-					href='/extras'
-				>
-					Extras
-				</a>
-			</li>
-		</ul>
-	</nav>
+  <div>
+    <a class={currentPath === '' ? 'active' : ''} href='/'>
+      <img src='/logo.png' alt='Logotype' class='w-auto h-10' />
+      <h1 class='text-2xl mx-4'>Voidegon</h1>
+    </a>
+  </div>
+  <nav
+    class='flex justify-between items-center text-base text-[--light] font-medium'
+  >
+    <a href='/menu'>
+      <svg
+        class='hidden'
+        width='30'
+        height='30'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+        <path d='M4 6l16 0'></path>
+        <path d='M4 12l16 0'></path>
+        <path d='M4 18l16 0'></path>
+      </svg>
+    </a>
+    <ul>
+      <li>
+        <a class={currentPath.includes('lore') ? 'active' : ''} href='/museum'>
+          Museo
+        </a>
+      </li>
+      <li>
+        <a
+          class={currentPath.includes('characters') ? 'active' : ''}
+          href='/characters'
+        >
+          Personajes
+        </a>
+      </li>
+      <li>
+        <a class={currentPath.includes('maps') ? 'active' : ''} href='/maps'>
+          Mapa
+        </a>
+      </li>
+      <li>
+        <a
+          class={currentPath.includes('extras') ? 'active' : ''}
+          href='/extras'
+        >
+          Extras
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <style>
-	header,
-	ul > li {
-		padding: 0.5rem 1rem;
-		transition: transform 150ms ease-out;
-	}
-	header > div > a,
-	header > nav > ul {
-		display: flex;
-		align-items: center;
-	}
-	a:hover {
-		color: var(--white);
-	}
-	.active {
-		font-weight: bold;
-		color: var(--light);
-		transform: none;
-	}
-	.active:hover {
-		color: var(--light);
-		transform: none;
-	}
+  h1 {
+    font-family: 'Moirai One', system-ui;
+    color: var(--light);
+    font-weight: 900;
+  }
 
-	li:hover {
-		transform: scale(1.05);
-	}
+  header,
+  ul > li {
+    padding: 0.5rem 1rem;
+    transition: transform 150ms ease-out;
+  }
+  header > div > a,
+  header > nav > ul {
+    display: flex;
+    align-items: center;
+  }
+  a:hover {
+    color: var(--white);
+  }
+  .active {
+    font-weight: bolder;
+    color: var(--light);
+    transform: none;
+  }
+  .active:hover {
+    color: var(--light);
+    transform: none;
+  }
 
-	@media screen and (max-width: 620px) {
-		header svg {
-			display: block;
-		}
-		header nav ul {
-			display: none;
-		}
-	}
+  @media screen and (max-width: 620px) {
+    header svg {
+      display: block;
+    }
+    header nav ul {
+      display: none;
+    }
+  }
 </style>

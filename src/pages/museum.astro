@@ -1,0 +1,27 @@
+---
+// Main Component
+import Layout from '@/layouts/Layout.astro';
+import Article from '@/components/Title-XL.astro';
+import Section from '@/components/Section.astro';
+import Menu from '@/layouts/Menu.astro';
+import Card from '@/components/Card.astro';
+---
+
+<Layout title='】 Voidegon ▸ Museo'>
+  <main>
+    <Article
+      title='Museo'
+      img='/img/bg_diaries.png'
+      center='center'
+      opacity={0.75}
+    />
+    <Section title='El Comienzo del Todo' subtitle='Asentando una Base' />
+    <Menu>
+      <Card
+        img='/img/paper_roll.png'
+        name='La Tierra Olvidada'
+        enlace='/museum/lore/murcia'
+      />
+    </Menu>
+  </main>
+</Layout>

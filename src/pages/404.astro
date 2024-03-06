@@ -1,15 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Error 404'>
-  <main class='flex justify-center flex-col h-full items-center'>
+  <main class='flex justify-center flex-col items-center -mt-4'>
     <svg
-      class='text-[--warning] mb-4 font-bold'
+      class='text-red-600 mb-4'
       width='50'
       height='50'
       viewBox='0 0 24 24'
-      stroke-width='2'
+      stroke-width='1.5'
       stroke='currentColor'
       fill='none'
       stroke-linecap='round'
@@ -19,27 +19,30 @@ import Layout from '../layouts/Layout.astro';
         d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z'
       ></path><path d='M12 16h.01'></path>
     </svg>
-    <h1 class='self-center font-[unbounded] text-4xl'>¡Cuidado!</h1>
-    <p class='text-center mt-4 w-80 text-pretty'>
-      Estas a punto de caerte en el vacio eterno de Voidegon, ten paciencia y
-      vuelve más tarde.
+    <h1 class='text-6xl text-red-600 uppercase'>Alerta</h1>
+    <p class='text-center mt-6 w-96 text-pretty font-[nunito] font-medium'>
+      Estas al borde del abismo, vas ha desbanecerte en el vacio eterno de
+      Voidegon. Date la vuelta antes de que sea demasiado tarde para
+      recuperarte.
     </p>
   </main>
 </Layout>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+  /** Title Artistic Font: Moirai One */
+  @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+
+  h1 {
+    font-family: 'Moirai One', system-ui;
+    font-weight: 900;
+  }
 
   body {
     overflow-y: hidden;
   }
   main {
-    background: url('/img/background.png') bottom/cover;
+    background: url('/img/background.png') center/cover;
     height: 95dvh;
-  }
-  h1 {
-    color: var(--light);
-    font-weight: 900;
   }
 
   img {

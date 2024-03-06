@@ -1,35 +1,46 @@
 ---
 interface Props {
-	title: string;
-	img?: string;
-	center?: string;
-	opacity?: number;
+  title: string;
+  img?: string;
+  center?: string;
+  opacity?: number;
 }
 
 const {
-	title,
-	img = '/img/background.png',
-	center = 'bottom',
-	opacity = 0.5,
+  title,
+  img = '/img/background.png',
+  center = 'bottom',
+  opacity = 0.5,
 } = Astro.props;
 ---
 
 <section
-	class='relative h-[30vh] flex justify-center items-center cursor-default'
-	style={{ background: `url(${img}) ${center}/cover` }}
+  class='relative h-[30vh] flex justify-center items-center cursor-default'
+  style={{ background: `url(${img}) ${center}/cover` }}
 >
-	<div
-		class='absolute inset-0'
-		style={{ opacity: `${opacity}`, background: '#000' }}
-	>
-	</div>
-	<h1
-		class={`
-			font-extrabold font-[unbounded] text-[--light] text-center 
+  <div
+    class='absolute inset-0'
+    style={{ opacity: `${opacity}`, background: '#000' }}
+  >
+  </div>
+  <h1
+    class={`
+			text-center 
 			relative mx-8 text-balance uppercase
 			md:text-6xl sm:text-4xl text-2xl
 		`}
-	>
-		{title}
-	</h1>
+  >
+    {title}
+  </h1>
 </section>
+
+<style>
+  /** Title Artistic Font: Moirai One */
+  @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+
+  h1 {
+    font-family: 'Moirai One', system-ui;
+    color: var(--light);
+    font-weight: 900;
+  }
+</style>
