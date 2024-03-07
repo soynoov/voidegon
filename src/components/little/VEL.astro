@@ -1,9 +1,9 @@
 ---
 interface Props {
-	vel: number;
-	fly?: number;
-	dig?: number;
-	add?: Array<number>;
+  vel: number;
+  fly?: number;
+  dig?: number;
+  add?: Array<number>;
 }
 
 const { vel, fly = 0, dig = 0, add = [0, 0, 0] } = Astro.props;
@@ -12,121 +12,120 @@ const d_fly = fly <= 0 ? 'none' : 'flex';
 const d_dig = dig <= 0 ? 'none' : 'flex';
 
 function addVel(x: number) {
-	x--;
-	if (add[x] > 0) {
-		return `+${add[x]}`;
-	}
+  x--;
+  if (add[x] > 0) {
+    return `+${add[x]}`;
+  }
 }
 ---
 
 <article
-	class={`
+  class={`
 		flex justify-center
 		p-2 gap-2 bg-[--gray] rounded-lg
 		w-full h-full
 	`}
 >
-	<section class='w-[50%]' style={`display: ${d_fly};`}>
-		<div>
-			<svg
-				width='24'
-				height='24'
-				viewBox='0 0 24 24'
-				stroke-width='1.5'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-			>
-				<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-				<path
-					d='M4 20l10 -10m0 -5v5h5m-9 -1v5h5m-9 -1v5h5m-5 -5l4 -4l4 -4'
-				></path>
-				<path
-					d='M19 10c.638 -.636 1 -1.515 1 -2.486a3.515 3.515 0 0 0 -3.517 -3.514c-.97 0 -1.847 .367 -2.483 1m-3 13l4 -4l4 -4'
-				></path>
-			</svg>
-		</div>
-		<h5>{fly}</h5>
-		<h6>{addVel(2)}</h6>
-	</section>
+  <section class='w-[50%]' style={`display: ${d_fly};`}>
+    <div>
+      <svg
+        class='icon icon-tabler icon-tabler-jetpack'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        stroke-width='1.5'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M10 6a3 3 0 1 0 -6 0v7h6v-7z'></path><path
+          d='M14 13h6v-7a3 3 0 0 0 -6 0v7z'></path><path
+          d='M5 16c0 2.333 .667 4 2 5c1.333 -1 2 -2.667 2 -5'></path><path
+          d='M15 16c0 2.333 .667 4 2 5c1.333 -1 2 -2.667 2 -5'></path><path
+          d='M10 8h4'></path><path d='M10 11h4'></path></svg
+      >
+    </div>
+    <h5>{fly}</h5>
+    <h6>{addVel(2)}</h6>
+  </section>
 
-	<section class='w-full'>
-		<div>
-			<svg
-				width='24'
-				height='24'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-				><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-					d='M4 6h5.426a1 1 0 0 1 .863 .496l1.064 1.823a3 3 0 0 0 1.896 1.407l4.677 1.114a4 4 0 0 1 3.074 3.89v2.27a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1z'
-				></path><path d='M14 13l1 -2'></path><path
-					d='M8 18v-1a4 4 0 0 0 -4 -4h-1'></path><path
-					d='M10 12l1.5 -3'></path></svg
-			>
-		</div>
-		<h5>{vel}</h5>
-		<h6>{addVel(1)}</h6>
-	</section>
+  <section class='w-full'>
+    <div>
+      <svg
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M4 6h5.426a1 1 0 0 1 .863 .496l1.064 1.823a3 3 0 0 0 1.896 1.407l4.677 1.114a4 4 0 0 1 3.074 3.89v2.27a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1z'
+        ></path><path d='M14 13l1 -2'></path><path
+          d='M8 18v-1a4 4 0 0 0 -4 -4h-1'></path><path d='M10 12l1.5 -3'
+        ></path></svg
+      >
+    </div>
+    <h5>{vel}</h5>
+    <h6>{addVel(1)}</h6>
+  </section>
 
-	<section class='w-[35%]' style={`display: ${d_dig};`}>
-		<div>
-			<svg
-				width='24'
-				height='24'
-				viewBox='0 0 24 24'
-				stroke-width='2'
-				stroke='currentColor'
-				fill='none'
-				stroke-linecap='round'
-				stroke-linejoin='round'
-				><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
-					d='M17 4l3 3'></path><path d='M18.5 5.5l-8 8'></path><path
-					d='M8.276 11.284l4.44 4.44a.968 .968 0 0 1 0 1.369l-2.704 2.704a4.108 4.108 0 0 1 -5.809 -5.81l2.704 -2.703a.968 .968 0 0 1 1.37 0z'
-				></path></svg
-			>
-		</div>
-		<h5>{dig}</h5>
-		<h6>{addVel(3)}</h6>
-	</section>
+  <section class='w-[35%]' style={`display: ${d_dig};`}>
+    <div>
+      <svg
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+          d='M17 4l3 3'></path><path d='M18.5 5.5l-8 8'></path><path
+          d='M8.276 11.284l4.44 4.44a.968 .968 0 0 1 0 1.369l-2.704 2.704a4.108 4.108 0 0 1 -5.809 -5.81l2.704 -2.703a.968 .968 0 0 1 1.37 0z'
+        ></path></svg
+      >
+    </div>
+    <h5>{dig}</h5>
+    <h6>{addVel(3)}</h6>
+  </section>
 </article>
 
 <style>
-	section {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 
-		background-color: var(--dark);
-		border-radius: 0.5rem;
-		padding: 0.5rem;
-		cursor: default;
+    background-color: var(--dark);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: default;
 
-		transition: width 300ms ease;
-	}
-	section:hover {
-		width: 100%;
-	}
+    transition: width 300ms ease;
+  }
+  section:hover {
+    width: 100%;
+  }
 
-	h5 {
-		font-family: 'pacifico';
-		margin-bottom: 0.35rem;
-		color: var(--white);
-		font-size: 1.5rem;
-	}
-	h6 {
-		font-family: 'pacifico';
-		margin-left: -0.5rem;
-		color: var(--date);
-		font-size: 0.9rem;
-	}
+  h5 {
+    font-family: 'pacifico';
+    margin-bottom: 0.35rem;
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-family: 'pacifico';
+    margin-left: -0.5rem;
+    color: var(--date);
+    font-size: 0.9rem;
+  }
 
-	svg {
-		color: var(--white);
-	}
+  svg {
+    color: var(--white);
+  }
 </style>
