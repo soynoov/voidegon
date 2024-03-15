@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+let version = '0.3.13:20';
 ---
 
 <Layout title='】 Voidegon'>
@@ -82,6 +84,9 @@ import Layout from '../layouts/Layout.astro';
       </svg>
     </div>
   </main>
+  <footer class='absolute bottom-1 left-2'>
+    <p class='text-[--gray] italic'>v_{version}</p>
+  </footer>
 </Layout>
 
 <style>
