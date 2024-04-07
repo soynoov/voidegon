@@ -1,64 +1,54 @@
 [
-	{
-		"name": "Nyliss Avacyn",
-		"race": "Aasimar",
-		"rol": "Wizard",
-		"xp": 400,
-		"level": 2,
-		"stats": {
-			"fue": 10,
-			"des": 14,
-			"con": 10,
-			"int": 16,
-			"sab": 14,
-			"car": 8
-		},
-		"skills": {
-			"acrobacias": 2,
-			"atletismo": 1,
-			"c.arcano": 1,
-			"engaño": 0,
-			"historia": 0
-		},
-		"comps": {
-			"mod_comp": 2,
-			"stats": ["int", "sab"],
-			"skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
-			"weapons": [
-				"dagas",
-				"dardos",
-				"hondas",
-				"bastones",
-				"ballestas ligeras"
-			]
-		},
-		"weapons": ["espada corta", "lanza"],
-		"money": {
-			"pc": 2,
-			"pp": 166,
-			"pe": 6,
-			"po": 18,
-			"ppt": 0
-		},
-		"backpack": {
-			"common": {
-				"libros": 3,
-				"plumas": 5,
-				"petalos": 6,
-				"hierro pulverizado": 10,
-				"plata pulverizada": 4,
-				"musgo": 3
-			},
-			"rare": [
-				"botella de tinta negra",
-				"pluma",
-				"espada oxidada de cobre"
-			],
-			"epic": {
-				"grimorio": "+hoja suelta",
-				"cupon var": "2 opciones"
-			},
-			"legendary": ["silbato magico"]
-		}
-	}
+  {
+    "name": "Nyliss Avacyn",
+    "race": "Aasimar",
+    "rol": "Wizard",
+    "xp": 410,
+    "level": 2,
+    "stats": {
+      "fue": 10,
+      "des": 14,
+      "con": 10,
+      "int": 16,
+      "sab": 14,
+      "car": 8
+    },
+    "skills": {
+      "acrobacias": 2,
+      "atletismo": 1,
+      "c.arcano": 1,
+      "engaño": 0,
+      "historia": 0
+    },
+    "comps": {
+      "mod_comp": 2,
+      "stats": ["int", "sab"],
+      "skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
+      "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
+    },
+    "weapons": ["espada corta", "lanza"],
+    "money": {
+      "pc": 2,
+      "pp": 166,
+      "pe": 6,
+      "po": 18,
+      "ppt": 0
+    },
+    "backpack": {
+      "common": {
+        "libros": 3,
+        "plumas": 5,
+        "petalos": 6,
+        "hierro pulverizado": 10,
+        "plata pulverizada": 4,
+        "musgo": 3
+      },
+      "rare": ["botella de tinta negra", "pluma", "espada oxidada de cobre"],
+      "epic": {
+        "grimorio": "+hoja suelta",
+        "cupon var": "2 opciones"
+      },
+      "legendary": ["silbato magico", "bolsa dimensión de bolsillo"]
+    }
+  }
 ]

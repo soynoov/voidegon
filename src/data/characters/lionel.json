@@ -1,44 +1,38 @@
 [
-	{
-		"name": "Lion'El Jonson",
-		"race": "Leonin",
-		"rol": "Barbarian",
-		"xp": 140,
-		"level": 2,
-		"stats": {
-			"fue": 16,
-			"des": 14,
-			"con": 14,
-			"int": 6,
-			"sab": 10,
-			"car": 12
-		},
-		"skills": {
-			"acrobacias": 2,
-			"atletismo": 1,
-			"c.arcano": 1,
-			"engaño": 0,
-			"historia": 0
-		},
-		"comps": {
-			"bon_com": 2,
-			"stats": ["int", "sab"],
-			"skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
-			"weapons": [
-				"dagas",
-				"dardos",
-				"hondas",
-				"bastones",
-				"ballestas ligeras"
-			]
-		},
-		"weapons": ["espada corta"],
-		"money": {
-			"pc": 0,
-			"pp": 0,
-			"pe": 0,
-			"po": 0,
-			"ppt": 0
-		}
-	}
+  {
+    "name": "Lion'El Jonson",
+    "race": "Leonin",
+    "rol": "Barbarian",
+    "xp": 150,
+    "level": 2,
+    "stats": {
+      "fue": 16,
+      "des": 14,
+      "con": 14,
+      "int": 6,
+      "sab": 10,
+      "car": 12
+    },
+    "skills": {
+      "acrobacias": 2,
+      "atletismo": 1,
+      "c.arcano": 1,
+      "engaño": 0,
+      "historia": 0
+    },
+    "comps": {
+      "bon_com": 2,
+      "stats": ["int", "sab"],
+      "skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
+      "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
+    },
+    "weapons": ["espada corta"],
+    "money": {
+      "pc": 0,
+      "pp": 0,
+      "pe": 0,
+      "po": 0,
+      "ppt": 0
+    }
+  }
 ]
