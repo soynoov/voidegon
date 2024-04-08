@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import Weapon from '@/components/Weapon.astro';
 import Spell from '@/components/Spell.astro';
 import VEL from '@/components/little/VEL.astro';
+import Backpack from '@/components/character/Backpack.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Extras ▸ Barbarian'>
@@ -17,5 +18,10 @@ import VEL from '@/components/little/VEL.astro';
   </section>
   <section class='mt-4 w-[30vw] mx-auto'>
     <VEL vel={30} fly={60} dig={10} />
+  </section>
+  <section class='mt-4 w-[80vw] mx-auto'>
+    <Backpack
+      objects={['Poción', 'Libro', 'Libro', 'Libro', 'Libro', 'Libro', 'Libro']}
+    />
   </section>
 </Layout>

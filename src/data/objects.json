@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Poción",
+    "img": "https://content.gitbook.com/content/nPydRNT4JAk1kEx9MDMd/blobs/h9cHbRAVVGfPx92jkvpj/Potion%203%20WITHOUT%20F%20HD%20(1).gif",
+    "type": "poción",
+    "description": "Una poción que restaura 2d4 + 2 puntos de salud.",
+    "valor": "20pc",
+    "rareza": "común"
+  },
+  {
+    "tipo": "poción",
+    "name": "Poción de fuerza",
+    "descripcion": "Una poción que otorga un aumento temporal de +2 a la fuerza durante 1 hora.",
+    "precio": 100,
+    "cantidad": 5,
+    "rareza": "inhabitual"
+  },
+  {
+    "type": "libro",
+    "name": "Libro",
+    "img": "https://i.pinimg.com/originals/73/69/6e/73696e022df7cd5cb3d999c6875361dd.gif",
+    "description": "Un libro encantado que contiene una selección de hechizos útiles.",
+    "precio": 200,
+    "cantidad": 3,
+    "rareza": "raro"
+  },
+  {
+    "tipo": "objeto mágico",
+    "nombre": "Collar de protección",
+    "descripcion": "Un collar encantado que proporciona resistencia a daño de tipo físico.",
+    "precio": 500,
+    "cantidad": 2,
+    "rareza": "raro"
+  },
+  {
+    "tipo": "artefacto",
+    "nombre": "Espada del rey antiguo",
+    "descripcion": "Una espada legendaria forjada por el rey de un antiguo reino, imbuida con poderes mágicos.",
+    "precio": 1000,
+    "cantidad": 1,
+    "rareza": "legendario"
+  }
+]
