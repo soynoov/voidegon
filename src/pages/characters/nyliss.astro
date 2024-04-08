@@ -1,4 +1,5 @@
 ---
+//
 import Layout from '../../layouts/Layout.astro';
 import Name from '../../components/character/Name.astro';
 import Stats from '../../components/character/Stats.astro';
@@ -6,10 +7,11 @@ import Money from '../../components/Money.astro';
 import Experience from '../../components/character/Experience.astro';
 import Skills from '../../components/character/Skills.astro';
 import Weapon from '../../components/Weapon.astro';
-import Spells from '../../components/Spell.astro';
-
+//
 import Portrait from '@/components/character/Portrait.astro';
-// Characters Components
+import Spell from '@/components/Spell.astro';
+// Character Components
+import Backpack from '@/components/character/Backpack.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
 import COM from '../../components/little/COM.astro';
@@ -21,26 +23,26 @@ import HR from '../../components/little/HR.astro';
 import INI from '../../components/little/INI.astro';
 import VEL from '../../components/little/VEL.astro';
 
-// - Llamamiento a todos los datos y variables (Por JSON a ser posible).
-import data from '../../data/characters/nyliss.json';
-import Spell from '../../components/Spell.astro';
+// Importar datos del personaje
+import character from '@/data/characters/nyliss.json';
 
-const nyliss = data[0],
-  fue = nyliss.stats.fue,
-  des = nyliss.stats.des,
-  con = nyliss.stats.con,
-  int = nyliss.stats.int,
-  sab = nyliss.stats.sab,
-  car = nyliss.stats.car,
-  mod_comp = nyliss.comps.mod_comp,
-  money = nyliss.money;
+// Extraer datos del personaje
+const nyliss = character[0];
+const { stats, money, comps, backpack } = nyliss;
 
-const mod_fue = 0,
-  mod_des = 2,
-  mod_con = 0,
-  mod_int = 3,
-  mod_sab = 2,
-  mod_car = 0;
+// Desestructurar estadísticas del personaje
+const { fue, des, con, int, sab, car } = stats;
+
+// Modificador de competencia
+const { mod_comp } = comps;
+
+// Modificadores de estadísticas
+const mod_fue = 0;
+const mod_des = 2;
+const mod_con = 0;
+const mod_int = 3;
+const mod_sab = 2;
+const mod_car = 0;
 ---
 
 <Layout title=`】 Voidegon ▸ ${nyliss.name}`>
@@ -120,49 +122,14 @@ const mod_fue = 0,
           ppt={money.ppt}
         />
       </section>
-      <section class='col-span-2 flex flex-col gap-2'>
+      <section class='col-span-3 flex flex-col gap-2'>
         <Weapon name='espada corta' />
+      </section>
+      <section class='col-span-3 flex flex-col gap-2'>
         <Weapon name='lanza' />
       </section>
-      <section class='col-span-4 h-full w-full'>
-        <div id='backpack' class='bg-[--gray] rounded-lg p-2 h-full w-full'>
-          <ul class='grid grid-cols-3 gap-2 font-[caveat] px-4'>
-            <li>Botella de Tinta Negra</li>
-            <li>Pluma</li>
-            <li>
-              Plata Pulverizada <span class='text-[--grey]'>(x4)</span>
-            </li>
-            <li>
-              Hierro Pulverizado <span class='text-[--grey]'>(x10)</span>
-            </li>
-            <li>Carta de un Colega Muerto</li>
-            <li>Ropas Comunes</li>
-            <li>
-              Grimorio
-              <span class='text-[--grey]'>(+Hoja Suelta)</span>
-            </li>
-            <li>Libros <span class='text-[--grey]'>(x3)</span></li>
-            <li>Plumas <span class='text-[--grey]'>(x5)</span></li>
-            <li>
-              Musgo Fluorescente
-              <span class='text-[--grey]'>(x3)</span>
-            </li>
-            <li>
-              Petalos de Rosa
-              <span class='text-[--grey]'>(x6)</span>
-            </li>
-            <li class='text-[--object] font-["caveat_brush"]'>
-              Silbato Mágico
-            </li>
-            <li>Espada Oxidad de Cobre</li>
-            <li>
-              Cupón para Var
-              <span class='text-[--grey]'>(2 Opciones)</span>
-            </li>
-            <li>Bolsa de Dimensión de Bolsillo</li>
-            <li>Libro de Pociones</li>
-          </ul>
-        </div>
+      <section class='col-span-6'>
+        <Backpack objects={backpack} />
       </section>
     </article>
 

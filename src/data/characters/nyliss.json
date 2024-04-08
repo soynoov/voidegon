@@ -37,19 +37,94 @@
     "backpack": [
       {
         "name": "Poción de Curación",
-        "type": "poción",
-        "description": "Una poción que restaura 2d4 + 2 puntos de salud.",
-        "value": "20pc",
         "quantity": 1,
-        "rarity": "común"
+        "rarity": "común",
+        "description": "Una poción que restaura 2d4 + 2 puntos de salud.",
+        "img": "https://content.gitbook.com/content/nPydRNT4JAk1kEx9MDMd/blobs/h9cHbRAVVGfPx92jkvpj/Potion%203%20WITHOUT%20F%20HD%20(1).gif"
       },
       {
         "name": "Tomo de Hechizos",
-        "type": "libro",
-        "description": "Un libro encantado que contiene una selección de hechizos útiles.",
-        "value": "100po",
         "quantity": 1,
-        "rarity": "raro"
+        "rarity": "raro",
+        "description": "Un libro encantado que contiene una selección de hechizos útiles."
+      },
+      {
+        "name": "Botella de tinta negra",
+        "quantity": 1,
+        "rarity": "común",
+        "description": "Una botella de tinta de color negro."
+      },
+      {
+        "name": "Pluma para escribir",
+        "quantity": 1,
+        "rarity": "común",
+        "description": "Una pluma utilizada para escribir."
+      },
+      {
+        "name": "Hierro pulverizado",
+        "quantity": 10,
+        "rarity": "común",
+        "description": "Polvo de hierro utilizado en diversas aplicaciones."
+      },
+      {
+        "name": "Plata pulverizada",
+        "quantity": 4,
+        "rarity": "común",
+        "description": "Polvo de plata utilizado en la alquimia y la fabricación de objetos mágicos."
+      },
+      {
+        "name": "Carta de un colega muerto",
+        "quantity": 1,
+        "rarity": "raro",
+        "description": "Una carta escrita por un colega fallecido que plantea una pregunta intrigante."
+      },
+      {
+        "name": "Muda de ropas comunes",
+        "quantity": 1,
+        "rarity": "común",
+        "description": "Ropa común para cambiar."
+      },
+      {
+        "name": "Grimorio",
+        "quantity": 1,
+        "rarity": "raro",
+        "description": "Un grimorio antiguo lleno de conocimientos arcanos."
+      },
+      {
+        "name": "Libros",
+        "quantity": 4,
+        "rarity": "común",
+        "description": "Un conjunto de libros sobre diversos temas."
+      },
+      {
+        "name": "Plumas",
+        "quantity": 5,
+        "rarity": "común",
+        "description": "Un conjunto de plumas."
+      },
+      {
+        "name": "Musgo fluorescente",
+        "quantity": 2,
+        "rarity": "inhabitual",
+        "description": "Musgo que emite un brillo fluorescente en la oscuridad."
+      },
+      {
+        "name": "Pétalos",
+        "quantity": 6,
+        "rarity": "común",
+        "description": "Pétalos de flores recogidos de un jardín."
+      },
+      {
+        "name": "Silbato mágico",
+        "quantity": 1,
+        "rarity": "raro",
+        "description": "Un silbato que emite un sonido mágico que solo pueden escuchar ciertas criaturas."
+      },
+      {
+        "name": "Espada oxidada de cobre",
+        "quantity": 1,
+        "rarity": "común",
+        "description": "Una espada vieja y oxidada hecha de cobre."
       }
     ]
   }

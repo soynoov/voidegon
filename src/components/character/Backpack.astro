@@ -1,37 +1,36 @@
 ---
-import data from '@/data/objects.json';
-
 interface Props {
-  objects?: Array<string>;
+  objects?: {
+    name: string;
+    quantity: number;
+    rarity: string;
+    description: string;
+    img?: string;
+  }[];
 }
 
 const { objects = [] } = Astro.props;
-
-const matchObjects = objects.map((objName) => {
-  const match = data.find((obj) => obj.name === objName);
-  return match ? match : { name: 'Default Name', img: '', description: '', type: '' };
-});
 ---
 
 <article
   class={`
     bg-[--gray] rounded-lg p-2
-    grid grid-cols-[auto-fill, minmax(200px, 1fr)] gap-2
+    grid grid-cols-4 gap-2
     w-full h-full
   `}
 >
-  {matchObjects.map((matchObject) => (
+  {objects.map((item) => (
     <section class={`
       bg-[--dark] rounded-lg p-1
       text-center 
       flex items-center gap-2
       w-full
     `}>
-      <img class='size-20 border-r-2 border-[--gray]' src={matchObject.img} alt={matchObject.name}>
+      {item.img && <img class='size-20 border-r-2 border-[--gray]' src={item.img} alt={item.name} />}
       <div class='text-start'>
-        <h2 class='font-bold'>{matchObject.name}</h2>
-        <p class='text-[--grey] text-sm'>{matchObject.description}</p>
-        <p class='text-[--gray] text-xs italic'>({matchObject.type})</p>
+        <h2 class='font-bold'>{item.name} (x{item.quantity})</h2>
+        <p class='text-[--grey] text-sm'>{item.description}</p>
+        <p class='text-[--gray] text-xs italic'>({item.rarity})</p>
       </div>
     </section>
   ))}
