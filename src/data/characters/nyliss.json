@@ -34,21 +34,24 @@
       "po": 18,
       "ppt": 0
     },
-    "backpack": {
-      "common": {
-        "libros": 3,
-        "plumas": 5,
-        "petalos": 6,
-        "hierro pulverizado": 10,
-        "plata pulverizada": 4,
-        "musgo": 3
+    "backpack": [
+      {
+        "name": "Poción de Curación",
+        "type": "poción",
+        "description": "Una poción que restaura 2d4 + 2 puntos de salud.",
+        "value": "20pc",
+        "quantity": 1,
+        "rarity": "común"
       },
-      "rare": ["botella de tinta negra", "pluma", "espada oxidada de cobre"],
-      "epic": {
-        "grimorio": "+hoja suelta",
-        "cupon var": "2 opciones"
-      },
-      "legendary": ["silbato magico", "bolsa dimensión de bolsillo"]
-    }
+      {
+        "name": "Tomo de Hechizos",
+        "type": "libro",
+        "description": "Un libro encantado que contiene una selección de hechizos útiles.",
+        "value": "100po",
+        "quantity": 1,
+        "rarity": "raro"
+      }
+    ]
+    
   }
 ]
