@@ -39,55 +39,64 @@
         "name": "Botella de tinta negra",
         "quantity": 1,
         "rarity": "common",
-        "description": "Una botella de tinta de color negro."
+        "description": "Una botella de tinta de color negro.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227052991928860703/tinta.png?ex=66270126&is=66148c26&hm=dbb77313645033b94d2ee5888e87731ec75c42f915132aea8b3ac59c3fcbe9b8&"
       },
       {
         "name": "Pluma para escribir",
         "quantity": 1,
         "rarity": "common",
-        "description": "Una pluma utilizada para escribir."
+        "description": "Una pluma utilizada para escribir.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227054115885158400/pluma_para_escribir.png?ex=66270232&is=66148d32&hm=c297e1ab65b1b9b188b9bce0ce0d82e575b492335fc0c3f00cb92591905a77d3&"
       },
       {
         "name": "Hierro pulverizado",
         "quantity": 10,
         "rarity": "common",
-        "description": "Polvo de hierro utilizado en diversas aplicaciones."
+        "description": "Polvo de hierro utilizado en diversas aplicaciones.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227055441851449464/hierro_pulverizado.png?ex=6627036e&is=66148e6e&hm=751abaa1a1413006ad202abe449dd73ced390ee29afe833712d1184a2c93c136&"
       },
       {
         "name": "Plata pulverizada",
         "quantity": 4,
         "rarity": "common",
-        "description": "Polvo de plata utilizado en la alquimia y la fabricación de objetos mágicos."
+        "description": "Polvo de plata utilizado en la alquimia y la fabricación de objetos mágicos.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227055464106295338/plata_pulverizada.png?ex=66270374&is=66148e74&hm=7e271f8acb4a4decee833801583f1c7aa4ee06c383e54cf5d606a6397c48a721&"
       },
       {
         "name": "Carta de un colega muerto",
         "quantity": 1,
         "rarity": "rare",
-        "description": "Una carta escrita por un colega fallecido que plantea una pregunta intrigante."
+        "description": "Una carta escrita por un colega fallecido que plantea una pregunta intrigante.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227056585109405696/carta.png?ex=6627047f&is=66148f7f&hm=201d7ea65b55b16dcca703d08896f30881bfcb3e8ba510380fe31ca54bcadd62&"
       },
       {
         "name": "Muda de ropas comunes",
         "quantity": 1,
         "rarity": "common",
-        "description": "Ropa común para cambiar."
+        "description": "Ropa común para cambiar.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227058310956716034/ropa_comun.png?ex=6627061a&is=6614911a&hm=a7fb5f6b3a02cfaefe4b703462482430b799b4d1fd3c2cbb86eed3e165da480f&"
       },
       {
         "name": "Grimorio",
         "quantity": 1,
         "rarity": "rare",
-        "description": "Un grimorio antiguo lleno de conocimientos arcanos."
+        "description": "Un grimorio antiguo lleno de conocimientos arcanos.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227059235217477652/grimorio.png?ex=662706f7&is=661491f7&hm=26b16d02a949bc303ba70e69dab0ba2e3a888ebe725f5620919450708e28f8e3&"
       },
       {
         "name": "Libros",
         "quantity": 4,
         "rarity": "common",
-        "description": "Un conjunto de libros sobre diversos temas."
+        "description": "Un conjunto de libros sobre diversos temas.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227059621672517682/libro.png?ex=66270753&is=66149253&hm=01d9e117f7ab60414d56bb7e0a272d249d734c8178b183c0d0395b98058405b7&"
       },
       {
         "name": "Plumas",
         "quantity": 5,
         "rarity": "common",
-        "description": "Un conjunto de plumas."
+        "description": "Un conjunto de plumas.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227062020369547264/pluma.png?ex=6627098f&is=6614948f&hm=4f317965a9cbb4d89f096980ae5a538250c4e684a6c48eb50281f8af72e38218&"
       },
       {
         "name": "Musgo fluorescente",
