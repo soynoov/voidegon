@@ -1,6 +1,6 @@
 ---
 interface Props {
-	name: string;
+  name: string;
 }
 const { name } = Astro.props;
 
@@ -8,52 +8,52 @@ import data from '@/data/weapons.json';
 
 // Buscar el objeto con el nombre coincidente
 const matchWeapon = data.find((weapon: any) => weapon.name === name) ?? {
-	name,
-	src: '',
-	bonus: '',
-	damage: '',
-	details: '',
+  name,
+  src: '',
+  bonus: '',
+  damage: '',
+  details: '',
 };
 ---
 
-<article class='bg-[--gray] p-2 rounded-lg'>
-	<a
-		href=`/extras/weapon/${matchWeapon.name.toLowerCase().replaceAll(" ", "-")}`
-	>
-		<section
-			class={`
+<article class='bg-[--gray] p-2 rounded-lg h-full'>
+  <a
+    href=`/extras/weapon/${matchWeapon.name.toLowerCase().replaceAll(" ", "-")}`
+  >
+    <section
+      class={`
         flex items-center justify-between
         bg-[--dark] rounded-lg p-2
-        text-start capitalize
+        text-start capitalize h-full
       `}
-		>
-			<div class='flex items-center gap-4'>
-				<img
-					src={matchWeapon.src}
-					alt={matchWeapon.name}
-					class='rounded-lg object-cover size-14'
-				/>
-				<div class='flex flex-col gap-1'>
-					<h3 class='font-bold'>{matchWeapon.name}</h3>
-					<p class='text-xs italic text-[--grey]'>
-						({matchWeapon.details})
-					</p>
-				</div>
-			</div>
-			<div class='flex pr-4 uppercase gap-2'>
-				<p>
-					{matchWeapon.damage}
-				</p>
-				<p class='text-[--date]'>
-					+ {matchWeapon.bonus}
-				</p>
-			</div>
-		</section>
-	</a>
+    >
+      <div class='flex items-center gap-4'>
+        <img
+          src={matchWeapon.src}
+          alt={matchWeapon.name}
+          class='rounded-lg object-cover size-14'
+        />
+        <div class='flex flex-col gap-1'>
+          <h3 class='font-bold'>{matchWeapon.name}</h3>
+          <p class='text-xs italic text-[--grey]'>
+            ({matchWeapon.details})
+          </p>
+        </div>
+      </div>
+      <div class='flex pr-4 uppercase gap-2'>
+        <p>
+          {matchWeapon.damage}
+        </p>
+        <p class='text-[--date]'>
+          + {matchWeapon.bonus}
+        </p>
+      </div>
+    </section>
+  </a>
 </article>
 
 <style>
-	a:hover > section {
-		background-color: var(--black);
-	}
+  a:hover > section {
+    background-color: var(--black);
+  }
 </style>

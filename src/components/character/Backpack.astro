@@ -10,28 +10,49 @@ interface Props {
 }
 
 const { objects = [] } = Astro.props;
+
+function getColorByRarity(rarity: string): string {
+  switch (rarity.toLowerCase()) {
+    case 'common':
+      return 'lightgreen';
+    case 'rare':
+      return 'cyan';
+    case 'epic':
+      return 'mediumpurple';
+    case 'legendary':
+      return 'orange';
+    case 'mithic':
+      return 'salmon';
+    default:
+      return 'white';
+  }
+}
 ---
 
 <article
   class={`
     bg-[--gray] rounded-lg p-2
-    grid grid-cols-4 gap-2
+    grid gap-2
     w-full h-full
   `}
 >
   {objects.map((item) => (
     <section class={`
-      bg-[--dark] rounded-lg p-1
-      text-center 
+      bg-[--dark] rounded-lg p-2
       flex items-center gap-2
       w-full
     `}>
-      {item.img && <img class='size-20 border-r-2 border-[--gray]' src={item.img} alt={item.name} />}
-      <div class='text-start'>
+      {item.img && <img class='size-20 object-contain' src={item.img} alt={item.name} />}
+      <div class='text-start p-2 border-l-2' style={`border-color: ${getColorByRarity(item.rarity)}`}>
         <h2 class='font-bold'>{item.name} (x{item.quantity})</h2>
-        <p class='text-[--grey] text-sm'>{item.description}</p>
-        <p class='text-[--gray] text-xs italic'>({item.rarity})</p>
+        <p class='text-[--grey] text-sm italic'>{item.description}</p>
       </div>
     </section>
   ))}
 </article>
+
+<style>
+  article {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+</style>
