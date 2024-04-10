@@ -102,31 +102,36 @@
         "name": "Musgo fluorescente",
         "quantity": 2,
         "rarity": "epic",
-        "description": "Musgo que emite un brillo fluorescente en la oscuridad."
+        "description": "Musgo que emite un brillo fluorescente en la oscuridad.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227413675158016030/musgo.png?ex=66285110&is=6615dc10&hm=9c15aa528c48a93bdf9b5ef42ef3da61cc4af5bab09c741462188ad612929950&"
       },
       {
         "name": "Pétalos",
         "quantity": 6,
         "rarity": "common",
-        "description": "Pétalos de flores recogidos de un jardín."
+        "description": "Pétalos de flores recogidos de un jardín.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227413675615453285/petalo.png?ex=66285110&is=6615dc10&hm=e8880cdbee3d56c94618d58f014ad2c9b992a6294fb710c273ef13101e232a3f&"
       },
       {
         "name": "Silbato mágico",
         "quantity": 1,
         "rarity": "mithic",
-        "description": "Un silbato que emite un sonido mágico que solo pueden escuchar ciertas criaturas."
+        "description": "Un silbato que emite un sonido mágico que solo pueden escuchar ciertas criaturas.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227416729500778636/silbato.png?ex=662853e8&is=6615dee8&hm=b9b68ce1b80ce92cb0aed024e474d3085a71cc451558a38d43badf0a286b2536&"
       },
       {
         "name": "Espada oxidada de cobre",
         "quantity": 1,
         "rarity": "common",
-        "description": "Una espada vieja y oxidada hecha de cobre."
+        "description": "Una espada vieja y oxidada hecha de cobre.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227417452300734465/espada_de_cobre_oxidada.png?ex=66285494&is=6615df94&hm=6be0f09e8cee7686a1765ccb5d38bb2953cc7a31abb46e0d0aea98a1073f2cbd&"
       },
       {
         "name": "Dimensión de Bolsillo",
         "quantity": 1,
         "rarity": "legendary",
-        "description": "Una espada vieja y oxidada hecha de cobre."
+        "description": "Una bolsa con almacenamiento infinito.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227419328706773073/dimension_de_bolsillo.png?ex=66285654&is=6615e154&hm=c92144016dd7701dc82de89561c1662221f0602601b186a3e7feebfecc0258c1&"
       }
     ]
   }
