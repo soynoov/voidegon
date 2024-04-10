@@ -16,14 +16,27 @@
     "skills": {
       "acrobacias": 2,
       "atletismo": 1,
-      "c.arcano": 1,
+      "arcano": 1,
       "engaño": 0,
-      "historia": 0
+      "historia": 0,
+      "interpretación": 0,
+      "intimidación": 0,
+      "investigación": 0,
+      "juego_de_manos": 0,
+      "medicina": 0,
+      "naturaleza": 0,
+      "percepción": 0,
+      "perspicacia": 0,
+      "persuasión": 0,
+      "religión": 0,
+      "sigilo": 0,
+      "supervivencia": 0,
+      "trato_con_animales": 0
     },
     "comps": {
       "mod_comp": 2,
       "stats": ["int", "sab"],
-      "skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
+      "skills": ["arcano", "engaño", "medicina", "supervivencia"],
       "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
     },
     "weapons": ["espada corta", "lanza"],
