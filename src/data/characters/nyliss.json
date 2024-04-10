@@ -102,13 +102,16 @@
         "name": "Musgo fluorescente",
         "quantity": 2,
         "rarity": "epic",
-        "description": "Musgo que emite un brillo fluorescente en la oscuridad."
+        "description": "Musgo que emite un brillo fluorescente en la oscuridad.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227411878184091670/musgo.png?ex=66284f63&is=6615da63&hm=3ff3f882caff74b88af1bd358489f178e1dae7b5e720963d624951824785e5dc&",
+        "type": "magic material"
       },
       {
         "name": "Pétalos",
         "quantity": 6,
         "rarity": "common",
-        "description": "Pétalos de flores recogidos de un jardín."
+        "description": "Pétalos de flores recogidos de un jardín.",
+        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227413675615453285/petalo.png?ex=66285110&is=6615dc10&hm=e8880cdbee3d56c94618d58f014ad2c9b992a6294fb710c273ef13101e232a3f&"
       },
       {
         "name": "Silbato mágico",

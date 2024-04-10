@@ -42,10 +42,10 @@ function getColorByRarity(rarity: string): string {
       flex items-center gap-2
       w-full
     `}>
-      {item.img && <img class='size-20 object-contain' src={item.img} alt={item.name} />}
+      {item.img && <img class='size-14 object-contain' src={item.img} alt={item.name} />}
       <div class='text-start p-2 border-l-2' style={`border-color: ${getColorByRarity(item.rarity)}`}>
         <h2 class='font-bold'>{item.name} (x{item.quantity})</h2>
-        <p class='text-[--grey] text-sm italic'>{item.description}</p>
+        <p class='text-[--grey] text-sm'>{item.description}</p>
       </div>
     </section>
   ))}
