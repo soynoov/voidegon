@@ -5,10 +5,18 @@ import Name from '@/components/character/Name.astro';
 // NPC Components
 import Hearts from '@/components/character/npc/Hearts.astro';
 import Portrait from '@/components/character/npc/Portrait.astro';
+// NPCs Data
+import npcs from '@/data/npcs/npcs.json';
+// Search Object "Var"
+const varData = Object.values(npcs).find((npc: any) => npc.name === 'Var');
 ---
 
-<Layout title='】 Voidegon ▸ Var'>
-  <Name name='Var' img='/img/npc/tir/var/bg_var.png' center='center' />
+<Layout title=`】 Voidegon ▸ ${varData?.name}`>
+  <Name
+    name={varData?.name}
+    img='/img/npc/tir/var/bg_var.png'
+    center='center'
+  />
   <article
     class={`
       w-[80vw] mx-auto
@@ -16,7 +24,7 @@ import Portrait from '@/components/character/npc/Portrait.astro';
     `}
   >
     <section class='col-span-6'>
-      <Hearts level={1} />
+      <Hearts level={varData?.friendship_level} />
     </section>
     <section class='col-span-2'>
       <h3>Dwarf</h3>

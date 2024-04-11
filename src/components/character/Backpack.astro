@@ -14,17 +14,17 @@ const { objects = [] } = Astro.props;
 function getColorByRarity(rarity: string): string {
   switch (rarity.toLowerCase()) {
     case 'common':
-      return 'lightgreen';
+      return 'common';
     case 'rare':
-      return 'cyan';
+      return 'rare';
     case 'epic':
-      return 'mediumpurple';
+      return 'epic';
     case 'legendary':
-      return 'orange';
+      return 'legendary';
     case 'mithic':
-      return 'salmon';
+      return 'mithic';
     default:
-      return 'white';
+      return 'common';
   }
 }
 ---
@@ -43,7 +43,7 @@ function getColorByRarity(rarity: string): string {
       w-full
     `}>
       {item.img && <img class='size-14 object-contain' src={item.img} alt={item.name} />}
-      <div class='text-start p-2 border-l-2' style={`border-color: ${getColorByRarity(item.rarity)}`}>
+      <div class='text-start p-2 border-l-2' style={`border-color: var(--${getColorByRarity(item.rarity)})`}>
         <h2 class='font-bold'>{item.name} (x{item.quantity})</h2>
         <p class='text-[--grey] text-sm'>{item.description}</p>
       </div>
