@@ -1,10 +1,10 @@
 [
 	{
-		"name": "Isidoro Matamoros",
-		"race": "Tiefling",
+		"nombre": "Isidoro Matamoros",
+		"raza": "Tiefling",
 		"rol": "Monk",
 		"xp": 440,
-		"level": 2,
+		"nivel": 2,
 		"stats": {
 			"fue": 16,
 			"des": 18,
@@ -13,7 +13,7 @@
 			"sab": 8,
 			"car": 8
 		},
-		"skills": {
+		"habilidades": {
 			"acrobacias": 4,
 			"atletismo": 3,
 			"c.arcano": 0,
@@ -33,11 +33,11 @@
 			"supervivencia": 0,
 			"t.animales": 0
 		},
-		"comps": {
-			"bon_com": 2,
+		"competencias": {
+			"mod_comp": 2,
 			"stats": ["int", "sab"],
-			"skills": ["c.arcano", "engaño", "medicina", "supervivencia"],
-			"weapons": [
+			"habilidades": ["c.arcano", "engaño", "medicina", "supervivencia"],
+			"armas": [
 				"dagas",
 				"dardos",
 				"hondas",
@@ -45,13 +45,72 @@
 				"ballestas ligeras"
 			]
 		},
-		"weapons": ["espada corta"],
-		"money": {
+		"armas": ["espada corta"],
+		"dinero": {
 			"pc": 0,
 			"pp": 0,
 			"pe": 0,
 			"po": 0,
 			"ppt": 0
-		}
+		},
+		"mochila":[
+			{
+		        "nombre": "Anillo de Sellar",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "",
+		        "tipo": [""],
+		        "img": ""
+		      },
+			{
+		        "nombre": "Anillo Brújula",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "Es un anillo guia, que muestra donde se localiza el Santuario secreto",
+		        "tipo": [""],
+		        "img": ""
+		      },
+			{
+		        "nombre": "Agua Embotellada",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "Efectivamente es agua embotellada",
+		        "tipo": [""],
+		        "img": ""
+		      },
+			{
+		        "nombre": "Botella Vacia",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "Efectivamente es una botella vacia",
+		        "tipo": [""],
+		        "img": ""
+		      },
+						{
+		        "nombre": "Botella de veneno",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "Efectivamente es una botella con veneno",
+		        "tipo": [""],
+		        "img": ""
+		      },
+			{
+		        "nombre": "Bola de Plata",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "Bola de plata la cual sirve para mejorar armas (Actualmente la porta Paco)",
+		        "tipo": [""],
+		        "img": ""
+		      },
+			{
+		        "nombre": "Documento que acredita el linaje",
+		        "cantidad": 1,
+		        "rareza": "",
+		        "descripción": "es un documento el cual muestra el linaje de donde provienes",
+		        "tipo": [""],
+		        "img": ""
+		      }
+
+		]
 	}
 ]
