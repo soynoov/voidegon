@@ -1,0 +1,89 @@
+---
+// Importamos los datos de objetos.json
+import Objetos from '@/data/objetos.json';
+
+// Definimos la interfaz para un objeto
+interface Objeto {
+  nombre: string;
+  cantidad?: number;
+  rareza?: string;
+  descripción?: string;
+  tipo?: string[];
+  img?: string;
+}
+
+// Definimos la interfaz para los props
+interface Props {
+  mochila?: Objeto[];
+}
+
+// Extraemos la propiedad mochila de los props, por defecto es un array vacío
+const { mochila = [] } = Astro.props;
+
+// Fusionar los objetos del archivo JSON con los objetos recibidos en la mochila
+const objetosFusionados: Objeto[] = [...Objetos, ...mochila];
+
+// Función para obtener el color según la rareza
+function getColorByRarity(rareza?: string): string {
+  switch (rareza?.toLowerCase()) {
+    case 'rara':
+      return 'rare';
+    case 'épica':
+      return 'epic';
+    case 'legendaria':
+      return 'legendary';
+    case 'mítica':
+      return 'mithic';
+    default:
+      return 'common';
+  }
+}
+---
+
+<article
+  class={`
+    bg-[--gray] rounded-lg p-2
+    grid gap-2
+    w-full h-full
+  `}
+>
+  {
+    objetosFusionados.map((item) => (
+      <section
+        class={`
+          bg-[--dark] rounded-lg p-2
+          flex items-center gap-2
+          w-full
+        `}
+      >
+        {item.img && (
+          <img
+            class='size-14 object-contain'
+            src={item.img}
+            alt={item.nombre}
+          />
+        )}
+        <div
+          class='text-start p-2 border-l-2'
+          style={`border-color: var(--${getColorByRarity(item.rareza)})`}
+        >
+          <h2 class='font-bold'>
+            {item.nombre} (x{item.cantidad})
+          </h2>
+          <p class='text-[--grey] text-sm'>{item.descripción}</p>
+          {Array.isArray(item.tipo) && (
+            <p class='text-[--gray] text-sm italic capitalize'>
+              ({item.tipo.join(', ')})
+            </p>
+          )}
+        </div>
+      </section>
+    ))
+  }
+</article>
+
+<style>
+  article {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+</style>

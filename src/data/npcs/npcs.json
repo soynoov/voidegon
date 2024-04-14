@@ -9,5 +9,16 @@
     "description": "Var, un enano anciano, tiene un rostro marcado por numerosas arrugas y cejas densas y pelirrojas que casi ocultan sus ojos. Su calvicie es evidente, y su barba sigue la misma tonalidad rojiza. Viste túnicas largas y raídas que parecen un manto desgarrado, y su apariencia refleja un aire de excentricidad.",
     "friendship_level": 1,
     "group": "Los Cinco Enanos"
+  },
+  {
+    "name": "Rel",
+    "race": "dwarf",
+    "role": "explorer",
+    "age": 0,
+    "height_feet": 0,
+    "weight_pounds": 0,
+    "description": "",
+    "friendship_level": 0,
+    "group": "Los Cinco Enanos"
   }
 ]

@@ -11,7 +11,7 @@ import Weapon from '../../components/Weapon.astro';
 import Portrait from '@/components/character/Portrait.astro';
 import Spell from '@/components/Spell.astro';
 // Character Components
-import Backpack from '@/components/character/Backpack.astro';
+import Mochila from '@/components/character/Mochila.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
 import COM from '../../components/little/COM.astro';
@@ -28,13 +28,13 @@ import character from '@/data/characters/nyliss.json';
 
 // Extraer datos del personaje
 const nyliss = character[0];
-const { stats, money, comps, backpack } = nyliss;
+const { stats, dinero, competencias, mochila } = nyliss;
 
 // Desestructurar estadísticas del personaje
 const { fue, des, con, int, sab, car } = stats;
 
 // Modificador de competencia
-const { mod_comp } = comps;
+const { mod_comp } = competencias;
 
 // Modificadores de estadísticas
 const mod_fue = 0;
@@ -60,7 +60,7 @@ const mod_car = 0;
     >
       <section class='col-span-6'>
         <Experience
-          race={nyliss.race}
+          race={nyliss.raza}
           rol={nyliss.rol}
           xp={nyliss.xp}
           start={1}
@@ -100,10 +100,10 @@ const mod_car = 0;
         <VEL vel={30} fly={60} />
       </section>
       <section class='col-span-2'>
-        <DG cantidad={nyliss.level} dice={6} />
+        <DG cantidad={nyliss.nivel} dice={6} />
       </section>
       <section class='col-span-6'>
-        <HP hp={6 * 2 + mod_con * nyliss.level - 0} hpmax={6 * 2 + mod_con} />
+        <HP hp={6 * 2 + mod_con * nyliss.nivel - 0} hpmax={6 * 2 + mod_con} />
       </section>
 
       <section class='col-span-6'>
@@ -112,21 +112,21 @@ const mod_car = 0;
       <!-- Inventory -->
       <section class='col-span-3 row-span-2'>
         <Money
-          pc={money.pc}
-          pp={money.pp}
-          pe={money.pe}
-          po={money.po}
-          ppt={money.ppt}
+          pc={dinero.pc}
+          pp={dinero.pp}
+          pe={dinero.pe}
+          po={dinero.po}
+          ppt={dinero.ppt}
         />
       </section>
       <section class='col-span-3 flex flex-col gap-2'>
-        <Weapon name={nyliss.weapons[0]} />
+        <Weapon name={nyliss.armas[0]} />
       </section>
       <section class='col-span-3 flex flex-col gap-2'>
-        <Weapon name={nyliss.weapons[1]} />
+        <Weapon name={nyliss.armas[1]} />
       </section>
       <section class='col-span-6'>
-        <Backpack objects={backpack} />
+        <Mochila mochila={mochila} />
       </section>
     </article>
 
@@ -154,7 +154,7 @@ const mod_car = 0;
           <h4>Manos Sanadoras</h4>
           <p>
             Como una acción, puedes tocar a una criatura y hacer que recupere un
-            número de puntos de golpe igual a tu nivel ({nyliss.level}). No
+            número de puntos de golpe igual a tu nivel ({nyliss.nivel}). No
             puedes volver a usar esta habilidad hasta finalizar un descanso
             largo.
           </p>

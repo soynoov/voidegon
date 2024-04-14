@@ -1,10 +1,10 @@
 [
   {
     "name": "Nyliss Avacyn",
-    "race": "Aasimar",
-    "rol": "Wizard",
+    "raza": "Aasimar",
+    "rol": "Mago",
     "xp": 410,
-    "level": 2,
+    "nivel": 2,
     "stats": {
       "fue": 10,
       "des": 14,
@@ -13,7 +13,7 @@
       "sab": 14,
       "car": 8
     },
-    "skills": {
+    "habilidades": {
       "acrobacias": 2,
       "atletismo": 1,
       "arcano": 1,
@@ -33,133 +33,126 @@
       "supervivencia": 0,
       "trato_con_animales": 0
     },
-    "comps": {
+    "competencias": {
       "mod_comp": 2,
       "stats": ["int", "sab"],
       "skills": ["arcano", "engaño", "medicina", "supervivencia"],
-      "weapons": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
+      "armas": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
     },
-    "weapons": ["espada corta", "lanza"],
-    "money": {
+    "armas": ["espada corta", "lanza"],
+    "dinero": {
       "pc": 2,
       "pp": 166,
       "pe": 6,
       "po": 18,
       "ppt": 0
     },
-    "backpack": [
+    "mochila": [
       {
-        "name": "Botella de tinta negra",
-        "quantity": 1,
-        "rarity": "common",
-        "description": "Una botella de tinta de color negro.",
-        "type": "tool",
+        "nombre": "Botella de tinta negra",
+        "cantidad": 1,
+        "rareza": "común",
+        "descripción": "Una botella de tinta de color negro.",
+        "tipo": ["herramienta"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227052991928860703/tinta.png?ex=66270126&is=66148c26&hm=dbb77313645033b94d2ee5888e87731ec75c42f915132aea8b3ac59c3fcbe9b8&"
       },
       {
-        "name": "Pluma para escribir",
-        "quantity": 1,
-        "rarity": "common",
-        "description": "Una pluma utilizada para escribir.",
-        "type": "tool",
+        "nombre": "Pluma para escribir",
+        "cantidad": 1,
+        "rareza": "común",
+        "descripción": "Una pluma utilizada para escribir.",
+        "tipo": ["herramienta"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227054115885158400/pluma_para_escribir.png?ex=66270232&is=66148d32&hm=c297e1ab65b1b9b188b9bce0ce0d82e575b492335fc0c3f00cb92591905a77d3&"
       },
       {
-        "name": "Hierro pulverizado",
-        "quantity": 10,
-        "rarity": "common",
-        "description": "Polvo de hierro utilizado en diversas aplicaciones.",
-        "type": "resource",
+        "nombre": "Hierro pulverizado",
+        "cantidad": 10,
+        "rareza": "común",
+        "descripción": "Polvo de hierro utilizado en diversas aplicaciones.",
+        "tipo": ["recurso"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227055441851449464/hierro_pulverizado.png?ex=6627036e&is=66148e6e&hm=751abaa1a1413006ad202abe449dd73ced390ee29afe833712d1184a2c93c136&"
       },
       {
-        "name": "Plata pulverizada",
-        "quantity": 4,
-        "rarity": "common",
-        "description": "Polvo de plata utilizado en la alquimia y la fabricación de objetos mágicos.",
-        "type": "resource",
+        "nombre": "Plata pulverizada",
+        "cantidad": 4,
+        "rareza": "común",
+        "descripción": "Polvo de plata utilizado en la alquimia y la fabricación de objetos mágicos.",
+        "tipo": ["recurso"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227055464106295338/plata_pulverizada.png?ex=66270374&is=66148e74&hm=7e271f8acb4a4decee833801583f1c7aa4ee06c383e54cf5d606a6397c48a721&"
       },
       {
-        "name": "Carta de un colega muerto",
-        "quantity": 1,
-        "rarity": "rare",
-        "description": "Una carta escrita por un colega fallecido que plantea una pregunta intrigante.",
-        "type": "mission",
+        "nombre": "Carta de un colega fallecido",
+        "cantidad": 1,
+        "rareza": "rara",
+        "descripción": "Una carta escrita por un colega fallecido que plantea una pregunta intrigante.",
+        "tipo": ["misión"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227056585109405696/carta.png?ex=6627047f&is=66148f7f&hm=201d7ea65b55b16dcca703d08896f30881bfcb3e8ba510380fe31ca54bcadd62&"
       },
       {
-        "name": "Muda de ropas comunes",
-        "quantity": 1,
-        "rarity": "common",
-        "description": "Ropa común para cambiar.",
-        "type": "material",
+        "nombre": "Muda de ropas comunes",
+        "cantidad": 1,
+        "rareza": "común",
+        "descripción": "Ropa común para cambiar.",
+        "tipo": ["material"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227058310956716034/ropa_comun.png?ex=6627061a&is=6614911a&hm=a7fb5f6b3a02cfaefe4b703462482430b799b4d1fd3c2cbb86eed3e165da480f&"
       },
       {
-        "name": "Grimorio",
-        "quantity": 1,
-        "rarity": "rare",
-        "description": "Un grimorio antiguo lleno de conocimientos arcanos.",
-        "type": "special object",
+        "nombre": "Grimorio",
+        "cantidad": 1,
+        "rareza": "rara",
+        "descripción": "Un grimorio antiguo lleno de conocimientos arcanos.",
+        "tipo": ["objeto especial"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227059235217477652/grimorio.png?ex=662706f7&is=661491f7&hm=26b16d02a949bc303ba70e69dab0ba2e3a888ebe725f5620919450708e28f8e3&"
       },
       {
-        "name": "Libros",
-        "quantity": 4,
-        "rarity": "common",
-        "description": "Un conjunto de libros sobre diversos temas.",
-        "type": "material",
+        "nombre": "Libros",
+        "cantidad": 4,
+        "rareza": "común",
+        "descripción": "Un conjunto de libros sobre diversos temas.",
+        "tipo": ["material"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227059621672517682/libro.png?ex=66270753&is=66149253&hm=01d9e117f7ab60414d56bb7e0a272d249d734c8178b183c0d0395b98058405b7&"
       },
       {
-        "name": "Plumas",
-        "quantity": 5,
-        "rarity": "common",
-        "description": "Un conjunto de plumas.",
-        "type": "resource",
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227062020369547264/pluma.png?ex=6627098f&is=6614948f&hm=4f317965a9cbb4d89f096980ae5a538250c4e684a6c48eb50281f8af72e38218&"
+        "nombre": "Pluma",
+        "cantidad": 5
       },
       {
-        "name": "Musgo fluorescente",
-        "quantity": 2,
-        "rarity": "epic",
-        "description": "Musgo que emite un brillo fluorescente en la oscuridad.",
-        "type": "resource",
+        "nombre": "Musgo fluorescente",
+        "cantidad": 2,
+        "rareza": "épica",
+        "descripción": "Musgo que emite un brillo fluorescente en la oscuridad.",
+        "tipo": ["recurso"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227411878184091670/musgo.png?ex=66284f63&is=6615da63&hm=3ff3f882caff74b88af1bd358489f178e1dae7b5e720963d624951824785e5dc&"
       },
       {
-        "name": "Pétalos",
-        "quantity": 6,
-        "rarity": "common",
-        "description": "Pétalos de flores recogidos de un jardín.",
-        "type": "resource",
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227413675615453285/petalo.png?ex=66285110&is=6615dc10&hm=e8880cdbee3d56c94618d58f014ad2c9b992a6294fb710c273ef13101e232a3f&"
+        "nombre": "Pétalo",
+        "cantidad": 6
       },
       {
-        "name": "Silbato mágico",
-        "quantity": 1,
-        "rarity": "mithic",
-        "description": "Un silbato que emite un sonido mágico que solo pueden escuchar ciertas criaturas.",
-        "type": ["special object", "mission"],
+        "nombre": "Silbato mágico",
+        "cantidad": 1,
+        "rareza": "mítica",
+        "descripción": "Un silbato que emite un sonido mágico que solo pueden escuchar ciertas criaturas.",
+        "tipo": ["objeto especial", "misión"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227416729500778636/silbato.png?ex=662853e8&is=6615dee8&hm=b9b68ce1b80ce92cb0aed024e474d3085a71cc451558a38d43badf0a286b2536&"
       },
       {
-        "name": "Espada oxidada de cobre",
-        "quantity": 1,
-        "rarity": "common",
-        "description": "Una espada vieja y oxidada hecha de cobre.",
-        "type": "mission",
+        "nombre": "Espada oxidada de cobre",
+        "cantidad": 1,
+        "rareza": "común",
+        "descripción": "Una espada vieja y oxidada hecha de cobre.",
+        "tipo": ["misión", "herramienta"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227417452300734465/espada_de_cobre_oxidada.png?ex=66285494&is=6615df94&hm=6be0f09e8cee7686a1765ccb5d38bb2953cc7a31abb46e0d0aea98a1073f2cbd&"
       },
       {
-        "name": "Dimensión de Bolsillo",
-        "quantity": 1,
-        "rarity": "legendary",
-        "description": "Una bolsa con almacenamiento infinito.",
-        "type": "special object",
+        "nombre": "Dimensión de Bolsillo",
+        "cantidad": 1,
+        "rareza": "legendaria",
+        "descripción": "Una bolsa con almacenamiento infinito.",
+        "tipo": ["objeto especial"],
         "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227419328706773073/dimension_de_bolsillo.png?ex=66285654&is=6615e154&hm=c92144016dd7701dc82de89561c1662221f0602601b186a3e7feebfecc0258c1&"
       }
-    ]
+    ],
+    "hechizos": []
   }
 ]
