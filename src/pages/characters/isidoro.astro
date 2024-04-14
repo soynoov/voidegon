@@ -64,18 +64,18 @@ const mod_car = 0;
       />
     </section>
     <section class='col-span-1'>
-      <CA mod={des + sab} />
+      <CA mod={mod_des + mod_sab} />
     </section>
     <section class='col-span-1'>
-      <INI des={des} />
+      <INI des={mod_des} />
     </section>
     <section class='col-span-2'>
       <DG cantidad={isidoro.nivel} dice={8} />
     </section>
     <section class='col-span-2'>
       <HP
-        hp={8 + 4 + con * isidoro.nivel - 0}
-        hpmax={8 + 4 + con * isidoro.nivel}
+        hp={8 + 4 + mod_con * isidoro.nivel - 0}
+        hpmax={8 + 4 + mod_con * isidoro.nivel}
       />
     </section>
     <section class='col-span-2'>
