@@ -1,10 +1,16 @@
 [
   {
-    "name": "Nyliss Avacyn",
+    "nombre": "Nyliss Avacyn",
     "raza": "Aasimar",
     "rol": "Mago",
     "xp": 410,
     "nivel": 2,
+    "dados_vida": {
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2
+    },
     "stats": {
       "fue": 10,
       "des": 14,
@@ -36,7 +42,7 @@
     "competencias": {
       "mod_comp": 2,
       "stats": ["int", "sab"],
-      "skills": ["arcano", "engaño", "medicina", "supervivencia"],
+      "habilidades": ["arcano", "engaño", "medicina", "supervivencia"],
       "armas": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
     },
     "armas": ["espada corta", "lanza"],

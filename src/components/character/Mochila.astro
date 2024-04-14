@@ -20,8 +20,16 @@ interface Props {
 // Extraemos la propiedad mochila de los props, por defecto es un array vacío
 const { mochila = [] } = Astro.props;
 
-// Fusionar los objetos del archivo JSON con los objetos recibidos en la mochila
-const objetosFusionados: Objeto[] = [...Objetos, ...mochila];
+// Fusionar la mochila con el segundo JSON
+const objetosFusionados = mochila.map((objetoMochila) => {
+  const objetoEncontrado = Objetos.find(
+    (objetoJSON) => objetoJSON.nombre === objetoMochila.nombre
+  );
+  if (objetoEncontrado) {
+    return { ...objetoMochila, ...objetoEncontrado };
+  }
+  return objetoMochila;
+});
 
 // Función para obtener el color según la rareza
 function getColorByRarity(rareza?: string): string {
