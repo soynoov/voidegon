@@ -41,7 +41,7 @@ function getColorByRarity(rareza?: string): string {
     case 'legendaria':
       return 'legendary';
     case 'mítica':
-      return 'mithic';
+      return 'mythic';
     default:
       return 'common';
   }
@@ -75,12 +75,12 @@ function getColorByRarity(rareza?: string): string {
           class='text-start p-2 border-l-2'
           style={`border-color: var(--${getColorByRarity(item.rareza)})`}
         >
-          <h2 class='font-bold'>
+          <h2 class='text-[--light] font-bold'>
             {item.nombre} (x{item.cantidad})
           </h2>
-          <p class='text-[--grey] text-sm'>{item.descripción}</p>
+          <p class='text-[--white] text-sm'>{item.descripción}</p>
           {Array.isArray(item.tipo) && (
-            <p class='text-[--gray] text-sm italic capitalize'>
+            <p class='text-[--grey] text-sm italic capitalize'>
               ({item.tipo.join(', ')})
             </p>
           )}
