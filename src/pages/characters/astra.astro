@@ -5,7 +5,8 @@ import Name from '../../components/character/Name.astro';
 import Experience from '../../components/character/Experience.astro';
 import Stats from '../../components/character/Stats.astro';
 import Skills from '../../components/character/Skills.astro';
-import Money from '../../components/Money.astro';
+//
+import Monedero from '@/components/personaje/Monedero.astro';
 //
 import HP from '../../components/little/HP.astro';
 import CA from '../../components/little/CA.astro';
@@ -14,7 +15,13 @@ import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
 import HR from '../../components/little/HR.astro';
 import Portrait from '@/components/character/Portrait.astro';
-//
+
+// Importar datos del personaje
+import character from '@/data/characters/astra.json';
+
+// Extraer datos del personaje
+const astra = character[0];
+
 let mod_com = 2,
   fue = 0,
   des = 5,
@@ -64,7 +71,7 @@ let mod_com = 2,
         <HR />
       </section>
       <section class='col-span-6'>
-        <Money />
+        <Monedero />
       </section>
     </article>
   </main>

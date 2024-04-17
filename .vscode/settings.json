@@ -2,15 +2,15 @@
     "folder-color.pathColors": [
         {
             "folderPath": "voidegon\\src\\components\\",
-            "badge": "🦴"
+            "badge": "🇪🇸"
         },
         {
             "folderPath": "voidegon\\src\\layouts\\",
-            "badge": "🫀"
+            "badge": "🇺🇸"
         },
         {
             "folderPath": "voidegon\\src\\pages\\",
-            "badge": "🌱"
+            "badge": "🇺🇸"
         },
         {
             "folderPath": "voidegon\\src\\pages\\maps\\",
@@ -34,7 +34,15 @@
         },
         {
             "folderPath": "voidegon\\src\\data\\",
-            "badge": "ℹ️"
+            "badge": "🇪🇸"
+        },
+        {
+            "folderPath": "voidegon\\src\\components\\character\\",
+            "badge": "CH"
+        },
+        {
+            "folderPath": "voidegon\\src\\data\\characters\\",
+            "badge": "CH"
         }
     ]
 }
