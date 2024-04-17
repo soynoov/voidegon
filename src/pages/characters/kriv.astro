@@ -3,13 +3,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Name from '../../components/character/Name.astro';
 import Stats from '../../components/character/Stats.astro';
-import Money from '../../components/Money.astro';
 import Experience from '../../components/character/Experience.astro';
 import Skills from '../../components/character/Skills.astro';
 
 import Portrait from '@/components/character/Portrait.astro';
 // Character Components
 import Armas from '@/components/character/Armas.astro';
+import Monedero from '@/components/character/Monedero.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
@@ -29,8 +29,7 @@ const kriv = data[0],
   int = kriv.stats.int,
   sab = kriv.stats.sab,
   car = kriv.stats.car,
-  bon_com = kriv.comps.bon_com,
-  money = kriv.money;
+  bon_com = kriv.comps.bon_com;
 
 // Modificadores
 let mod_fue = 4,
@@ -98,13 +97,7 @@ let pg = dg + bon_com * kriv.level; // PG: Puntos de Golpe
         <HR />
       </section>
       <section class='col-span-3'>
-        <Money
-          pc={kriv.money.pc}
-          pp={kriv.money.pp}
-          pe={kriv.money.pe}
-          po={kriv.money.po}
-          ppt={kriv.money.ppt}
-        />
+        <Monedero monedero={kriv.monedero} />
       </section>
       <section class='col-span-3'>
         <Armas armas={kriv.armas} />

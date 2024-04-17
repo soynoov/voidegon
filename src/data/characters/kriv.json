@@ -38,7 +38,7 @@
       ]
     },
     "armas": ["martillo de guerra"],
-    "money": {
+    "monedero": {
       "pc": 99,
       "pp": 0,
       "pe": 16,
