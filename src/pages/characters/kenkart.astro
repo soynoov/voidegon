@@ -12,10 +12,9 @@ import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
 import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
-import Money from '@/components/Money.astro';
 //
 // JSON
-import data from '@/data/characters/kenkart.json';
+import data from '@/data/personajes/kenkart.json';
 let kenkart = data[0],
   fue = kenkart.stats.fue,
   des = kenkart.stats.des,
@@ -84,9 +83,7 @@ let mod_com = 2,
           modcom={bon_com}
         />
       </section>
-      <section class='col-span-6'>
-        <Money pp={money.pp} pe={money.pe} po={money.po} />
-      </section>
+      <section class='col-span-6'></section>
     </article>
   </main>
 </Layout>

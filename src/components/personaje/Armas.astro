@@ -1,17 +1,17 @@
 ---
 // Importamos los datos de armas.json
-import ArmasData from '@/data/armas.json';
+import ArmasJSON from '@/data/armas.json';
 
 // Definimos la interfaz para un arma
 interface Arma {
   nombre: string;
   img?: string;
   categoria?: string;
-  tipo?: string;
-  bonus?: string;
-  danio?: string;
+  tipo: string;
+  bonus: string;
+  danio: string;
   precio?: (string | number)[];
-  peso?: number;
+  peso: number;
   detalles?: string[];
 }
 
@@ -20,8 +20,8 @@ interface Props {
   armas?: string[]; // Cambiamos el tipo de los nombres de Arma a string[]
 }
 
-// Convertimos ArmasData en un array tipado de Arma[]
-const armasArray: Arma[] = ArmasData as Arma[];
+// Convertimos ArmasJSON en un array tipado de Arma[]
+const armasArray: Arma[] = ArmasJSON as Arma[];
 
 // Extraemos la propiedad armas de los props, por defecto es un array vacío
 const { armas = [] } = Astro.props;

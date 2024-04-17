@@ -1,124 +1,121 @@
 [
-	{
-		"name": "Luz",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/301/small-e3b4a99ea8ba68b6a156b811434935d56721ef8f.png?1637057057",
-		"type": "Truco",
-		"school": "Evocación",
-		"components": ["V", "M"],
-		"materials": ["Una Luciérnaga", "Musgo Fosforescente"],
-		"time": "1 acción",
-		"range": "Toque",
-		"duration": "1 Hora",
-		"description": "Tocas un objeto de no más de 10 pies en cualquier dimensión. Hasta que el conjuro termine, el objeto emite luz brillante en un radio de 20 pies y luz tenue en otros 20 pies adicionales. La luz puede ser del color que quieras. Cubrir completamente el objeto con algo opaco bloquea la luz. El conjuro termina si lo lanzas otra vez o si lo disipas como acción.\n Si eliges como objetivo a un objeto que una criatura hostil lleva puesto o transporta, dicha criatura debe superar una tirada de salvación de Destreza para evitar el conjuro."
-	},
-	{
-		"name": "Agarre Electrizante",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3465/small-67a7f06054694912e13d8bc8641b99f062c8b095.png?1695899435",
-		"type": "Truco",
-		"school": "Evocación",
-		"components": ["V", "S"],
-		"time": "1 acción",
-		"range": "Toque",
-		"duration": "Instantáneo",
-		"description": "Un rayo surge de tu mano para golpear a una criatura que estás intentando tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataque si el objetivo lleva una armadura de metal. Si impactas, el objetivo recibe 1d8 puntos de daño por relámpago y no puede realizar reacciones hasta el inicio de su siguiente turno.\n El daño del conjuro aumenta en 1d8 cuando llegas al nivel 5 (2d8), al nivel 11 (3d8) y al nivel 17 (4d8)."
-	},
-	{
-		"name": "Impacto Certero",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/294/small-8bb5b9465c67ffcc3a4f7165ca1bfaea696723f5.png?1637057053",
-		"type": "Truco",
-		"school": "Adivinación",
-		"components": ["S"],
-		"time": "1 acción",
-		"range": "30 pies",
-		"duration": "1 Asalto",
-		"description": "Extiendes tu mano y señalas con el dedo a un objetivo dentro del alcance. Tu magia te revela sus defensas. Durante tu siguiente turno, tienes ventaja en la primera tirada de ataque que realices contra el objetivo, siempre y cuando no haya terminado el conjuro."
-	},
-	{
-		"name": "Reparar",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/6204/small-d7830bdfd18a6ffc8f471ad6d53124524f0654d8.png?1701240139",
-		"type": "Truco",
-		"school": "Transmutación",
-		"components": ["V", "M", "S"],
-		"materials": ["Dos magnetitas"],
-		"time": "1 minuto",
-		"range": "Toque",
-		"duration": "1 minuto",
-		"description": "Este conjuro repara una única rotura o rasgadura de un objeto que tocas, como una malla metálica rota, las dos mitades de una llave, una capa rasgada o una bota de vino que gotea. Mientras la rotura o rasgadura no sea mayor de 1 pie en cualquier dimensión, la remiendas y no dejas ningún rastro del daño anterior.\n Este conjuro puede reparar físicamente un objeto mágico o un constructo, pero no puede restaurar su magia."
-	},
-	{
-		"name": "Dormir",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/2964/small-90d28832b4b4d8f5ad5cc7c5f6ae1da21c4b7438.jpg?1651083329",
-		"type": "Nivel 1",
-		"school": "Encantamiento",
-		"components": ["V", "M", "S"],
-		"materials": ["Una pizca de arena fina, pétalos de rosa o un grillo"],
-		"time": "1 acción",
-		"range": "90 pies (20 pies)",
-		"duration": "1 minuto",
-		"description": "Este conjuro sume a las criaturas en un sueño ligero. Tira 5d8: el resultado es el número de puntos de golpe de criaturas a los que puede afectar este conjuro. Las criaturas que se encuentren a 20 pies o menos de un punto que elijas dentro del alcance se ven afectadas en orden ascendente de sus puntos de golpe (ignorando a las criaturas inconscientes).\n Empezando por la criatura que tenga el menor número de puntos de golpe actuales, cada criatura afectada por este conjuro cae inconsciente hasta que el conjuro termina, hasta que reciba daño o hasta que alguien la zarandee para que se despierte. Resta los puntos de golpe de cada criatura al total antes de pasar a la siguiente criatura con menos puntos de golpe. Los puntos de golpe de una criatura deben ser iguales o menores que el total que quede para que esa criatura resulte afectada.\n Los no muertos y las criaturas inmunes a ser hechizadas no se ven afectados por este conjuro.\n En niveles superiores. Cuando lanzas este conjuro usando un espacio de conjuro de nivel 2 o superior, tira 2d8 adicionales por cada nivel por encima de 1."
-	},
-	{
-		"name": "Encontrar Familiar",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/898/small-2b9f448f964a47504476a2c4d1fa813158701bc8.PNG?1637060650",
-		"type": "Nivel 1",
-		"school": "Conjuración",
-		"components": ["V", "M", "S", "R"],
-		"materials": [
-			"Carbon vegetal",
-			"Incienso",
-			"Hierbas de 10 po de valor que debe consumir el fuego en un brasero de latón"
-		],
-		"time": "1 hora",
-		"range": "10 pies",
-		"duration": "Instantáneo",
-		"description": "Consigues el servicio de un familiar, un espíritu con la forma animal que elijas: araña, búho, cangrejo, caballito de mar, comadreja, cuervo, gato, halcón, lagarto, murciélago, pulpo, pez (piraña), rata, rana (sapo) o serpiente venenosa. El familiar aparece en un lugar sin ocupar dentro del alcance y tiene las estadísticas de la forma elegida, aunque sea un celestial, una fata o un infernal (según decidas) en lugar de una bestia.\n El familiar actúa de manera independiente, pero siempre obedece tus órdenes. En combate, tira su propia iniciativa y tiene sus propios turnos. No puede atacar, pero puede realizar otras acciones con normalidad. Cuando sus puntos de golpe se reducen a 0, desaparece sin dejar ninguna forma física tras de sí. Aparece de nuevo cuando vuelvas a lanzar este conjuro.\n Mientras el familiar esté a 100 pies de ti o menos, puedes comunicarte con él telepáticamente. Además, como acción, puedes ver a través de sus ojos y escuchar a través de sus oídos hasta el principio de tu siguiente turno, lo que hace que consigas los beneficios de los sentidos especiales que tenga el familiar. Durante este tiempo, estás sordo y ciego respecto a tus propios sentidos.\n Como acción, puedes desconvocar temporalmente al familiar. Desparece en una dimensión de bolsillo, donde espera hasta que lo convocas. Como acción, puedes hacer que reaparezca en un lugar sin ocupar a 30 pies de ti o menos. También puedes desconvocarlo para siempre.\n No puedes tener más de un familiar a la vez. Si lanzas este conjuro mientras ya tienes un familiar, haces que adopte una nueva forma. Elige una de las formas de la lista anterior y el familiar se transformará en la criatura elegida.\n Finalmente, cuando lanzas un conjuro con un alcance de toque, el familiar puede transmitirlo como si lo lanzara él. El familiar debe estar a 100 pies de ti o menos y usar su reacción. Si el conjuro requiere hacer una tirada de ataque, usas tu modificador de ataque."
-	},
-	{
-		"name": "Entender idiomas",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/6346/small-61735ad4752f338d2ba163ecabe0681357e0a672.png?1701410937",
-		"type": "Nivel 1",
-		"school": "Adivinación",
-		"components": ["V", "M", "S", "R"],
-		"materials": ["Una pizca de hollin ", "Sal"],
-		"time": "1 acción",
-		"range": "Personal",
-		"duration": "1 Hora (no se)",
-		"description": "Mientras dura el conjuro, entiendes el significado literal de cualquier idioma que escuches. También entiendes cualquier idioma escrito que veas, pero debes estar tocando la superficie en la que las palabras están escritas. Tardas alrededor de 1 minuto en leer una página de texto.\n Este conjuro no descodifica mensajes secretos en un texto o en un glifo, como un sigilo arcano, que no estén en el lenguaje escrito."
-	},
-	{
-		"name": "Escudo",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/309/small-a9a4f4979179abde675c08350dc29e15596514e4.png?1637057062",
-		"type": "Nivel 1",
-		"school": "Abjuración",
-		"components": ["V", "S"],
-		"time": "1 reacción",
-		"range": "Personal",
-		"duration": "1 asalto",
-		"description": "Una barrera invisible de fuerza mágica te protege. Hasta el principio de tu siguiente turno, tienes un bonificador de +5 a la CA, incluso contra el ataque que lo activa, y no recibes daño del conjuro Proyectil mágico."
-	},
-	{
-		"name": "Ola Atronadora",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3762/small-ac4c1275dc52a33d74d30822d1e787d80bc5e831.png?1696571496",
-		"type": "Nivel 1",
-		"school": "Evocación",
-		"components": ["V", "S"],
-		"time": "1 acción",
-		"range": "Personal (15 pies)",
-		"duration": "Instantáneo",
-		"description": "Una ola de una fuerza atronadora surge de ti. Cada criatura que se encuentre en un cubo de 15 pies adyacente a ti debe hacer una tirada de salvación de Constitución. Si falla, recibe 2d8 puntos de daño por trueno y es empujada lejos de ti a 10 pies. Si tiene éxito, recibe la mitad del daño y no es empujada. \n Además, los objetos que no estén sujetos y que se encuentren completamente dentro del área son alejados de ti 10 pies debido al efecto del conjuro, y el conjuro emite un bum atronador que se oye a una distancia de 300 pies.\n En niveles superiores. Cuando lanzas este conjuro usando un espacio de conjuro de nivel 2 o superior, el daño aumenta en 1d8 por cada nivel por encima de 1."
-	},
-	{
-		"name": "Protección contra el Bien y el Mal",
-		"src": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/363/small-a090e077eb04b0f73e14c9f6146b3b3bbdc5089d.png?1637057145",
-		"type": "Nivel 1",
-		"school": "Abjuración",
-		"components": ["V", "M", "S", "C"],
-		"materials": [
-			"Agua bendita o plata y hierro pulverizados que son consumidos como parte del conjuro"
-		],
-		"time": "1 acción",
-		"range": "Toque",
-		"duration": "10 minutos",
-		"description": "Hasta que el conjuro termine, una criatura voluntaria a la que tocas está protegida contra ciertos tipos de criaturas: aberraciones, celestiales, elementales, fatas, infernales y no muertos.\n La protección garantiza varios beneficios. Las criaturas de esos tipos tienen desventaja en las tiradas de ataque que hagan contra el objetivo. El objetivo tampoco puede ser hechizado, asustado o poseído por ellas. Si el objetivo ya está hechizado, asustado o poseído por una criatura de ese tipo, tiene ventaja en una nueva tirada de salvación que haga contra el efecto pertinente."
-	}
+  {
+    "nombre": "Luz",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/301/small-e3b4a99ea8ba68b6a156b811434935d56721ef8f.png?1637057057",
+    "nivel": 0,
+    "escuela": "Evocación",
+    "componentes": ["V", "M"],
+    "materiales": "una luciérnaga o musgo fosforescente",
+    "casteo": "1 Acción",
+    "alcance": "Toque",
+    "duracion": "1 Hora",
+    "rol": ["bardo", "clérigo", "hechicero", "mago"],
+    "descripcion": "Tocas un objeto de no más de 10 pies en cualquier dimensión. Hasta que el conjuro termine, el objeto emite luz brillante en un radio de 20 pies y luz tenue en otros 20 pies adicionales. La luz puede ser del color que quieras. Cubrir completamente el objeto con algo opaco bloquea la luz. El conjuro termina si lo lanzas otra vez o si lo disipas como acción. \n\n Si eliges como objetivo a un objeto que una criatura hostil lleva puesto o transporta, dicha criatura debe superar una tirada de salvación de Destreza para evitar el conjuro."
+  },
+  {
+    "nombre": "Agarre Electrizante",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3465/small-67a7f06054694912e13d8bc8641b99f062c8b095.png?1695899435",
+    "nivel": 0,
+    "escuela": "Evocación",
+    "componentes": ["V", "S"],
+    "casteo": "1 acción",
+    "alcance": "Toque",
+    "duracion": "Instantáneo",
+    "descripcion": "Un rayo surge de tu mano para golpear a una criatura que estás intentando tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataque si el objetivo lleva una armadura de metal. Si impactas, el objetivo recibe 1d8 puntos de daño por relámpago y no puede realizar reacciones hasta el inicio de su siguiente turno. \n\n El daño del conjuro aumenta en 1d8 cuando llegas al nivel 5 (2d8), al nivel 11 (3d8) y al nivel 17 (4d8)."
+  },
+  {
+    "nombre": "Impacto Certero",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/294/small-8bb5b9465c67ffcc3a4f7165ca1bfaea696723f5.png?1637057053",
+    "nivel": 0,
+    "escuela": "Adivinación",
+    "componentes": ["S"],
+    "casteo": "1 acción",
+    "alcance": "30 pies",
+    "duracion": "1 Asalto",
+    "descripcion": "Extiendes tu mano y señalas con el dedo a un objetivo dentro del alcance. Tu magia te revela sus defensas. Durante tu siguiente turno, tienes ventaja en la primera tirada de ataque que realices contra el objetivo, siempre y cuando no haya terminado el conjuro."
+  },
+  {
+    "nombre": "Reparar",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/6204/small-d7830bdfd18a6ffc8f471ad6d53124524f0654d8.png?1701240139",
+    "nivel": 0,
+    "escuela": "Transmutación",
+    "componentes": ["V", "M", "S"],
+    "materiales": ["Dos magnetitas"],
+    "casteo": "1 minuto",
+    "alcance": "Toque",
+    "duracion": "1 minuto",
+    "descripcion": "Este conjuro repara una única rotura o rasgadura de un objeto que tocas, como una malla metálica rota, las dos mitades de una llave, una capa rasgada o una bota de vino que gotea. Mientras la rotura o rasgadura no sea mayor de 1 pie en cualquier dimensión, la remiendas y no dejas ningún rastro del daño anterior. \n\n Este conjuro puede reparar físicamente un objeto mágico o un constructo, pero no puede restaurar su magia."
+  },
+  {
+    "nombre": "Dormir",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/2964/small-90d28832b4b4d8f5ad5cc7c5f6ae1da21c4b7438.jpg?1651083329",
+    "nivel": "Nivel 1",
+    "escuela": "Encantamiento",
+    "componentes": ["V", "M", "S"],
+    "materiales": ["Una pizca de arena fina, pétalos de rosa o un grillo"],
+    "casteo": "1 acción",
+    "alcance": "90 pies (20 pies)",
+    "duracion": "1 minuto",
+    "descripcion": "Este conjuro sume a las criaturas en un sueño ligero. Tira 5d8: el resultado es el número de puntos de golpe de criaturas a los que puede afectar este conjuro. Las criaturas que se encuentren a 20 pies o menos de un punto que elijas dentro del alcance se ven afectadas en orden ascendente de sus puntos de golpe (ignorando a las criaturas inconscientes). \n\n Empezando por la criatura que tenga el menor número de puntos de golpe actuales, cada criatura afectada por este conjuro cae inconsciente hasta que el conjuro termina, hasta que reciba daño o hasta que alguien la zarandee para que se despierte. Resta los puntos de golpe de cada criatura al total antes de pasar a la siguiente criatura con menos puntos de golpe. Los puntos de golpe de una criatura deben ser iguales o menores que el total que quede para que esa criatura resulte afectada. \n\n Los no muertos y las criaturas inmunes a ser hechizadas no se ven afectados por este conjuro. \n\n En niveles superiores. Cuando lanzas este conjuro usando un espacio de conjuro de nivel 2 o superior, tira 2d8 adicionales por cada nivel por encima de 1."
+  },
+  {
+    "nombre": "Encontrar Familiar",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/898/small-2b9f448f964a47504476a2c4d1fa813158701bc8.PNG?1637060650",
+    "nivel": 1,
+    "escuela": "Conjuración",
+    "componentes": ["V", "M", "S", "R"],
+    "materiales": "carbón vegetal, incienso y hierbas de 10 po de valor que debe consumir el fuego en un brasero de latón",
+    "casteo": "1 hora",
+    "alcance": "10 pies",
+    "duracion": "Instantáneo",
+    "descripcion": "Consigues el servicio de un familiar, un espíritu con la forma animal que elijas: araña, búho, cangrejo, caballito de mar, comadreja, cuervo, gato, halcón, lagarto, murciélago, pulpo, pez (piraña), rata, rana (sapo) o serpiente venenosa. El familiar aparece en un lugar sin ocupar dentro del alcance y tiene las estadísticas de la forma elegida, aunque sea un celestial, una fata o un infernal (según decidas) en lugar de una bestia. \n\n El familiar actúa de manera independiente, pero siempre obedece tus órdenes. En combate, tira su propia iniciativa y tiene sus propios turnos. No puede atacar, pero puede realizar otras acciones con normalidad. Cuando sus puntos de golpe se reducen a 0, desaparece sin dejar ninguna forma física tras de sí. Aparece de nuevo cuando vuelvas a lanzar este conjuro. \n\n Mientras el familiar esté a 100 pies de ti o menos, puedes comunicarte con él telepáticamente. Además, como acción, puedes ver a través de sus ojos y escuchar a través de sus oídos hasta el principio de tu siguiente turno, lo que hace que consigas los beneficios de los sentidos especiales que tenga el familiar. Durante este tiempo, estás sordo y ciego respecto a tus propios sentidos. \n\n Como acción, puedes desconvocar temporalmente al familiar. Desparece en una dimensión de bolsillo, donde espera hasta que lo convocas. Como acción, puedes hacer que reaparezca en un lugar sin ocupar a 30 pies de ti o menos. También puedes desconvocarlo para siempre. \n\n No puedes tener más de un familiar a la vez. Si lanzas este conjuro mientras ya tienes un familiar, haces que adopte una nueva forma. Elige una de las formas de la lista anterior y el familiar se transformará en la criatura elegida. \n\n Finalmente, cuando lanzas un conjuro con un alcance de toque, el familiar puede transmitirlo como si lo lanzara él. El familiar debe estar a 100 pies de ti o menos y usar su reacción. Si el conjuro requiere hacer una tirada de ataque, usas tu modificador de ataque."
+  },
+  {
+    "nombre": "Entender idiomas",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/6346/small-61735ad4752f338d2ba163ecabe0681357e0a672.png?1701410937",
+    "nivel": 1,
+    "escuela": "Adivinación",
+    "componentes": ["V", "M", "S", "R"],
+    "materiales": ["Una pizca de hollin ", "Sal"],
+    "casteo": "1 acción",
+    "alcance": "Personal",
+    "duracion": "1 Hora (no se)",
+    "descripcion": "Mientras dura el conjuro, entiendes el significado literal de cualquier idioma que escuches. También entiendes cualquier idioma escrito que veas, pero debes estar tocando la superficie en la que las palabras están escritas. Tardas alrededor de 1 minuto en leer una página de texto. \n\n Este conjuro no descodifica mensajes secretos en un texto o en un glifo, como un sigilo arcano, que no estén en el lenguaje escrito."
+  },
+  {
+    "nombre": "Escudo",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/309/small-a9a4f4979179abde675c08350dc29e15596514e4.png?1637057062",
+    "nivel": 1,
+    "escuela": "Abjuración",
+    "componentes": ["V", "S"],
+    "casteo": "1 reacción",
+    "alcance": "Personal",
+    "duracion": "1 asalto",
+    "descripcion": "Una barrera invisible de fuerza mágica te protege. Hasta el principio de tu siguiente turno, tienes un bonificador de +5 a la CA, incluso contra el ataque que lo activa, y no recibes daño del conjuro Proyectil mágico."
+  },
+  {
+    "nombre": "Ola Atronadora",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3762/small-ac4c1275dc52a33d74d30822d1e787d80bc5e831.png?1696571496",
+    "nivel": 1,
+    "escuela": "Evocación",
+    "componentes": ["V", "S"],
+    "casteo": "1 acción",
+    "alcance": "Personal (15 pies)",
+    "duracion": "Instantáneo",
+    "descripcion": "Una ola de una fuerza atronadora surge de ti. Cada criatura que se encuentre en un cubo de 15 pies adyacente a ti debe hacer una tirada de salvación de Constitución. Si falla, recibe 2d8 puntos de daño por trueno y es empujada lejos de ti a 10 pies. Si tiene éxito, recibe la mitad del daño y no es empujada. \n\n Además, los objetos que no estén sujetos y que se encuentren completamente dentro del área son alejados de ti 10 pies debido al efecto del conjuro, y el conjuro emite un bum atronador que se oye a una distancia de 300 pies. \n\n En niveles superiores. Cuando lanzas este conjuro usando un espacio de conjuro de nivel 2 o superior, el daño aumenta en 1d8 por cada nivel por encima de 1."
+  },
+  {
+    "nombre": "Protección contra el Bien y el Mal",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/363/small-a090e077eb04b0f73e14c9f6146b3b3bbdc5089d.png?1637057145",
+    "nivel": 1,
+    "escuela": "Abjuración",
+    "componentes": ["V", "M", "S", "C"],
+    "materiales": [
+      "Agua bendita o plata y hierro pulverizados que son consumidos como parte del conjuro"
+    ],
+    "casteo": "1 acción",
+    "alcance": "Toque",
+    "duracion": "10 minutos",
+    "descripcion": "Hasta que el conjuro termine, una criatura voluntaria a la que tocas está protegida contra ciertos tipos de criaturas: aberraciones, celestiales, elementales, fatas, infernales y no muertos. \n\n La protección garantiza varios beneficios. Las criaturas de esos tipos tienen desventaja en las tiradas de ataque que hagan contra el objetivo. El objetivo tampoco puede ser hechizado, asustado o poseído por ellas. Si el objetivo ya está hechizado, asustado o poseído por una criatura de ese tipo, tiene ventaja en una nueva tirada de salvación que haga contra el efecto pertinente."
+  }
 ]

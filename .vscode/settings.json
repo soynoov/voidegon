@@ -13,32 +13,12 @@
             "badge": "🇺🇸"
         },
         {
-            "folderPath": "voidegon\\src\\pages\\maps\\",
-            "badge": "🗺️"
-        },
-        {
-            "folderPath": "voidegon\\src\\pages\\extras\\",
-            "badge": "🧵"
-        },
-        {
             "folderPath": "voidegon\\src\\pages\\diaries\\",
             "badge": "📓"
         },
         {
-            "folderPath": "voidegon\\src\\pages\\characters\\",
-            "badge": "🤡"
-        },
-        {
-            "folderPath": "voidegon\\src\\pages\\characters\\npc\\",
-            "badge": "🤖"
-        },
-        {
             "folderPath": "voidegon\\src\\data\\",
             "badge": "🇪🇸"
-        },
-        {
-            "folderPath": "voidegon\\src\\components\\character\\",
-            "badge": "CH"
         },
         {
             "folderPath": "voidegon\\src\\data\\characters\\",

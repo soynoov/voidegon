@@ -1,0 +1,177 @@
+---
+// Importamos los datos de conjuros.json
+import ConjurosJSON from '@/data/conjuros.json';
+
+// Definimos la interfaz para un conjuro
+interface Conjuro {
+  nombre: string;
+  img: string;
+  nivel: number;
+  escuela: string;
+  componentes: string[];
+  materiales?: string; // Hacemos que el campo materiales sea opcional
+  casteo: string;
+  alcance: string;
+  duracion: string;
+  rol: string[];
+  descripcion: string;
+}
+
+interface Props {
+  conjuros: string[]; // Cambiamos el tipo de los nombres de conjuros a string[]
+}
+
+// Convertimos ConjurosJSON en un array tipado de Conjuro[]
+const conjurosArray: Conjuro[] = ConjurosJSON as Conjuro[];
+
+const { conjuros = [] } = Astro.props;
+
+// Buscamos y filtramos los conjuros basados en los nombres proporcionados
+const conjurosEncontrados: Conjuro[] = conjurosArray.filter(
+  (conjuro: Conjuro) => conjuros.includes(conjuro.nombre)
+);
+---
+
+<article
+  class={`
+    flex flex-wrap gap-2 justify-center
+    w-full
+  `}
+>
+  {
+    conjurosEncontrados.map((conjuro) => (
+      <section
+        class={`
+          bg-[--gray] rounded-lg p-2
+          flex flex-col gap-2 w-[24.5%]
+        `}
+      >
+        <div class='flex w-full gap-2 items-center dark rounded-lg p-2'>
+          <img
+            src={conjuro.img}
+            alt={conjuro.nombre}
+            class='size-[2cm] rounded-lg'
+          />
+          <h1 class='text-3xl font-[unbounded] font-bold text-[--title] pl-2'>
+            {conjuro.nombre}
+          </h1>
+        </div>
+        <div class='dark flex flex-col gap-2 p-2'>
+          <div class='flex justify-between gray detail'>
+            <div class='dark p-1 flex gap-2'>
+              <p>R</p>
+              <div
+                class={`${conjuro.componentes.includes('R') ? 'checked' : ''} check`}
+              >
+                X
+              </div>
+            </div>
+            <div class='dark p-1 flex gap-2'>
+              <p>C</p>
+              <div
+                class={`${conjuro.componentes.includes('C') ? 'checked' : ''} check`}
+              >
+                X
+              </div>
+            </div>
+            <div class='dark p-1 flex gap-2'>
+              <p>V</p>
+              <div
+                class={`${conjuro.componentes.includes('V') ? 'checked' : ''} check`}
+              >
+                X
+              </div>
+            </div>
+            <div class='dark p-1 flex gap-2'>
+              <p>S</p>
+              <div
+                class={`${conjuro.componentes.includes('S') ? 'checked' : ''} check`}
+              >
+                X
+              </div>
+            </div>
+            <div class='dark p-1 flex gap-2'>
+              <p>M</p>
+              <div
+                class={`${conjuro.componentes.includes('M') ? 'checked' : ''} check`}
+              >
+                X
+              </div>
+            </div>
+          </div>
+          <p class='gray detail'>
+            Tiempo de Lanzamiento:{' '}
+            <span class='font-[caveat]'>{conjuro.casteo}</span>
+          </p>
+          <div class='flex gap-2 justify-between'>
+            <p class='gray detail w-full'>
+              {' '}
+              Duración:
+              <span class='font-[caveat]'>{conjuro.duracion}</span>
+            </p>
+            <p class='gray detail w-full'>
+              {' '}
+              Alcance:
+              <span class='font-[caveat]'>{conjuro.alcance}</span>
+            </p>
+          </div>
+          {conjuro.materiales ? (
+            <p class='gray detail p-1'>
+              Materiales:
+              <span class='font-[caveat] capitalize'>{conjuro.materiales}</span>
+            </p>
+          ) : (
+            ''
+          )}
+        </div>
+        <div class='dark p-2 rounded-lg h-full'>
+          <h3>Descripcion:</h3>
+          <p class='text-sm text-[--white] font-[lexend] text-justify'>
+            {conjuro.descripcion.split('\n').map((line, index) => (
+              <fragment key={index}>
+                {line}
+                <br />
+              </fragment>
+            ))}
+          </p>
+        </div>
+      </section>
+    ))
+  }
+</article>
+
+<style>
+  .dark {
+    background-color: var(--dark);
+    color: var(--section);
+    border-radius: 0.5rem;
+    font-family: 'lobster';
+    padding-inline: 0.5rem;
+  }
+  .gray {
+    background-color: var(--gray);
+    border-radius: 0.5rem;
+  }
+  .detail {
+    padding: 0.25rem;
+    color: var(--subtitle);
+  }
+  .sub {
+    color: var(--subtitle);
+    font-family: 'lobster';
+  }
+  .check {
+    background-color: var(--gray);
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 1.5rem;
+    color: var(--gray);
+  }
+  .checked {
+    background-color: var(--white);
+    color: var(--white);
+  }
+  span {
+    color: var(--white);
+  }
+</style>

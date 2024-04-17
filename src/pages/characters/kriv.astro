@@ -20,9 +20,10 @@ import DG from '../../components/little/DG.astro';
 import COM from '../../components/little/COM.astro';
 import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
+
 // - Llamamiento a todos los datos y variables (JSON - BDD)
-import data from '../../data/characters/kriv.json';
-const kriv = data[0],
+import character from '@/data/personajes/kriv.json';
+const kriv = character[0],
   fue = kriv.stats.fue,
   des = kriv.stats.des,
   con = kriv.stats.con,

@@ -14,8 +14,9 @@ import INI from '../../components/little/INI.astro';
 import DG from '../../components/little/DG.astro';
 import VEL from '../../components/little/VEL.astro';
 // Importar datos del personaje
-import character from '@/data/characters/isidoro.json';
+import character from '@/data/personajes/isidoro.json';
 import Mochila from '@/components/personaje/Mochila.astro';
+import Monedero from '@/components/personaje/Monedero.astro';
 
 // Extraer datos del personaje
 const isidoro = character[0];
@@ -47,10 +48,10 @@ const mod_car = 0;
     <section class='col-span-6'>
       <Experience race={isidoro.raza} rol={isidoro.rol} xp={355} />
     </section>
-    <section class='col-span-2 row-span-5 section'>
+    <section class='col-span-2 row-span-6 section'>
       <Portrait name={isidoro.nombre} />
     </section>
-    <section class='col-span-2 row-span-4'>
+    <section class='col-span-2 row-span-5'>
       <Stats
         fue={14}
         des={18}
@@ -72,6 +73,7 @@ const mod_car = 0;
     <section class='col-span-2'>
       <DG cantidad={isidoro.nivel} dice={8} />
     </section>
+
     <section class='col-span-2'>
       <HP
         hp={8 + 4 + mod_con * isidoro.nivel - 0}
@@ -80,6 +82,9 @@ const mod_car = 0;
     </section>
     <section class='col-span-2'>
       <VEL vel={30} add={[10, 0, 0]} />
+    </section>
+    <section class='col-span-2'>
+      <Monedero />
     </section>
     <section class='col-span-4'>
       <Skills
