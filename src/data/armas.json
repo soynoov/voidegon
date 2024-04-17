@@ -1,0 +1,35 @@
+[
+  {
+    "nombre": "espada corta",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1385/small-458dbdb685d1fbcb09c11075b91d809ec57d5bbc.png?1637065524",
+    "categoria": "arma marcial",
+    "tipo": "perforante",
+    "bonus": "fue",
+    "danio": "1d6",
+    "precio": [10, "po"],
+    "peso": 2,
+    "detalles": ["ligera", "sútil"]
+  },
+  {
+    "nombre": "lanza",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1369/small-ccd54f01069fac436874a2fdab5d1663b2a0145f.PNG?1637065453",
+    "categoria": "arma sencilla",
+    "tipo": "perforante",
+    "bonus": "fue",
+    "danio": "1d6",
+    "precio": [1, "po"],
+    "peso": 3,
+    "detalles": ["arrojadiza", "distancia", "versátil"]
+  },
+  {
+    "nombre": "martillo de guerra",
+    "img": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/728/small-d3c54411a0236d319c33db4217b303f59eebfe5c.png?1637058998",
+    "categoria": "arma marcial",
+    "tipo": "contundente",
+    "bonus": "fue",
+    "danio": "1d8",
+    "precio": [15, "po"],
+    "peso": 2,
+    "detalles": ["versátil"]
+  }
+]

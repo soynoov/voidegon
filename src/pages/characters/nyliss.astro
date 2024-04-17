@@ -1,25 +1,25 @@
 ---
-//
-import Layout from '../../layouts/Layout.astro';
+// Main Components
+import Layout from '@/layouts/Layout.astro';
 import Name from '../../components/character/Name.astro';
 import Stats from '../../components/character/Stats.astro';
-import Money from '../../components/Money.astro';
-import Experience from '../../components/character/Experience.astro';
 import Skills from '../../components/character/Skills.astro';
-import Weapon from '../../components/Weapon.astro';
+import Experience from '../../components/character/Experience.astro';
 //
-import Portrait from '@/components/character/Portrait.astro';
 import Spell from '@/components/Spell.astro';
+import Portrait from '@/components/character/Portrait.astro';
 // Character Components
+import Armas from '@/components/character/Armas.astro';
 import Mochila from '@/components/character/Mochila.astro';
+import Monedero from '@/components/character/Monedero.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
-import COM from '../../components/little/COM.astro';
 import DG from '../../components/little/DG.astro';
 import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
 import HP from '../../components/little/HP.astro';
 import HR from '../../components/little/HR.astro';
+import COM from '../../components/little/COM.astro';
 import INI from '../../components/little/INI.astro';
 import VEL from '../../components/little/VEL.astro';
 
@@ -28,7 +28,7 @@ import character from '@/data/characters/nyliss.json';
 
 // Extraer datos del personaje
 const nyliss = character[0];
-const { stats, dinero, competencias, mochila } = nyliss;
+const { stats, monedero, competencias, mochila } = nyliss;
 
 // Desestructurar estadísticas del personaje
 const { fue, des, con, int, sab, car } = stats;
@@ -110,20 +110,11 @@ const mod_car = 0;
         <HR />
       </section>
       <!-- Inventory -->
-      <section class='col-span-3 row-span-2'>
-        <Money
-          pc={dinero.pc}
-          pp={dinero.pp}
-          pe={dinero.pe}
-          po={dinero.po}
-          ppt={dinero.ppt}
-        />
+      <section class='col-span-3'>
+        <Monedero monedero={monedero} />
       </section>
-      <section class='col-span-3 flex flex-col gap-2'>
-        <Weapon name={nyliss.armas[0]} />
-      </section>
-      <section class='col-span-3 flex flex-col gap-2'>
-        <Weapon name={nyliss.armas[1]} />
+      <section class='col-span-3'>
+        <Armas armas={nyliss.armas} />
       </section>
       <section class='col-span-6'>
         <Mochila mochila={mochila} />

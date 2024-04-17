@@ -37,7 +37,7 @@
         "escudo"
       ]
     },
-    "weapons": ["espada corta"],
+    "armas": ["martillo de guerra"],
     "money": {
       "pc": 99,
       "pp": 0,

@@ -9,7 +9,7 @@ import Skills from '../../components/character/Skills.astro';
 
 import Portrait from '@/components/character/Portrait.astro';
 // Character Components
-import Weapon from '@/components/Weapon.astro';
+import Armas from '@/components/character/Armas.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
 import INI from '../../components/little/INI.astro';
@@ -107,7 +107,7 @@ let pg = dg + bon_com * kriv.level; // PG: Puntos de Golpe
         />
       </section>
       <section class='col-span-3'>
-        <Weapon name='martillo de guerra' />
+        <Armas armas={kriv.armas} />
       </section>
     </article>
     <HR />

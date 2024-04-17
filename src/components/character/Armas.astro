@@ -1,0 +1,93 @@
+---
+// Importamos los datos de armas.json
+import ArmasData from '@/data/armas.json';
+
+// Definimos la interfaz para un arma
+interface Arma {
+  nombre: string;
+  img?: string;
+  categoria?: string;
+  tipo?: string;
+  bonus?: string;
+  danio?: string;
+  precio?: (string | number)[];
+  peso?: number;
+  detalles?: string[];
+}
+
+// Definimos la interfaz para los props
+interface Props {
+  armas?: string[]; // Cambiamos el tipo de los nombres de Arma a string[]
+}
+
+// Convertimos ArmasData en un array tipado de Arma[]
+const armasArray: Arma[] = ArmasData as Arma[];
+
+// Extraemos la propiedad armas de los props, por defecto es un array vacío
+const { armas = [] } = Astro.props;
+
+// Buscamos y filtramos las armas basadas en los nombres proporcionados
+const armasEncontradas: Arma[] = armasArray.filter((arma: Arma) =>
+  armas.includes(arma.nombre)
+);
+---
+
+<article
+  class={`
+    bg-[--gray] rounded-lg p-2
+    flex flex-col gap-2 justify-center
+    w-full h-full
+  `}
+>
+  {
+    armasEncontradas.map((arma) => (
+      <a
+        href={`/extras/weapon/${arma.nombre.toLowerCase().replaceAll(' ', '-')}`}
+        class='w-full'
+      >
+        <section
+          class={`
+          bg-[--dark] rounded-lg p-2
+          flex items-center justify-between gap-2
+        `}
+        >
+          <div class='flex gap-2 items-center'>
+            {arma.img && (
+              <img
+                class='size-14 object-contain rounded-lg'
+                src={arma.img}
+                alt={arma.nombre}
+              />
+            )}
+            <div class='text-start'>
+              <h1 class='text-[--light] font-bold font-[unbounded] capitalize'>
+                {arma.nombre}
+              </h1>
+              <p class='text-[--grey] text-sm capitalize font-["lobster_two"] font-semibold mt-1'>
+                ({arma.detalles?.join(', ')})
+              </p>
+            </div>
+          </div>
+          <div class='flex uppercase gap-2 font-[unbounded] font-semibold'>
+            <p>{arma.danio}</p>
+            <p class='text-[--date]'>+ {arma.bonus}</p>
+          </div>
+          <div class='pr-4'>
+            <p class='text-[--grey] text-sm font-["lobster_two"] font-semibold'>
+              {arma.peso} lb
+            </p>
+            <p class='text-[--grey] text-sm font-["lobster_two"] font-semibold mt-1'>
+              {arma.precio?.join(' ')}
+            </p>
+          </div>
+        </section>
+      </a>
+    ))
+  }
+</article>
+
+<style>
+  a:hover > section {
+    background-color: var(--black);
+  }
+</style>
