@@ -1,13 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Name from '../../../components/character/Name.astro';
-import Money from '@/components/Money.astro';
 // Map Components
 import Stars from '@/components/map/Stars.astro';
 //
 import HR from '../../../components/little/HR.astro';
 import H2 from '../../../components/little/H2.astro';
 import H3 from '../../../components/little/H3.astro';
+import Monedero from '@/components/personaje/Monedero.astro';
 ---
 
 <Layout title='】 Voidegon ▸ Murcia ▸ Taberna'>
@@ -79,7 +79,7 @@ import H3 from '../../../components/little/H3.astro';
             actual:
           </p>
         </div>
-        <Money pc={1} pe={1} po={4} ppt={2} />
+        <Monedero monedero={{ pc: 1, pe: 1, po: 4, ppt: 2 }} />
       </section>
     </article>
     <HR />

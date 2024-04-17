@@ -1,19 +1,26 @@
 ---
 interface Monedero {
-  pc: number;
-  pp: number;
-  pe: number;
-  po: number;
-  ppt: number;
+  pc?: number;
+  pp?: number;
+  pe?: number;
+  po?: number;
+  ppt?: number;
 }
 
 interface Props {
   monedero?: Monedero;
 }
 
-// Extraemos la propiedad mochila de los props, por defecto es un array vacío
-const monederoDefault: Monedero = { pc: 0, pp: 0, pe: 0, po: 0, ppt: 0 };
-const { monedero = monederoDefault } = Astro.props;
+const { monedero = {} } = Astro.props;
+
+// Establecer el valor predeterminado de pp si no está presente en monedero
+const monederoDefault = {
+  pc: monedero.pc ?? 0,
+  pp: monedero.pp ?? 0,
+  pe: monedero.pe ?? 0,
+  po: monedero.po ?? 0,
+  ppt: monedero.ppt ?? 0,
+};
 ---
 
 <article
@@ -26,27 +33,27 @@ const { monedero = monederoDefault } = Astro.props;
   <!-- Cobre -->
   <div>
     <h3 class='bg-[--copper]'>PC</h3>
-    <h6>{monedero.pc}</h6>
+    <h6>{monederoDefault.pc}</h6>
   </div>
   <!-- Plata -->
   <div>
     <h3 class='bg-[--silver]'>PP</h3>
-    <h6>{monedero.pp}</h6>
+    <h6>{monederoDefault.pp}</h6>
   </div>
   <!-- Electro -->
   <div>
     <h3 class='bg-[--electro]'>PE</h3>
-    <h6>{monedero.pe}</h6>
+    <h6>{monederoDefault.pe}</h6>
   </div>
   <!-- Oro -->
   <div>
     <h3 class='bg-[--gold]'>PO</h3>
-    <h6>{monedero.po}</h6>
+    <h6>{monederoDefault.po}</h6>
   </div>
   <!-- Platino -->
   <div>
     <h3 class='bg-[--platinum]'>PPT</h3>
-    <h6>{monedero.ppt}</h6>
+    <h6>{monederoDefault.ppt}</h6>
   </div>
 </article>
 
