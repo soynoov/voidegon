@@ -75,12 +75,12 @@ function getColorByRarity(rareza?: string): string {
           class='text-start p-2 border-l-2'
           style={`border-color: var(--${getColorByRarity(item.rareza)})`}
         >
-          <h2 class='text-[--light] font-bold'>
+          <h1 class='text-[--light] font-bold font-[unbounded]'>
             {item.nombre} (x{item.cantidad})
-          </h2>
+          </h1>
           <p class='text-[--white] text-sm'>{item.descripción}</p>
           {Array.isArray(item.tipo) && (
-            <p class='text-[--grey] text-sm italic capitalize'>
+            <p class='text-[--grey] text-sm capitalize font-["lobster_two"] font-semibold'>
               ({item.tipo.join(', ')})
             </p>
           )}

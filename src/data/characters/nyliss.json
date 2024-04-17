@@ -60,7 +60,7 @@
         "rareza": "común",
         "descripción": "Una botella de tinta de color negro.",
         "tipo": ["herramienta"],
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227052991928860703/tinta.png?ex=66270126&is=66148c26&hm=dbb77313645033b94d2ee5888e87731ec75c42f915132aea8b3ac59c3fcbe9b8&"
+        "img": "https://media.discordapp.net/attachments/1006530163728728075/1230074540210651257/A79FAACC-7E74-43B8-9D09-AB4151EAB6FD.png?ex=6631ff30&is=661f8a30&hm=99511328a846f32dc912647c970c1a66c85dc61c60fa8153e68cf053181e55f6&=&format=webp&quality=lossless&width=693&height=700"
       },
       {
         "nombre": "Pluma para escribir",
@@ -128,7 +128,7 @@
         "rareza": "épica",
         "descripción": "Musgo que emite un brillo fluorescente en la oscuridad.",
         "tipo": ["recurso"],
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227411878184091670/musgo.png?ex=66284f63&is=6615da63&hm=3ff3f882caff74b88af1bd358489f178e1dae7b5e720963d624951824785e5dc&"
+        "img": "https://media.discordapp.net/attachments/1006530163728728075/1227413675158016030/musgo.png?ex=66318b90&is=661f1690&hm=9eb00adc5fd63e0c318192f29784a53c7a079ab01f6b50e5859574a0125a0efc&=&format=webp&quality=lossless&width=552&height=563"
       },
       {
         "nombre": "Pétalo",
