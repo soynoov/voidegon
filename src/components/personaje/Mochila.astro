@@ -34,14 +34,18 @@ const objetosFusionados = mochila.map((objetoMochila) => {
 // Función para obtener el color según la rareza
 function getColorByRarity(rareza?: string): string {
   switch (rareza?.toLowerCase()) {
-    case 'rara':
+    case 'poco común':
+      return 'uncommon';
+    case 'raro':
       return 'rare';
-    case 'épica':
+    case 'épico':
       return 'epic';
-    case 'legendaria':
+    case 'legendario':
       return 'legendary';
-    case 'mítica':
+    case 'mítico':
       return 'mythic';
+    case 'único':
+      return 'unique';
     default:
       return 'common';
   }
@@ -64,26 +68,21 @@ function getColorByRarity(rareza?: string): string {
           w-full
         `}
       >
-        {item.img && (
-          <img
-            class='size-14 object-contain'
-            src={item.img}
-            alt={item.nombre}
-          />
-        )}
+        <img class='size-14 object-contain' src={item.img} alt={item.nombre} />
         <div
           class='text-start p-2 border-l-2'
           style={`border-color: var(--${getColorByRarity(item.rareza)})`}
         >
           <h1 class='text-[--light] font-bold font-[unbounded]'>
-            {item.nombre} (x{item.cantidad})
+            {item.nombre}{' '}
+            {item.cantidad !== undefined &&
+              item.cantidad !== 1 &&
+              `(x${item.cantidad})`}
           </h1>
           <p class='text-[--white] text-sm'>{item.descripción}</p>
-          {Array.isArray(item.tipo) && (
-            <p class='text-[--grey] text-sm capitalize font-["lobster_two"] font-semibold'>
-              ({item.tipo.join(', ')})
-            </p>
-          )}
+          <p class='text-[--grey] text-sm capitalize font-["lobster_two"] font-semibold'>
+            ({item.tipo?.join(', ')})
+          </p>
         </div>
       </section>
     ))

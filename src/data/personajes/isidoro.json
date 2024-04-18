@@ -51,57 +51,57 @@
       {
         "nombre": "Anillo de Sellar",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "",
-        "tipo": [""],
+        "rareza": "común",
+        "descripción": "Un anillo utilizado para sellar documentos o pactos mágicos.",
+        "tipo": ["Herramienta"],
         "img": ""
       },
       {
         "nombre": "Anillo Brújula",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "Es un anillo guia, que muestra donde se localiza el Santuario secreto",
-        "tipo": [""],
+        "rareza": "épico",
+        "descripción": "Un anillo que sirve como brújula, mostrando la ubicación del Santuario secreto.",
+        "tipo": ["Herramienta"],
         "img": ""
       },
       {
         "nombre": "Agua Embotellada",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "Efectivamente es agua embotellada",
-        "tipo": [""],
+        "rareza": "común",
+        "descripción": "Una botella de agua fresca y pura, lista para beber.",
+        "tipo": ["Consumible"],
         "img": ""
       },
       {
-        "nombre": "Botella Vacia",
+        "nombre": "Botella Vacía",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "Efectivamente es una botella vacia",
-        "tipo": [""],
+        "rareza": "común",
+        "descripción": "Una botella vacía, lista para ser llenada con líquidos de tu elección.",
+        "tipo": ["Herramienta"],
         "img": ""
       },
       {
-        "nombre": "Botella de veneno",
+        "nombre": "Botella de Veneno",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "Efectivamente es una botella con veneno",
-        "tipo": [""],
+        "rareza": "poco común",
+        "descripción": "Una botella que contiene veneno mortal, útil para asesinatos sigilosos.",
+        "tipo": ["Consumible"],
         "img": ""
       },
       {
         "nombre": "Bola de Plata",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "Bola de plata la cual sirve para mejorar armas (Actualmente la porta Paco)",
-        "tipo": [""],
+        "rareza": "poco común",
+        "descripción": "Una bola de plata utilizada para mejorar armas mediante un proceso de forja especial. Está actualmente en posesión de Paco.",
+        "tipo": ["Munición", "Material"],
         "img": ""
       },
       {
         "nombre": "Documento que acredita el linaje",
         "cantidad": 1,
-        "rareza": "",
-        "descripción": "es un documento el cual muestra el linaje de donde provienes",
-        "tipo": [""],
+        "rareza": "épico",
+        "descripción": "Un documento oficial que certifica el linaje y origen de quien lo posee.",
+        "tipo": ["Documento"],
         "img": ""
       }
     ]
