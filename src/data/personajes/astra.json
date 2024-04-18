@@ -1,1 +1,77 @@
-[{}]
+[{
+    
+      "nombre": "Astra Starlink",
+      "raza": "Elfo Astral",
+      "rol": "Arquero",
+      "xp": 0,
+      "nivel": 1,
+      "stats": {
+        "fue": 7,
+        "des": 20,
+        "con": 10,
+        "int": 10,
+        "sab": 16,
+        "car": 9
+      },
+      "skills": {
+        "acrobacias": 0,
+        "atletismo": -2,
+        "arcano": 0,
+        "engaño": -1,
+        "historia": 0,
+        "interpretación": 0,
+        "intimidación": 0,
+        "investigación": 0,
+        "juego_de_manos": 1,
+        "medicina": 1,
+        "naturaleza": 0,
+        "percepcion": 2,
+        "perspicacia": 0,
+        "religión": 0,
+        "sigilo": 2,
+        "supervivencia": 0,
+        "trato_con_animales": 2
+        
+      },
+      "comps": {
+        "bon_com": 2,
+        "stats": ["fue", "des"],
+        "skills": ["medicina", "percepcion", "trato_con_animales"],
+        "weapons": ["armas simples", "armas marciales"]
+      },
+      "weapons": ["arco largo", "ballesta de mano"],
+      "money": {
+        "pc": 0,
+        "pp": 0,
+        "pe": 0,
+        "po": 0,
+        "ppt": 0
+      },
+      "vida": {
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 1
+      },
+      "monedero": {
+        "pc": 0,
+        "pp": 0,
+        "pe": 0,
+        "po": 0,
+        "ppt": 0
+      },
+      "magia": {
+        "espacios": {
+          "0": 1,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }}
+
+  }]
