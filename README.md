@@ -14,7 +14,7 @@ El proyecto está desarrollado utilizando la tecnología Astro.
 
 ## Estado del Proyecto
 
-El proyecto se encuentra en estado Alpha, versión 0.4.1. Estamos trabajando constantemente para mejorar y expandir la experiencia de juego en el universo de Voidegon.
+El proyecto se encuentra en estado Alpha, versión 0.4.4. Estamos trabajando constantemente para mejorar y expandir la experiencia de juego en el universo de Voidegon.
 
 ## Contenido
 
