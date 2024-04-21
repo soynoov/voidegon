@@ -1,0 +1,33 @@
+---
+import Corazon from '@/components/svg/corazones/Corazon.astro';
+import CorazonBlock from '@/components/svg/corazones/CorazonBlock.astro';
+import CorazonFull from '@/components/svg/corazones/CorazonFull.astro';
+
+interface Props {
+  amistad?: number;
+  amistad_max?: number;
+}
+
+const { amistad = 0, amistad_max = 8 } = Astro.props;
+
+const corazonesFull = Math.min(amistad, amistad_max);
+const corazones = Math.max(
+  0,
+  Math.min(amistad_max - corazonesFull, 10 - corazonesFull)
+);
+---
+
+<article class='bg-[--gray] p-2 rounded-lg'>
+  <section
+    class={`
+      flex justify-around
+      p-2 bg-[--dark] rounded-lg
+    `}
+  >
+    <Fragment>
+      {[...Array(corazonesFull)].map(() => <CorazonFull />)}
+      {[...Array(corazones)].map(() => <Corazon />)}
+      {[...Array(10 - corazonesFull - corazones)].map(() => <CorazonBlock />)}
+    </Fragment>
+  </section>
+</article>

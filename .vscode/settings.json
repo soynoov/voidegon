@@ -23,6 +23,10 @@
         {
             "folderPath": "voidegon\\src\\data\\characters\\",
             "badge": "CH"
+        },
+        {
+            "folderPath": "voidegon\\public\\",
+            "badge": "🇪🇸"
         }
     ]
 }

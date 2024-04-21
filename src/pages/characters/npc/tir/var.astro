@@ -3,80 +3,49 @@
 import Layout from '@/layouts/Layout.astro';
 import Name from '@/components/character/Name.astro';
 // NPC Components
-import Hearts from '@/components/character/npc/Hearts.astro';
-import Portrait from '@/components/character/npc/Portrait.astro';
-// NPCs Data
-import npcs from '@/data/personajes/pnjs/pnjs.json';
-// Search Object "Var"
-const varData = Object.values(npcs).find((npc: any) => npc.name === 'Var');
+import Amistad from '@/components/personaje/pnj/Amistad.astro';
+// Importar los datos de los PNJs
+import pnj from '@/data/personajes/pnjs/pnjs.json';
+import Retrato from '@/components/personaje/pnj/Retrato.astro';
+// Buscar a Var en la lista de PNJs
+const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
 ---
 
-<Layout title=`】 Voidegon ▸ ${varData?.name}`>
+<Layout title='】 Voidegon ▸ var'>
   <Name
-    name={varData?.name}
-    img='/img/npc/tir/var/bg_var.png'
-    center='center'
+    name={varJSON?.nombre}
+    img={varJSON?.ruta + 'bg_var.png'}
+    center='top'
+    opacity={0.6}
   />
-  <article
+  <main
     class={`
-      w-[80vw] mx-auto
-      grid grid-cols-6 gap-2 auto-rows-auto
-    `}
+				w-[80vw] mx-auto
+			`}
   >
-    <section class='col-span-6'>
-      <Hearts level={varData?.friendship_level} />
-    </section>
-    <section class='col-span-2'>
-      <h3>Dwarf</h3>
-    </section>
-    <section class='col-span-2 row-span-3'>
-      <Portrait src='/img/npc/tir/var/var.png' alt='Var' />
-    </section>
-    <section class='col-span-2'>
-      <h3>372 años</h3>
-    </section>
-    <section class='col-span-2'>
-      <p class='p-4 px-8'>[████████ ██████████ █████████ ███████████]</p>
-    </section>
-    <section class='col-span-2'>
-      <h3>Alchemist</h3>
-    </section>
-    <section class='col-span-2'>
-      <h3>Caótico Neutral</h3>
-    </section>
-    <section class='col-span-2'>
-      <p class='p-4 px-8 text-justify'>
-        Este enano anciano presenta un rostro marcado por numerosas arrugas y
-        cejas pelirrojas densas, casi ocultando sus ojos entre ellas. La
-        calvicie es evidente, y su barba sigue la misma tonalidad. Viste con
-        harapos largos que se asemejan a un manto descosido, y su apariencia
-        refleja un aire de excentricidad.
-      </p>
-    </section>
-    <section class='col-span-2'>
-      <h3>62 Kilos</h3>
-    </section>
-    <section class='col-span-2'>
-      <h3>1.18 Metros</h3>
-    </section>
-  </article>
+    <article
+      class={`
+        grid grid-cols-3
+      `}
+    >
+      <section class='col-span-1'>
+        <Amistad
+          amistad={varJSON?.amistad}
+          amistad_max={varJSON?.amistad_max}
+        />
+      </section>
+      <section class='col-span-1'>
+        <Retrato img={varJSON?.ruta + 'var.png'} />
+      </section>
+      <section>
+        <!-- Raza y Rol -->
+      </section>
+    </article>
+  </main>
 </Layout>
 
 <style>
-  section:has(h3) {
-    background-color: var(--gray);
-    border-radius: 0.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: 'lobster';
-    color: var(--subtitle);
-
-    cursor: default;
+  section {
+    padding: 0.25rem;
   }
-  /* section:has(h3):hover {
-		background-color: var(--black);
-	} */
 </style>

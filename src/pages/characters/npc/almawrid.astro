@@ -3,18 +3,38 @@
 import Layout from '@/layouts/Layout.astro';
 import Name from '@/components/character/Name.astro';
 // NPC Components
-import Hearts from '@/components/character/npc/Hearts.astro';
+import Amistad from '@/components/personaje/pnj/Amistad.astro';
+// Importar los datos de los PNJs
+import pnj from '@/data/personajes/pnjs/pnjs.json';
+import Retrato from '@/components/personaje/pnj/Retrato.astro';
+// Buscar a Almawrid en la lista de PNJs
+const almawrid = pnj.find((personaje: any) => personaje.nombre === 'Almawrid');
 ---
 
 <Layout title='】 Voidegon ▸ Almawrid'>
-  <main>
-    <Name name='Almawrid' />
-    <article
-      class={`
+  <Name name={almawrid?.nombre + ' ' + almawrid?.apellido} />
+  <main
+    class={`
 				w-[80vw] mx-auto
 			`}
+  >
+    <article
+      class={`
+        grid grid-cols-3
+      `}
     >
-      <Hearts level={2} max_level={8} />
+      <section class='col-span-1 col-start-2'>
+        <Retrato img='/img/npc/almawrid/almawrid.png' />
+      </section>
+      <section class='col-span-1 row-start-2 col-start-2'>
+        <Amistad amistad={almawrid?.amistad} />
+      </section>
     </article>
   </main>
 </Layout>
+
+<style>
+  section {
+    padding: 0.25rem;
+  }
+</style>

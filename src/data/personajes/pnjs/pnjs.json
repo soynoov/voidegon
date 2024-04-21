@@ -4,11 +4,13 @@
     "raza": "dwarf",
     "rol": "alchemist",
     "edad": 352,
-    "height_feet": 3.75,
-    "weight_pounds": 162,
-    "descripcion": "Var, un enano anciano, tiene un rostro marcado por numerosas arrugas y cejas densas y pelirrojas que casi ocultan sus ojos. Su calvicie es evidente, y su barba sigue la misma tonalidad rojiza. Viste túnicas largas y raídas que parecen un manto desgarrado, y su apariencia refleja un aire de excentricidad.",
+    "altura": 3.75,
+    "peso": 162,
     "amistad": 1,
-    "grupo": "Los Cinco Enanos"
+    "amistad_max": 5,
+    "grupo": "Los Cinco Enanos",
+    "descripcion": "Var, un enano anciano, tiene un rostro marcado por numerosas arrugas y cejas densas y pelirrojas que casi ocultan sus ojos. Su calvicie es evidente, y su barba sigue la misma tonalidad rojiza. Viste túnicas largas y raídas que parecen un manto desgarrado, y su apariencia refleja un aire de excentricidad.",
+    "ruta": "/imgs/personajes/pnjs/tir/var/"
   },
   {
     "nombre": "Rel",
@@ -20,5 +22,13 @@
     "descripcion": "",
     "amistad": 0,
     "grupo": "Los Cinco Enanos"
+  },
+  {
+    "nombre": "Almawrid",
+    "apellido": "Alfaniyu",
+    "raza": "Humano",
+    "rol": "",
+    "edad": "",
+    "amistad": 1
   }
 ]
