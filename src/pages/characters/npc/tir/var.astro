@@ -1,10 +1,13 @@
 ---
-// Main Components
+// Layout Components
 import Layout from '@/layouts/Layout.astro';
+//
 import Name from '@/components/character/Name.astro';
 // NPC Components
 import Amistad from '@/components/personaje/pnj/Amistad.astro';
-import Atributos from '@/components/personaje/pnj/Atributos.astro';
+// SVGs
+import CorazonPlus from '@/components/svg/corazones/CorazonPlus.astro';
+import CorazonMinus from '@/components/svg/corazones/CorazonMinus.astro';
 // Importar los datos de los PNJs
 import pnj from '@/data/personajes/pnjs/pnjs.json';
 import Retrato from '@/components/personaje/pnj/Retrato.astro';
@@ -30,30 +33,52 @@ const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
         grid grid-cols-3
       `}
     >
-      <section class='col-span-1'>
+      <section>
         <Amistad
           amistad={varJSON?.amistad}
           amistad_max={varJSON?.amistad_max}
         />
       </section>
-      <section class='col-span-2'>
-        <Atributos raza={varJSON?.raza} rol={varJSON?.rol} />
+      <section class='section col-span-2'>
+        <h3>{varJSON?.raza}</h3>
+        <h3>{varJSON?.rol}</h3>
       </section>
-      <section class='col-span-1 row-span-2'>
+      <section class='row-span-5'>
         <Retrato img={varJSON?.ruta + 'var.png'} />
       </section>
-      <section class='censored section col-span-2 text-center'>
+      <section class='censored section col-span-2'>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel cumque
           reiciendis ad officiis pariatur et unde iste quo quia, ipsam aut sunt
           enim omnis hic earum, iure, quibusdam vitae natus!
         </p>
-        <p class='mt-2'>
+        <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
           pariatur tenetur perferendis optio error minima aliquam fugit
           laudantium dignissimos! Repellat dolore vitae id enim assumenda
           consequatur aperiam sint minima vero?
         </p>
+      </section>
+      <section class='censored section col-span-2'>
+        <p>
+          {varJSON?.descripcion}
+        </p>
+      </section>
+      <section class='section col-span-2'></section>
+      <section class='section col-start-1'>
+        <div>
+          <p class='flex gap-2 ml-4'>
+            <span class='heart'>
+              <CorazonPlus /> Amistad
+            </span> por sanar su mente temporalmente.
+          </p>
+          <hr />
+          <p class='flex gap-2 ml-4'>
+            <span class='heart'>
+              <CorazonMinus /> Amistad
+            </span> por probar los formatos.
+          </p>
+        </div>
       </section>
     </article>
   </main>
@@ -63,15 +88,36 @@ const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
   section {
     padding: 0.25rem;
   }
+  hr {
+    margin: 0.5rem;
+    border-color: var(--gray);
+  }
   .section {
     background-color: var(--gray);
     border-radius: 0.5rem;
     margin: 0.25rem;
     padding: 0.5rem;
+
+    display: flex;
+    flex-direction:;
+    gap: 0.5rem;
   }
   .section > * {
     background-color: var(--dark);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    width: 100%;
+  }
+  .section > h3 {
+    text-transform: capitalize;
+    font-family: 'lobster';
+    color: var(--subtitle);
+    text-align: center;
+  }
+
+  .heart {
+    color: var(--red);
+    display: flex;
+    gap: 0.5rem;
   }
 </style>
