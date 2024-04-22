@@ -26,6 +26,6 @@ Para contribuir al proyecto, ponte en contacto con el Dungeon Master (DM), Heroy
 
 ## Contacto
 
-Para más detalles o preguntas, ponte en contacto con el DM a través de [correo electrónico] o [redes sociales].
+Para más detalles o preguntas, ponte en contacto con el DM a través de [heroyi3000@gmail] o [@herotai_sama].
 
 ¡Gracias por ser parte del universo de Voidegon!
