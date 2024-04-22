@@ -1,0 +1,39 @@
+---
+interface Props {
+  raza?: string;
+  rol?: string;
+  altura?: string;
+  peso?: string;
+}
+
+const { raza, rol, altura, peso } = Astro.props;
+---
+
+<article class='bg-[--gray] p-2 rounded-lg'>
+  <section
+    class={`
+      p-2 bg-[--dark] rounded-lg
+      capitalize font-["lobster"] text-[--subtitle]
+    `}
+  >
+    <div>
+      <h3>{raza}</h3>
+      <h3>{rol}</h3>
+    </div>
+    <div>
+      <h3>{altura}</h3>
+      <h3>{peso}</h3>
+    </div>
+    <div>
+      <h3>{}</h3>
+      <h3>{}</h3>
+    </div>
+  </section>
+</article>
+
+<style>
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
