@@ -12,9 +12,9 @@ import Armas from '@/components/personaje/Armas.astro';
 import Mochila from '@/components/personaje/Mochila.astro';
 import Monedero from '@/components/personaje/Monedero.astro';
 import Conjuros from '@/components/personaje/Conjuros.astro';
+import DG from '@/components/personaje/DG.astro';
 // Little Components
 import CA from '../../components/little/CA.astro';
-import DG from '../../components/little/DG.astro';
 import H2 from '../../components/little/H2.astro';
 import H3 from '../../components/little/H3.astro';
 import HP from '../../components/little/HP.astro';
@@ -64,7 +64,7 @@ if (!nyliss.magia.trucos.includes('Luz')) {
   <main class='w-[80vw] mx-auto'>
     <!-- ESTADISTICAS -->
 
-    <article class='mt-2 grid grid-cols-6'>
+    <article class='grid grid-cols-6 p-2'>
       <section class='col-span-6'>
         <Experience
           race={nyliss.raza}
@@ -113,7 +113,7 @@ if (!nyliss.magia.trucos.includes('Luz')) {
       </section>
 
       <section class='col-span-2'>
-        <DG cantidad={nyliss.nivel} dice={6} />
+        <DG dg={nyliss.dg} />
       </section>
 
       <section class='col-span-6'>

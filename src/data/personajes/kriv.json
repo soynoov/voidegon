@@ -5,6 +5,7 @@
     "rol": "Paladin",
     "xp": 355,
     "level": 2,
+
     "stats": {
       "fue": 16,
       "des": 6,
@@ -13,6 +14,7 @@
       "sab": 12,
       "car": 16
     },
+
     "skills": {
       "acrobacias": -1,
       "atletismo": 5,
@@ -24,8 +26,9 @@
       "investigacion": 0,
       "juego_manos": 0
     },
-    "comps": {
-      "bon_com": 2,
+
+    "competencias": {
+      "mod_comp": 2,
       "stats": ["sab", "car"],
       "skills": ["atletismo", "intimidacion", "perpicacia", "persuasion"],
       "weapons": [
@@ -37,13 +40,24 @@
         "escudo"
       ]
     },
+
     "armas": ["martillo de guerra"],
+
     "monedero": {
       "pc": 99,
       "pp": 0,
       "pe": 16,
       "po": 2,
       "ppt": 0
+    },
+
+    "dg": {
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 1,
+      "10": 1
     }
   }
 ]

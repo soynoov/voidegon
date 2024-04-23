@@ -1,0 +1,68 @@
+---
+interface DG {
+  [key: string]: number;
+}
+
+interface Props {
+  dg: DG;
+}
+
+const { dg } = Astro.props;
+const keys = Object.keys(dg);
+const values = Object.values(dg);
+---
+
+<article
+  class={`
+    bg-[--gray] p-2 cursor-default
+    rounded-lg h-full w-full
+  `}
+>
+  <section
+    class={`
+      flex flex-col h-full w-full
+      justify-center gap-1
+    `}
+  >
+    <div>
+      {
+        keys.map((key) => (
+          <h3 class='bg-[--black] text-[--red] font-bold'>{key}</h3>
+        ))
+      }
+    </div>
+    <div>
+      {values.map((value) => <h5 class='bg-[--dark]'>{value}</h5>)}
+    </div>
+  </section>
+</article>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  h3,
+  h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 100%;
+
+    font-family: 'unbounded';
+  }
+
+  h3 {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  h5 {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+</style>

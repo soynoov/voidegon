@@ -5,6 +5,7 @@
     "rol": "Monje",
     "xp": 440,
     "nivel": 2,
+
     "stats": {
       "fue": 16,
       "des": 18,
@@ -13,6 +14,7 @@
       "sab": 8,
       "car": 8
     },
+
     "habilidades": {
       "acrobacias": 4,
       "atletismo": 3,
@@ -33,13 +35,24 @@
       "supervivencia": 0,
       "t.animales": 0
     },
+
     "competencias": {
       "mod_comp": 2,
       "stats": ["int", "sab"],
       "habilidades": ["c.arcano", "engaño", "medicina", "supervivencia"],
       "armas": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
     },
+
     "armas": ["espada corta"],
+
+    "dg": {
+      "4": 1,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 1
+    },
+
     "dinero": {
       "pc": 0,
       "pp": 0,
@@ -47,6 +60,7 @@
       "po": 0,
       "ppt": 0
     },
+
     "mochila": [
       {
         "nombre": "Anillo de Sellar",
