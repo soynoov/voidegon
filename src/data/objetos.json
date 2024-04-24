@@ -2,14 +2,14 @@
   {
     "nombre": "Pétalo",
     "rareza": "común",
-    "descripción": "Pétalo de flor, recogidos de un jardín.",
+    "descripcion": "Pétalo de flor, recogidos de un jardín.",
     "tipo": ["recurso", "material", "ingrediente", "decoración"],
     "img": "https://i.imgur.com/ADxQUtu.png"
   },
   {
     "nombre": "Pluma",
     "rareza": "común",
-    "descripción": "Elemento esencial de los escribas y poetas.",
+    "descripcion": "Elemento esencial de los escribas y poetas.",
     "tipo": ["recurso", "material"],
     "img": "https://i.imgur.com/VPuTCSo.png"
   }

@@ -44,7 +44,7 @@ const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
         <h3>{varJSON?.rol}</h3>
       </section>
       <section class='row-span-5'>
-        <Retrato img={varJSON?.ruta + 'var.png'} />
+        <Retrato img={varJSON?.img} alt={varJSON?.nombre} />
       </section>
       <section class='censored section col-span-2'>
         <p>
@@ -59,24 +59,21 @@ const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
           consequatur aperiam sint minima vero?
         </p>
       </section>
-      <section class='censored section col-span-2'>
-        <p>
+      <section class='section col-span-2'>
+        <h3>{varJSON?.altura + ' metros'}</h3>
+        <h3>{varJSON?.peso + ' kg'}</h3>
+      </section>
+      <section class='section col-span-2'>
+        <p class='font-[nunito]'>
           {varJSON?.descripcion}
         </p>
       </section>
-      <section class='section col-span-2'></section>
       <section class='section col-start-1'>
         <div>
           <p class='flex gap-2 ml-4'>
             <span class='heart'>
               <CorazonPlus /> Amistad
             </span> por sanar su mente temporalmente.
-          </p>
-          <hr />
-          <p class='flex gap-2 ml-4'>
-            <span class='heart'>
-              <CorazonMinus /> Amistad
-            </span> por probar los formatos.
           </p>
         </div>
       </section>
@@ -92,6 +89,10 @@ const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
     margin: 0.5rem;
     border-color: var(--gray);
   }
+  p {
+    text-align: justify;
+  }
+
   .section {
     background-color: var(--gray);
     border-radius: 0.5rem;

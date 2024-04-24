@@ -7,7 +7,7 @@ interface Objeto {
   nombre: string;
   cantidad?: number;
   rareza?: string;
-  descripción?: string;
+  descripcion?: string;
   tipo?: string[];
   img?: string;
 }
@@ -85,7 +85,7 @@ function getColorByRarity(rareza?: string): string {
               item.cantidad !== 1 &&
               `(x${item.cantidad})`}
           </h1>
-          <p class='text-[--white] text-sm'>{item.descripción}</p>
+          <p class='text-[--white] text-sm'>{item.descripcion}</p>
           <p class='text-[--grey] text-sm capitalize font-["lobster_two"] font-semibold'>
             ({item.tipo?.join(', ')})
           </p>

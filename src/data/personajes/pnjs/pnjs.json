@@ -4,13 +4,19 @@
     "raza": "dwarf",
     "rol": "alchemist",
     "edad": 352,
+
     "altura": 1.14,
     "peso": 73.4,
+
     "amistad": 1,
     "amistad_max": 5,
+
+    "descripcion": "A pesar de ser enano, Var es relativamente bajo para su especie. Su peso es considerable debido a su barriga, resultado de incontables años de estudio sin movimiento. Posee una barba pelirroja y una calva, y siempre lleva consigo un cetro que utiliza como bastón para caminar. Sus ropajes son modestos, pero siempre porta pociones encima. Su rostro muestra signos de arrugas y su cuerpo presenta estrías debido a su avanzada edad...",
+
     "grupo": "Los Cinco Enanos",
-    "descripcion": "Var, un enano anciano, tiene un rostro marcado por numerosas arrugas y cejas densas y pelirrojas que casi ocultan sus ojos. Su calvicie es evidente, y su barba sigue la misma tonalidad rojiza. Viste túnicas largas y raídas que parecen un manto desgarrado, y su apariencia refleja un aire de excentricidad.",
-    "ruta": "/imgs/personajes/pnjs/tir/var/"
+
+    "ruta": "/imgs/personajes/pnjs/tir/var/",
+    "img": "https://i.imgur.com/sahEukd.png"
   },
   {
     "nombre": "Rel",
