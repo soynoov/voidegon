@@ -108,7 +108,7 @@
         "rareza": "poco común",
         "descripción": "Una bola de plata utilizada para mejorar armas mediante un proceso de forja especial. Está actualmente en posesión de Paco.",
         "tipo": ["Munición", "Material"],
-        "img": ""
+        "img": "https://i.imgur.com/G1CwN82.png"
       },
       {
         "nombre": "Documento que acredita el linaje",

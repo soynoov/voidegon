@@ -4,13 +4,13 @@
     "rareza": "común",
     "descripción": "Pétalo de flor, recogidos de un jardín.",
     "tipo": ["recurso", "material", "ingrediente", "decoración"],
-    "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227413675615453285/petalo.png?ex=66285110&is=6615dc10&hm=e8880cdbee3d56c94618d58f014ad2c9b992a6294fb710c273ef13101e232a3f&"
+    "img": "https://i.imgur.com/ADxQUtu.png"
   },
   {
     "nombre": "Pluma",
     "rareza": "común",
     "descripción": "Elemento esencial de los escribas y poetas.",
     "tipo": ["recurso", "material"],
-    "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227062020369547264/pluma.png?ex=6627098f&is=6614948f&hm=4f317965a9cbb4d89f096980ae5a538250c4e684a6c48eb50281f8af72e38218&"
+    "img": "https://i.imgur.com/VPuTCSo.png"
   }
 ]

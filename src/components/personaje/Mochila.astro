@@ -68,7 +68,13 @@ function getColorByRarity(rareza?: string): string {
           w-full
         `}
       >
-        <img class='size-14 object-contain' src={item.img} alt={item.nombre} />
+        {item.img && (
+          <img
+            class='size-14 object-contain'
+            src={item.img}
+            alt={item.nombre}
+          />
+        )}
         <div
           class='text-start p-2 border-l-2'
           style={`border-color: var(--${getColorByRarity(item.rareza)})`}
