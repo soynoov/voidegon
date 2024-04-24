@@ -1,0 +1,13 @@
+[
+  {
+    "nombre": "taberna",
+    "nivel": 2,
+    "img": "",
+    "dinero": {
+      "pc": 1,
+      "pe": 1,
+      "po": 4,
+      "ppt": 2
+    }
+  }
+]

@@ -1,0 +1,26 @@
+---
+import Estrella from '@/components/svg/estrellas/Estrella.astro';
+import EstrellaFull from '@/components/svg/estrellas/EstrellaFull.astro';
+
+interface Props {
+  nivel?: number;
+}
+
+const { nivel = 0 } = Astro.props;
+const estrellasFull = Math.min(nivel, 5);
+const estrellasVacias = Math.max(0, 5 - estrellasFull);
+---
+
+<article class='bg-[--gray] p-2 rounded-lg'>
+  <section
+    class={`
+      flex justify-around
+      p-2 bg-[--dark] rounded-lg
+    `}
+  >
+    <Fragment>
+      {[...Array(estrellasFull)].map(() => <EstrellaFull />)}
+      {[...Array(estrellasVacias)].map(() => <Estrella />)}
+    </Fragment>
+  </section>
+</article>

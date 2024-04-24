@@ -20,7 +20,7 @@
       "acrobacias": 2,
       "atletismo": 1,
       "arcano": 1,
-      "engaño": 0,
+      "enganio": 0,
       "historia": 0,
       "interpretacion": -1,
       "intimidacion": 0,
@@ -40,7 +40,7 @@
     "competencias": {
       "mod_comp": 2,
       "stats": ["int", "sab"],
-      "habilidades": ["arcano", "engaño", "medicina", "supervivencia"],
+      "habilidades": ["arcano", "enganio", "medicina", "supervivencia"],
       "armas": ["dagas", "dardos", "hondas", "bastones", "ballestas ligeras"]
     },
 
@@ -173,7 +173,7 @@
         "rareza": "único",
         "descripcion": "Un silbato que emite un sonido mágico que solo pueden escuchar ciertas criaturas.",
         "tipo": ["objeto clave"],
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227416729500778636/silbato.png?ex=662853e8&is=6615dee8&hm=b9b68ce1b80ce92cb0aed024e474d3085a71cc451558a38d43badf0a286b2536&"
+        "img": ""
       },
       {
         "nombre": "Espada oxidada de cobre",
@@ -181,7 +181,7 @@
         "rareza": "épico",
         "descripcion": "Una espada vieja y oxidada hecha de cobre.",
         "tipo": ["objeto clave", "herramienta"],
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227417452300734465/espada_de_cobre_oxidada.png?ex=66285494&is=6615df94&hm=6be0f09e8cee7686a1765ccb5d38bb2953cc7a31abb46e0d0aea98a1073f2cbd&"
+        "img": ""
       },
       {
         "nombre": "Dimensión de Bolsillo",
@@ -189,7 +189,7 @@
         "rareza": "mítico",
         "descripcion": "Una bolsa con almacenamiento infinito.",
         "tipo": ["herramienta"],
-        "img": "https://cdn.discordapp.com/attachments/1006530163728728075/1227419328706773073/dimension_de_bolsillo.png?ex=66285654&is=6615e154&hm=c92144016dd7701dc82de89561c1662221f0602601b186a3e7feebfecc0258c1&"
+        "img": ""
       }
     ]
   }
