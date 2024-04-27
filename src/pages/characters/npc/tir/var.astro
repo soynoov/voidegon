@@ -11,6 +11,10 @@ import CorazonMinus from '@/components/svg/corazones/CorazonMinus.astro';
 // Importar los datos de los PNJs
 import pnj from '@/data/personajes/pnjs/pnjs.json';
 import Retrato from '@/components/personaje/pnj/Retrato.astro';
+import {
+  markHTMLString,
+  renderHTMLElement,
+} from 'astro/runtime/server/index.js';
 // Buscar a Var en la lista de PNJs
 const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
 ---
@@ -65,7 +69,7 @@ const varJSON = pnj.find((personaje: any) => personaje.nombre === 'Var');
       </section>
       <section class='section col-span-2'>
         <p class='font-[nunito]'>
-          {varJSON?.descripcion}
+          {markHTMLString(varJSON?.descripcion)}
         </p>
       </section>
       <section class='section col-start-1'>
